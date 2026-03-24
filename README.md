@@ -2,6 +2,8 @@
 
 Jeu de plateau local en 2D (React, Tailwind) pour réviser des cours : circuit de 24 cases, 2 joueurs, propriétés et duels basés sur des questions (QCM / ouvertes) chargées depuis un fichier `deck.json`. Création de decks assistée par **Google Gemini** à partir de PDF.
 
+**Dépôt :** [github.com/Corgidev42/PharmAI](https://github.com/Corgidev42/PharmAI)
+
 ## Prérequis
 
 - [Node.js](https://nodejs.org/) 18+
@@ -10,7 +12,7 @@ Jeu de plateau local en 2D (React, Tailwind) pour réviser des cours : circuit d
 ## Installation
 
 ```bash
-git clone https://github.com/<votre-compte>/PharmAI.git
+git clone https://github.com/Corgidev42/PharmAI.git
 cd PharmAI
 npm install
 ```
