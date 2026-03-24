@@ -13,6 +13,7 @@ import {
   checkVictory,
   nextPlayerIndex,
   countOwnedTiles,
+  applyPlayerBonus,
 } from '../game/engine.js'
 
 function buildInitialState() {
@@ -33,6 +34,8 @@ function buildInitialState() {
     maxTurns: MAX_TURNS,
     winner: null,
     deckErrors: null,
+    /** Événement case spéciale (Départ, Taxe, Parc…) affiché en modale sans question */
+    specialFeedback: null,
   }
 }
 
@@ -73,6 +76,85 @@ export const useGameStore = create((set, get) => ({
     )
 
     const landing = resolveLanding(s.tiles, newPos, s.currentPlayer)
+
+    if (landing === 'SPECIAL_DEPART') {
+      const playersWithBonus = applyPlayerBonus(updatedPlayers, s.currentPlayer, 1)
+      set({
+        players: playersWithBonus,
+        phase: PHASES.RESULT,
+        specialFeedback: {
+          kind: 'depart',
+          title: 'Case départ',
+          subtitle: 'Prime : +1 point bonus (hors cases possédées).',
+          positive: true,
+        },
+        diceValue: null,
+        landingType: null,
+        currentCard: null,
+        lastAnswerCorrect: null,
+      })
+      return
+    }
+
+    if (landing === 'SPECIAL_TAX') {
+      const playersAfterTax = applyPlayerBonus(updatedPlayers, s.currentPlayer, -1)
+      set({
+        players: playersAfterTax,
+        phase: PHASES.RESULT,
+        specialFeedback: {
+          kind: 'tax',
+          title: 'Taxe',
+          subtitle: 'Vous payez 1 point bonus (minimum 0).',
+          positive: false,
+        },
+        diceValue: null,
+        landingType: null,
+        currentCard: null,
+        lastAnswerCorrect: null,
+      })
+      return
+    }
+
+    if (landing === 'SPECIAL_REST') {
+      const tile = s.tiles[newPos]
+      const isParc = tile.special === 'PARC'
+      set({
+        players: updatedPlayers,
+        phase: PHASES.RESULT,
+        specialFeedback: {
+          kind: 'rest',
+          title: isParc ? 'Parc gratuit' : 'Visite en prison',
+          subtitle: isParc ? 'Repos : aucune question, passez au joueur suivant.' : 'Simple visite : rien ne se passe.',
+          positive: true,
+        },
+        diceValue: null,
+        landingType: null,
+        currentCard: null,
+        lastAnswerCorrect: null,
+      })
+      return
+    }
+
+    if (landing === 'SPECIAL_CHANCE') {
+      const { card, nextIndex } = drawCard(s.deck.cards, s.deck.currentIndex)
+      if (!card) {
+        set({
+          players: updatedPlayers,
+          phase: PHASES.GAME_OVER,
+          winner: checkVictory(s.tiles, s.deck, s.turnCount + 1) ?? -1,
+        })
+        return
+      }
+      set({
+        players: updatedPlayers,
+        currentCard: card,
+        deck: { ...s.deck, currentIndex: nextIndex },
+        landingType: 'CHANCE',
+        phase: PHASES.QUESTION,
+        diceValue: null,
+      })
+      return
+    }
 
     if (landing === 'OWN') {
       const victory = checkVictory(s.tiles, s.deck, s.turnCount + 1)
@@ -155,13 +237,25 @@ export const useGameStore = create((set, get) => ({
     let newPlayers = s.players
 
     if (correct) {
-      newTiles = captureTile(s.tiles, tileIndex, s.currentPlayer)
-      newPlayers = s.players.map((p) =>
-        p.id === s.currentPlayer ? { ...p, score: countOwnedTiles(newTiles, p.id) } : { ...p, score: countOwnedTiles(newTiles, p.id) }
-      )
+      if (s.landingType === 'CHANCE') {
+        newPlayers = applyPlayerBonus(s.players, s.currentPlayer, 1).map((p) => ({
+          ...p,
+          score: countOwnedTiles(s.tiles, p.id),
+        }))
+        newTiles = s.tiles
+      } else {
+        newTiles = captureTile(s.tiles, tileIndex, s.currentPlayer)
+        newPlayers = s.players.map((p) => ({
+          ...p,
+          score: countOwnedTiles(newTiles, p.id),
+        }))
+      }
     } else if (s.landingType === 'OPPONENT') {
       const penalized = applyDuelPenalty(player)
       newPlayers = s.players.map((p) => (p.id === s.currentPlayer ? penalized : p))
+    } else if (!correct && s.landingType === 'CHANCE') {
+      newPlayers = s.players
+      newTiles = s.tiles
     }
 
     set({
@@ -177,7 +271,12 @@ export const useGameStore = create((set, get) => ({
     const s = get()
     const victory = checkVictory(s.tiles, s.deck, s.turnCount + 1)
     if (victory !== null) {
-      set({ phase: PHASES.GAME_OVER, winner: victory, turnCount: s.turnCount + 1 })
+      set({
+        phase: PHASES.GAME_OVER,
+        winner: victory,
+        turnCount: s.turnCount + 1,
+        specialFeedback: null,
+      })
       return
     }
     set({
@@ -188,6 +287,7 @@ export const useGameStore = create((set, get) => ({
       currentCard: null,
       landingType: null,
       lastAnswerCorrect: null,
+      specialFeedback: null,
     })
   },
 

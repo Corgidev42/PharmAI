@@ -26,6 +26,7 @@ export default function ScoreBoard() {
       <div className="space-y-3">
         {players.map((player) => {
           const owned = countOwnedTiles(tiles, player.id)
+          const bonus = player.bonus ?? 0
           const isActive = player.id === currentPlayer
 
           return (
@@ -42,10 +43,13 @@ export default function ScoreBoard() {
               />
               <div className="flex-1 min-w-0">
                 <p className="text-sm font-medium text-gray-200 truncate">{player.name}</p>
-                <p className="text-xs text-gray-500">{owned} case{owned !== 1 ? 's' : ''}</p>
+                <p className="text-xs text-gray-500">
+                  {owned} case{owned !== 1 ? 's' : ''}
+                  {bonus !== 0 ? ` · bonus ${bonus > 0 ? '+' : ''}${bonus}` : ''}
+                </p>
               </div>
               <span className="text-lg font-bold" style={{ color: player.color }}>
-                {player.score}
+                {player.score + bonus}
               </span>
             </div>
           )

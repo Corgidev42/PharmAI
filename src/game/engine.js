@@ -1,4 +1,12 @@
-import { TOTAL_TILES, DICE_MIN, DICE_MAX, DUEL_PENALTY, MAX_TURNS } from './constants.js'
+import {
+  TOTAL_TILES,
+  DICE_MIN,
+  DICE_MAX,
+  DUEL_PENALTY,
+  MAX_TURNS,
+  TILE_SPECIAL_AT_INDEX,
+  SPECIAL_TILE,
+} from './constants.js'
 
 export function rollDice() {
   return Math.floor(Math.random() * (DICE_MAX - DICE_MIN + 1)) + DICE_MIN
@@ -12,11 +20,12 @@ export function createInitialTiles() {
   return Array.from({ length: TOTAL_TILES }, (_, i) => ({
     id: i,
     owner: null,
+    special: TILE_SPECIAL_AT_INDEX[i] ?? null,
   }))
 }
 
 export function createPlayer(id, name, color) {
-  return { id, name, position: 0, score: 0, color }
+  return { id, name, position: 0, score: 0, bonus: 0, color }
 }
 
 /**
@@ -51,15 +60,33 @@ export function checkAnswer(card, answer) {
 
 export function resolveLanding(tiles, tileIndex, playerId) {
   const tile = tiles[tileIndex]
+  if (tile.special) {
+    if (tile.special === SPECIAL_TILE.DEPART) return 'SPECIAL_DEPART'
+    if (tile.special === SPECIAL_TILE.CHANCE) return 'SPECIAL_CHANCE'
+    if (tile.special === SPECIAL_TILE.TAX) return 'SPECIAL_TAX'
+    if (tile.special === SPECIAL_TILE.PARC || tile.special === SPECIAL_TILE.PRISON)
+      return 'SPECIAL_REST'
+  }
   if (tile.owner === null) return 'FREE'
   if (tile.owner === playerId) return 'OWN'
   return 'OPPONENT'
 }
 
 export function captureTile(tiles, tileIndex, playerId) {
+  const target = tiles[tileIndex]
+  if (target.special) return tiles
   return tiles.map((t, i) =>
     i === tileIndex ? { ...t, owner: playerId } : t
   )
+}
+
+/** Bonus Monopoly (points hors nombre de cases possédées). */
+export function applyPlayerBonus(players, playerId, delta) {
+  return players.map((p) => {
+    if (p.id !== playerId) return p
+    const next = (p.bonus ?? 0) + delta
+    return { ...p, bonus: delta < 0 ? Math.max(0, next) : next }
+  })
 }
 
 export function applyDuelPenalty(player) {

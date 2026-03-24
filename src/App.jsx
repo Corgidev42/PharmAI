@@ -5,6 +5,7 @@ import ScoreBoard from './components/ScoreBoard'
 import Dice from './components/Dice'
 import QuestionModal from './components/QuestionModal'
 import DuelBanner from './components/DuelBanner'
+import SpecialEventModal from './components/SpecialEventModal'
 import GameOverScreen from './components/GameOverScreen'
 
 export default function App() {
@@ -32,6 +33,7 @@ export default function App() {
       </div>
       <QuestionModal />
       <DuelBanner />
+      <SpecialEventModal />
     </div>
   )
 }

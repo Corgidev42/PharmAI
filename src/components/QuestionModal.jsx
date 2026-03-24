@@ -64,7 +64,16 @@ function OpenQuestion({ card, onAnswer }) {
   )
 }
 
-function ResultDisplay({ correct, onProceed }) {
+function ResultDisplay({ correct, onProceed, isChance }) {
+  const captureLine =
+    isChance
+      ? correct
+        ? '+1 point bonus (case Chance, pas de propriété).'
+        : 'Pas de bonus — la carte est tout de même consommée.'
+      : correct
+        ? 'Vous capturez cette case !'
+        : 'Aucune capture cette fois.'
+
   return (
     <motion.div
       initial={{ scale: 0.8, opacity: 0 }}
@@ -80,7 +89,7 @@ function ResultDisplay({ correct, onProceed }) {
         {correct ? 'Bonne réponse !' : 'Mauvaise réponse...'}
       </p>
       <p className="text-sm text-gray-400">
-        {correct ? 'Vous capturez cette case !' : 'Aucune capture cette fois.'}
+        {captureLine}
       </p>
       <button
         onClick={onProceed}
@@ -103,7 +112,9 @@ export default function QuestionModal() {
   const proceedAfterResult = useGameStore((s) => s.proceedAfterResult)
 
   const landingType = useGameStore((s) => s.landingType)
-  const visible = phase === PHASES.QUESTION || (phase === PHASES.RESULT && landingType === 'FREE')
+  const visible =
+    phase === PHASES.QUESTION ||
+    (phase === PHASES.RESULT && (landingType === 'FREE' || landingType === 'CHANCE'))
   const player = players[currentPlayer]
 
   return (
@@ -124,6 +135,11 @@ export default function QuestionModal() {
           >
             {phase === PHASES.QUESTION && currentCard && (
               <>
+                {landingType === 'CHANCE' && (
+                  <p className="text-xs font-semibold text-violet-400 mb-3 px-2 py-1.5 rounded-lg bg-violet-500/10 border border-violet-500/20">
+                    Case Chance — une bonne réponse donne +1 bonus ; vous ne prenez pas la case.
+                  </p>
+                )}
                 <div className="flex items-center justify-between mb-4">
                   <span
                     className="text-xs font-semibold uppercase tracking-wider px-2 py-1 rounded"
@@ -144,7 +160,11 @@ export default function QuestionModal() {
             )}
 
             {phase === PHASES.RESULT && (
-              <ResultDisplay correct={lastAnswerCorrect} onProceed={proceedAfterResult} />
+              <ResultDisplay
+                correct={lastAnswerCorrect}
+                onProceed={proceedAfterResult}
+                isChance={landingType === 'CHANCE'}
+              />
             )}
           </motion.div>
         </motion.div>

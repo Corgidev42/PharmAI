@@ -34,11 +34,15 @@ export default function GameOverScreen() {
               {winnerPlayer.name}
             </p>
           )}
+          <p className="text-xs text-gray-500 px-2">
+            Le gagnant est celui qui possède le plus de cases (les points bonus des cases spéciales ne changent pas ce classement).
+          </p>
         </div>
 
         <div className="glass rounded-2xl p-4 space-y-3">
           {players.map((player) => {
             const owned = countOwnedTiles(tiles, player.id)
+            const bonus = player.bonus ?? 0
             const isWinner = player.id === winner
             return (
               <div
@@ -52,9 +56,12 @@ export default function GameOverScreen() {
                   style={{ backgroundColor: player.color }}
                 />
                 <span className="flex-1 text-left text-gray-200 font-medium">{player.name}</span>
-                <span className="text-sm text-gray-400">{owned} cases</span>
+                <span className="text-sm text-gray-400">
+                  {owned} cases
+                  {bonus !== 0 ? ` · bonus ${bonus > 0 ? '+' : ''}${bonus}` : ''}
+                </span>
                 <span className="text-lg font-bold" style={{ color: player.color }}>
-                  {player.score}
+                  {player.score + bonus}
                 </span>
               </div>
             )
