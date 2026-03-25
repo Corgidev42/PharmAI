@@ -56,7 +56,7 @@ npm run preview
 
 - **Deck vide** : dès qu’une carte est nécessaire (case libre, duel ou Chance) et qu’il n’y en a plus, la partie **s’arrête** et le gagnant est celui qui possède **le plus de cases** (égalité possible).
 - **Retomber sur la même case** : chaque arrêt tire la **prochaine carte du deck** dans l’ordre. Ce n’est **pas** la même question (sauf si vous rechargez un deck et rejouez la même séquence).
-- **Cases spéciales** (style Monopoly) : **Départ** (+1 bonus), **Taxe** (−1 bonus, minimum 0), **Chance** (question : +1 bonus si bonne réponse, **sans** capture de case), **Parc** / **Prison** (repos, pas de question). Les bonus n’influent pas sur la victoire « plus de cases ».
+- **Cases spéciales** : **Départ** (+1 bonus), **Fée des bonbons** (+1), **Potion rose** (+2), **Mégaphone** (+1), **Taxe des licornes** (−1 bonus, min. 0), **Chance** (question bonus sans capture), **Nuage** / **Bulles** / **Toile kawaii** / **Parc** (repos), **Serpent** / **Échelle** (glissade de −2 ou +2 cases puis résolution de la case d’arrivée). Les bonus n’influent pas sur la victoire « plus de cases ».
 
 ## Format `deck.json`
 

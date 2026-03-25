@@ -11,8 +11,9 @@ export default function DuelBanner() {
   const submitAnswer = useGameStore((s) => s.submitAnswer)
   const lastAnswerCorrect = useGameStore((s) => s.lastAnswerCorrect)
   const proceedAfterResult = useGameStore((s) => s.proceedAfterResult)
-
   const landingType = useGameStore((s) => s.landingType)
+  const slideNote = useGameStore((s) => s.slideNote)
+
   const [selected, setSelected] = useState(null)
 
   const visible = phase === PHASES.DUEL || (phase === PHASES.RESULT && landingType === 'OPPONENT')
@@ -27,37 +28,42 @@ export default function DuelBanner() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm p-4"
+          className="fixed inset-0 z-[55] flex items-center justify-center bg-fuchsia-950/75 backdrop-blur-md p-4"
         >
           <motion.div
-            initial={{ scale: 0.9, y: 20 }}
-            animate={{ scale: 1, y: 0 }}
-            exit={{ scale: 0.9, y: 20 }}
-            className="w-full max-w-lg rounded-2xl border-2 border-rose-500/40 bg-gray-900 shadow-2xl overflow-hidden"
+            initial={{ scale: 0.9, rotate: -1 }}
+            animate={{ scale: 1, rotate: 0 }}
+            exit={{ scale: 0.9 }}
+            className="w-full max-w-lg rounded-[1.75rem] border-2 border-rose-400/50 bg-gradient-to-b from-purple-950/98 to-rose-950/40 shadow-neon-rose overflow-hidden"
           >
-            {/* Duel header */}
-            <div className="bg-gradient-to-r from-rose-900/40 to-amber-900/40 px-6 py-4 flex items-center justify-between">
-              <div className="flex items-center gap-3">
-                <div className="w-4 h-4 rounded-full" style={{ backgroundColor: attacker.color }} />
-                <span className="font-bold text-gray-100">{attacker.name}</span>
+            <div className="bg-gradient-to-r from-pink-500/30 via-rose-500/25 to-amber-400/25 px-5 py-4 flex items-center justify-between border-b border-pink-400/20">
+              <div className="flex items-center gap-2">
+                <div className="w-5 h-5 rounded-full shadow-neon-pink" style={{ backgroundColor: attacker.color }} />
+                <span className="font-extrabold text-white text-sm">{attacker.name}</span>
               </div>
-              <span className="text-xs font-bold uppercase tracking-widest text-rose-400">
-                Duel
+              <span className="text-[10px] font-extrabold uppercase tracking-[0.2em] text-amber-200">
+                Duel ✨
               </span>
-              <div className="flex items-center gap-3">
-                <span className="font-bold text-gray-100">{defender.name}</span>
-                <div className="w-4 h-4 rounded-full" style={{ backgroundColor: defender.color }} />
+              <div className="flex items-center gap-2">
+                <span className="font-extrabold text-white text-sm">{defender.name}</span>
+                <div className="w-5 h-5 rounded-full shadow-neon-cyan" style={{ backgroundColor: defender.color }} />
               </div>
             </div>
 
             <div className="p-6">
+              {slideNote && phase === PHASES.DUEL && (
+                <p className="text-[11px] font-bold text-cyan-200 mb-4 px-3 py-2 rounded-xl bg-cyan-500/15 border border-cyan-400/35 whitespace-pre-line">
+                  {slideNote}
+                </p>
+              )}
+
               {phase === PHASES.DUEL && currentCard && (
                 <>
-                  <p className="text-xs text-rose-300 mb-1">
-                    Question de difficulté {'★'.repeat(currentCard.difficulty)}{'☆'.repeat(3 - currentCard.difficulty)}
-                    {' '}&mdash; Répondez correctement pour capturer la case !
+                  <p className="text-xs font-bold text-rose-200/90 mb-2">
+                    Difficulté {'★'.repeat(currentCard.difficulty)}
+                    {'☆'.repeat(3 - currentCard.difficulty)} — vole la case si tu réussis !
                   </p>
-                  <p className="text-lg font-medium text-gray-100 leading-relaxed mt-3 mb-5">
+                  <p className="text-lg font-bold text-white leading-relaxed mt-2 mb-5">
                     {currentCard.question}
                   </p>
 
@@ -68,16 +74,19 @@ export default function DuelBanner() {
                           key={opt}
                           onClick={() => {
                             setSelected(opt)
-                            setTimeout(() => { submitAnswer(opt); setSelected(null) }, 200)
+                            setTimeout(() => {
+                              submitAnswer(opt)
+                              setSelected(null)
+                            }, 200)
                           }}
                           disabled={selected !== null}
-                          className={`px-4 py-3 rounded-lg border text-left transition-all text-sm font-medium
+                          className={`px-4 py-3.5 rounded-2xl border-2 text-left text-sm font-bold transition-all
                             ${
                               selected === opt
-                                ? 'border-rose-400 bg-rose-500/20 text-rose-200'
-                                : 'border-gray-600 bg-gray-700/50 text-gray-200 hover:bg-gray-700'
+                                ? 'border-rose-400 bg-rose-500/25 text-rose-50 shadow-neon-rose'
+                                : 'border-rose-400/30 bg-purple-950/50 text-pink-50 hover:border-rose-400/60'
                             }
-                            ${selected !== null && selected !== opt ? 'opacity-40' : ''}
+                            ${selected !== null && selected !== opt ? 'opacity-35' : ''}
                           `}
                         >
                           {opt}
@@ -86,24 +95,22 @@ export default function DuelBanner() {
                     </div>
                   ) : (
                     <div className="space-y-3">
-                      <div className="p-3 rounded-lg bg-gray-700/40 border border-gray-600">
-                        <p className="text-xs text-gray-400 mb-1">Réponse attendue :</p>
-                        <p className="text-sm text-gray-200 italic">{currentCard.answer}</p>
+                      <div className="p-4 rounded-2xl bg-purple-950/70 border-2 border-rose-400/25">
+                        <p className="text-xs font-bold text-rose-300/80 mb-1">Réponse attendue</p>
+                        <p className="text-sm text-pink-100 italic">{currentCard.answer}</p>
                       </div>
                       <div className="flex gap-3">
                         <button
                           onClick={() => submitAnswer(true)}
-                          className="flex-1 py-2.5 rounded-lg bg-emerald-600/20 border border-emerald-500/50
-                            text-emerald-300 font-medium hover:bg-emerald-600/30 transition-colors"
+                          className="flex-1 py-3 rounded-2xl bg-emerald-500/25 border-2 border-emerald-400/50 text-emerald-100 font-extrabold"
                         >
-                          Correct
+                          Validé !
                         </button>
                         <button
                           onClick={() => submitAnswer(false)}
-                          className="flex-1 py-2.5 rounded-lg bg-rose-600/20 border border-rose-500/50
-                            text-rose-300 font-medium hover:bg-rose-600/30 transition-colors"
+                          className="flex-1 py-3 rounded-2xl bg-rose-500/25 border-2 border-rose-400/50 text-rose-100 font-extrabold"
                         >
-                          Incorrect
+                          Nope
                         </button>
                       </div>
                     </div>
@@ -113,22 +120,24 @@ export default function DuelBanner() {
 
               {phase === PHASES.RESULT && (
                 <motion.div
-                  initial={{ scale: 0.8, opacity: 0 }}
+                  initial={{ scale: 0.85, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
-                  className="text-center space-y-4 py-4"
+                  className="text-center space-y-4 py-2"
                 >
-                  <div className={`text-6xl ${lastAnswerCorrect ? 'text-emerald-400' : 'text-rose-400'}`}>
-                    {lastAnswerCorrect ? '⚔️' : '🛡️'}
+                  {slideNote && (
+                    <p className="text-[11px] text-cyan-200/90 font-bold whitespace-pre-line">{slideNote}</p>
+                  )}
+                  <div className="text-6xl drop-shadow-[0_0_20px_rgba(251,113,133,0.5)]">
+                    {lastAnswerCorrect ? '👑' : '😿'}
                   </div>
-                  <p className={`text-xl font-bold ${lastAnswerCorrect ? 'text-emerald-300' : 'text-rose-300'}`}>
-                    {lastAnswerCorrect ? 'Case capturée !' : 'Duel perdu ! -1 point'}
+                  <p className={`text-xl font-extrabold ${lastAnswerCorrect ? 'text-emerald-300' : 'text-rose-300'}`}>
+                    {lastAnswerCorrect ? 'La case change de main !' : 'Duel perdu… −1 pt'}
                   </p>
                   <button
                     onClick={proceedAfterResult}
-                    className="px-6 py-2.5 rounded-lg bg-gray-700 border border-gray-600
-                      text-gray-200 font-medium hover:bg-gray-600 transition-colors"
+                    className="px-8 py-3 rounded-2xl font-extrabold bg-gradient-to-r from-rose-500 to-pink-500 text-white shadow-neon-rose"
                   >
-                    Continuer
+                    On continue !
                   </button>
                 </motion.div>
               )}

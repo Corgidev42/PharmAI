@@ -22,7 +22,9 @@ function DiceFace({ value }) {
         const hasDot = dots.some(([r, c]) => r === row && c === col)
         return (
           <div key={i} className="flex items-center justify-center">
-            {hasDot && <div className="w-2.5 h-2.5 rounded-full bg-gray-100" />}
+            {hasDot && (
+              <div className="w-2.5 h-2.5 rounded-full bg-cyan-300 shadow-[0_0_8px_rgba(103,232,249,0.9)]" />
+            )}
           </div>
         )
       })}
@@ -63,28 +65,28 @@ export default function Dice() {
 
   return (
     <div className="flex flex-col items-center gap-3">
-      <p className="text-sm text-gray-400">
+      <p className="text-sm font-semibold text-pink-200/85 text-center max-w-[14rem]">
         {isActive ? (
           <>
             Tour de{' '}
-            <span style={{ color: players[currentPlayer].color }} className="font-semibold">
+            <span style={{ color: players[currentPlayer].color }} className="font-extrabold drop-shadow-[0_0_6px_currentColor]">
               {players[currentPlayer].name}
             </span>
-            {' '}&mdash; Lancez le dé !
+            {' '}— lance le dé !
           </>
         ) : (
-          phase === PHASES.MOVING && `Déplacement de ${diceValue} case${diceValue > 1 ? 's' : ''}...`
+          phase === PHASES.MOVING && `Hop ! ${diceValue} case${diceValue > 1 ? 's' : ''}…`
         )}
       </p>
 
       <motion.button
         onClick={handleRoll}
         disabled={!isActive || rolling}
-        className={`relative w-20 h-20 rounded-xl border-2 flex items-center justify-center
-          transition-colors ${
+        className={`relative w-24 h-24 rounded-3xl border-2 flex items-center justify-center
+          transition-all ${
             isActive
-              ? 'border-gray-500 bg-gray-800 hover:bg-gray-700 cursor-pointer'
-              : 'border-gray-700 bg-gray-800/50 cursor-default opacity-60'
+              ? 'border-pink-400/70 bg-purple-950/80 hover:border-cyan-400/60 cursor-pointer shadow-neon-pink hover:shadow-neon-cyan'
+              : 'border-white/15 bg-purple-950/50 cursor-default opacity-55'
           }`}
         animate={rolling ? { rotate: [0, 15, -15, 10, -10, 0] } : { rotate: 0 }}
         transition={{ duration: 0.4, repeat: rolling ? Infinity : 0 }}

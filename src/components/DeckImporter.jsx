@@ -42,11 +42,11 @@ export default function DeckImporter() {
         onDragLeave={() => setDragging(false)}
         onDrop={handleDrop}
         onClick={() => inputRef.current?.click()}
-        className={`flex flex-col items-center justify-center gap-2 p-6 rounded-xl border-2 border-dashed
-          cursor-pointer transition-colors ${
+        className={`flex flex-col items-center justify-center gap-2 p-6 rounded-2xl border-2 border-dashed
+          cursor-pointer transition-all ${
             dragging
-              ? 'border-indigo-400 bg-indigo-500/10'
-              : 'border-gray-600 bg-gray-800/40 hover:bg-gray-800/60 hover:border-gray-500'
+              ? 'border-pink-400 bg-pink-500/15 shadow-neon-pink'
+              : 'border-cyan-400/40 bg-purple-950/40 hover:bg-fuchsia-950/30 hover:border-pink-400/50'
           }`}
       >
         <svg className="w-8 h-8 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">

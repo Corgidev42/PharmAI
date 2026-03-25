@@ -11,16 +11,16 @@ export default function ScoreBoard() {
   const cardsLeft = useGameStore((s) => s.deck.cards.length - s.deck.currentIndex)
 
   return (
-    <div className="glass rounded-2xl p-5 w-64 space-y-4">
+    <div className="glass-candy rounded-3xl p-5 w-64 space-y-4 border-2 border-cyan-400/25 shadow-neon-cyan">
       {deckTheme && (
-        <p className="text-xs text-gray-400 text-center font-medium tracking-wide uppercase">
+        <p className="text-xs text-fuchsia-200/90 text-center font-extrabold tracking-wide uppercase">
           {deckTheme}
         </p>
       )}
 
-      <div className="flex justify-between text-xs text-gray-500">
+      <div className="flex justify-between text-[11px] font-semibold text-cyan-200/70">
         <span>Tour {turnCount}/{maxTurns}</span>
-        <span>{cardsLeft} carte{cardsLeft !== 1 ? 's' : ''} restante{cardsLeft !== 1 ? 's' : ''}</span>
+        <span>{cardsLeft} carte{cardsLeft !== 1 ? 's' : ''}</span>
       </div>
 
       <div className="space-y-3">
@@ -32,23 +32,24 @@ export default function ScoreBoard() {
           return (
             <div
               key={player.id}
-              className={`flex items-center gap-3 px-3 py-2.5 rounded-xl transition-colors ${
-                isActive ? 'bg-gray-700/50 ring-1' : 'bg-gray-800/30'
+              className={`flex items-center gap-3 px-3 py-3 rounded-2xl transition-all border-2 ${
+                isActive
+                  ? 'bg-pink-500/15 border-pink-400/50 shadow-neon-pink'
+                  : 'bg-purple-950/40 border-white/10'
               }`}
-              style={isActive ? { ringColor: player.color + '60' } : {}}
             >
               <div
-                className="w-5 h-5 rounded-full shrink-0 ring-2 ring-white/20"
+                className="w-6 h-6 rounded-full shrink-0 ring-2 ring-white/40 shadow-lg"
                 style={{ backgroundColor: player.color }}
               />
               <div className="flex-1 min-w-0">
-                <p className="text-sm font-medium text-gray-200 truncate">{player.name}</p>
-                <p className="text-xs text-gray-500">
+                <p className="text-sm font-bold text-white truncate">{player.name}</p>
+                <p className="text-[11px] text-pink-200/70">
                   {owned} case{owned !== 1 ? 's' : ''}
                   {bonus !== 0 ? ` · bonus ${bonus > 0 ? '+' : ''}${bonus}` : ''}
                 </p>
               </div>
-              <span className="text-lg font-bold" style={{ color: player.color }}>
+              <span className="text-xl font-extrabold tabular-nums drop-shadow-[0_0_8px_currentColor]" style={{ color: player.color }}>
                 {player.score + bonus}
               </span>
             </div>

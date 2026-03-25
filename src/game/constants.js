@@ -1,41 +1,57 @@
 export const TOTAL_TILES = 24
 export const MAX_TURNS = 30
 
-/** Cases « Monopoly » : pas de propriété, effets immédiats ou carte bonus. */
+/** Cases spéciales : classiques + inventions « mignonnes » (serpents, fée, potion…). */
 export const SPECIAL_TILE = {
   DEPART: 'DEPART',
   CHANCE: 'CHANCE',
   TAX: 'TAX',
   PARC: 'PARC',
   PRISON: 'PRISON',
+  /** +1 bonus — fée des bonbons */
+  FEE_BONBONS: 'FEE_BONBONS',
+  /** Glissade −2 cases (rebondit jusqu’à une case stable) */
+  SERPENT: 'SERPENT',
+  /** Glissade +2 cases */
+  ECHELLE: 'ECHELLE',
+  /** +2 bonus — potion rose */
+  POTION_DOUX: 'POTION_DOUX',
+  /** Repos — nuage tout doux */
+  NUAGE: 'NUAGE',
+  /** +1 bonus — tu flex */
+  MEGAPHONE: 'MEGAPHONE',
+  /** Repos — bulles magiques */
+  BULLES_PAIX: 'BULLES_PAIX',
+  /** Repos — toile d’araignée (coin mignon, rien de méchant) */
+  TOILE_ARAIGNEE: 'TOILE_ARAIGNEE',
 }
 
-/** Par index de case (0–23). null = case propriété classique. */
+/** Par index 0–23. null = case propriété classique. */
 export const TILE_SPECIAL_AT_INDEX = [
-  SPECIAL_TILE.DEPART, // 0 — Départ
+  SPECIAL_TILE.DEPART,
+  SPECIAL_TILE.FEE_BONBONS,
   null,
+  SPECIAL_TILE.ECHELLE,
+  SPECIAL_TILE.TAX,
   null,
+  SPECIAL_TILE.SERPENT,
   null,
-  SPECIAL_TILE.TAX, // 4 — Impôt
+  SPECIAL_TILE.CHANCE,
+  SPECIAL_TILE.POTION_DOUX,
   null,
+  SPECIAL_TILE.MEGAPHONE,
+  SPECIAL_TILE.NUAGE,
   null,
+  SPECIAL_TILE.BULLES_PAIX,
   null,
-  SPECIAL_TILE.CHANCE, // 8 — Chance (question bonus, pas de propriété)
+  SPECIAL_TILE.CHANCE,
   null,
+  SPECIAL_TILE.SERPENT,
+  SPECIAL_TILE.FEE_BONBONS,
+  SPECIAL_TILE.TAX,
   null,
-  null,
-  SPECIAL_TILE.PARC, // 12 — Parc gratuit (repos)
-  null,
-  null,
-  null,
-  SPECIAL_TILE.CHANCE, // 16 — Chance
-  null,
-  null,
-  null,
-  SPECIAL_TILE.TAX, // 20 — Taxe
-  null,
-  SPECIAL_TILE.PRISON, // 22 — Visite simple (repos)
-  null,
+  SPECIAL_TILE.TOILE_ARAIGNEE,
+  SPECIAL_TILE.ECHELLE,
 ]
 
 export const SPECIAL_TILE_LABEL = {
@@ -44,12 +60,39 @@ export const SPECIAL_TILE_LABEL = {
   [SPECIAL_TILE.TAX]: 'Taxe',
   [SPECIAL_TILE.PARC]: 'Parc',
   [SPECIAL_TILE.PRISON]: 'Prison',
+  [SPECIAL_TILE.FEE_BONBONS]: 'Fée',
+  [SPECIAL_TILE.SERPENT]: 'Serpent',
+  [SPECIAL_TILE.ECHELLE]: 'Échelle',
+  [SPECIAL_TILE.POTION_DOUX]: 'Potion',
+  [SPECIAL_TILE.NUAGE]: 'Nuage',
+  [SPECIAL_TILE.MEGAPHONE]: 'Mégaphone',
+  [SPECIAL_TILE.BULLES_PAIX]: 'Bulles',
+  [SPECIAL_TILE.TOILE_ARAIGNEE]: 'Toile',
 }
+
+/** Couleur néon pour le plateau (Tailwind arbitrary / thème). */
+export const SPECIAL_TILE_ACCENT = {
+  [SPECIAL_TILE.DEPART]: 'lime',
+  [SPECIAL_TILE.CHANCE]: 'violet',
+  [SPECIAL_TILE.TAX]: 'rose',
+  [SPECIAL_TILE.PARC]: 'cyan',
+  [SPECIAL_TILE.PRISON]: 'slate',
+  [SPECIAL_TILE.FEE_BONBONS]: 'pink',
+  [SPECIAL_TILE.SERPENT]: 'emerald',
+  [SPECIAL_TILE.ECHELLE]: 'sky',
+  [SPECIAL_TILE.POTION_DOUX]: 'fuchsia',
+  [SPECIAL_TILE.NUAGE]: 'sky',
+  [SPECIAL_TILE.MEGAPHONE]: 'amber',
+  [SPECIAL_TILE.BULLES_PAIX]: 'cyan',
+  [SPECIAL_TILE.TOILE_ARAIGNEE]: 'violet',
+}
+
 export const DICE_MIN = 1
 export const DICE_MAX = 6
 export const DUEL_PENALTY = 1
 
-export const PLAYER_COLORS = ['#6366f1', '#f59e0b']
+/** Couleurs joueurs : néon bien flashy */
+export const PLAYER_COLORS = ['#ff6ec7', '#5dffe1']
 export const PLAYER_NAMES = ['Joueur 1', 'Joueur 2']
 
 export const PHASES = {
@@ -62,11 +105,6 @@ export const PHASES = {
   GAME_OVER: 'GAME_OVER',
 }
 
-// Board layout: rectangular loop of 24 tiles
-// Top row:    0..6   (left to right, 7 tiles)
-// Right col:  7..11  (top to bottom, 5 tiles)
-// Bottom row: 12..18 (right to left, 7 tiles)
-// Left col:   19..23 (bottom to top, 5 tiles)
 export const BOARD_COLS = 8
 export const BOARD_ROWS = 7
 

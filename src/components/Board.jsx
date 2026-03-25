@@ -3,6 +3,7 @@ import { useGameStore } from '../store/useGameStore'
 import { TOTAL_TILES, BOARD_COLS, BOARD_ROWS, getTilePosition } from '../game/constants'
 import Tile from './Tile'
 import Pawn from './Pawn'
+import SnakeDecor from './SnakeDecor'
 
 export default function Board() {
   const tiles = useGameStore((s) => s.tiles)
@@ -24,9 +25,10 @@ export default function Board() {
   }, [tilePositions])
 
   return (
-    <div className="relative">
+    <div className="relative glass-candy p-5 md:p-6 border-2 border-pink-400/25">
+      <SnakeDecor />
       <div
-        className="grid gap-1.5"
+        className="grid gap-1.5 relative z-[1]"
         style={{
           gridTemplateColumns: `repeat(${BOARD_COLS}, 4rem)`,
           gridTemplateRows: `repeat(${BOARD_ROWS}, 4rem)`,
@@ -68,3 +70,4 @@ export default function Board() {
     </div>
   )
 }
+

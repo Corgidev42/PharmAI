@@ -20,13 +20,16 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center p-4 gap-6">
-      <h1 className="text-2xl font-bold tracking-tight text-gray-300">
+    <div className="min-h-screen flex flex-col items-center justify-center p-4 gap-8 pb-12">
+      <h1 className="text-3xl md:text-4xl title-candy animate-neon-flicker">
         PharmAI
       </h1>
-      <div className="flex flex-col lg:flex-row items-center lg:items-start gap-6">
+      <p className="-mt-4 text-sm text-pink-200/70 font-semibold">
+        Plateau tout doux · néon · serpents amicaux
+      </p>
+      <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8">
         <ScoreBoard />
-        <div className="flex flex-col items-center gap-4">
+        <div className="flex flex-col items-center gap-6">
           <Board />
           <Dice />
         </div>

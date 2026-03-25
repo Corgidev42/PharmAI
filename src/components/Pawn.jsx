@@ -7,7 +7,7 @@ export default function Pawn({ playerId, row, col, color }) {
 
   return (
     <motion.div
-      className="absolute w-7 h-7 rounded-full ring-2 ring-white/40 shadow-xl z-10 pointer-events-none"
+      className="absolute w-7 h-7 rounded-full ring-2 ring-white/60 shadow-[0_0_14px_currentColor] z-[30] pointer-events-none"
       style={{ backgroundColor: color }}
       animate={{
         top: row * CELL_SIZE + 18 + offset,

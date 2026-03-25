@@ -168,19 +168,19 @@ export default function DeckCreator({ onClose }) {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm p-4 overflow-y-auto"
+      className="fixed inset-0 z-[100] flex items-center justify-center bg-purple-950/80 backdrop-blur-md p-4 overflow-y-auto"
     >
       <motion.div
         initial={{ scale: 0.95, y: 20 }}
         animate={{ scale: 1, y: 0 }}
         exit={{ scale: 0.95, y: 20 }}
-        className="w-full max-w-2xl rounded-2xl border border-gray-700/50 bg-gray-900 shadow-2xl my-8"
+        className="w-full max-w-2xl rounded-[1.75rem] border-2 border-pink-400/35 bg-gradient-to-b from-purple-950/98 to-fuchsia-950/40 shadow-neon-pink my-8"
       >
         {/* Header */}
-        <div className="flex items-center justify-between px-6 py-4 border-b border-gray-800">
+        <div className="flex items-center justify-between px-6 py-4 border-b border-pink-400/20">
           <div>
-            <h2 className="text-lg font-bold text-gray-100">Créer un deck via Gemini</h2>
-            <p className="text-xs text-gray-500 mt-0.5">PDF → Extraction → Questions (Google AI)</p>
+            <h2 className="text-lg font-extrabold title-candy">Deck magique Gemini</h2>
+            <p className="text-xs text-pink-200/70 mt-0.5">PDF → paillettes → questions</p>
           </div>
           <button
             onClick={onClose}
