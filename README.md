@@ -65,6 +65,8 @@ Même schéma pour chaque joueur. Voir `public/deck.sample.json` : champs `theme
 
 > **Types supportés par l’import :** `QCM` et `OPEN` uniquement (`src/game/deckLoader.js`).
 
+Les decks versionnés dans le dépôt sont rangés par joueur : **`public/moi/`** (tes fichiers JSON) et **`public/lou/`** (ceux de Lou). L’exemple chargé par défaut à l’écran d’accueil reste **`public/deck.sample.json`** à la racine de `public/`.
+
 ## Manuel : créer un deck avec NotebookLM
 
 Méthode pour produire un fichier JSON de révision **à partir de tes documents** (PDF, cours, notes) dans [NotebookLM](https://notebooklm.google.com/), sans passer par Gemini dans l’app.
@@ -77,7 +79,7 @@ Méthode pour produire un fichier JSON de révision **à partir de tes documents
 ### Prérequis
 
 - Un notebook NotebookLM avec tes **sources** uploadées (documents de cours).
-- Un éditeur de texte pour coller le JSON généré dans un fichier `.json` (ex. `public/mon-deck.json`).
+- Un éditeur de texte pour coller le JSON généré dans un fichier `.json` (ex. `public/moi/mon-deck.json` ou `public/lou/...`).
 
 ### Déroulé
 
@@ -85,7 +87,7 @@ Méthode pour produire un fichier JSON de révision **à partir de tes documents
 2. **Ouvrir le chat** du notebook (pas seulement les résumés audio).
 3. **Coller le prompt ci‑dessous** tel quel (tu peux remplacer « mes documents sources » par une précision : ex. « focus chapitre X »).
 4. **Vérifier la sortie** : un seul bloc JSON valide, sans markdown autour, sans texte avant/après.
-5. **Enregistrer** le contenu dans un fichier, par exemple `public/mon-deck.json`.
+5. **Enregistrer** le contenu dans un fichier, par exemple `public/moi/mon-deck.json` ou `public/lou/mon-deck.json`.
 6. **Importer dans PharmAI** : écran d’accueil → import du deck (ou chargement par URL selon ton flux).
 
 ### Prompt à coller dans NotebookLM
