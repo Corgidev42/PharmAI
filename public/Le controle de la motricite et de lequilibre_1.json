@@ -1,0 +1,429 @@
+{
+  "theme": "Contrôle moteur et Pharmacologie",
+  "cards": [
+    {
+      "id": 1,
+      "type": "QCM",
+      "question": "Quel est le rôle principal du cervelet dans le système moteur ?",
+      "options": [
+        "Relais sensitif",
+        "Contrôle du mouvement volontaire",
+        "Contrôle de l'équilibre et de la coordination",
+        "Centre réflexe polysynaptique"
+      ],
+      "answer": "Contrôle de l'équilibre et de la coordination",
+      "difficulty": 1
+    },
+    {
+      "id": 2,
+      "type": "QCM",
+      "question": "Quel système contrôle spécifiquement le mouvement volontaire ?",
+      "options": [
+        "Le système extra-pyramidal",
+        "Le système pyramidal",
+        "Le système réticulo-spinal",
+        "Le système parasympathique"
+      ],
+      "answer": "Le système pyramidal",
+      "difficulty": 1
+    },
+    {
+      "id": 3,
+      "type": "QCM",
+      "question": "Quel est le rôle fonctionnel fondamental de la moelle épinière pour la motricité ?",
+      "options": [
+        "Centre de l'équilibre",
+        "Relais sensitif cortical",
+        "Centre réflexe",
+        "Programmation du mouvement"
+      ],
+      "answer": "Centre réflexe",
+      "difficulty": 1
+    },
+    {
+      "id": 4,
+      "type": "QCM",
+      "question": "Quel est le principal mécanisme d'action des bêta-bloquants ?",
+      "options": [
+        "Blocage des récepteurs bêta-adrénergiques",
+        "Stimulation des récepteurs alpha",
+        "Inhibition de l'enzyme de conversion",
+        "Blocage des canaux calciques"
+      ],
+      "answer": "Blocage des récepteurs bêta-adrénergiques",
+      "difficulty": 1
+    },
+    {
+      "id": 5,
+      "type": "QCM",
+      "question": "Quelle voie d'administration offre la biodisponibilité la plus élevée ?",
+      "options": [
+        "Orale",
+        "Intraveineuse",
+        "Sublinguale",
+        "Transdermique"
+      ],
+      "answer": "Intraveineuse",
+      "difficulty": 1
+    },
+    {
+      "id": 6,
+      "type": "QCM",
+      "question": "Lequel de ces centres nerveux agit comme un relais pour les voies motrices ?",
+      "options": [
+        "Cervelet",
+        "Thalamus",
+        "Vestibule",
+        "Cortex sensitivo-moteur"
+      ],
+      "answer": "Thalamus",
+      "difficulty": 1
+    },
+    {
+      "id": 7,
+      "type": "QCM",
+      "question": "Quel organe est principalement responsable du métabolisme des médicaments ?",
+      "options": [
+        "Rein",
+        "Foie",
+        "Intestin",
+        "Poumon"
+      ],
+      "answer": "Foie",
+      "difficulty": 1
+    },
+    {
+      "id": 8,
+      "type": "QCM",
+      "question": "Quel ion est massivement libéré par le réticulum sarcoplasmique lors de l'excitation-contraction musculaire ?",
+      "options": [
+        "Sodium (Na+)",
+        "Potassium (K+)",
+        "Calcium (Ca++)",
+        "Magnésium (Mg++)"
+      ],
+      "answer": "Calcium (Ca++)",
+      "difficulty": 1
+    },
+    {
+      "id": 9,
+      "type": "QCM",
+      "question": "Quel neurotransmetteur est libéré au niveau de la plaque motrice ?",
+      "options": [
+        "Dopamine",
+        "Sérotonine",
+        "Acétylcholine (ACh)",
+        "Adrénaline"
+      ],
+      "answer": "Acétylcholine (ACh)",
+      "difficulty": 1
+    },
+    {
+      "id": 10,
+      "type": "OPEN",
+      "question": "Définissez la demi-vie d'élimination d'un médicament.",
+      "answer": "C'est le temps nécessaire pour que la concentration plasmatique du médicament diminue de moitié.",
+      "difficulty": 1
+    },
+    {
+      "id": 11,
+      "type": "OPEN",
+      "question": "Quelle structure du système extra-pyramidal est spécifiquement le centre de l'équilibre ?",
+      "answer": "Le vestibule.",
+      "difficulty": 1
+    },
+    {
+      "id": 12,
+      "type": "OPEN",
+      "question": "De quoi est constituée une unité motrice ?",
+      "answer": "Elle est constituée d'un motoneurone alpha et de l'ensemble des fibres musculaires qu'il innerve.",
+      "difficulty": 1
+    },
+    {
+      "id": 13,
+      "type": "OPEN",
+      "question": "Quel est le rôle fonctionnel des noyaux gris centraux ?",
+      "answer": "Ils interviennent dans la programmation du mouvement.",
+      "difficulty": 1
+    },
+    {
+      "id": 14,
+      "type": "OPEN",
+      "question": "Qu'est-ce que la pharmacovigilance ?",
+      "answer": "C'est la surveillance et l'évaluation des effets indésirables des médicaments après leur mise sur le marché.",
+      "difficulty": 1
+    },
+    {
+      "id": 15,
+      "type": "OPEN",
+      "question": "Où se situe exactement l'aire motrice primaire (aire 4) ?",
+      "answer": "Elle se situe au niveau du cortex moteur, dans le cortex frontal postérieur.",
+      "difficulty": 1
+    },
+    {
+      "id": 16,
+      "type": "QCM",
+      "question": "Quel récepteur est responsable du déclenchement du réflexe myotatique inverse ?",
+      "options": [
+        "Le fuseau neuro-musculaire",
+        "L'organe tendineux de Golgi",
+        "Le nocicepteur cutané",
+        "La plaque motrice"
+      ],
+      "answer": "L'organe tendineux de Golgi",
+      "difficulty": 2
+    },
+    {
+      "id": 17,
+      "type": "QCM",
+      "question": "Quelle fibre sensitive est stimulée par l'étirement du fuseau neuro-musculaire ?",
+      "options": [
+        "Fibre sensitive Ia",
+        "Fibre sensitive Ib",
+        "Fibre Ad",
+        "Fibre C"
+      ],
+      "answer": "Fibre sensitive Ia",
+      "difficulty": 2
+    },
+    {
+      "id": 18,
+      "type": "QCM",
+      "question": "Les enzymes du cytochrome P450 sont principalement impliquées dans quel processus ?",
+      "options": [
+        "L'absorption intestinale",
+        "La distribution tissulaire",
+        "La biotransformation hépatique",
+        "L'excrétion rénale"
+      ],
+      "answer": "La biotransformation hépatique",
+      "difficulty": 2
+    },
+    {
+      "id": 19,
+      "type": "QCM",
+      "question": "Un antagoniste compétitif déplace la courbe dose-réponse de l'agoniste vers :",
+      "options": [
+        "La gauche sans changer l'Emax",
+        "La droite sans changer l'Emax",
+        "La droite en diminuant l'Emax",
+        "La gauche en augmentant l'Emax"
+      ],
+      "answer": "La droite sans changer l'Emax",
+      "difficulty": 2
+    },
+    {
+      "id": 20,
+      "type": "QCM",
+      "question": "D'un point de vue fonctionnel, le réflexe nociceptif en flexion est un réflexe :",
+      "options": [
+        "Monosynaptique",
+        "Polysynaptique",
+        "Myotatique",
+        "Autogénique"
+      ],
+      "answer": "Polysynaptique",
+      "difficulty": 2
+    },
+    {
+      "id": 21,
+      "type": "QCM",
+      "question": "Un agoniste partiel se caractérise par :",
+      "options": [
+        "Une efficacité maximale identique à l'agoniste complet",
+        "Une affinité nulle pour le récepteur",
+        "Une efficacité intrinsèque inférieure à 1",
+        "Une absence totale d'effet pharmacologique"
+      ],
+      "answer": "Une efficacité intrinsèque inférieure à 1",
+      "difficulty": 2
+    },
+    {
+      "id": 22,
+      "type": "QCM",
+      "question": "À quel niveau anatomique s'effectue la décussation des pyramides du faisceau cortico-spinal ?",
+      "options": [
+        "Dans le thalamus",
+        "Dans le mésencéphale",
+        "Dans le bulbe rachidien",
+        "Dans la moelle épinière"
+      ],
+      "answer": "Dans le bulbe rachidien",
+      "difficulty": 2
+    },
+    {
+      "id": 23,
+      "type": "QCM",
+      "question": "Quelle phase des essais cliniques teste l'efficacité du médicament sur un grand nombre de patients ?",
+      "options": [
+        "Phase I",
+        "Phase II",
+        "Phase III",
+        "Phase IV"
+      ],
+      "answer": "Phase III",
+      "difficulty": 2
+    },
+    {
+      "id": 24,
+      "type": "QCM",
+      "question": "Lors d'un réflexe myotatique, le relâchement du muscle antagoniste est rendu possible grâce à :",
+      "options": [
+        "Un interneurone inhibiteur",
+        "L'activation directe d'un motoneurone gamma",
+        "La stimulation de l'organe tendineux de Golgi",
+        "L'inhibition des voies descendantes pyramidales"
+      ],
+      "answer": "Un interneurone inhibiteur",
+      "difficulty": 2
+    },
+    {
+      "id": 25,
+      "type": "OPEN",
+      "question": "Qu'est-ce que l'effet de premier passage hépatique ?",
+      "answer": "C'est le métabolisme d'un médicament par le foie avant qu'il n'atteigne la circulation systémique, ce qui réduit sa biodisponibilité.",
+      "difficulty": 2
+    },
+    {
+      "id": 26,
+      "type": "OPEN",
+      "question": "Quel est le double but fonctionnel du réflexe myotatique inverse (inhibition autogénique) ?",
+      "answer": "Il assure la stabilisation de la contraction musculaire et possède une fonction de protection de l'appareil locomoteur.",
+      "difficulty": 2
+    },
+    {
+      "id": 27,
+      "type": "OPEN",
+      "question": "Expliquez la différence entre la puissance et l'efficacité d'un médicament.",
+      "answer": "La puissance correspond à la dose nécessaire pour produire un effet (EC50), tandis que l'efficacité correspond à l'effet maximal qu'il est possible d'atteindre (Emax).",
+      "difficulty": 2
+    },
+    {
+      "id": 28,
+      "type": "OPEN",
+      "question": "Quelles sont les deux conséquences motrices directes de l'étirement du fuseau neuro-musculaire ?",
+      "answer": "Il entraîne la contraction du muscle agoniste étiré et, simultanément, le relâchement du muscle antagoniste.",
+      "difficulty": 2
+    },
+    {
+      "id": 29,
+      "type": "OPEN",
+      "question": "Comment nomme-t-on l'organisation topographique de l'aire motrice primaire sur le cortex ?",
+      "answer": "On nomme cette cartographie fonctionnelle l'homonculus moteur.",
+      "difficulty": 2
+    },
+    {
+      "id": 30,
+      "type": "OPEN",
+      "question": "Dans le système extra-pyramidal, quel est le rôle particulier des centres du tronc cérébral ?",
+      "answer": "Ils ont un rôle de centres d'intégration des informations motrices.",
+      "difficulty": 2
+    },
+    {
+      "id": 31,
+      "type": "QCM",
+      "question": "Le phénomène pharmacologique de tachyphylaxie désigne :",
+      "options": [
+        "Une augmentation progressive de l'effet du médicament",
+        "Une diminution rapide de la réponse après administrations répétées",
+        "Une réaction allergique systémique au médicament",
+        "Une saturation toxique au niveau du foie"
+      ],
+      "answer": "Une diminution rapide de la réponse après administrations répétées",
+      "difficulty": 3
+    },
+    {
+      "id": 32,
+      "type": "QCM",
+      "question": "Quelle est la fonction précise des motoneurones gamma dans le contrôle moteur ?",
+      "options": [
+        "Activer directement la contraction des fibres musculaires extrafusales",
+        "Ajuster le niveau de tension des fibres intrafusales pour contrôler l'activité fusoriale",
+        "Inhiber la transmission synaptique des réflexes nociceptifs",
+        "Relayer les informations volontaires du cortex vers la moelle"
+      ],
+      "answer": "Ajuster le niveau de tension des fibres intrafusales pour contrôler l'activité fusoriale",
+      "difficulty": 3
+    },
+    {
+      "id": 33,
+      "type": "QCM",
+      "question": "Quel isoenzyme du système cytochrome P450 métabolise le plus grand nombre de médicaments ?",
+      "options": [
+        "CYP1A2",
+        "CYP2D6",
+        "CYP3A4",
+        "CYP2C9"
+      ],
+      "answer": "CYP3A4",
+      "difficulty": 3
+    },
+    {
+      "id": 34,
+      "type": "QCM",
+      "question": "Quelle voie descendante issue des centres supérieurs permet de moduler l'activité des motoneurones gamma ?",
+      "options": [
+        "Le faisceau cortico-spinal direct",
+        "Le faisceau réticulo-spinal",
+        "Le faisceau spino-thalamique",
+        "La voie visuo-spatiale"
+      ],
+      "answer": "Le faisceau réticulo-spinal",
+      "difficulty": 3
+    },
+    {
+      "id": 35,
+      "type": "QCM",
+      "question": "La clairance rénale d'un médicament dépend directement de :",
+      "options": [
+        "La filtration glomérulaire uniquement",
+        "La filtration glomérulaire, la sécrétion tubulaire et la réabsorption",
+        "L'induction enzymatique des cytochromes hépatiques",
+        "La liaison exclusive aux protéines plasmatiques"
+      ],
+      "answer": "La filtration glomérulaire, la sécrétion tubulaire et la réabsorption",
+      "difficulty": 3
+    },
+    {
+      "id": 36,
+      "type": "QCM",
+      "question": "Où se situe précisément le récepteur de ryanodine essentiel au couplage excitation-contraction musculaire ?",
+      "options": [
+        "Sur la membrane post-synaptique de la plaque motrice",
+        "Sur la membrane des citernes du réticulum sarcoplasmique",
+        "Sur la surface de la membrane du tubule T",
+        "Sur les vésicules synaptiques contenant l'acétylcholine"
+      ],
+      "answer": "Sur la membrane des citernes du réticulum sarcoplasmique",
+      "difficulty": 3
+    },
+    {
+      "id": 37,
+      "type": "OPEN",
+      "question": "Décrivez ce qu'implique une marge thérapeutique étroite pour un médicament.",
+      "answer": "Cela signifie qu'il y a une très faible différence entre sa dose efficace et sa dose toxique, ce qui exige un suivi thérapeutique strict.",
+      "difficulty": 3
+    },
+    {
+      "id": 38,
+      "type": "OPEN",
+      "question": "Qu'est-ce qu'un promédicament (ou prodrogue) ? Donnez l'exemple issu du cours.",
+      "answer": "C'est une substance initialement inactive qui est convertie en un métabolite actif dans l'organisme, comme l'énalapril qui se transforme en énalaprilate.",
+      "difficulty": 3
+    },
+    {
+      "id": 39,
+      "type": "OPEN",
+      "question": "Expliquez le phénomène d'induction enzymatique et sa principale conséquence clinique.",
+      "answer": "C'est l'augmentation de la synthèse des enzymes de métabolisation (ex: CYP450), causant une accélération métabolique qui entraîne une baisse d'efficacité des autres médicaments.",
+      "difficulty": 3
+    },
+    {
+      "id": 40,
+      "type": "OPEN",
+      "question": "Sur un plan mécanique, que produit la stimulation d'un motoneurone gamma sur le fuseau neuromusculaire ?",
+      "answer": "Elle provoque la contraction des pôles du fuseau, ce qui étire mécaniquement sa partie centrale sensitive et maintient le contrôle du réflexe myotatique.",
+      "difficulty": 3
+    }
+  ]
+}

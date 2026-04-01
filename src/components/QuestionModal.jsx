@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useGameStore } from '../store/useGameStore'
 import { PHASES } from '../game/constants'
+import OpenQuestionTwoPlayer from './OpenQuestionTwoPlayer'
 
 function QCMQuestion({ card, onAnswer }) {
   const [selected, setSelected] = useState(null)
@@ -35,62 +36,31 @@ function QCMQuestion({ card, onAnswer }) {
   )
 }
 
-function OpenQuestion({ card, onAnswer }) {
-  return (
-    <div className="space-y-4">
-      <p className="text-lg font-bold text-white leading-relaxed">{card.question}</p>
-      <div className="p-4 rounded-2xl bg-purple-950/70 border-2 border-fuchsia-400/30">
-        <p className="text-xs font-bold text-fuchsia-300/80 mb-1">Réponse attendue</p>
-        <p className="text-sm text-pink-100/90 italic">{card.answer}</p>
-      </div>
-      <p className="text-xs text-cyan-200/70">Le joueur actif tranche avec bienveillance.</p>
-      <div className="flex gap-3">
-        <button
-          onClick={() => onAnswer(true)}
-          className="flex-1 py-3 rounded-2xl bg-emerald-500/20 border-2 border-emerald-400/50
-            text-emerald-200 font-extrabold hover:bg-emerald-500/30 shadow-[0_0_16px_rgba(52,211,153,0.25)]"
-        >
-          Yes !
-        </button>
-        <button
-          onClick={() => onAnswer(false)}
-          className="flex-1 py-3 rounded-2xl bg-rose-500/20 border-2 border-rose-400/50
-            text-rose-200 font-extrabold hover:bg-rose-500/30"
-        >
-          Oups non
-        </button>
-      </div>
-    </div>
-  )
-}
-
 function ResultDisplay({ correct, onProceed, isChance }) {
   const captureLine = isChance
     ? correct
-      ? '+1 bonus pailleté — pas de case à capturer ✨'
-      : 'Pas de bonus cette fois (la carte file quand même).'
+      ? '+2 bonus (case Chance, pas de capture).'
+      : 'Pas de bonus. Carte suivante.'
     : correct
-      ? 'La case est à toi !'
-      : 'Pas de capture — tant pis, on réessaiera.'
+      ? 'Case capturée.'
+      : 'Case non capturée.'
 
   return (
     <motion.div
-      initial={{ scale: 0.8, opacity: 0 }}
-      animate={{ scale: 1, opacity: 1 }}
+      initial={{ opacity: 0, y: 10 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ type: 'spring', stiffness: 320, damping: 28 }}
       className="text-center space-y-4"
     >
-      <div className={`text-7xl ${correct ? 'drop-shadow-[0_0_20px_rgba(52,211,153,0.8)]' : 'drop-shadow-[0_0_16px_rgba(251,113,133,0.7)]'}`}>
-        {correct ? '🌟' : '💫'}
-      </div>
-      <p className={`text-xl font-extrabold ${correct ? 'text-emerald-300' : 'text-rose-300'}`}>
-        {correct ? 'Trop fort !' : 'Aïe aïe aïe…'}
+      <p className={`text-xl font-bold ${correct ? 'text-emerald-300' : 'text-rose-300'}`}>
+        {correct ? 'Bonne réponse' : 'Mauvaise réponse'}
       </p>
-      <p className="text-sm text-pink-100/80">{captureLine}</p>
+      <p className="text-sm text-slate-300">{captureLine}</p>
       <button
         onClick={onProceed}
-        className="px-8 py-3 rounded-2xl font-extrabold bg-gradient-to-r from-pink-500 to-fuchsia-500 text-white shadow-neon-pink hover:scale-105 transition-transform"
+        className="px-8 py-3 rounded-2xl font-bold bg-gradient-to-r from-pink-500 to-fuchsia-500 text-white shadow-neon-pink hover:brightness-110 transition-all"
       >
-        Suivant
+        Continuer
       </button>
     </motion.div>
   )
@@ -111,6 +81,7 @@ export default function QuestionModal() {
     phase === PHASES.QUESTION ||
     (phase === PHASES.RESULT && (landingType === 'FREE' || landingType === 'CHANCE'))
   const player = players[currentPlayer]
+  const arbiter = players[currentPlayer === 0 ? 1 : 0]
 
   return (
     <AnimatePresence>
@@ -119,17 +90,18 @@ export default function QuestionModal() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 z-50 flex items-center justify-center bg-purple-950/75 backdrop-blur-md p-4"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-md p-4"
         >
           <motion.div
-            initial={{ scale: 0.92, y: 16 }}
-            animate={{ scale: 1, y: 0 }}
-            exit={{ scale: 0.92, y: 16 }}
-            className="w-full max-w-lg rounded-[1.75rem] border-2 border-pink-400/40 bg-gradient-to-br from-purple-950/98 to-fuchsia-950/50 p-6 shadow-neon-pink"
-            style={{ boxShadow: `0 0 40px ${player.color}33, 0 0 80px rgba(255,110,199,0.12)` }}
+            initial={{ opacity: 0, scale: 0.96, y: 12 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.96, y: 12 }}
+            transition={{ type: 'spring', stiffness: 300, damping: 26 }}
+            className="w-full max-w-lg rounded-2xl border border-white/15 bg-gradient-to-br from-purple-950/98 to-slate-950/90 p-6 shadow-2xl"
+            style={{ boxShadow: `0 0 32px ${player.color}22` }}
           >
             {slideNote && phase === PHASES.QUESTION && (
-              <p className="text-xs font-extrabold text-emerald-200 mb-4 px-3 py-2.5 rounded-2xl bg-emerald-500/15 border-2 border-emerald-400/35 shadow-neon-emerald whitespace-pre-line">
+              <p className="text-xs font-medium text-slate-300 mb-4 px-3 py-2 rounded-xl bg-white/5 border border-white/10 whitespace-pre-line">
                 {slideNote}
               </p>
             )}
@@ -137,22 +109,22 @@ export default function QuestionModal() {
             {phase === PHASES.QUESTION && currentCard && (
               <>
                 {landingType === 'CHANCE' && (
-                  <p className="text-xs font-extrabold text-violet-200 mb-3 px-3 py-2 rounded-2xl bg-violet-500/20 border-2 border-violet-400/40 shadow-neon-violet">
-                    Case Chance — bonne réponse = +1 bonus tout mignon, sans voler de case.
+                  <p className="text-xs font-medium text-violet-200/95 mb-3 px-3 py-2 rounded-xl bg-violet-500/15 border border-violet-400/30">
+                    Case Chance : carte la plus facile restante dans le paquet. Bonne réponse = +2 bonus
+                    (pas de capture de case).
                   </p>
                 )}
                 <div className="flex items-center justify-between mb-4">
                   <span
-                    className="text-xs font-extrabold uppercase tracking-wider px-3 py-1.5 rounded-full border-2 border-white/20"
+                    className="text-xs font-bold uppercase tracking-wider px-3 py-1.5 rounded-full border border-white/15"
                     style={{
-                      backgroundColor: `${player.color}28`,
+                      backgroundColor: `${player.color}22`,
                       color: player.color,
-                      boxShadow: `0 0 14px ${player.color}44`,
                     }}
                   >
                     {player.name}
                   </span>
-                  <span className="text-xs font-bold text-amber-200/90">
+                  <span className="text-xs font-semibold text-amber-200/90">
                     {'★'.repeat(currentCard.difficulty)}
                     {'☆'.repeat(3 - currentCard.difficulty)}
                   </span>
@@ -160,7 +132,13 @@ export default function QuestionModal() {
                 {currentCard.type === 'QCM' ? (
                   <QCMQuestion card={currentCard} onAnswer={submitAnswer} />
                 ) : (
-                  <OpenQuestion card={currentCard} onAnswer={submitAnswer} />
+                  <OpenQuestionTwoPlayer
+                    activeName={player.name}
+                    arbiterName={arbiter.name}
+                    card={currentCard}
+                    onAnswer={submitAnswer}
+                    accent={landingType === 'CHANCE' ? 'violet' : 'pink'}
+                  />
                 )}
               </>
             )}
@@ -168,7 +146,7 @@ export default function QuestionModal() {
             {phase === PHASES.RESULT && (
               <>
                 {slideNote && (
-                  <p className="text-[11px] font-bold text-cyan-200/90 mb-4 px-3 py-2 rounded-xl bg-cyan-500/10 border border-cyan-400/30 whitespace-pre-line">
+                  <p className="text-[11px] font-medium text-slate-400 mb-4 px-3 py-2 rounded-lg bg-white/5 border border-white/10 whitespace-pre-line">
                     {slideNote}
                   </p>
                 )}

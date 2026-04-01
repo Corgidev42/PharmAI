@@ -42,11 +42,23 @@ export default {
           '0%, 100%': { transform: 'rotate(-2deg)' },
           '50%': { transform: 'rotate(2deg)' },
         },
+        twinkle: {
+          '0%, 100%': { opacity: '0', transform: 'scale(0.5)' },
+          '50%': { opacity: '1', transform: 'scale(1)' },
+        },
+        floatUp: {
+          '0%': { transform: 'translateY(0)', opacity: '0' },
+          '10%': { opacity: '1' },
+          '90%': { opacity: '1' },
+          '100%': { transform: 'translateY(-110vh)', opacity: '0' },
+        },
       },
       animation: {
         'float-blob': 'floatBlob 18s ease-in-out infinite',
         'neon-flicker': 'neonFlicker 2.5s ease-in-out infinite',
         wiggle: 'wiggle 2s ease-in-out infinite',
+        twinkle: 'twinkle 3s ease-in-out infinite',
+        'float-up': 'floatUp 16s linear infinite',
       },
     },
   },

@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useGameStore } from '../store/useGameStore'
 import { PHASES } from '../game/constants'
+import OpenQuestionTwoPlayer from './OpenQuestionTwoPlayer'
 
 export default function DuelBanner() {
   const phase = useGameStore((s) => s.phase)
@@ -41,8 +42,8 @@ export default function DuelBanner() {
                 <div className="w-5 h-5 rounded-full shadow-neon-pink" style={{ backgroundColor: attacker.color }} />
                 <span className="font-extrabold text-white text-sm">{attacker.name}</span>
               </div>
-              <span className="text-[10px] font-extrabold uppercase tracking-[0.2em] text-amber-200">
-                Duel ✨
+              <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-amber-200">
+                Duel
               </span>
               <div className="flex items-center gap-2">
                 <span className="font-extrabold text-white text-sm">{defender.name}</span>
@@ -59,61 +60,50 @@ export default function DuelBanner() {
 
               {phase === PHASES.DUEL && currentCard && (
                 <>
-                  <p className="text-xs font-bold text-rose-200/90 mb-2">
+                  <p className="text-xs font-semibold text-rose-200/90 mb-2">
                     Difficulté {'★'.repeat(currentCard.difficulty)}
-                    {'☆'.repeat(3 - currentCard.difficulty)} — vole la case si tu réussis !
-                  </p>
-                  <p className="text-lg font-bold text-white leading-relaxed mt-2 mb-5">
-                    {currentCard.question}
+                    {'☆'.repeat(3 - currentCard.difficulty)} — en cas de succès, tu captures la case.
                   </p>
 
                   {currentCard.type === 'QCM' ? (
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                      {currentCard.options.map((opt) => (
-                        <button
-                          key={opt}
-                          onClick={() => {
-                            setSelected(opt)
-                            setTimeout(() => {
-                              submitAnswer(opt)
-                              setSelected(null)
-                            }, 200)
-                          }}
-                          disabled={selected !== null}
-                          className={`px-4 py-3.5 rounded-2xl border-2 text-left text-sm font-bold transition-all
-                            ${
-                              selected === opt
-                                ? 'border-rose-400 bg-rose-500/25 text-rose-50 shadow-neon-rose'
-                                : 'border-rose-400/30 bg-purple-950/50 text-pink-50 hover:border-rose-400/60'
-                            }
-                            ${selected !== null && selected !== opt ? 'opacity-35' : ''}
-                          `}
-                        >
-                          {opt}
-                        </button>
-                      ))}
-                    </div>
+                    <>
+                      <p className="text-lg font-bold text-white leading-relaxed mt-2 mb-5">
+                        {currentCard.question}
+                      </p>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        {currentCard.options.map((opt) => (
+                          <button
+                            key={opt}
+                            onClick={() => {
+                              setSelected(opt)
+                              setTimeout(() => {
+                                submitAnswer(opt)
+                                setSelected(null)
+                              }, 200)
+                            }}
+                            disabled={selected !== null}
+                            className={`px-4 py-3.5 rounded-2xl border-2 text-left text-sm font-bold transition-all
+                              ${
+                                selected === opt
+                                  ? 'border-rose-400 bg-rose-500/25 text-rose-50 shadow-neon-rose'
+                                  : 'border-rose-400/30 bg-purple-950/50 text-pink-50 hover:border-rose-400/60'
+                              }
+                              ${selected !== null && selected !== opt ? 'opacity-35' : ''}
+                            `}
+                          >
+                            {opt}
+                          </button>
+                        ))}
+                      </div>
+                    </>
                   ) : (
-                    <div className="space-y-3">
-                      <div className="p-4 rounded-2xl bg-purple-950/70 border-2 border-rose-400/25">
-                        <p className="text-xs font-bold text-rose-300/80 mb-1">Réponse attendue</p>
-                        <p className="text-sm text-pink-100 italic">{currentCard.answer}</p>
-                      </div>
-                      <div className="flex gap-3">
-                        <button
-                          onClick={() => submitAnswer(true)}
-                          className="flex-1 py-3 rounded-2xl bg-emerald-500/25 border-2 border-emerald-400/50 text-emerald-100 font-extrabold"
-                        >
-                          Validé !
-                        </button>
-                        <button
-                          onClick={() => submitAnswer(false)}
-                          className="flex-1 py-3 rounded-2xl bg-rose-500/25 border-2 border-rose-400/50 text-rose-100 font-extrabold"
-                        >
-                          Nope
-                        </button>
-                      </div>
-                    </div>
+                    <OpenQuestionTwoPlayer
+                      activeName={attacker.name}
+                      arbiterName={defender.name}
+                      card={currentCard}
+                      onAnswer={submitAnswer}
+                      accent="rose"
+                    />
                   )}
                 </>
               )}
@@ -127,17 +117,14 @@ export default function DuelBanner() {
                   {slideNote && (
                     <p className="text-[11px] text-cyan-200/90 font-bold whitespace-pre-line">{slideNote}</p>
                   )}
-                  <div className="text-6xl drop-shadow-[0_0_20px_rgba(251,113,133,0.5)]">
-                    {lastAnswerCorrect ? '👑' : '😿'}
-                  </div>
-                  <p className={`text-xl font-extrabold ${lastAnswerCorrect ? 'text-emerald-300' : 'text-rose-300'}`}>
-                    {lastAnswerCorrect ? 'La case change de main !' : 'Duel perdu… −1 pt'}
+                  <p className={`text-xl font-bold ${lastAnswerCorrect ? 'text-emerald-300' : 'text-rose-300'}`}>
+                    {lastAnswerCorrect ? 'Case capturée.' : 'Échec du duel (−1 point).'}
                   </p>
                   <button
                     onClick={proceedAfterResult}
-                    className="px-8 py-3 rounded-2xl font-extrabold bg-gradient-to-r from-rose-500 to-pink-500 text-white shadow-neon-rose"
+                    className="px-8 py-3 rounded-2xl font-bold bg-gradient-to-r from-rose-500 to-pink-500 text-white shadow-neon-rose"
                   >
-                    On continue !
+                    Continuer
                   </button>
                 </motion.div>
               )}

@@ -1,0 +1,429 @@
+{
+  "theme": "Système Nerveux Autonome et Pharmacologie",
+  "cards": [
+    {
+      "id": 1,
+      "type": "QCM",
+      "question": "Quel est le principal mécanisme d'action des bêta-bloquants ?",
+      "options": [
+        "Blocage des récepteurs bêta-adrénergiques",
+        "Stimulation des récepteurs alpha",
+        "Inhibition de l'enzyme de conversion",
+        "Blocage des canaux calciques"
+      ],
+      "answer": "Blocage des récepteurs bêta-adrénergiques",
+      "difficulty": 1
+    },
+    {
+      "id": 2,
+      "type": "QCM",
+      "question": "Quelle voie d'administration offre la biodisponibilité la plus élevée ?",
+      "options": [
+        "Intraveineuse",
+        "Orale",
+        "Sublinguale",
+        "Transdermique"
+      ],
+      "answer": "Intraveineuse",
+      "difficulty": 1
+    },
+    {
+      "id": 3,
+      "type": "QCM",
+      "question": "Quel organe est principalement responsable du métabolisme des médicaments ?",
+      "options": [
+        "Foie",
+        "Rein",
+        "Intestin",
+        "Poumon"
+      ],
+      "answer": "Foie",
+      "difficulty": 1
+    },
+    {
+      "id": 4,
+      "type": "QCM",
+      "question": "Quel paramètre pharmacocinétique mesure l'exposition totale au médicament ?",
+      "options": [
+        "AUC (Aire sous la courbe)",
+        "Cmax",
+        "Tmax",
+        "Clairance"
+      ],
+      "answer": "AUC (Aire sous la courbe)",
+      "difficulty": 1
+    },
+    {
+      "id": 5,
+      "type": "QCM",
+      "question": "Quelles structures forment la composante centrale du système nerveux ?",
+      "options": [
+        "Hémisphères cérébraux, diencéphale, tronc cérébral, cervelet, moelle épinière",
+        "Nerfs spinaux et ganglions sensitifs",
+        "Organes effecteurs et système entérique",
+        "Récepteurs cutanés et voies afférentes"
+      ],
+      "answer": "Hémisphères cérébraux, diencéphale, tronc cérébral, cervelet, moelle épinière",
+      "difficulty": 1
+    },
+    {
+      "id": 6,
+      "type": "QCM",
+      "question": "Quel neurotransmetteur est libéré par les neurones post-ganglionnaires du système parasympathique au niveau du viscère ?",
+      "options": [
+        "Acétylcholine",
+        "Noradrénaline",
+        "Adrénaline",
+        "Dopamine"
+      ],
+      "answer": "Acétylcholine",
+      "difficulty": 1
+    },
+    {
+      "id": 7,
+      "type": "QCM",
+      "question": "Quel est l'effet de la stimulation sympathique sur les fibres radiales de l'iris ?",
+      "options": [
+        "Mydriase (contraction)",
+        "Myosis (contraction)",
+        "Relâchement du muscle ciliaire",
+        "Aucun effet direct"
+      ],
+      "answer": "Mydriase (contraction)",
+      "difficulty": 1
+    },
+    {
+      "id": 8,
+      "type": "QCM",
+      "question": "Dans les voies à deux neurones du système nerveux autonome, comment est le neurone post-ganglionnaire ?",
+      "options": [
+        "Amyélinique",
+        "Myélinisé",
+        "Multipolaire géant",
+        "Bipolaire sensitif"
+      ],
+      "answer": "Amyélinique",
+      "difficulty": 1
+    },
+    {
+      "id": 9,
+      "type": "QCM",
+      "question": "Quelles hormones sont sécrétées directement dans le sang par les cellules chromaffines de la médullo-surrénale ?",
+      "options": [
+        "Adrénaline et Noradrénaline",
+        "Acétylcholine et Dopamine",
+        "Cortisol et Aldostérone",
+        "Sérotonine et Mélatonine"
+      ],
+      "answer": "Adrénaline et Noradrénaline",
+      "difficulty": 1
+    },
+    {
+      "id": 10,
+      "type": "OPEN",
+      "question": "Définissez la demi-vie d'élimination d'un médicament.",
+      "answer": "C'est le temps nécessaire pour que la concentration plasmatique du médicament diminue de moitié.",
+      "difficulty": 1
+    },
+    {
+      "id": 11,
+      "type": "OPEN",
+      "question": "Qu'est-ce que la pharmacovigilance ?",
+      "answer": "C'est la surveillance et l'évaluation des effets indésirables des médicaments après leur mise sur le marché.",
+      "difficulty": 1
+    },
+    {
+      "id": 12,
+      "type": "OPEN",
+      "question": "Quelle est la fonction principale du système nerveux autonome (ou végétatif) ?",
+      "answer": "Il assure l'innervation trophique de tous les tissus et l'innervation fonctionnelle involontaire des viscères pour maintenir l'homéostasie.",
+      "difficulty": 1
+    },
+    {
+      "id": 13,
+      "type": "OPEN",
+      "question": "Quelles sont les deux grandes subdivisions (systèmes antagonistes) du système nerveux autonome ?",
+      "answer": "Le système sympathique et le système parasympathique.",
+      "difficulty": 1
+    },
+    {
+      "id": 14,
+      "type": "OPEN",
+      "question": "Sur la fréquence cardiaque, quel est l'effet global de l'activation du système parasympathique ?",
+      "answer": "Il exerce un effet chronotrope négatif, ce qui signifie qu'il diminue la fréquence cardiaque.",
+      "difficulty": 1
+    },
+    {
+      "id": 15,
+      "type": "OPEN",
+      "question": "Quel système autonome favorise la rétention de l'urine au niveau de la vessie ?",
+      "answer": "Le système sympathique.",
+      "difficulty": 1
+    },
+    {
+      "id": 16,
+      "type": "QCM",
+      "question": "Les enzymes du cytochrome P450 sont principalement impliquées dans quel processus ?",
+      "options": [
+        "Biotransformation hépatique",
+        "Absorption intestinale",
+        "Distribution tissulaire",
+        "Excrétion rénale"
+      ],
+      "answer": "Biotransformation hépatique",
+      "difficulty": 2
+    },
+    {
+      "id": 17,
+      "type": "QCM",
+      "question": "Un agoniste partiel en pharmacologie se caractérise par :",
+      "options": [
+        "Une efficacité intrinsèque inférieure à 1",
+        "Une affinité nulle pour le récepteur",
+        "Une efficacité maximale identique à l'agoniste complet",
+        "Une absence totale d'effet pharmacologique"
+      ],
+      "answer": "Une efficacité intrinsèque inférieure à 1",
+      "difficulty": 2
+    },
+    {
+      "id": 18,
+      "type": "QCM",
+      "question": "Un antagoniste compétitif déplace la courbe dose-réponse de l'agoniste vers :",
+      "options": [
+        "La droite sans changer l'Emax",
+        "La gauche sans changer l'Emax",
+        "La droite en diminuant l'Emax",
+        "La gauche en augmentant l'Emax"
+      ],
+      "answer": "La droite sans changer l'Emax",
+      "difficulty": 2
+    },
+    {
+      "id": 19,
+      "type": "QCM",
+      "question": "La liaison aux protéines plasmatiques (albumine) d'un médicament affecte principalement :",
+      "options": [
+        "La fraction libre active du médicament",
+        "L'absorption intestinale du médicament",
+        "Le métabolisme hépatique de phase II",
+        "L'excrétion par voie biliaire"
+      ],
+      "answer": "La fraction libre active du médicament",
+      "difficulty": 2
+    },
+    {
+      "id": 20,
+      "type": "QCM",
+      "question": "Lors du baroréflexe, que provoque une hausse importante de la tension artérielle ?",
+      "options": [
+        "Une activation parasympathique et une inhibition sympathique",
+        "Une activation sympathique et une inhibition parasympathique",
+        "Une tachycardie compensatrice et une vasoconstriction",
+        "Une libération massive d'adrénaline par la surrénale"
+      ],
+      "answer": "Une activation parasympathique et une inhibition sympathique",
+      "difficulty": 2
+    },
+    {
+      "id": 21,
+      "type": "QCM",
+      "question": "Au niveau vasculaire, quel récepteur est stimulé par l'acétylcholine pour provoquer une vasodilatation via la production de NO endothélial ?",
+      "options": [
+        "Le récepteur muscarinique M3",
+        "Le récepteur alpha-1 adrénergique",
+        "Le récepteur bêta-2 adrénergique",
+        "Le récepteur nicotinique musculaire"
+      ],
+      "answer": "Le récepteur muscarinique M3",
+      "difficulty": 2
+    },
+    {
+      "id": 22,
+      "type": "QCM",
+      "question": "Quel est l'effet du système sympathique via les récepteurs bêta-2 sur les muscles lisses bronchiques ?",
+      "options": [
+        "Relaxation (bronchodilatation)",
+        "Contraction (bronchoconstriction)",
+        "Augmentation drastique des sécrétions muqueuses",
+        "Des spasmes bronchiques rythmés"
+      ],
+      "answer": "Relaxation (bronchodilatation)",
+      "difficulty": 2
+    },
+    {
+      "id": 23,
+      "type": "QCM",
+      "question": "Quel nerf crânien achemine principalement les fibres préganglionnaires parasympathiques vers le plexus cardiaque et digestif ?",
+      "options": [
+        "Le nerf vague (X)",
+        "Le nerf olfactif (I)",
+        "Le nerf trijumeau (V)",
+        "Le nerf facial (VII)"
+      ],
+      "answer": "Le nerf vague (X)",
+      "difficulty": 2
+    },
+    {
+      "id": 24,
+      "type": "QCM",
+      "question": "Au niveau de la physiologie cardiaque, à quoi correspond un effet dromotrope positif généré par le système sympathique ?",
+      "options": [
+        "Une augmentation de la vitesse de conduction",
+        "Une augmentation de la force de contraction",
+        "Une augmentation de la fréquence cardiaque",
+        "Un abaissement du seuil d'excitabilité"
+      ],
+      "answer": "Une augmentation de la vitesse de conduction",
+      "difficulty": 2
+    },
+    {
+      "id": 25,
+      "type": "OPEN",
+      "question": "Qu'est-ce que l'effet de premier passage hépatique ?",
+      "answer": "C'est le métabolisme d'un médicament par le foie avant qu'il n'atteigne la circulation systémique, ce qui réduit fortement sa biodisponibilité.",
+      "difficulty": 2
+    },
+    {
+      "id": 26,
+      "type": "OPEN",
+      "question": "Expliquez la différence entre la puissance et l'efficacité d'un médicament.",
+      "answer": "La puissance correspond à la dose nécessaire pour produire un effet (EC50), tandis que l'efficacité est l'effet maximal qu'il peut atteindre (Emax).",
+      "difficulty": 2
+    },
+    {
+      "id": 27,
+      "type": "OPEN",
+      "question": "Décrivez la voie parasympathique impliquée dans le réflexe de la miction.",
+      "answer": "Les fibres parasympathiques (issues de S2-S4) entraînent la contraction du détrusor via les récepteurs muscariniques pour expulser l'urine.",
+      "difficulty": 2
+    },
+    {
+      "id": 28,
+      "type": "OPEN",
+      "question": "Quels sont les centres primaires d'où émergent les fibres du système parasympathique ?",
+      "answer": "Ce sont les noyaux de nerfs crâniens (III, VII, IX, X) dans le tronc cérébral et les centres sacrés (S1-S3) de la moelle épinière.",
+      "difficulty": 2
+    },
+    {
+      "id": 29,
+      "type": "OPEN",
+      "question": "En cas d'hypoxie sévère, quelle est la réponse cardiovasculaire déclenchée via le chémoréflexe ?",
+      "answer": "Elle déclenche une activation sympathique, ce qui entraîne une augmentation de la fréquence cardiaque et une vasoconstriction périphérique.",
+      "difficulty": 2
+    },
+    {
+      "id": 30,
+      "type": "OPEN",
+      "question": "Que provoque globalement la stimulation parasympathique au niveau de l'œil ?",
+      "answer": "Elle provoque un myosis (contraction du sphincter irien) et l'accommodation du cristallin (contraction du muscle ciliaire).",
+      "difficulty": 2
+    },
+    {
+      "id": 31,
+      "type": "QCM",
+      "question": "En pharmacologie, le phénomène de tachyphylaxie désigne :",
+      "options": [
+        "Une diminution rapide de la réponse après administrations répétées",
+        "Une augmentation progressive de l'effet du médicament",
+        "Une réaction allergique généralisée au médicament",
+        "Un effet toxique hépatique survenant de manière aiguë"
+      ],
+      "answer": "Une diminution rapide de la réponse après administrations répétées",
+      "difficulty": 3
+    },
+    {
+      "id": 32,
+      "type": "QCM",
+      "question": "Lequel de ces isoenzymes du cytochrome P450 métabolise le plus grand nombre de médicaments en clinique ?",
+      "options": [
+        "CYP3A4",
+        "CYP1A2",
+        "CYP2D6",
+        "CYP2C9"
+      ],
+      "answer": "CYP3A4",
+      "difficulty": 3
+    },
+    {
+      "id": 33,
+      "type": "QCM",
+      "question": "De quels mécanismes rénaux dépend précisément la clairance rénale d'un médicament ?",
+      "options": [
+        "La filtration glomérulaire, la sécrétion tubulaire et la réabsorption",
+        "La filtration glomérulaire uniquement",
+        "Le débit sanguin hépatique",
+        "Exclusivement de sa liaison aux protéines sanguines"
+      ],
+      "answer": "La filtration glomérulaire, la sécrétion tubulaire et la réabsorption",
+      "difficulty": 3
+    },
+    {
+      "id": 34,
+      "type": "QCM",
+      "question": "Au niveau du myocarde, par quel mécanisme intracellulaire le système sympathique exerce-t-il son effet inotrope positif ?",
+      "options": [
+        "Les récepteurs bêta-1 couplés à Gs augmentant l'AMPc et la conductance calcique",
+        "Les récepteurs M2 couplés à Gi diminuant l'AMPc",
+        "Les récepteurs alpha-1 couplés à Gq",
+        "La facilitation de l'ouverture des canaux sodiques voltage-dépendants rapides"
+      ],
+      "answer": "Les récepteurs bêta-1 couplés à Gs augmentant l'AMPc et la conductance calcique",
+      "difficulty": 3
+    },
+    {
+      "id": 35,
+      "type": "QCM",
+      "question": "Au niveau vasculaire, que provoque l'activation des récepteurs alpha-2 présynaptiques par un agoniste ?",
+      "options": [
+        "Une inhibition de la libération de noradrénaline, favorisant la vasodilatation",
+        "Une libération massive d'adrénaline induisant une forte vasoconstriction",
+        "L'activation directe de la voie du NO endothélial",
+        "La contraction directe des cellules musculaires lisses de la paroi"
+      ],
+      "answer": "Une inhibition de la libération de noradrénaline, favorisant la vasodilatation",
+      "difficulty": 3
+    },
+    {
+      "id": 36,
+      "type": "QCM",
+      "question": "Sur le plan de l'électrophysiologie du nœud sinusal, comment l'acétylcholine (parasympathique) induit-elle un effet chronotrope négatif ?",
+      "options": [
+        "En augmentant la conductance potassique (récepteurs M2 couplés à Gi)",
+        "En augmentant de façon drastique la conductance calcique (récepteurs bêta-1)",
+        "En bloquant irréversiblement les canaux sodiques lents du prépotentiel",
+        "En inhibant directement la pompe Na+/K+ ATPase membranaire"
+      ],
+      "answer": "En augmentant la conductance potassique (récepteurs M2 couplés à Gi)",
+      "difficulty": 3
+    },
+    {
+      "id": 37,
+      "type": "OPEN",
+      "question": "Décrivez ce qu'implique un médicament ayant une « marge thérapeutique étroite ».",
+      "answer": "Le médicament possède une faible différence entre sa dose efficace et sa dose toxique, nécessitant par conséquent un suivi clinique et biologique très strict.",
+      "difficulty": 3
+    },
+    {
+      "id": 38,
+      "type": "OPEN",
+      "question": "Qu'est-ce qu'un promédicament (ou prodrogue) ? Donnez un exemple cité dans le cours.",
+      "answer": "C'est une substance initialement inactive qui est convertie en un métabolite actif au sein de l'organisme (ex: l'énalapril métabolisé en énalaprilate).",
+      "difficulty": 3
+    },
+    {
+      "id": 39,
+      "type": "OPEN",
+      "question": "Expliquez le phénomène pharmacocinétique d'induction enzymatique et ses conséquences cliniques.",
+      "answer": "Certains médicaments augmentent la synthèse des enzymes hépatiques (comme le CYP450), ce qui accélère le métabolisme et diminue l'efficacité des autres médicaments pris simultanément.",
+      "difficulty": 3
+    },
+    {
+      "id": 40,
+      "type": "OPEN",
+      "question": "D'après les notes, quel effet modulateur le système sympathique peut-il avoir sur les fibres pré-ganglionnaires parasympathiques des bronches ?",
+      "answer": "Il peut exercer un effet relaxant via des récepteurs bêta-2 situés directement sur la fibre pré-ganglionnaire parasympathique.",
+      "difficulty": 3
+    }
+  ]
+}

@@ -52,8 +52,9 @@ function resolveModelId(preset, customId) {
   return preset
 }
 
-export default function DeckCreator({ onClose }) {
-  const loadDeck = useGameStore((s) => s.loadDeck)
+export default function DeckCreator({ onClose, playerId = 0 }) {
+  const loadDeckForPlayer = useGameStore((s) => s.loadDeckForPlayer)
+  const playerName = useGameStore((s) => s.players[playerId]?.name ?? `Joueur ${playerId + 1}`)
 
   const [step, setStep] = useState('upload')
   const [files, setFiles] = useState([])
@@ -145,10 +146,10 @@ export default function DeckCreator({ onClose }) {
   // --- Preview actions ---
   const handleLoadInGame = useCallback(() => {
     if (generatedDeck) {
-      loadDeck(generatedDeck)
+      loadDeckForPlayer(playerId, generatedDeck)
       onClose()
     }
-  }, [generatedDeck, loadDeck, onClose])
+  }, [generatedDeck, loadDeckForPlayer, playerId, onClose])
 
   const handleDownload = useCallback(() => {
     if (generatedDeck) downloadDeckAsJson(generatedDeck)
@@ -179,8 +180,10 @@ export default function DeckCreator({ onClose }) {
         {/* Header */}
         <div className="flex items-center justify-between px-6 py-4 border-b border-pink-400/20">
           <div>
-            <h2 className="text-lg font-extrabold title-candy">Deck magique Gemini</h2>
-            <p className="text-xs text-pink-200/70 mt-0.5">PDF → paillettes → questions</p>
+            <h2 className="text-lg font-extrabold title-candy">Deck Gemini</h2>
+            <p className="text-xs text-pink-200/70 mt-0.5">
+              Pour <span className="font-semibold text-cyan-200">{playerName}</span> — PDF → questions
+            </p>
           </div>
           <button
             onClick={onClose}

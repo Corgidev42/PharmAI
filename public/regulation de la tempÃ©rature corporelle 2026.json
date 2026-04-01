@@ -1,0 +1,429 @@
+{
+  "theme": "Pharmacologie Générale et Régulation de la Température Corporelle",
+  "cards": [
+    {
+      "id": 1,
+      "type": "QCM",
+      "question": "Quel est le principal mécanisme d'action des bêta-bloquants ?",
+      "options": [
+        "Blocage des canaux calciques",
+        "Stimulation des récepteurs alpha",
+        "Inhibition de l'enzyme de conversion",
+        "Blocage des récepteurs bêta-adrénergiques"
+      ],
+      "answer": "Blocage des récepteurs bêta-adrénergiques",
+      "difficulty": 1
+    },
+    {
+      "id": 2,
+      "type": "QCM",
+      "question": "Quelle voie d'administration offre la biodisponibilité la plus élevée pour un médicament ?",
+      "options": [
+        "Transdermique",
+        "Orale",
+        "Intraveineuse",
+        "Sublinguale"
+      ],
+      "answer": "Intraveineuse",
+      "difficulty": 1
+    },
+    {
+      "id": 3,
+      "type": "OPEN",
+      "question": "Définissez la demi-vie d'élimination d'un médicament.",
+      "answer": "C'est le temps nécessaire pour que la concentration plasmatique du médicament diminue de moitié.",
+      "difficulty": 1
+    },
+    {
+      "id": 4,
+      "type": "QCM",
+      "question": "Quel organe est principalement responsable du métabolisme des médicaments dans l'organisme ?",
+      "options": [
+        "Rein",
+        "Intestin",
+        "Poumon",
+        "Foie"
+      ],
+      "answer": "Foie",
+      "difficulty": 1
+    },
+    {
+      "id": 5,
+      "type": "QCM",
+      "question": "Quel paramètre pharmacocinétique permet de mesurer l'exposition totale au médicament ?",
+      "options": [
+        "Clairance",
+        "AUC (Aire sous la courbe)",
+        "Cmax",
+        "Tmax"
+      ],
+      "answer": "AUC (Aire sous la courbe)",
+      "difficulty": 1
+    },
+    {
+      "id": 6,
+      "type": "OPEN",
+      "question": "Quelle est la définition de la pharmacovigilance ?",
+      "answer": "C'est la surveillance et l'évaluation des effets indésirables des médicaments après leur mise sur le marché.",
+      "difficulty": 1
+    },
+    {
+      "id": 7,
+      "type": "QCM",
+      "question": "Chez l'homme homéotherme, à combien s'élève approximativement la température centrale du noyau thermique ?",
+      "options": [
+        "36°C",
+        "37°C",
+        "38°C",
+        "39°C"
+      ],
+      "answer": "37°C",
+      "difficulty": 1
+    },
+    {
+      "id": 8,
+      "type": "OPEN",
+      "question": "Par quels moyens le corps humain perd-il 70% de sa chaleur à une température ambiante de 21°C ?",
+      "answer": "Par les mécanismes de radiation et de conduction.",
+      "difficulty": 1
+    },
+    {
+      "id": 9,
+      "type": "QCM",
+      "question": "Quelle structure cérébrale est considérée comme le principal centre thermorégulateur ?",
+      "options": [
+        "Le cervelet",
+        "L'aire pré-optique de l'hypothalamus antérieur",
+        "Le bulbe rachidien",
+        "Le thalamus"
+      ],
+      "answer": "L'aire pré-optique de l'hypothalamus antérieur",
+      "difficulty": 1
+    },
+    {
+      "id": 10,
+      "type": "QCM",
+      "question": "À partir de quelle température cutanée ressent-on de la douleur via l'activation des nocicepteurs ?",
+      "options": [
+        "Supérieure à 36°C",
+        "Supérieure à 40°C",
+        "Supérieure à 45°C",
+        "Supérieure à 50°C"
+      ],
+      "answer": "Supérieure à 45°C",
+      "difficulty": 1
+    },
+    {
+      "id": 11,
+      "type": "OPEN",
+      "question": "De combien de degrés la température buccale est-elle différente de la température rectale ?",
+      "answer": "La température buccale est inférieure de 0,6°C par rapport à la température rectale.",
+      "difficulty": 1
+    },
+    {
+      "id": 12,
+      "type": "QCM",
+      "question": "Quel mécanisme de thermolyse est déclenché par l'organisme dans un environnement chaud ?",
+      "options": [
+        "Vasoconstriction cutanée",
+        "Frisson des muscles squelettiques",
+        "Vasodilatation cutanée",
+        "Augmentation de l'activité de la graisse brune"
+      ],
+      "answer": "Vasodilatation cutanée",
+      "difficulty": 1
+    },
+    {
+      "id": 13,
+      "type": "QCM",
+      "question": "Lors d'une exposition au froid, quelles réponses de thermogénèse sont activées ?",
+      "options": [
+        "Vasoconstriction cutanée et frisson",
+        "Vasodilatation cutanée et sudation",
+        "Halètement et inhibition sympathique",
+        "Baisse du rythme cardiaque et atonie musculaire"
+      ],
+      "answer": "Vasoconstriction cutanée et frisson",
+      "difficulty": 1
+    },
+    {
+      "id": 14,
+      "type": "OPEN",
+      "question": "Citez deux processus physiologiques permettant la production de chaleur par le corps.",
+      "answer": "Les réactions métaboliques de base, l'activité musculaire (ou la prise de nourriture, et la graisse brune).",
+      "difficulty": 1
+    },
+    {
+      "id": 15,
+      "type": "QCM",
+      "question": "Quelles hormones thyroïdiennes stimulent les réactions métaboliques de base pour la production de chaleur ?",
+      "options": [
+        "L'insuline et le glucagon",
+        "La T3 et la T4",
+        "Le cortisol et l'aldostérone",
+        "L'adrénaline et la noradrénaline"
+      ],
+      "answer": "La T3 et la T4",
+      "difficulty": 1
+    },
+    {
+      "id": 16,
+      "type": "QCM",
+      "question": "Dans quel processus biologique les enzymes du cytochrome P450 sont-elles principalement impliquées ?",
+      "options": [
+        "L'absorption intestinale",
+        "L'excrétion rénale",
+        "La biotransformation hépatique",
+        "La distribution tissulaire"
+      ],
+      "answer": "La biotransformation hépatique",
+      "difficulty": 2
+    },
+    {
+      "id": 17,
+      "type": "OPEN",
+      "question": "Définissez ce qu'est l'effet de premier passage hépatique.",
+      "answer": "C'est le métabolisme d'un médicament par le foie avant qu'il n'atteigne la circulation systémique, ce qui réduit sa biodisponibilité.",
+      "difficulty": 2
+    },
+    {
+      "id": 18,
+      "type": "QCM",
+      "question": "Quel type de liaison médicament-récepteur est généralement réversible ?",
+      "options": [
+        "Liaison covalente",
+        "Liaison ionique",
+        "Liaison métallique",
+        "Liaison peptidique"
+      ],
+      "answer": "Liaison ionique",
+      "difficulty": 2
+    },
+    {
+      "id": 19,
+      "type": "QCM",
+      "question": "Par quelle caractéristique pharmacodynamique un agoniste partiel se définit-il ?",
+      "options": [
+        "Une efficacité intrinsèque inférieure à 1",
+        "Une affinité nulle pour le récepteur",
+        "Une efficacité maximale identique à l'agoniste complet",
+        "Une absence totale d'effet pharmacologique"
+      ],
+      "answer": "Une efficacité intrinsèque inférieure à 1",
+      "difficulty": 2
+    },
+    {
+      "id": 20,
+      "type": "OPEN",
+      "question": "Quelle est la distinction entre la puissance et l'efficacité d'un médicament ?",
+      "answer": "La puissance correspond à la dose nécessaire pour produire un effet (EC50), et l'efficacité correspond à l'effet maximal atteignable (Emax).",
+      "difficulty": 2
+    },
+    {
+      "id": 21,
+      "type": "QCM",
+      "question": "Comment un antagoniste compétitif modifie-t-il la courbe dose-réponse d'un agoniste ?",
+      "options": [
+        "Il la déplace vers la droite en diminuant l'Emax",
+        "Il la déplace vers la gauche sans changer l'Emax",
+        "Il la déplace vers la gauche en augmentant l'Emax",
+        "Il la déplace vers la droite sans changer l'Emax"
+      ],
+      "answer": "Il la déplace vers la droite sans changer l'Emax",
+      "difficulty": 2
+    },
+    {
+      "id": 22,
+      "type": "QCM",
+      "question": "Quel est l'objectif de la Phase III des essais cliniques ?",
+      "options": [
+        "Tester l'efficacité du médicament sur un grand nombre de patients",
+        "Évaluer la toxicité sur le modèle animal",
+        "Réaliser la pharmacovigilance après commercialisation",
+        "Mesurer la demi-vie sur quelques volontaires sains"
+      ],
+      "answer": "Tester l'efficacité du médicament sur un grand nombre de patients",
+      "difficulty": 2
+    },
+    {
+      "id": 23,
+      "type": "QCM",
+      "question": "La liaison aux protéines plasmatiques (comme l'albumine) affecte principalement :",
+      "options": [
+        "L'absorption du médicament",
+        "L'excrétion biliaire",
+        "La fraction libre active du médicament",
+        "Le métabolisme de phase II"
+      ],
+      "answer": "La fraction libre active du médicament",
+      "difficulty": 2
+    },
+    {
+      "id": 24,
+      "type": "OPEN",
+      "question": "Comparez la densité des thermorécepteurs au froid par rapport à ceux au chaud sur la peau.",
+      "answer": "Les récepteurs au froid sont plus nombreux que les récepteurs au chaud (notamment très denses sur la face).",
+      "difficulty": 2
+    },
+    {
+      "id": 25,
+      "type": "QCM",
+      "question": "Par quel type de fibres nerveuses sensitives les signaux des récepteurs au froid sont-ils conduits ?",
+      "options": [
+        "Les fibres motrices alpha",
+        "Les fibres de type C uniquement",
+        "Les fibres de type A-delta",
+        "Les fibres myélinisées de type Ia"
+      ],
+      "answer": "Les fibres de type A-delta",
+      "difficulty": 2
+    },
+    {
+      "id": 26,
+      "type": "OPEN",
+      "question": "Où se situent les thermorécepteurs centraux en dehors de l'aire pré-optique hypothalamique ?",
+      "answer": "Ils se situent dans la paroi des organes intra-abdominaux, les gros troncs veineux et la moelle épinière.",
+      "difficulty": 2
+    },
+    {
+      "id": 27,
+      "type": "QCM",
+      "question": "Selon le schéma des voies nerveuses régulatrices, quel composant du système nerveux autonome déclenche la sudation ?",
+      "options": [
+        "Le système nerveux parasympathique",
+        "Le système nerveux somatique",
+        "Le système sympathique adrénergique",
+        "Le système nerveux entérique"
+      ],
+      "answer": "Le système nerveux parasympathique",
+      "difficulty": 2
+    },
+    {
+      "id": 28,
+      "type": "QCM",
+      "question": "Quelle voie ascendante achemine les signaux thermorégulateurs de la périphérie vers l'hypothalamus ?",
+      "options": [
+        "La voie spino-hypothalamique",
+        "La voie pyramidale",
+        "Le faisceau gracile",
+        "La voie lemniscale"
+      ],
+      "answer": "La voie spino-hypothalamique",
+      "difficulty": 2
+    },
+    {
+      "id": 29,
+      "type": "OPEN",
+      "question": "Dans le mécanisme de thermogénèse, comment la graisse brune contribue-t-elle à réchauffer le corps ?",
+      "answer": "La graisse brune produit de la chaleur lorsqu'elle est stimulée par l'activité sympathique.",
+      "difficulty": 2
+    },
+    {
+      "id": 30,
+      "type": "QCM",
+      "question": "Lors d'une exposition au froid, quelles structures du tronc cérébral sont activées en aval de l'aire pré-optique ?",
+      "options": [
+        "Le cortex frontal et le gyrus cingulaire",
+        "Le noyau para-ventriculaire et l'hypophyse",
+        "L'hypothalamus dorsomédian et le noyau du raphé",
+        "L'aire tegmentale ventrale et le striatum"
+      ],
+      "answer": "L'hypothalamus dorsomédian et le noyau du raphé",
+      "difficulty": 2
+    },
+    {
+      "id": 31,
+      "type": "QCM",
+      "question": "Que désigne le phénomène pharmacologique de tachyphylaxie ?",
+      "options": [
+        "Une réaction allergique systémique",
+        "Une augmentation progressive de l'effet d'un médicament",
+        "Une toxicité hépatique aiguë",
+        "Une diminution rapide de la réponse après administrations répétées"
+      ],
+      "answer": "Une diminution rapide de la réponse après administrations répétées",
+      "difficulty": 3
+    },
+    {
+      "id": 32,
+      "type": "QCM",
+      "question": "Quel est l'isoenzyme du système cytochrome P450 qui métabolise le plus grand nombre de médicaments ?",
+      "options": [
+        "CYP2C9",
+        "CYP2D6",
+        "CYP3A4",
+        "CYP1A2"
+      ],
+      "answer": "CYP3A4",
+      "difficulty": 3
+    },
+    {
+      "id": 33,
+      "type": "QCM",
+      "question": "De quels mécanismes physiologiques dépend la clairance rénale d'un médicament ?",
+      "options": [
+        "La filtration glomérulaire uniquement",
+        "Le débit sanguin hépatique et biliaire",
+        "La filtration glomérulaire, la sécrétion tubulaire et la réabsorption",
+        "L'excrétion biliaire et la liaison aux protéines"
+      ],
+      "answer": "La filtration glomérulaire, la sécrétion tubulaire et la réabsorption",
+      "difficulty": 3
+    },
+    {
+      "id": 34,
+      "type": "OPEN",
+      "question": "Qu'est-ce qu'un promédicament (ou prodrogue) ? Donnez l'exemple du cours.",
+      "answer": "C'est une substance pharmacologiquement inactive qui est convertie en métabolite actif dans l'organisme, comme l'énalapril converti en énalaprilate.",
+      "difficulty": 3
+    },
+    {
+      "id": 35,
+      "type": "OPEN",
+      "question": "Pourquoi prescrire un médicament à marge thérapeutique étroite demande-t-il une grande prudence ?",
+      "answer": "Parce qu'il a une faible différence entre sa dose efficace et sa dose toxique, ce qui exige un suivi thérapeutique strict.",
+      "difficulty": 3
+    },
+    {
+      "id": 36,
+      "type": "OPEN",
+      "question": "Quelles sont les conséquences cliniques de l'induction enzymatique (ex: CYP450) ?",
+      "answer": "Elle entraîne une augmentation de la synthèse des enzymes, accélérant le métabolisme et réduisant l'efficacité des médicaments co-administrés.",
+      "difficulty": 3
+    },
+    {
+      "id": 37,
+      "type": "OPEN",
+      "question": "Par quel mécanisme les substances pyrogènes déclenchent-elles la fièvre au niveau du système nerveux central ?",
+      "answer": "Elles modifient la température de référence via les PGE2 en inhibant l'aire pré-optique, simulant un signal de froid pour l'organisme.",
+      "difficulty": 3
+    },
+    {
+      "id": 38,
+      "type": "QCM",
+      "question": "Quel neurotransmetteur est libéré par les neurones du noyau du raphé pour stimuler le frisson via la moelle épinière ?",
+      "options": [
+        "Le GABA",
+        "L'acétylcholine",
+        "La dopamine",
+        "Le glutamate (Glu)"
+      ],
+      "answer": "Le glutamate (Glu)",
+      "difficulty": 3
+    },
+    {
+      "id": 39,
+      "type": "OPEN",
+      "question": "Que se passe-t-il lorsque l'aire pré-optique cesse d'inhiber (via le GABA) l'hypothalamus dorsomédian suite à une baisse de température locale ?",
+      "answer": "Cela provoque une désinhibition qui permet l'activation des voies de thermogénèse (noyau du raphé, frisson, vasoconstriction).",
+      "difficulty": 3
+    },
+    {
+      "id": 40,
+      "type": "OPEN",
+      "question": "Quelle aire de l'hypothalamus est spécifiquement dédiée à la conservation et la production de chaleur en intégrant les afférences limbiques ?",
+      "answer": "L'aire hypothalamique postérieure (Aire HT post).",
+      "difficulty": 3
+    }
+  ]
+}

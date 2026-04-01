@@ -1,76 +1,71 @@
-export const TOTAL_TILES = 24
+export const TOTAL_TILES = 26
 export const MAX_TURNS = 30
 
-/** Cases spéciales : classiques + inventions « mignonnes » (serpents, fée, potion…). */
 export const SPECIAL_TILE = {
   DEPART: 'DEPART',
   CHANCE: 'CHANCE',
   TAX: 'TAX',
   PARC: 'PARC',
   PRISON: 'PRISON',
-  /** +1 bonus — fée des bonbons */
   FEE_BONBONS: 'FEE_BONBONS',
-  /** Glissade −2 cases (rebondit jusqu’à une case stable) */
   SERPENT: 'SERPENT',
-  /** Glissade +2 cases */
   ECHELLE: 'ECHELLE',
-  /** +2 bonus — potion rose */
   POTION_DOUX: 'POTION_DOUX',
-  /** Repos — nuage tout doux */
   NUAGE: 'NUAGE',
-  /** +1 bonus — tu flex */
   MEGAPHONE: 'MEGAPHONE',
-  /** Repos — bulles magiques */
   BULLES_PAIX: 'BULLES_PAIX',
-  /** Repos — toile d’araignée (coin mignon, rien de méchant) */
   TOILE_ARAIGNEE: 'TOILE_ARAIGNEE',
 }
 
-/** Par index 0–23. null = case propriété classique. */
+/**
+ * 26 cases (p\u00e9rim\u00e8tre complet 8\u00d77 avec les 4 coins).
+ * 8 sp\u00e9ciales seulement, le reste = propri\u00e9t\u00e9s.
+ */
 export const TILE_SPECIAL_AT_INDEX = [
-  SPECIAL_TILE.DEPART,
-  SPECIAL_TILE.FEE_BONBONS,
-  null,
-  SPECIAL_TILE.ECHELLE,
-  SPECIAL_TILE.TAX,
-  null,
-  SPECIAL_TILE.SERPENT,
-  null,
-  SPECIAL_TILE.CHANCE,
-  SPECIAL_TILE.POTION_DOUX,
-  null,
-  SPECIAL_TILE.MEGAPHONE,
-  SPECIAL_TILE.NUAGE,
-  null,
-  SPECIAL_TILE.BULLES_PAIX,
-  null,
-  SPECIAL_TILE.CHANCE,
-  null,
-  SPECIAL_TILE.SERPENT,
-  SPECIAL_TILE.FEE_BONBONS,
-  SPECIAL_TILE.TAX,
-  null,
-  SPECIAL_TILE.TOILE_ARAIGNEE,
-  SPECIAL_TILE.ECHELLE,
+  SPECIAL_TILE.DEPART,        // 0  coin haut-gauche
+  null,                        // 1
+  null,                        // 2
+  SPECIAL_TILE.ECHELLE,       // 3
+  null,                        // 4
+  null,                        // 5
+  null,                        // 6
+  null,                        // 7  coin haut-droit
+  SPECIAL_TILE.CHANCE,        // 8
+  null,                        // 9
+  null,                        // 10
+  null,                        // 11
+  SPECIAL_TILE.SERPENT,       // 12
+  null,                        // 13 coin bas-droit
+  null,                        // 14
+  SPECIAL_TILE.NUAGE,        // 15
+  null,                        // 16
+  null,                        // 17
+  SPECIAL_TILE.CHANCE,       // 18
+  null,                        // 19
+  null,                        // 20 coin bas-gauche
+  SPECIAL_TILE.TAX,           // 21
+  null,                        // 22
+  SPECIAL_TILE.FEE_BONBONS,  // 23
+  null,                        // 24
+  null,                        // 25
 ]
 
 export const SPECIAL_TILE_LABEL = {
-  [SPECIAL_TILE.DEPART]: 'Départ',
+  [SPECIAL_TILE.DEPART]: 'D\u00e9part',
   [SPECIAL_TILE.CHANCE]: 'Chance',
   [SPECIAL_TILE.TAX]: 'Taxe',
   [SPECIAL_TILE.PARC]: 'Parc',
   [SPECIAL_TILE.PRISON]: 'Prison',
-  [SPECIAL_TILE.FEE_BONBONS]: 'Fée',
+  [SPECIAL_TILE.FEE_BONBONS]: 'F\u00e9e',
   [SPECIAL_TILE.SERPENT]: 'Serpent',
-  [SPECIAL_TILE.ECHELLE]: 'Échelle',
+  [SPECIAL_TILE.ECHELLE]: '\u00c9chelle',
   [SPECIAL_TILE.POTION_DOUX]: 'Potion',
   [SPECIAL_TILE.NUAGE]: 'Nuage',
-  [SPECIAL_TILE.MEGAPHONE]: 'Mégaphone',
+  [SPECIAL_TILE.MEGAPHONE]: 'M\u00e9gaphone',
   [SPECIAL_TILE.BULLES_PAIX]: 'Bulles',
   [SPECIAL_TILE.TOILE_ARAIGNEE]: 'Toile',
 }
 
-/** Couleur néon pour le plateau (Tailwind arbitrary / thème). */
 export const SPECIAL_TILE_ACCENT = {
   [SPECIAL_TILE.DEPART]: 'lime',
   [SPECIAL_TILE.CHANCE]: 'violet',
@@ -91,9 +86,9 @@ export const DICE_MIN = 1
 export const DICE_MAX = 6
 export const DUEL_PENALTY = 1
 
-/** Couleurs joueurs : néon bien flashy */
 export const PLAYER_COLORS = ['#ff6ec7', '#5dffe1']
-export const PLAYER_NAMES = ['Joueur 1', 'Joueur 2']
+/** Noms par défaut — modifiables à l’écran ; deck de questions lié à chaque joueur. */
+export const PLAYER_NAMES = ['Lou', 'Toi']
 
 export const PHASES = {
   START: 'START',
@@ -108,9 +103,10 @@ export const PHASES = {
 export const BOARD_COLS = 8
 export const BOARD_ROWS = 7
 
+/** Parcours p\u00e9rim\u00e9trique : haut \u2192 droite \u2192 bas \u2192 gauche (sens horaire, 26 cases). */
 export function getTilePosition(index) {
-  if (index <= 6) return { row: 0, col: index }
-  if (index <= 11) return { row: index - 6, col: 7 }
-  if (index <= 18) return { row: 6, col: 18 - index }
-  return { row: 23 - index + 1, col: 0 }
+  if (index <= 7) return { row: 0, col: index }
+  if (index <= 12) return { row: index - 7, col: 7 }
+  if (index <= 20) return { row: 6, col: 20 - index }
+  return { row: 26 - index, col: 0 }
 }

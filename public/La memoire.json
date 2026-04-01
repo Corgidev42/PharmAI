@@ -1,0 +1,429 @@
+{
+  "theme": "Mémoire et Pharmacologie",
+  "cards": [
+    {
+      "id": 1,
+      "type": "QCM",
+      "question": "Quel est le délai de rétention de la mémoire sensorielle ?",
+      "options": [
+        "Inférieure à 0,5 seconde",
+        "De 1 à 2 secondes",
+        "Environ 7 secondes",
+        "Quelques minutes"
+      ],
+      "answer": "Inférieure à 0,5 seconde",
+      "difficulty": 1
+    },
+    {
+      "id": 2,
+      "type": "QCM",
+      "question": "Quelle mémoire implique principalement le cortex frontal et préfrontal ?",
+      "options": [
+        "La mémoire procédurale",
+        "La mémoire de travail",
+        "La mémoire sensorielle",
+        "La mémoire épisodique"
+      ],
+      "answer": "La mémoire de travail",
+      "difficulty": 1
+    },
+    {
+      "id": 3,
+      "type": "QCM",
+      "question": "Combien d'éléments la mémoire de travail peut-elle retenir en moyenne ?",
+      "options": [
+        "3 ± 1",
+        "7 ± 2",
+        "12 ± 3",
+        "Un nombre illimité"
+      ],
+      "answer": "7 ± 2",
+      "difficulty": 1
+    },
+    {
+      "id": 4,
+      "type": "QCM",
+      "question": "Quelle mémoire est sollicitée pour se souvenir de la capitale du Japon ?",
+      "options": [
+        "Mémoire épisodique",
+        "Mémoire procédurale",
+        "Mémoire sémantique",
+        "Mémoire de travail"
+      ],
+      "answer": "Mémoire sémantique",
+      "difficulty": 1
+    },
+    {
+      "id": 5,
+      "type": "QCM",
+      "question": "Quel célèbre patient a subi l'ablation bilatérale des hippocampes en 1953 pour soigner son épilepsie ?",
+      "options": [
+        "Phineas Gage",
+        "Henry Molaison (H.M.)",
+        "Alois Alzheimer",
+        "Ivan Pavlov"
+      ],
+      "answer": "Henry Molaison (H.M.)",
+      "difficulty": 1
+    },
+    {
+      "id": 6,
+      "type": "QCM",
+      "question": "Selon le cours, la mémoire de travail est indispensable pour :",
+      "options": [
+        "Les réflexes nociceptifs",
+        "L'équilibre vestibulaire",
+        "La consolidation de la mémoire",
+        "Le stockage à long terme des automatismes"
+      ],
+      "answer": "La consolidation de la mémoire",
+      "difficulty": 1
+    },
+    {
+      "id": 7,
+      "type": "QCM",
+      "question": "Quelle structure cérébrale a été démontrée comme indispensable à la mémorisation spatiale ?",
+      "options": [
+        "L'hippocampe",
+        "L'amygdale",
+        "Le cervelet",
+        "Le bulbe olfactif"
+      ],
+      "answer": "L'hippocampe",
+      "difficulty": 1
+    },
+    {
+      "id": 8,
+      "type": "QCM",
+      "question": "Qu'est-ce que l'amorçage dans le cadre de la mémoire non déclarative ?",
+      "options": [
+        "Associer une cloche à la salivation",
+        "Énoncer un mot à partir de son préfixe en fonction du contexte",
+        "Conduire une voiture automatiquement",
+        "Mémoriser un événement traumatisant"
+      ],
+      "answer": "Énoncer un mot à partir de son préfixe en fonction du contexte",
+      "difficulty": 1
+    },
+    {
+      "id": 9,
+      "type": "QCM",
+      "question": "Quel type d'apprentissage associatif correspond au fait de s'arrêter au feu rouge ?",
+      "options": [
+        "Conditionnement répondant",
+        "Conditionnement opérant",
+        "Amorçage",
+        "Habituation"
+      ],
+      "answer": "Conditionnement opérant",
+      "difficulty": 1
+    },
+    {
+      "id": 10,
+      "type": "OPEN",
+      "question": "Donnez l'une des définitions de la mémoire présentée dans l'introduction du cours.",
+      "answer": "C'est la faculté de conserver et de rappeler des états de conscience passés et ce qui s'y trouve associé.",
+      "difficulty": 1
+    },
+    {
+      "id": 11,
+      "type": "OPEN",
+      "question": "Quelle est l'utilité fonctionnelle de la mémoire de travail ?",
+      "answer": "Elle permet le stockage temporaire des informations utiles à la réalisation d'une tâche et sert de voie d'entrée à la consolidation.",
+      "difficulty": 1
+    },
+    {
+      "id": 12,
+      "type": "OPEN",
+      "question": "Comment le cours définit-il la mémoire « parking » (mémoire à moyen terme) ?",
+      "answer": "C'est un stockage pour un certain temps d'une information transitoire, non consolidée puis effacée.",
+      "difficulty": 1
+    },
+    {
+      "id": 13,
+      "type": "OPEN",
+      "question": "Citez un exemple de tâche faisant appel à l'activité procédurale.",
+      "answer": "Conduire une voiture ou jouer d'un instrument de musique.",
+      "difficulty": 1
+    },
+    {
+      "id": 14,
+      "type": "OPEN",
+      "question": "Quel type d'amnésie principale le patient H.M. a-t-il développé après son opération en 1953 ?",
+      "answer": "Il a développé une amnésie antérograde (incapacité à former de nouveaux souvenirs).",
+      "difficulty": 1
+    },
+    {
+      "id": 15,
+      "type": "OPEN",
+      "question": "Dans le réseau de l'éveil, quel neuromédiateur est libéré par le noyau basal de Meynert ?",
+      "answer": "L'acétylcholine (Ach).",
+      "difficulty": 1
+    },
+    {
+      "id": 16,
+      "type": "QCM",
+      "question": "L'expérience du chien de Pavlov illustre :",
+      "options": [
+        "Le conditionnement opérant",
+        "Le conditionnement répondant",
+        "La mémoire sémantique",
+        "L'amorçage"
+      ],
+      "answer": "Le conditionnement répondant",
+      "difficulty": 2
+    },
+    {
+      "id": 17,
+      "type": "QCM",
+      "question": "Quel circuit correspond à la boucle tri-synaptique de l'hippocampe ?",
+      "options": [
+        "Cortex entorhinal -> Gyrus dentelé -> CA3 -> CA1",
+        "Subiculum -> CA1 -> CA3 -> Gyrus dentelé",
+        "Thalamus -> Amygdale -> CA1 -> Fornix",
+        "Gyrus cingulaire -> CA3 -> Cortex entorhinal -> Subiculum"
+      ],
+      "answer": "Cortex entorhinal -> Gyrus dentelé -> CA3 -> CA1",
+      "difficulty": 2
+    },
+    {
+      "id": 18,
+      "type": "QCM",
+      "question": "Quelle est la principale voie de sortie de l'hippocampe vers le fornix ?",
+      "options": [
+        "Le cortex entorhinal",
+        "Le gyrus dentelé",
+        "Le subiculum",
+        "Les collatérales de Schaffer"
+      ],
+      "answer": "Le subiculum",
+      "difficulty": 2
+    },
+    {
+      "id": 19,
+      "type": "QCM",
+      "question": "Lors de la consolidation d'une procédure motrice, quelles structures sont principalement sollicitées ?",
+      "options": [
+        "Hippocampe, thalamus, tronc cérébral",
+        "Régions motrices, striatum, cortex pariétal et cervelet",
+        "Amygdale, gyrus cingulaire, noyau de Meynert",
+        "Lobe temporal médial exclusivement"
+      ],
+      "answer": "Régions motrices, striatum, cortex pariétal et cervelet",
+      "difficulty": 2
+    },
+    {
+      "id": 20,
+      "type": "QCM",
+      "question": "Selon l'étude de Mueller et Oppenheimer (2014), quel est l'effet de l'écriture manuscrite sur la mémorisation ?",
+      "options": [
+        "Elle distrait l'attention et réduit la mémoire factuelle",
+        "Elle fixe les concepts plus efficacement en stimulant les boucles phonologiques et visuo-spatiales",
+        "Elle est moins efficace que le clavier car plus lente",
+        "Elle inhibe les associations proprioceptives"
+      ],
+      "answer": "Elle fixe les concepts plus efficacement en stimulant les boucles phonologiques et visuo-spatiales",
+      "difficulty": 2
+    },
+    {
+      "id": 21,
+      "type": "QCM",
+      "question": "Lors d'un stimulus visuel à contenu émotionnel (positif ou négatif), quelle structure est systématiquement suractivée bilatéralement ?",
+      "options": [
+        "L'hippocampe",
+        "Le cervelet",
+        "Le gyrus fusiforme",
+        "Le noyau accumbens"
+      ],
+      "answer": "Le gyrus fusiforme",
+      "difficulty": 2
+    },
+    {
+      "id": 22,
+      "type": "QCM",
+      "question": "Quelle structure cérébrale s'active spécifiquement lors de la présentation d'une image à connotation négative ?",
+      "options": [
+        "L'amygdale",
+        "Le thalamus",
+        "L'aire de Wernicke",
+        "Le gyrus de Heschl"
+      ],
+      "answer": "L'amygdale",
+      "difficulty": 2
+    },
+    {
+      "id": 23,
+      "type": "QCM",
+      "question": "Quelles ondes électriques corticales, émises pendant le sommeil, participent à la consolidation mémorielle ?",
+      "options": [
+        "Les ondes alpha et bêta",
+        "Les ondes delta et les fuseaux",
+        "Les ondes thêta uniquement",
+        "Les ondes gamma"
+      ],
+      "answer": "Les ondes delta et les fuseaux",
+      "difficulty": 2
+    },
+    {
+      "id": 24,
+      "type": "QCM",
+      "question": "Que démontre le test de transmission sociale de l'odeur (thym/cumin) sur des rats avec lésion de l'hippocampe ?",
+      "options": [
+        "La mémoire olfactive immédiate est détruite",
+        "L'hippocampe n'a aucun rôle dans l'olfaction",
+        "L'hippocampe est indispensable à la consolidation de l'information, mais pas à la mémoire immédiate",
+        "L'amygdale compense totalement la lésion hippocampique"
+      ],
+      "answer": "L'hippocampe est indispensable à la consolidation de l'information, mais pas à la mémoire immédiate",
+      "difficulty": 2
+    },
+    {
+      "id": 25,
+      "type": "OPEN",
+      "question": "Quels sont les facteurs mentionnés dans le cours favorisant la transformation d'une mémoire non consolidée en mémoire consolidée ?",
+      "answer": "Les stimulations, les répétitions, les associations et l'attention (ou concentration).",
+      "difficulty": 2
+    },
+    {
+      "id": 26,
+      "type": "OPEN",
+      "question": "Que conclut-on du cas de H.M. quant au rôle de l'hippocampe dans le temps ?",
+      "answer": "L'hippocampe est le siège de l'apprentissage et de la consolidation, mais il n'est plus actif pour la restitution d'une information ancienne déjà mémorisée.",
+      "difficulty": 2
+    },
+    {
+      "id": 27,
+      "type": "OPEN",
+      "question": "Quelle expérience classique utilise-t-on pour tester la mémorisation spatiale chez les rongeurs ?",
+      "answer": "Le labyrinthe aquatique de Morris (Morris water maze).",
+      "difficulty": 2
+    },
+    {
+      "id": 28,
+      "type": "OPEN",
+      "question": "Comment les émotions intenses (ex: état de stress post-traumatique) affectent-elles l'encodage de la mémoire ?",
+      "answer": "Le contexte émotionnel intense module et provoque une distorsion profonde de l'encodage de la mémoire.",
+      "difficulty": 2
+    },
+    {
+      "id": 29,
+      "type": "OPEN",
+      "question": "Quels sont les trois rôles principaux du sommeil décrits dans le cours ?",
+      "answer": "Contrôler la dette de sommeil, consolider l'encodage mémoriel (via hippocampe et cortex), et faire le tri des informations au niveau cortical.",
+      "difficulty": 2
+    },
+    {
+      "id": 30,
+      "type": "OPEN",
+      "question": "D'après l'imagerie métabolique, que se passe-t-il 25 jours après l'acquisition d'une tâche spatiale si le contexte reste identique ?",
+      "answer": "L'hippocampe n'est plus actif, tandis que le cortex est très actif, car la tâche est acquise et repose sur la restitution.",
+      "difficulty": 2
+    },
+    {
+      "id": 31,
+      "type": "QCM",
+      "question": "Le phénomène pharmacologique de tachyphylaxie désigne :",
+      "options": [
+        "Une augmentation progressive de l'effet du médicament",
+        "Une diminution rapide de la réponse après administrations répétées",
+        "Une réaction allergique systémique au médicament",
+        "Un effet toxique hépatique irréversible"
+      ],
+      "answer": "Une diminution rapide de la réponse après administrations répétées",
+      "difficulty": 3
+    },
+    {
+      "id": 32,
+      "type": "QCM",
+      "question": "Quel isoenzyme du cytochrome P450 métabolise le plus grand nombre de médicaments ?",
+      "options": [
+        "CYP1A2",
+        "CYP2D6",
+        "CYP3A4",
+        "CYP2C9"
+      ],
+      "answer": "CYP3A4",
+      "difficulty": 3
+    },
+    {
+      "id": 33,
+      "type": "QCM",
+      "question": "De quels mécanismes physiologiques dépend la clairance rénale d'un médicament ?",
+      "options": [
+        "Exclusivement de la filtration glomérulaire",
+        "La filtration glomérulaire, la sécrétion tubulaire et la réabsorption",
+        "Le débit sanguin hépatique et la liaison aux protéines",
+        "La métabolisation par le CYP450"
+      ],
+      "answer": "La filtration glomérulaire, la sécrétion tubulaire et la réabsorption",
+      "difficulty": 3
+    },
+    {
+      "id": 34,
+      "type": "QCM",
+      "question": "Dans le réseau de la mémoire procédurale, quelles structures prennent le relais de l'automatisation une fois la procédure pleinement acquise ?",
+      "options": [
+        "Le cervelet et le tronc cérébral",
+        "L'hippocampe et l'amygdale",
+        "Le striatum et le cortex pariétal",
+        "Le gyrus cingulaire antérieur"
+      ],
+      "answer": "Le striatum et le cortex pariétal",
+      "difficulty": 3
+    },
+    {
+      "id": 35,
+      "type": "QCM",
+      "question": "Quelle est la voie d'entrée principale des afférences sensorielles vers l'hippocampe ?",
+      "options": [
+        "Le cortex entorhinal (couche II)",
+        "Le subiculum",
+        "Les corps mamillaires",
+        "Le noyau basal de Meynert"
+      ],
+      "answer": "Le cortex entorhinal (couche II)",
+      "difficulty": 3
+    },
+    {
+      "id": 36,
+      "type": "QCM",
+      "question": "Que se passe-t-il dans le cerveau de l'animal 25 jours après l'apprentissage si on change le contexte de la tâche ?",
+      "options": [
+        "Seul le cortex reste actif",
+        "L'hippocampe s'éteint définitivement",
+        "L'hippocampe redevient très actif avec le cortex pour réapprendre et s'adapter",
+        "L'amygdale inhibe totalement le cortex moteur"
+      ],
+      "answer": "L'hippocampe redevient très actif avec le cortex pour réapprendre et s'adapter",
+      "difficulty": 3
+    },
+    {
+      "id": 37,
+      "type": "OPEN",
+      "question": "Qu'est-ce qu'un promédicament (ou prodrogue) ? Donnez un exemple.",
+      "answer": "C'est une substance pharmacologiquement inactive qui est convertie en un métabolite actif dans l'organisme, comme l'énalapril transformé en énalaprilate.",
+      "difficulty": 3
+    },
+    {
+      "id": 38,
+      "type": "OPEN",
+      "question": "Expliquez le phénomène d'induction enzymatique et ses conséquences.",
+      "answer": "C'est l'augmentation de la synthèse des enzymes de métabolisation par un médicament, ce qui accélère le métabolisme et diminue l'efficacité des autres médicaments.",
+      "difficulty": 3
+    },
+    {
+      "id": 39,
+      "type": "OPEN",
+      "question": "Quel est le rôle du télencéphale ventral (noyau basal de Meynert) dans la modulation de la mémorisation ?",
+      "answer": "Il projette des fibres cholinergiques (Ach) vers le cortex préfrontal et la face médiale du lobe temporal pour moduler le niveau d'éveil.",
+      "difficulty": 3
+    },
+    {
+      "id": 40,
+      "type": "OPEN",
+      "question": "Décrivez le trajet de l'influx au sein de la boucle tri-synaptique de l'hippocampe.",
+      "answer": "L'information entre par la voie perforante, fait relais dans le gyrus dentelé, passe à CA3 via les fibres moussues, puis à CA1 via les collatérales de Schaffer.",
+      "difficulty": 3
+    }
+  ]
+}

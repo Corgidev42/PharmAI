@@ -1,11 +1,12 @@
 import { create } from 'zustand'
-import { PHASES, PLAYER_COLORS, PLAYER_NAMES, MAX_TURNS } from '../game/constants.js'
+import { PHASES, PLAYER_COLORS, PLAYER_NAMES, MAX_TURNS, SPECIAL_TILE, TOTAL_TILES } from '../game/constants.js'
 import {
   rollDice,
   movePlayer,
   createInitialTiles,
   createPlayer,
   drawCard,
+  drawChanceCard,
   checkAnswer,
   resolveLanding,
   captureTile,
@@ -14,7 +15,6 @@ import {
   nextPlayerIndex,
   countOwnedTiles,
   applyPlayerBonus,
-  applySerpentsEtEchelles,
   getRestSpecialCopy,
 } from '../game/engine.js'
 
@@ -27,7 +27,11 @@ function buildInitialState() {
       createPlayer(1, PLAYER_NAMES[1], PLAYER_COLORS[1]),
     ],
     tiles: createInitialTiles(),
-    deck: { theme: '', cards: [], currentIndex: 0 },
+    /** Un paquet de cartes par joueur (index 0 et 1) — les questions du tour viennent du deck du joueur actif. */
+    decks: [
+      { theme: '', cards: [], currentIndex: 0 },
+      { theme: '', cards: [], currentIndex: 0 },
+    ],
     diceValue: null,
     currentCard: null,
     landingType: null,
@@ -40,12 +44,49 @@ function buildInitialState() {
     specialFeedback: null,
     /** Message après glissade serpent/échelle (affiché au-dessus des questions / modales) */
     slideNote: null,
+    /** Animation cartoon à l’atterrissage */
+    landingFx: null,
+    /** Verrou pour éviter un double mouvement */
+    isAnimatingMovement: false,
   }
 }
 
 function withSlide(subtitle, slideNote) {
   if (!slideNote) return subtitle
   return `${slideNote}\n\n${subtitle}`
+}
+
+
+const STEP_DELAY_MS = 110
+const SLIDE_STEP_DELAY_MS = 90
+const LANDING_FX_MS = 420
+
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms))
+}
+
+function updatePlayerPosition(players, playerId, position) {
+  return players.map((p) => (p.id === playerId ? { ...p, position } : p))
+}
+
+function backwardStep(position) {
+  return (position - 1 + TOTAL_TILES) % TOTAL_TILES
+}
+
+function setDeckAt(decks, playerId, newDeck) {
+  const out = [...decks]
+  out[playerId] = newDeck
+  return out
+}
+
+function getLandingFx(landingType) {
+  if (landingType?.startsWith('SPECIAL_')) {
+    return { kind: 'special', emoji: '◆', label: 'Effet' }
+  }
+  if (landingType === 'FREE' || landingType === 'CHANCE' || landingType === 'OPPONENT') {
+    return { kind: 'question', emoji: '?', label: 'Question' }
+  }
+  return { kind: 'normal', emoji: '·', label: 'Stop' }
 }
 
 export const useGameStore = create((set, get) => ({
@@ -57,11 +98,16 @@ export const useGameStore = create((set, get) => ({
       players: s.players.map((p) => (p.id === id ? { ...p, name } : p)),
     })),
 
-  loadDeck: (deckData) =>
-    set({
-      deck: { theme: deckData.theme, cards: [...deckData.cards], currentIndex: 0 },
+  /** Charge le deck d’un joueur précis (0 ou 1). */
+  loadDeckForPlayer: (playerId, deckData) =>
+    set((s) => ({
+      decks: setDeckAt(s.decks, playerId, {
+        theme: deckData.theme,
+        cards: [...deckData.cards],
+        currentIndex: 0,
+      }),
       deckErrors: null,
-    }),
+    })),
 
   setDeckErrors: (errors) => set({ deckErrors: errors }),
 
@@ -75,18 +121,72 @@ export const useGameStore = create((set, get) => ({
   },
 
   // --- Movement resolution ---
-  finishMovement: () => {
+  finishMovement: async () => {
     const s = get()
+    if (s.isAnimatingMovement || s.phase !== PHASES.MOVING || !s.diceValue) return
+
+    set({ isAnimatingMovement: true, landingFx: null })
+
     const player = s.players[s.currentPlayer]
-    const rawPos = movePlayer(player.position, s.diceValue)
-    const { finalIndex, slideNote } = applySerpentsEtEchelles(rawPos, s.tiles)
-    const newPos = finalIndex
+    let movingPlayers = s.players
+    let pos = player.position
 
-    const updatedPlayers = s.players.map((p) =>
-      p.id === s.currentPlayer ? { ...p, position: newPos } : p
-    )
+    for (let i = 0; i < s.diceValue; i++) {
+      pos = movePlayer(pos, 1)
+      movingPlayers = updatePlayerPosition(movingPlayers, s.currentPlayer, pos)
+      set({ players: movingPlayers })
+      await sleep(STEP_DELAY_MS)
+    }
 
+    let serpents = 0
+    let echelles = 0
+    let guard = 0
+
+    while (guard < 10) {
+      guard++
+      const special = s.tiles[pos]?.special
+      if (!special) break
+
+      if (special === SPECIAL_TILE.SERPENT) {
+        for (let i = 0; i < 2; i++) {
+          pos = backwardStep(pos)
+          movingPlayers = updatePlayerPosition(movingPlayers, s.currentPlayer, pos)
+          set({ players: movingPlayers })
+          await sleep(SLIDE_STEP_DELAY_MS)
+        }
+        serpents++
+        continue
+      }
+
+      if (special === SPECIAL_TILE.ECHELLE) {
+        for (let i = 0; i < 2; i++) {
+          pos = movePlayer(pos, 1)
+          movingPlayers = updatePlayerPosition(movingPlayers, s.currentPlayer, pos)
+          set({ players: movingPlayers })
+          await sleep(SLIDE_STEP_DELAY_MS)
+        }
+        echelles++
+        continue
+      }
+
+      break
+    }
+
+    const slideBits = []
+    if (serpents) slideBits.push(`${serpents} serpent${serpents > 1 ? 's' : ''}`)
+    if (echelles) slideBits.push(`${echelles} échelle${echelles > 1 ? 's' : ''}`)
+    const slideNote = slideBits.length ? `${slideBits.join(' · ')} — case ajustée.` : null
+
+    const newPos = pos
+    const updatedPlayers = movingPlayers
     const landing = resolveLanding(s.tiles, newPos, s.currentPlayer)
+    const pid = s.currentPlayer
+    const myDeck = s.decks[pid]
+
+    const fx = getLandingFx(landing)
+    set({ landingFx: { id: Date.now(), tileIndex: newPos, ...fx } })
+    await sleep(LANDING_FX_MS)
+    set({ landingFx: null })
 
     if (landing === 'SPECIAL_DEPART') {
       const playersWithBonus = applyPlayerBonus(updatedPlayers, s.currentPlayer, 1)
@@ -95,8 +195,8 @@ export const useGameStore = create((set, get) => ({
         phase: PHASES.RESULT,
         specialFeedback: {
           kind: 'depart',
-          title: '🌟 Super départ !',
-          subtitle: withSlide('Prime toute mignonne : +1 point bonus ✨', slideNote),
+          title: 'Départ',
+          subtitle: withSlide('+1 bonus.', slideNote),
           positive: true,
           neon: 'lime',
         },
@@ -105,6 +205,7 @@ export const useGameStore = create((set, get) => ({
         landingType: null,
         currentCard: null,
         lastAnswerCorrect: null,
+        isAnimatingMovement: false,
       })
       return
     }
@@ -116,8 +217,8 @@ export const useGameStore = create((set, get) => ({
         phase: PHASES.RESULT,
         specialFeedback: {
           kind: 'fee',
-          title: '🧚 Fée des bonbons',
-          subtitle: withSlide('Elle te file un sucre magique : +1 bonus !', slideNote),
+          title: 'Fée',
+          subtitle: withSlide('+1 bonus.', slideNote),
           positive: true,
           neon: 'pink',
         },
@@ -126,6 +227,7 @@ export const useGameStore = create((set, get) => ({
         landingType: null,
         currentCard: null,
         lastAnswerCorrect: null,
+        isAnimatingMovement: false,
       })
       return
     }
@@ -137,8 +239,8 @@ export const useGameStore = create((set, get) => ({
         phase: PHASES.RESULT,
         specialFeedback: {
           kind: 'potion',
-          title: '🧪 Potion rose',
-          subtitle: withSlide('Gloups ! Ça pétille : +2 bonus !', slideNote),
+          title: 'Potion',
+          subtitle: withSlide('+2 bonus.', slideNote),
           positive: true,
           neon: 'fuchsia',
         },
@@ -147,6 +249,7 @@ export const useGameStore = create((set, get) => ({
         landingType: null,
         currentCard: null,
         lastAnswerCorrect: null,
+        isAnimatingMovement: false,
       })
       return
     }
@@ -158,8 +261,8 @@ export const useGameStore = create((set, get) => ({
         phase: PHASES.RESULT,
         specialFeedback: {
           kind: 'megaphone',
-          title: '📣 Mégaphone kawaii',
-          subtitle: withSlide('Tout le monde t’entend briller : +1 bonus !', slideNote),
+          title: 'Mégaphone',
+          subtitle: withSlide('+1 bonus.', slideNote),
           positive: true,
           neon: 'amber',
         },
@@ -168,6 +271,7 @@ export const useGameStore = create((set, get) => ({
         landingType: null,
         currentCard: null,
         lastAnswerCorrect: null,
+        isAnimatingMovement: false,
       })
       return
     }
@@ -179,8 +283,8 @@ export const useGameStore = create((set, get) => ({
         phase: PHASES.RESULT,
         specialFeedback: {
           kind: 'tax',
-          title: '💸 Taxe des licornes',
-          subtitle: withSlide('Elles ont besoin de paillettes : −1 bonus (min. 0).', slideNote),
+          title: 'Taxe',
+          subtitle: withSlide('−1 bonus (plancher à 0).', slideNote),
           positive: false,
           neon: 'rose',
         },
@@ -189,6 +293,30 @@ export const useGameStore = create((set, get) => ({
         landingType: null,
         currentCard: null,
         lastAnswerCorrect: null,
+        isAnimatingMovement: false,
+      })
+      return
+    }
+
+    if (landing === 'SPECIAL_NUAGE') {
+      const playersWithBonus = applyPlayerBonus(updatedPlayers, s.currentPlayer, 1)
+      set({
+        players: playersWithBonus,
+        phase: PHASES.RESULT,
+        specialFeedback: {
+          kind: 'nuage',
+          title: 'Nuage',
+          subtitle: withSlide('+1 bonus. Tu rejoues : relance le dé (même joueur).', slideNote),
+          positive: true,
+          neon: 'sky',
+          extraTurn: true,
+        },
+        slideNote: null,
+        diceValue: null,
+        landingType: null,
+        currentCard: null,
+        lastAnswerCorrect: null,
+        isAnimatingMovement: false,
       })
       return
     }
@@ -211,34 +339,40 @@ export const useGameStore = create((set, get) => ({
         landingType: null,
         currentCard: null,
         lastAnswerCorrect: null,
+        isAnimatingMovement: false,
       })
       return
     }
 
     if (landing === 'SPECIAL_CHANCE') {
-      const { card, nextIndex } = drawCard(s.deck.cards, s.deck.currentIndex)
+      const { card, nextIndex, remainingCards } = drawChanceCard(myDeck.cards, myDeck.currentIndex)
       if (!card) {
         set({
           players: updatedPlayers,
           phase: PHASES.GAME_OVER,
-          winner: checkVictory(s.tiles, s.deck, s.turnCount + 1) ?? -1,
+          winner: checkVictory(s.tiles, s.decks, s.turnCount + 1) ?? -1,
+          isAnimatingMovement: false,
         })
         return
       }
+      const newDeckState = remainingCards
+        ? { ...myDeck, cards: remainingCards }
+        : { ...myDeck, currentIndex: nextIndex }
       set({
         players: updatedPlayers,
         currentCard: card,
-        deck: { ...s.deck, currentIndex: nextIndex },
+        decks: setDeckAt(s.decks, pid, newDeckState),
         landingType: 'CHANCE',
         phase: PHASES.QUESTION,
         diceValue: null,
         slideNote,
+        isAnimatingMovement: false,
       })
       return
     }
 
     if (landing === 'OWN') {
-      const victory = checkVictory(s.tiles, s.deck, s.turnCount + 1)
+      const victory = checkVictory(s.tiles, s.decks, s.turnCount + 1)
       if (victory !== null) {
         set({
           players: updatedPlayers,
@@ -246,6 +380,7 @@ export const useGameStore = create((set, get) => ({
           phase: PHASES.GAME_OVER,
           winner: victory,
           slideNote: null,
+          isAnimatingMovement: false,
         })
         return
       }
@@ -255,8 +390,8 @@ export const useGameStore = create((set, get) => ({
           phase: PHASES.RESULT,
           specialFeedback: {
             kind: 'own_slide',
-            title: '🏠 Toujours chez toi',
-            subtitle: `${slideNote}\n\nC’est ta propriété : repos, au joueur suivant !`,
+            title: 'Ta case',
+            subtitle: `${slideNote}\n\nPropriété déjà à toi : fin de tour.`,
             positive: true,
             neon: 'sky',
           },
@@ -265,6 +400,7 @@ export const useGameStore = create((set, get) => ({
           landingType: null,
           currentCard: null,
           lastAnswerCorrect: null,
+          isAnimatingMovement: false,
         })
         return
       }
@@ -276,59 +412,63 @@ export const useGameStore = create((set, get) => ({
         diceValue: null,
         landingType: null,
         slideNote: null,
+        isAnimatingMovement: false,
       })
       return
     }
 
     if (landing === 'FREE') {
-      const { card, nextIndex } = drawCard(s.deck.cards, s.deck.currentIndex)
+      const { card, nextIndex } = drawCard(myDeck.cards, myDeck.currentIndex)
       if (!card) {
         set({
           players: updatedPlayers,
           phase: PHASES.GAME_OVER,
-          winner: checkVictory(s.tiles, s.deck, s.turnCount + 1) ?? -1,
+          winner: checkVictory(s.tiles, s.decks, s.turnCount + 1) ?? -1,
+          isAnimatingMovement: false,
         })
         return
       }
       set({
         players: updatedPlayers,
         currentCard: card,
-        deck: { ...s.deck, currentIndex: nextIndex },
+        decks: setDeckAt(s.decks, pid, { ...myDeck, currentIndex: nextIndex }),
         landingType: 'FREE',
         phase: PHASES.QUESTION,
         diceValue: null,
         slideNote,
+        isAnimatingMovement: false,
       })
       return
     }
 
-    // OPPONENT tile -> duel
-    const tileDifficulty = s.deck.cards.length > 0 ? 1 : 0
+    const tileDifficulty = myDeck.cards.length > 0 ? 1 : 0
     const { card, nextIndex, remainingCards } = drawCard(
-      s.deck.cards,
-      s.deck.currentIndex,
+      myDeck.cards,
+      myDeck.currentIndex,
       tileDifficulty
     )
     if (!card) {
       set({
         players: updatedPlayers,
         phase: PHASES.GAME_OVER,
-        winner: checkVictory(s.tiles, s.deck, s.turnCount + 1) ?? -1,
+        winner: checkVictory(s.tiles, s.decks, s.turnCount + 1) ?? -1,
+        isAnimatingMovement: false,
       })
       return
     }
-    const newDeck = remainingCards
-      ? { ...s.deck, cards: remainingCards }
-      : { ...s.deck, currentIndex: nextIndex }
+    const newDeckAfterDuel = remainingCards
+      ? { ...myDeck, cards: remainingCards }
+      : { ...myDeck, currentIndex: nextIndex }
 
     set({
       players: updatedPlayers,
       currentCard: card,
-      deck: newDeck,
+      decks: setDeckAt(s.decks, pid, newDeckAfterDuel),
       landingType: 'OPPONENT',
       phase: PHASES.DUEL,
       diceValue: null,
       slideNote,
+      isAnimatingMovement: false,
     })
   },
 
@@ -344,7 +484,7 @@ export const useGameStore = create((set, get) => ({
 
     if (correct) {
       if (s.landingType === 'CHANCE') {
-        newPlayers = applyPlayerBonus(s.players, s.currentPlayer, 1).map((p) => ({
+        newPlayers = applyPlayerBonus(s.players, s.currentPlayer, 2).map((p) => ({
           ...p,
           score: countOwnedTiles(s.tiles, p.id),
         }))
@@ -369,13 +509,14 @@ export const useGameStore = create((set, get) => ({
       players: newPlayers,
       lastAnswerCorrect: correct,
       phase: PHASES.RESULT,
+      landingFx: null,
     })
   },
 
   // --- After result display ---
   proceedAfterResult: () => {
     const s = get()
-    const victory = checkVictory(s.tiles, s.deck, s.turnCount + 1)
+    const victory = checkVictory(s.tiles, s.decks, s.turnCount + 1)
     if (victory !== null) {
       set({
         phase: PHASES.GAME_OVER,
@@ -383,6 +524,20 @@ export const useGameStore = create((set, get) => ({
         turnCount: s.turnCount + 1,
         specialFeedback: null,
         slideNote: null,
+        landingFx: null,
+      })
+      return
+    }
+    if (s.specialFeedback?.extraTurn) {
+      set({
+        phase: PHASES.ROLLING,
+        diceValue: null,
+        currentCard: null,
+        landingType: null,
+        lastAnswerCorrect: null,
+        specialFeedback: null,
+        slideNote: null,
+        landingFx: null,
       })
       return
     }
@@ -396,6 +551,7 @@ export const useGameStore = create((set, get) => ({
       lastAnswerCorrect: null,
       specialFeedback: null,
       slideNote: null,
+      landingFx: null,
     })
   },
 

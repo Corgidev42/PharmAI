@@ -46,6 +46,23 @@ export function drawCard(cards, currentIndex, minDifficulty = 0) {
   return { card: cards[currentIndex], nextIndex: currentIndex + 1 }
 }
 
+/** Case Chance : pioche la carte restante la plus facile (difficulté minimale). */
+export function drawChanceCard(cards, currentIndex) {
+  if (currentIndex >= cards.length) return { card: null, nextIndex: currentIndex }
+
+  const remaining = cards.slice(currentIndex)
+  if (remaining.length === 0) return { card: null, nextIndex: currentIndex }
+
+  const minDiff = Math.min(...remaining.map((c) => Number(c.difficulty) || 3))
+  const rel = remaining.findIndex((c) => (Number(c.difficulty) || 3) === minDiff)
+  const absoluteIndex = currentIndex + rel
+
+  const card = cards[absoluteIndex]
+  const nextCards = [...cards]
+  nextCards.splice(absoluteIndex, 1)
+  return { card, nextIndex: currentIndex, remainingCards: nextCards }
+}
+
 export function checkAnswer(card, answer) {
   if (card.type === 'QCM') {
     return answer === card.answer
@@ -80,9 +97,9 @@ export function applySerpentsEtEchelles(startIndex, tiles, maxChain = 10) {
   let slideNote = null
   if (serpents || echelles) {
     const bits = []
-    if (serpents) bits.push(`${serpents} serpent${serpents > 1 ? 's' : ''} 🐍`)
-    if (echelles) bits.push(`${echelles} échelle${echelles > 1 ? 's' : ''} 🪜`)
-    slideNote = `${bits.join(' et ')} : ton pion a rebondi sur le parcours coloré !`
+    if (serpents) bits.push(`${serpents} serpent${serpents > 1 ? 's' : ''}`)
+    if (echelles) bits.push(`${echelles} échelle${echelles > 1 ? 's' : ''}`)
+    slideNote = `${bits.join(' · ')} — case ajustée (serpent / échelle).`
   }
 
   return { finalIndex: pos, slideNote }
@@ -97,10 +114,10 @@ export function resolveLanding(tiles, tileIndex, playerId) {
     if (tile.special === SPECIAL_TILE.FEE_BONBONS) return 'SPECIAL_FEE_BONBONS'
     if (tile.special === SPECIAL_TILE.POTION_DOUX) return 'SPECIAL_POTION_DOUX'
     if (tile.special === SPECIAL_TILE.MEGAPHONE) return 'SPECIAL_MEGAPHONE'
+    if (tile.special === SPECIAL_TILE.NUAGE) return 'SPECIAL_NUAGE'
     if (
       tile.special === SPECIAL_TILE.PARC ||
       tile.special === SPECIAL_TILE.PRISON ||
-      tile.special === SPECIAL_TILE.NUAGE ||
       tile.special === SPECIAL_TILE.BULLES_PAIX ||
       tile.special === SPECIAL_TILE.TOILE_ARAIGNEE
     )
@@ -135,11 +152,18 @@ export function countOwnedTiles(tiles, playerId) {
   return tiles.filter((t) => t.owner === playerId).length
 }
 
-export function checkVictory(tiles, deck, turnCount) {
-  const deckExhausted = deck.currentIndex >= deck.cards.length
+/**
+ * @param {Array<{ cards: unknown[], currentIndex: number }>} decks — un paquet par joueur (index 0 et 1)
+ */
+export function checkVictory(tiles, decks, turnCount) {
+  const bothDecksExhausted =
+    Array.isArray(decks) &&
+    decks.length >= 2 &&
+    decks[0].currentIndex >= decks[0].cards.length &&
+    decks[1].currentIndex >= decks[1].cards.length
   const turnsOver = turnCount >= MAX_TURNS
 
-  if (!deckExhausted && !turnsOver) return null
+  if (!bothDecksExhausted && !turnsOver) return null
 
   const counts = [countOwnedTiles(tiles, 0), countOwnedTiles(tiles, 1)]
 
@@ -152,34 +176,29 @@ export function nextPlayerIndex(current) {
   return current === 0 ? 1 : 0
 }
 
-/** Texte mignon pour les cases repos (selon le type exact). */
+/** Texte des cases repos (hors Nuage, traité à part). */
 export function getRestSpecialCopy(special) {
   switch (special) {
-    case SPECIAL_TILE.NUAGE:
-      return {
-        title: 'Nuage tout doux',
-        subtitle: 'Tu fais la sieste sur un nuage. Aucune question, zzz… Passe ton tour en douceur.',
-      }
     case SPECIAL_TILE.BULLES_PAIX:
       return {
-        title: 'Bulles magiques',
-        subtitle: 'Pop ! Des bulles roses t’entourent. Moment chill — au joueur suivant.',
+        title: 'Repos',
+        subtitle: 'Pas de question. Tour suivant.',
       }
     case SPECIAL_TILE.TOILE_ARAIGNEE:
       return {
-        title: 'Toile d’araignée kawaii',
-        subtitle: 'Une araignée t’offre du thé (en peluche). Rien de méchant, juste un câlin.',
+        title: 'Repos',
+        subtitle: 'Pas de question. Tour suivant.',
       }
     case SPECIAL_TILE.PARC:
       return {
-        title: 'Parc arc-en-ciel',
-        subtitle: 'Banc confortable, pas de révision ici. Repos !',
+        title: 'Repos',
+        subtitle: 'Pas de question. Tour suivant.',
       }
     case SPECIAL_TILE.PRISON:
     default:
       return {
-        title: 'Pause citron',
-        subtitle: 'Coin tranquille : pas de question, souffle un peu.',
+        title: 'Repos',
+        subtitle: 'Pas de question. Tour suivant.',
       }
   }
 }

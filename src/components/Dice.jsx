@@ -35,6 +35,7 @@ function DiceFace({ value }) {
 export default function Dice() {
   const phase = useGameStore((s) => s.phase)
   const diceValue = useGameStore((s) => s.diceValue)
+  const isAnimatingMovement = useGameStore((s) => s.isAnimatingMovement)
   const currentPlayer = useGameStore((s) => s.currentPlayer)
   const players = useGameStore((s) => s.players)
   const roll = useGameStore((s) => s.roll)
@@ -55,7 +56,9 @@ export default function Dice() {
         const finalValue = roll()
         setDisplayValue(finalValue)
         setRolling(false)
-        setTimeout(() => finishMovement(), 600)
+        setTimeout(async () => {
+          await finishMovement()
+        }, 180)
       }
     }, 80)
   }, [phase, rolling, roll, finishMovement])
@@ -72,10 +75,13 @@ export default function Dice() {
             <span style={{ color: players[currentPlayer].color }} className="font-extrabold drop-shadow-[0_0_6px_currentColor]">
               {players[currentPlayer].name}
             </span>
-            {' '}— lance le dé !
+            {' '}— lance le dé.
           </>
         ) : (
-          phase === PHASES.MOVING && `Hop ! ${diceValue} case${diceValue > 1 ? 's' : ''}…`
+          phase === PHASES.MOVING &&
+          (isAnimatingMovement
+            ? `Déplacement — ${diceValue ?? ''} ${diceValue > 1 ? 'cases' : 'case'}`
+            : `${diceValue ?? ''} ${diceValue > 1 ? 'cases' : 'case'}`)
         )}
       </p>
 

@@ -4,23 +4,36 @@ import { countOwnedTiles } from '../game/engine'
 export default function ScoreBoard() {
   const players = useGameStore((s) => s.players)
   const tiles = useGameStore((s) => s.tiles)
+  const decks = useGameStore((s) => s.decks)
   const currentPlayer = useGameStore((s) => s.currentPlayer)
   const turnCount = useGameStore((s) => s.turnCount)
   const maxTurns = useGameStore((s) => s.maxTurns)
-  const deckTheme = useGameStore((s) => s.deck.theme)
-  const cardsLeft = useGameStore((s) => s.deck.cards.length - s.deck.currentIndex)
 
   return (
-    <div className="glass-candy rounded-3xl p-5 w-64 space-y-4 border-2 border-cyan-400/25 shadow-neon-cyan">
-      {deckTheme && (
-        <p className="text-xs text-fuchsia-200/90 text-center font-extrabold tracking-wide uppercase">
-          {deckTheme}
-        </p>
-      )}
+    <div className="glass-candy rounded-3xl p-5 w-full max-w-xs sm:w-72 space-y-4 border-2 border-cyan-400/25 shadow-neon-cyan">
+      <div className="space-y-2 text-[10px] text-fuchsia-200/85">
+        {players.map((p, i) => {
+          const d = decks[i]
+          const left = d.cards.length - d.currentIndex
+          return (
+            <div key={p.id} className="border border-white/10 rounded-xl px-2 py-1.5 bg-purple-950/40">
+              <p className="font-bold text-white/95 truncate">{p.name}</p>
+              <p className="text-fuchsia-200/70 truncate" title={d.theme}>
+                {d.theme || '—'}
+              </p>
+              <p className="text-cyan-200/80">{left} carte{left !== 1 ? 's' : ''} restante{left !== 1 ? 's' : ''}</p>
+            </div>
+          )
+        })}
+      </div>
 
       <div className="flex justify-between text-[11px] font-semibold text-cyan-200/70">
-        <span>Tour {turnCount}/{maxTurns}</span>
-        <span>{cardsLeft} carte{cardsLeft !== 1 ? 's' : ''}</span>
+        <span>
+          Tour {turnCount}/{maxTurns}
+        </span>
+        <span className="text-pink-200/80">
+          Pioche : {players[currentPlayer]?.name ?? '…'}
+        </span>
       </div>
 
       <div className="space-y-3">
@@ -49,7 +62,10 @@ export default function ScoreBoard() {
                   {bonus !== 0 ? ` · bonus ${bonus > 0 ? '+' : ''}${bonus}` : ''}
                 </p>
               </div>
-              <span className="text-xl font-extrabold tabular-nums drop-shadow-[0_0_8px_currentColor]" style={{ color: player.color }}>
+              <span
+                className="text-xl font-extrabold tabular-nums drop-shadow-[0_0_8px_currentColor]"
+                style={{ color: player.color }}
+              >
                 {player.score + bonus}
               </span>
             </div>

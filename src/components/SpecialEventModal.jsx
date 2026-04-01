@@ -35,13 +35,14 @@ export default function SpecialEventModal() {
           className="fixed inset-0 z-50 flex items-center justify-center bg-purple-950/70 backdrop-blur-md p-4"
         >
           <motion.div
-            initial={{ scale: 0.88, y: 24, rotate: -2 }}
-            animate={{ scale: 1, y: 0, rotate: 0 }}
-            exit={{ scale: 0.88, y: 24 }}
-            className={`w-full max-w-md rounded-[1.75rem] border-2 bg-gradient-to-br p-7 shadow-2xl ${neon}`}
+            initial={{ opacity: 0, y: 16, scale: 0.98 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: 12 }}
+            transition={{ type: 'spring', stiffness: 320, damping: 28 }}
+            className={`w-full max-w-md rounded-2xl border-2 bg-gradient-to-br p-7 shadow-2xl ${neon}`}
           >
-            <p className="text-[11px] font-extrabold uppercase tracking-widest text-pink-300/90 mb-2">
-              Case magique
+            <p className="text-[11px] font-semibold uppercase tracking-widest text-slate-400 mb-2">
+              Case spéciale
             </p>
             <h3 className="text-2xl font-extrabold text-white mb-3 drop-shadow-[0_0_12px_rgba(255,255,255,0.2)]">
               {specialFeedback.title}
@@ -51,11 +52,11 @@ export default function SpecialEventModal() {
             </p>
             <button
               onClick={() => proceedAfterResult()}
-              className="w-full py-3.5 rounded-2xl font-extrabold text-sm
+              className="w-full py-3.5 rounded-2xl font-bold text-sm
                 bg-gradient-to-r from-pink-500 to-fuchsia-500 text-white
-                shadow-neon-pink hover:scale-[1.02] active:scale-[0.98] transition-transform"
+                shadow-neon-pink hover:brightness-110 transition-all"
             >
-              Ok, c’est trop mignon — suite !
+              Continuer
             </button>
           </motion.div>
         </motion.div>

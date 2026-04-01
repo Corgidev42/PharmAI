@@ -1,0 +1,429 @@
+{
+  "theme": "Contrôle moteur et Pharmacologie",
+  "cards": [
+    {
+      "id": 1,
+      "type": "QCM",
+      "question": "Quel est le principal mécanisme d'action des bêta-bloquants ?",
+      "options": [
+        "Blocage des canaux calciques",
+        "Stimulation des récepteurs alpha",
+        "Inhibition de l'enzyme de conversion",
+        "Blocage des récepteurs bêta-adrénergiques"
+      ],
+      "answer": "Blocage des récepteurs bêta-adrénergiques",
+      "difficulty": 1
+    },
+    {
+      "id": 2,
+      "type": "QCM",
+      "question": "Quelle voie d'administration offre la biodisponibilité la plus élevée ?",
+      "options": [
+        "Orale",
+        "Sublinguale",
+        "Intraveineuse",
+        "Transdermique"
+      ],
+      "answer": "Intraveineuse",
+      "difficulty": 1
+    },
+    {
+      "id": 3,
+      "type": "QCM",
+      "question": "Quel organe est principalement responsable du métabolisme des médicaments ?",
+      "options": [
+        "Foie",
+        "Rein",
+        "Intestin",
+        "Poumon"
+      ],
+      "answer": "Foie",
+      "difficulty": 1
+    },
+    {
+      "id": 4,
+      "type": "QCM",
+      "question": "Quel paramètre pharmacocinétique mesure l'exposition totale au médicament ?",
+      "options": [
+        "Cmax",
+        "Clairance",
+        "Tmax",
+        "AUC (Aire sous la courbe)"
+      ],
+      "answer": "AUC (Aire sous la courbe)",
+      "difficulty": 1
+    },
+    {
+      "id": 5,
+      "type": "QCM",
+      "question": "Quel est l'organe de l'équilibre situé dans l'oreille interne ?",
+      "options": [
+        "Le vestibule",
+        "La cochlée",
+        "Le tympan",
+        "La trompe d'Eustache"
+      ],
+      "answer": "Le vestibule",
+      "difficulty": 1
+    },
+    {
+      "id": 6,
+      "type": "QCM",
+      "question": "Que détecte l'inclinaison de la tête au niveau de l'utricule et du saccule ?",
+      "options": [
+        "L'accélération angulaire",
+        "La rotation des yeux",
+        "L'audition",
+        "L'accélération linéaire"
+      ],
+      "answer": "L'accélération linéaire",
+      "difficulty": 1
+    },
+    {
+      "id": 7,
+      "type": "QCM",
+      "question": "Quel ion entre depuis l'endolymphe pour dépolariser les cellules ciliées vestibulaires ?",
+      "options": [
+        "Na+",
+        "Ca2+",
+        "K+",
+        "Cl-"
+      ],
+      "answer": "K+",
+      "difficulty": 1
+    },
+    {
+      "id": 8,
+      "type": "QCM",
+      "question": "Quelle est l'une des fonctions de la formation réticulée du tronc cérébral ?",
+      "options": [
+        "Régulation de la vigilance et de la motricité",
+        "Sécrétion d'hormones thyroïdiennes",
+        "Contrôle exclusif de l'audition",
+        "Filtration glomérulaire"
+      ],
+      "answer": "Régulation de la vigilance et de la motricité",
+      "difficulty": 1
+    },
+    {
+      "id": 9,
+      "type": "QCM",
+      "question": "Quel lobe cérébelleux (archéo-cervelet) est principalement impliqué dans l'équilibre ?",
+      "options": [
+        "Lobe frontal",
+        "Lobe flocculo-nodulaire",
+        "Lobe temporal",
+        "Vermis"
+      ],
+      "answer": "Lobe flocculo-nodulaire",
+      "difficulty": 1
+    },
+    {
+      "id": 10,
+      "type": "OPEN",
+      "question": "Définissez la demi-vie d'élimination d'un médicament.",
+      "answer": "C'est le temps nécessaire pour que la concentration plasmatique du médicament diminue de moitié.",
+      "difficulty": 1
+    },
+    {
+      "id": 11,
+      "type": "OPEN",
+      "question": "Qu'est-ce que la pharmacovigilance ?",
+      "answer": "C'est la surveillance et l'évaluation des effets indésirables des médicaments après leur mise sur le marché.",
+      "difficulty": 1
+    },
+    {
+      "id": 12,
+      "type": "OPEN",
+      "question": "Où sont situés l'utricule et le saccule ?",
+      "answer": "Ils sont situés dans les organes otolithiques de l'organe vestibulaire (labyrinthe).",
+      "difficulty": 1
+    },
+    {
+      "id": 13,
+      "type": "OPEN",
+      "question": "Que provoque la dépolarisation des cellules ciliées vestibulaires ?",
+      "answer": "Elle entraîne la libération de glutamate.",
+      "difficulty": 1
+    },
+    {
+      "id": 14,
+      "type": "OPEN",
+      "question": "Quel faisceau issu du pont ou du bulbe régule la musculature axiale et la lutte contre la gravité ?",
+      "answer": "Le faisceau réticulo-spinal.",
+      "difficulty": 1
+    },
+    {
+      "id": 15,
+      "type": "OPEN",
+      "question": "Quelle est l'action principale du paléo-cervelet ?",
+      "answer": "Le paléo-cervelet contrôle le tonus musculaire et la posture via la moelle.",
+      "difficulty": 1
+    },
+    {
+      "id": 16,
+      "type": "QCM",
+      "question": "Les enzymes du cytochrome P450 sont principalement impliquées dans quel processus ?",
+      "options": [
+        "Absorption intestinale",
+        "Distribution tissulaire",
+        "Biotransformation hépatique",
+        "Excrétion rénale"
+      ],
+      "answer": "Biotransformation hépatique",
+      "difficulty": 2
+    },
+    {
+      "id": 17,
+      "type": "QCM",
+      "question": "Quel type de liaison médicament-récepteur est généralement réversible ?",
+      "options": [
+        "Liaison covalente",
+        "Liaison ionique",
+        "Liaison peptidique",
+        "Liaison disulfide"
+      ],
+      "answer": "Liaison ionique",
+      "difficulty": 2
+    },
+    {
+      "id": 18,
+      "type": "QCM",
+      "question": "Un agoniste partiel se caractérise par :",
+      "options": [
+        "Une efficacité maximale identique à l'agoniste complet",
+        "Une affinité nulle pour le récepteur",
+        "Une efficacité intrinsèque inférieure à 1",
+        "Une inhibition de l'enzyme de conversion"
+      ],
+      "answer": "Une efficacité intrinsèque inférieure à 1",
+      "difficulty": 2
+    },
+    {
+      "id": 19,
+      "type": "QCM",
+      "question": "Un antagoniste compétitif déplace la courbe dose-réponse de l'agoniste vers :",
+      "options": [
+        "La gauche sans changer l'Emax",
+        "La droite en diminuant l'Emax",
+        "La gauche en augmentant l'Emax",
+        "La droite sans changer l'Emax"
+      ],
+      "answer": "La droite sans changer l'Emax",
+      "difficulty": 2
+    },
+    {
+      "id": 20,
+      "type": "QCM",
+      "question": "Quelle phase des essais cliniques teste l'efficacité du médicament sur un grand nombre de patients ?",
+      "options": [
+        "Phase I",
+        "Phase II",
+        "Phase III",
+        "Phase IV"
+      ],
+      "answer": "Phase III",
+      "difficulty": 2
+    },
+    {
+      "id": 21,
+      "type": "QCM",
+      "question": "La liaison aux protéines plasmatiques (albumine) affecte principalement :",
+      "options": [
+        "L'absorption du médicament",
+        "Le métabolisme de phase II",
+        "La fraction libre active du médicament",
+        "L'excrétion biliaire"
+      ],
+      "answer": "La fraction libre active du médicament",
+      "difficulty": 2
+    },
+    {
+      "id": 22,
+      "type": "QCM",
+      "question": "Quel est le premier relais du traitement central des voies vestibulaires ?",
+      "options": [
+        "Noyaux vestibulaires bulbaires",
+        "Thalamus",
+        "Cortex moteur",
+        "Cervelet"
+      ],
+      "answer": "Noyaux vestibulaires bulbaires",
+      "difficulty": 2
+    },
+    {
+      "id": 23,
+      "type": "QCM",
+      "question": "Quelles sont les afférences des noyaux vestibulaires ?",
+      "options": [
+        "Auditives et gustatives",
+        "Visuelles, somesthésiques, cervelet",
+        "Olfactive et visuelles",
+        "Exclusivement médullaires"
+      ],
+      "answer": "Visuelles, somesthésiques, cervelet",
+      "difficulty": 2
+    },
+    {
+      "id": 24,
+      "type": "QCM",
+      "question": "La projection vestibulaire vers le thalamus puis le cortex pariétal sert à :",
+      "options": [
+        "Contrôler le rythme cardiaque",
+        "Réguler la respiration",
+        "Gérer la digestion",
+        "Perception mouvements et orientation spatiale"
+      ],
+      "answer": "Perception mouvements et orientation spatiale",
+      "difficulty": 2
+    },
+    {
+      "id": 25,
+      "type": "OPEN",
+      "question": "Qu'est-ce que l'effet de premier passage hépatique ?",
+      "answer": "C'est le métabolisme d'un médicament par le foie avant qu'il n'atteigne la circulation systémique, réduisant ainsi sa biodisponibilité.",
+      "difficulty": 2
+    },
+    {
+      "id": 26,
+      "type": "OPEN",
+      "question": "Expliquez la différence entre puissance et efficacité d'un médicament.",
+      "answer": "La puissance est la dose nécessaire pour produire un effet (EC50), l'efficacité est l'effet maximal atteignable (Emax).",
+      "difficulty": 2
+    },
+    {
+      "id": 27,
+      "type": "OPEN",
+      "question": "Quel est le rôle du réflexe vestibulo-oculaire ?",
+      "answer": "Il permet la stabilisation du regard et de l'image sur la rétine lors des mouvements de la tête.",
+      "difficulty": 2
+    },
+    {
+      "id": 28,
+      "type": "OPEN",
+      "question": "Que module spécifiquement le faisceau réticulo-spinal bulbaire ?",
+      "answer": "Il a un rôle inhibiteur sur les muscles du cou, du tronc et les extenseurs des membres.",
+      "difficulty": 2
+    },
+    {
+      "id": 29,
+      "type": "OPEN",
+      "question": "Citez les trois couches du cortex cérébelleux.",
+      "answer": "La couche moléculaire, la couche des cellules de Purkinje, et la couche granulaire.",
+      "difficulty": 2
+    },
+    {
+      "id": 30,
+      "type": "OPEN",
+      "question": "Dans le néo-cervelet, quel noyau central reçoit les afférences corticales pour la coordination motrice ?",
+      "answer": "Le noyau dentelé.",
+      "difficulty": 2
+    },
+    {
+      "id": 31,
+      "type": "QCM",
+      "question": "Le phénomène pharmacologique de tachyphylaxie désigne :",
+      "options": [
+        "Une augmentation progressive de l'effet",
+        "Une réaction allergique systémique",
+        "Une accumulation toxique dans le foie",
+        "Une diminution rapide de la réponse après administrations répétées"
+      ],
+      "answer": "Une diminution rapide de la réponse après administrations répétées",
+      "difficulty": 3
+    },
+    {
+      "id": 32,
+      "type": "QCM",
+      "question": "Quel isoenzyme du système CYP450 métabolise le plus grand nombre de médicaments ?",
+      "options": [
+        "CYP1A2",
+        "CYP2D6",
+        "CYP3A4",
+        "CYP2C9"
+      ],
+      "answer": "CYP3A4",
+      "difficulty": 3
+    },
+    {
+      "id": 33,
+      "type": "QCM",
+      "question": "La clairance rénale d'un médicament dépend directement de :",
+      "options": [
+        "Filtration glomérulaire uniquement",
+        "Filtration glomérulaire, sécrétion tubulaire et réabsorption",
+        "Débit sanguin hépatique",
+        "Liaison aux protéines sériques"
+      ],
+      "answer": "Filtration glomérulaire, sécrétion tubulaire et réabsorption",
+      "difficulty": 3
+    },
+    {
+      "id": 34,
+      "type": "QCM",
+      "question": "Que détectent les crêtes ampullaires des canaux semi-circulaires ?",
+      "options": [
+        "L'accélération linéaire",
+        "L'accélération angulaire",
+        "Les ondes sonores",
+        "La pression artérielle"
+      ],
+      "answer": "L'accélération angulaire",
+      "difficulty": 3
+    },
+    {
+      "id": 35,
+      "type": "QCM",
+      "question": "Quel est le noyau cérébelleux relié à l'archéo-cerebellum pour le contrôle de l'équilibre ?",
+      "options": [
+        "Noyau dentelé",
+        "Noyau emboliforme",
+        "Noyau fastigial",
+        "Noyau rouge"
+      ],
+      "answer": "Noyau fastigial",
+      "difficulty": 3
+    },
+    {
+      "id": 36,
+      "type": "QCM",
+      "question": "Quels faisceaux composent le système moteur ventromédian ?",
+      "options": [
+        "Cortico-spinal et rubro-spinal",
+        "Spino-thalamique et lemniscal",
+        "Tecto-spinal, vestibulo-spinal, réticulo-spinal",
+        "Cortico-nucléaire uniquement"
+      ],
+      "answer": "Tecto-spinal, vestibulo-spinal, réticulo-spinal",
+      "difficulty": 3
+    },
+    {
+      "id": 37,
+      "type": "OPEN",
+      "question": "Décrivez ce qu'implique une marge thérapeutique étroite pour un médicament.",
+      "answer": "Il y a une très faible différence entre sa dose efficace et sa dose toxique, ce qui exige un suivi thérapeutique strict.",
+      "difficulty": 3
+    },
+    {
+      "id": 38,
+      "type": "OPEN",
+      "question": "Qu'est-ce qu'un promédicament ? Donnez l'exemple issu du cours.",
+      "answer": "C'est une substance inactive convertie en métabolite actif dans l'organisme, comme l'énalapril qui se transforme en énalaprilate.",
+      "difficulty": 3
+    },
+    {
+      "id": 39,
+      "type": "OPEN",
+      "question": "Expliquez le phénomène d'induction enzymatique et ses conséquences cliniques.",
+      "answer": "L'augmentation de la synthèse des enzymes (ex: CYP450) accélère le métabolisme et réduit l'efficacité des médicaments co-administrés.",
+      "difficulty": 3
+    },
+    {
+      "id": 40,
+      "type": "OPEN",
+      "question": "Quel est le rôle inhibiteur des cellules de Purkinje dans le cortex cérébelleux ?",
+      "answer": "Elles projettent des efférences inhibitrices (circuit secondaire modulateur) sur le noyau gris effecteur du cervelet.",
+      "difficulty": 3
+    }
+  ]
+}

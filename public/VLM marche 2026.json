@@ -1,0 +1,429 @@
+{
+  "theme": "Anatomie, Posture, Marche et Pharmacologie",
+  "cards": [
+    {
+      "id": 1,
+      "type": "QCM",
+      "question": "Quelle voie d'administration médicamenteuse offre la biodisponibilité la plus élevée ?",
+      "options": [
+        "Intraveineuse",
+        "Orale",
+        "Sublinguale",
+        "Transdermique"
+      ],
+      "answer": "Intraveineuse",
+      "difficulty": 1
+    },
+    {
+      "id": 2,
+      "type": "QCM",
+      "question": "Quel organe de notre corps est principalement responsable du métabolisme des médicaments ?",
+      "options": [
+        "Le foie",
+        "Les reins",
+        "L'intestin",
+        "Les poumons"
+      ],
+      "answer": "Le foie",
+      "difficulty": 1
+    },
+    {
+      "id": 3,
+      "type": "QCM",
+      "question": "En anatomie, quel plan sépare le corps en parties gauche et droite ?",
+      "options": [
+        "Le plan sagittal",
+        "Le plan frontal",
+        "Le plan transversal",
+        "Le plan coronal"
+      ],
+      "answer": "Le plan sagittal",
+      "difficulty": 1
+    },
+    {
+      "id": 4,
+      "type": "QCM",
+      "question": "De combien d'os le crâne humain (qui entoure et protège l'encéphale) est-il constitué ?",
+      "options": [
+        "8 os",
+        "14 os",
+        "22 os",
+        "26 os"
+      ],
+      "answer": "8 os",
+      "difficulty": 1
+    },
+    {
+      "id": 5,
+      "type": "QCM",
+      "question": "Parmi les os suivants, lequel ne fait pas partie du crâne mais appartient aux os de la face ?",
+      "options": [
+        "L'os zygomatique",
+        "L'os frontal",
+        "L'os temporal",
+        "L'os sphénoïde"
+      ],
+      "answer": "L'os zygomatique",
+      "difficulty": 1
+    },
+    {
+      "id": 6,
+      "type": "QCM",
+      "question": "Comment nomme-t-on les articulations totalement mobiles, comme les articulations synoviales ?",
+      "options": [
+        "Les diarthroses",
+        "Les synarthroses",
+        "Les amphiarthroses",
+        "Les articulations fibreuses"
+      ],
+      "answer": "Les diarthroses",
+      "difficulty": 1
+    },
+    {
+      "id": 7,
+      "type": "QCM",
+      "question": "En station debout (statique normale), où se situe le centre de gravité du corps humain ?",
+      "options": [
+        "En avant de S1/S2",
+        "En arrière de L5",
+        "Au niveau de la vertèbre C2",
+        "Au niveau de la symphyse pubienne"
+      ],
+      "answer": "En avant de S1/S2",
+      "difficulty": 1
+    },
+    {
+      "id": 8,
+      "type": "QCM",
+      "question": "Que représente la cadence de la marche ?",
+      "options": [
+        "Le nombre de pas effectués par minute",
+        "La distance parcourue par unité de temps",
+        "La distance séparant deux talons lors d'un double appui",
+        "L'angle entre la ligne de marche et le pied"
+      ],
+      "answer": "Le nombre de pas effectués par minute",
+      "difficulty": 1
+    },
+    {
+      "id": 9,
+      "type": "QCM",
+      "question": "En pharmacocinétique, quel paramètre mesure l'exposition totale de l'organisme au médicament ?",
+      "options": [
+        "L'AUC (Aire sous la courbe)",
+        "La Cmax",
+        "Le Tmax",
+        "La clairance"
+      ],
+      "answer": "L'AUC (Aire sous la courbe)",
+      "difficulty": 1
+    },
+    {
+      "id": 10,
+      "type": "OPEN",
+      "question": "Définissez brièvement la demi-vie d'élimination d'un médicament.",
+      "answer": "C'est le temps nécessaire pour que la concentration plasmatique du médicament diminue de moitié.",
+      "difficulty": 1
+    },
+    {
+      "id": 11,
+      "type": "OPEN",
+      "question": "Qu'est-ce que la pharmacovigilance ?",
+      "answer": "C'est la surveillance et l'évaluation des effets indésirables des médicaments après leur mise sur le marché.",
+      "difficulty": 1
+    },
+    {
+      "id": 12,
+      "type": "OPEN",
+      "question": "Quels sont les trois segments distincts qui composent le membre inférieur ?",
+      "answer": "Le membre inférieur est composé de la cuisse, de la jambe et du pied.",
+      "difficulty": 1
+    },
+    {
+      "id": 13,
+      "type": "OPEN",
+      "question": "Quel est l'unique os constituant le squelette de la cuisse ?",
+      "answer": "Il s'agit du fémur.",
+      "difficulty": 1
+    },
+    {
+      "id": 14,
+      "type": "OPEN",
+      "question": "Comment s'appelle l'os du tarse formant le talon du pied ?",
+      "answer": "C'est le calcanéus (ou calcanéum).",
+      "difficulty": 1
+    },
+    {
+      "id": 15,
+      "type": "OPEN",
+      "question": "Dans le système postural, quelle est la fonction spécifique des propriocepteurs ?",
+      "answer": "Ils situent les différentes parties de notre corps par rapport à l'ensemble dans une position donnée.",
+      "difficulty": 1
+    },
+    {
+      "id": 16,
+      "type": "QCM",
+      "question": "En pharmacodynamie, par quoi se caractérise un agoniste partiel ?",
+      "options": [
+        "Une efficacité intrinsèque inférieure à 1",
+        "Une efficacité maximale identique à l'agoniste complet",
+        "Une affinité nulle pour le récepteur",
+        "Une absence totale d'effet pharmacologique"
+      ],
+      "answer": "Une efficacité intrinsèque inférieure à 1",
+      "difficulty": 2
+    },
+    {
+      "id": 17,
+      "type": "QCM",
+      "question": "Quelle phase des essais cliniques a pour but de tester l'efficacité du médicament sur un grand nombre de patients ?",
+      "options": [
+        "La Phase III",
+        "La Phase I",
+        "La Phase II",
+        "La Phase IV"
+      ],
+      "answer": "La Phase III",
+      "difficulty": 2
+    },
+    {
+      "id": 18,
+      "type": "QCM",
+      "question": "Sur quoi la liaison d'un médicament aux protéines plasmatiques (comme l'albumine) a-t-elle principalement un impact ?",
+      "options": [
+        "La fraction libre active du médicament",
+        "L'absorption du médicament dans l'intestin",
+        "Le métabolisme de phase II dans le foie",
+        "L'excrétion biliaire"
+      ],
+      "answer": "La fraction libre active du médicament",
+      "difficulty": 2
+    },
+    {
+      "id": 19,
+      "type": "QCM",
+      "question": "Comment se nomme la partie centrale, molle et gélatineuse du disque intervertébral ?",
+      "options": [
+        "Le noyau pulpeux (Nucleus pulposus)",
+        "L'anneau fibreux (Annulus fibrosus)",
+        "La pie mère",
+        "Le foramen intervertébral"
+      ],
+      "answer": "Le noyau pulpeux (Nucleus pulposus)",
+      "difficulty": 2
+    },
+    {
+      "id": 20,
+      "type": "QCM",
+      "question": "Les 8 os constituant le carpe de la main sont organisés en combien de rangées transversales ?",
+      "options": [
+        "2 rangées",
+        "3 rangées",
+        "4 rangées",
+        "1 seule rangée"
+      ],
+      "answer": "2 rangées",
+      "difficulty": 2
+    },
+    {
+      "id": 21,
+      "type": "QCM",
+      "question": "Parmi les ligaments de l'articulation du genou, lequel s'y trouve pour assurer la stabilité interne croisée ?",
+      "options": [
+        "Le ligament croisé antérieur",
+        "Le ligament collatéral de la cheville",
+        "Le ligament transverse du carpe",
+        "Le ligament coraco-acromial"
+      ],
+      "answer": "Le ligament croisé antérieur",
+      "difficulty": 2
+    },
+    {
+      "id": 22,
+      "type": "QCM",
+      "question": "Lors de l'évaluation de la statique normale de profil, quelle est la valeur standard de l'angle du plateau lombaire (L5 / sacrum) ?",
+      "options": [
+        "32°",
+        "15°",
+        "45°",
+        "90°"
+      ],
+      "answer": "32°",
+      "difficulty": 2
+    },
+    {
+      "id": 23,
+      "type": "QCM",
+      "question": "Pendant la marche, quelle est l'amplitude de la trajectoire verticale du centre de gravité (qui décrit une courbe sinusoïdale) ?",
+      "options": [
+        "Environ 5 cm",
+        "Environ 10 cm",
+        "Moins de 1 cm",
+        "Environ 15 cm"
+      ],
+      "answer": "Environ 5 cm",
+      "difficulty": 2
+    },
+    {
+      "id": 24,
+      "type": "QCM",
+      "question": "Dans le cycle de la marche, quelle phase dure le plus longtemps et représente environ 40 % du cycle ?",
+      "options": [
+        "L'appui unilatéral (pied à plat)",
+        "L'appui postérieur d'élan (DAP D)",
+        "L'attaque du talon au sol",
+        "Le double appui antérieur de réception"
+      ],
+      "answer": "L'appui unilatéral (pied à plat)",
+      "difficulty": 2
+    },
+    {
+      "id": 25,
+      "type": "OPEN",
+      "question": "Quelle est la différence entre la puissance et l'efficacité d'un médicament ?",
+      "answer": "La puissance est la dose nécessaire pour produire un effet (EC50), tandis que l'efficacité est l'effet maximal que le médicament peut atteindre (Emax).",
+      "difficulty": 2
+    },
+    {
+      "id": 26,
+      "type": "OPEN",
+      "question": "Expliquez l'effet de premier passage hépatique.",
+      "answer": "C'est la métabolisation d'un médicament par le foie avant son arrivée dans la circulation sanguine systémique, ce qui réduit sa biodisponibilité globale.",
+      "difficulty": 2
+    },
+    {
+      "id": 27,
+      "type": "OPEN",
+      "question": "Quelles sont les trois membranes constituant les méninges qui protègent la moelle épinière ?",
+      "answer": "Ce sont la pie mère (interne), l'arachnoïde (moyenne) et la dure mère (externe).",
+      "difficulty": 2
+    },
+    {
+      "id": 28,
+      "type": "OPEN",
+      "question": "Quelle est la fonction principale de la ceinture pelvienne citée dans le cours ?",
+      "answer": "Elle sert de base osseuse pour les membres inférieurs et soutient les viscères du bassin.",
+      "difficulty": 2
+    },
+    {
+      "id": 29,
+      "type": "OPEN",
+      "question": "Qu'appelle-t-on l'angle de marche, mesuré à environ 15° ?",
+      "answer": "C'est l'angle formé entre la ligne de marche globale et l'axe longitudinal du pied posé au sol.",
+      "difficulty": 2
+    },
+    {
+      "id": 30,
+      "type": "OPEN",
+      "question": "Quel groupe musculaire réalise l'élévation du talon (flexion plantaire) permettant de propulser le corps en avant lors de la marche ?",
+      "answer": "C'est le muscle triceps sural.",
+      "difficulty": 2
+    },
+    {
+      "id": 31,
+      "type": "QCM",
+      "question": "En pharmacologie, que décrit exactement le phénomène de tachyphylaxie ?",
+      "options": [
+        "Une diminution rapide de la réponse après des administrations répétées",
+        "Une augmentation progressive de l'effet d'un médicament",
+        "Une réaction allergique généralisée",
+        "Une toxicité hépatique d'apparition aiguë"
+      ],
+      "answer": "Une diminution rapide de la réponse après des administrations répétées",
+      "difficulty": 3
+    },
+    {
+      "id": 32,
+      "type": "QCM",
+      "question": "Parmi la famille du cytochrome P450, quel isoenzyme est responsable de la métabolisation du plus grand nombre de médicaments ?",
+      "options": [
+        "Le CYP3A4",
+        "Le CYP1A2",
+        "Le CYP2D6",
+        "Le CYP2C9"
+      ],
+      "answer": "Le CYP3A4",
+      "difficulty": 3
+    },
+    {
+      "id": 33,
+      "type": "QCM",
+      "question": "Parmi les os suivants du carpe, lequel NE FAIT PAS partie de la première rangée (rangée proximale) ?",
+      "options": [
+        "Le capitatum (grand os)",
+        "Le scaphoïde",
+        "Le lunatum (semi-lunaire)",
+        "Le triquétrum (pyramidal)"
+      ],
+      "answer": "Le capitatum (grand os)",
+      "difficulty": 3
+    },
+    {
+      "id": 34,
+      "type": "QCM",
+      "question": "Lors du cycle de la marche, que se passe-t-il spécifiquement au niveau du genou lors de la phase DAR D (double appui de réception, 10%) ?",
+      "options": [
+        "Le quadriceps verrouille le genou en extension incomplète",
+        "Les ischio-jambiers provoquent une flexion maximale de 45°",
+        "La patella se luxe pour libérer l'articulation",
+        "Le triceps sural force le genou en hyperextension"
+      ],
+      "answer": "Le quadriceps verrouille le genou en extension incomplète",
+      "difficulty": 3
+    },
+    {
+      "id": 35,
+      "type": "QCM",
+      "question": "Durant l'appui unilatéral de la marche, quel groupe musculaire maintient l'équilibre du bassin qui a tendance à s'incliner du côté oscillant ?",
+      "options": [
+        "Les muscles fessiers",
+        "Les muscles ischio-jambiers",
+        "Le muscle psoas",
+        "Le triceps sural"
+      ],
+      "answer": "Les muscles fessiers",
+      "difficulty": 3
+    },
+    {
+      "id": 36,
+      "type": "QCM",
+      "question": "De quels mécanismes physiologiques conjoints dépend la clairance rénale d'un médicament ?",
+      "options": [
+        "La filtration glomérulaire, la sécrétion tubulaire et la réabsorption",
+        "La filtration glomérulaire uniquement",
+        "La métabolisation par le CYP450 et la liaison aux protéines",
+        "Exclusivement du débit sanguin artériel rénal"
+      ],
+      "answer": "La filtration glomérulaire, la sécrétion tubulaire et la réabsorption",
+      "difficulty": 3
+    },
+    {
+      "id": 37,
+      "type": "OPEN",
+      "question": "Qu'est-ce qu'un promédicament (ou prodrogue) ? Donnez l'exemple du cours.",
+      "answer": "C'est une substance inactive qui est métabolisée en principe actif au sein de l'organisme, comme l'énalapril qui est converti en énalaprilate.",
+      "difficulty": 3
+    },
+    {
+      "id": 38,
+      "type": "OPEN",
+      "question": "Expliquez l'induction enzymatique et ses conséquences lors de la prise de multiples traitements.",
+      "answer": "L'induction enzymatique augmente la synthèse des enzymes de métabolisation (ex: CYP450), ce qui accélère la dégradation et diminue l'efficacité des médicaments co-administrés.",
+      "difficulty": 3
+    },
+    {
+      "id": 39,
+      "type": "OPEN",
+      "question": "En pharmacologie clinique, que signifie prescrire un médicament à marge thérapeutique étroite ?",
+      "answer": "Cela indique une très faible différence de posologie entre la dose efficace et la dose toxique, ce qui impose un suivi médical et biologique très strict.",
+      "difficulty": 3
+    },
+    {
+      "id": 40,
+      "type": "OPEN",
+      "question": "Lors de la phase de réception de la marche (DAR), quel est le rôle des releveurs du pied comme le tibial antérieur ?",
+      "answer": "Ils freinent la chute de l'avant-pied pour éviter qu'il ne claque au sol lors du passage du pied à plat.",
+      "difficulty": 3
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+Tu es un assistant pédagogique. Tu as accès à mes documents sources (cours, PDF, notes) dans ce notebook.
+
+TÂCHE
+Analyse cette source et produis UN deck de révision au format JSON strict, sans texte avant ni après le JSON (pas d’introduction, pas de conclusion, pas de markdown).
+
+STRUCTURE DU JSON (obligatoire)
+- Racine : un objet avec exactement deux clés : "theme" (string) et "cards" (tableau).
+- Chaque élément de "cards" est un objet avec :
+  - "id" : entier unique, séquentiel de 1 à 40
+  - "type" : "QCM" | "OPEN"
+  - "question" : string
+  - "options" : tableau de strings UNIQUEMENT si type === "QCM" (exactement 4 options pour chaque QCM)
+  - "answer" : string (pour QCM : la bonne option, identique à l’une des 4 options ; pour OPEN : réponse attendue courte)
+  - "difficulty" : entier 1, 2 ou 3
+
+VOLUME ET RÉPARTITION
+- Total de cartes dans "cards" : 40 (uniquement "QCM" ou "OPEN")
+
+Répartition des DIFFICULTÉS :
+- 15 cartes en difficulty 1 (facile)
+- 15 cartes en difficulty 2 (moyen)
+- 10 cartes en difficulty 3 (difficile)
+
+RÉPARTITION QCM / OPEN
+- Environ 60 % QCM et 40 % OPEN (arrondis pour que le total fasse 40).
+
+CONTENU PÉDAGOGIQUE
+- Tout le contenu des questions/réponses doit être dérivé des thèmes et faits présents dans mes sources ; ne pas inventer de hors-sujet.
+- QCM : les 3 mauvaises réponses (distracteurs) doivent être plausibles et proches du sujet (erreurs classiques, confusions de cours), pas absurdes.
+- OPEN : "answer" au plus 2 phrases, style réponse attendue en oral ou à l’examen court.
+
+EXEMPLE DE FORME (à imiter strictement pour la structure, pas le contenu) :
+{
+  "theme": "Titre du thème",
+  "cards": [
+    {
+      "id": 1,
+      "type": "QCM",
+      "question": "...",
+      "options": ["...", "...", "...", "..."],
+      "answer": "...",
+      "difficulty": 1
+    },
+    {
+      "id": 2,
+      "type": "OPEN",
+      "question": "...",
+      "answer": "...",
+      "difficulty": 2
+    }
+  ]
+}
+
+CONTRAINTES FINALES
+- Un seul bloc de sortie : le JSON complet, valide, syntaxiquement correct.
+- Pas de commentaires JSON, pas de virgule en trop.
+- Vérifie avant envoi : exactement 40 cartes (QCM/OPEN) avec la répartition des difficultés indiquée ; ids 1 à 40 sans doublon.

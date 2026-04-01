@@ -1,0 +1,429 @@
+{
+  "theme": "Physiologie et Pharmacologie",
+  "cards": [
+    {
+      "id": 1,
+      "type": "QCM",
+      "question": "Quel est le principal mécanisme d'action des bêta-bloquants ?",
+      "options": [
+        "Blocage des canaux calciques",
+        "Stimulation des récepteurs alpha",
+        "Inhibition de l'enzyme de conversion",
+        "Blocage des récepteurs bêta-adrénergiques"
+      ],
+      "answer": "Blocage des récepteurs bêta-adrénergiques",
+      "difficulty": 1
+    },
+    {
+      "id": 2,
+      "type": "QCM",
+      "question": "Quelle voie d'administration offre la biodisponibilité la plus élevée ?",
+      "options": [
+        "Orale",
+        "Intraveineuse",
+        "Sublinguale",
+        "Transdermique"
+      ],
+      "answer": "Intraveineuse",
+      "difficulty": 1
+    },
+    {
+      "id": 3,
+      "type": "OPEN",
+      "question": "Définissez la demi-vie d'élimination d'un médicament.",
+      "answer": "C'est le temps nécessaire pour que la concentration plasmatique du médicament diminue de moitié.",
+      "difficulty": 1
+    },
+    {
+      "id": 4,
+      "type": "QCM",
+      "question": "Quel organe est principalement responsable du métabolisme des médicaments ?",
+      "options": [
+        "Rein",
+        "Foie",
+        "Intestin",
+        "Poumon"
+      ],
+      "answer": "Foie",
+      "difficulty": 1
+    },
+    {
+      "id": 5,
+      "type": "QCM",
+      "question": "Quel paramètre pharmacocinétique mesure l'exposition totale de l'organisme au médicament ?",
+      "options": [
+        "Cmax",
+        "Tmax",
+        "AUC (Aire sous la courbe)",
+        "Clairance"
+      ],
+      "answer": "AUC (Aire sous la courbe)",
+      "difficulty": 1
+    },
+    {
+      "id": 6,
+      "type": "OPEN",
+      "question": "En pharmacologie, qu'est-ce que la pharmacovigilance ?",
+      "answer": "C'est la surveillance et l'évaluation des effets indésirables des médicaments après leur mise sur le marché.",
+      "difficulty": 1
+    },
+    {
+      "id": 7,
+      "type": "QCM",
+      "question": "Quel est l'effet du système nerveux sympathique sur le sphincter lisse vésical ?",
+      "options": [
+        "Relâchement complet",
+        "Contraction",
+        "Spasmes rythmés",
+        "Aucune action"
+      ],
+      "answer": "Contraction",
+      "difficulty": 1
+    },
+    {
+      "id": 8,
+      "type": "QCM",
+      "question": "Quel effet le système nerveux sympathique a-t-il sur les fibres musculaires iriennes ?",
+      "options": [
+        "Contraction du sphincter (Myosis)",
+        "Contraction du muscle radial (Mydriase)",
+        "Relâchement des procès ciliaires",
+        "Aucune action"
+      ],
+      "answer": "Contraction du muscle radial (Mydriase)",
+      "difficulty": 1
+    },
+    {
+      "id": 9,
+      "type": "OPEN",
+      "question": "Quel est le rôle du système sympathique sur les glandes médullo-surrénales ?",
+      "answer": "Il stimule la libération d'adrénaline et de noradrénaline dans la circulation sanguine.",
+      "difficulty": 1
+    },
+    {
+      "id": 10,
+      "type": "QCM",
+      "question": "Quel est l'effet global du système nerveux sympathique sur les muscles lisses intestinaux ?",
+      "options": [
+        "Augmentation du péristaltisme",
+        "Sécrétion accrue de mucus",
+        "Relâchement (diminution du péristaltisme)",
+        "Contractions spasmodiques"
+      ],
+      "answer": "Relâchement (diminution du péristaltisme)",
+      "difficulty": 1
+    },
+    {
+      "id": 11,
+      "type": "OPEN",
+      "question": "Quel rôle physiologique fondamental joue le noyau du tractus solitaire selon le document ?",
+      "answer": "Il intervient de façon majeure dans la régulation nerveuse de la prise alimentaire.",
+      "difficulty": 1
+    },
+    {
+      "id": 12,
+      "type": "QCM",
+      "question": "Où se dirige normalement le bol alimentaire juste après la déglutition ?",
+      "options": [
+        "Vers la trachée",
+        "Vers le pharynx supérieur",
+        "Vers l'estomac via l'œsophage",
+        "Vers l'intestin grêle directement"
+      ],
+      "answer": "Vers l'estomac via l'œsophage",
+      "difficulty": 1
+    },
+    {
+      "id": 13,
+      "type": "QCM",
+      "question": "Quel type de sécrétion est principalement régulé au niveau de l'estomac lors de la digestion ?",
+      "options": [
+        "Sécrétion basique",
+        "Sécrétion biliaire",
+        "Sécrétion acide",
+        "Sécrétion salivaire"
+      ],
+      "answer": "Sécrétion acide",
+      "difficulty": 1
+    },
+    {
+      "id": 14,
+      "type": "OPEN",
+      "question": "Donnez une définition de la mémoire consolidée.",
+      "answer": "C'est une trace mnésique devenue stable et stockée durablement dans le temps suite à un apprentissage.",
+      "difficulty": 1
+    },
+    {
+      "id": 15,
+      "type": "OPEN",
+      "question": "Quelle est l'une des caractéristiques physiques différenciant le sommeil paradoxal du sommeil lent ?",
+      "answer": "Le sommeil paradoxal se distingue par la présence de mouvements oculaires rapides (REM) et une atonie musculaire.",
+      "difficulty": 1
+    },
+    {
+      "id": 16,
+      "type": "QCM",
+      "question": "Dans quel processus physiologique les enzymes du cytochrome P450 sont-elles principalement impliquées ?",
+      "options": [
+        "Absorption intestinale",
+        "Distribution tissulaire",
+        "Biotransformation hépatique",
+        "Excrétion rénale"
+      ],
+      "answer": "Biotransformation hépatique",
+      "difficulty": 2
+    },
+    {
+      "id": 17,
+      "type": "OPEN",
+      "question": "Qu'est-ce que l'effet de premier passage hépatique ?",
+      "answer": "C'est le métabolisme d'un médicament par le foie avant son entrée dans la circulation systémique, ce qui réduit sa biodisponibilité.",
+      "difficulty": 2
+    },
+    {
+      "id": 18,
+      "type": "QCM",
+      "question": "Quel type de liaison moléculaire médicament-récepteur est généralement réversible ?",
+      "options": [
+        "Liaison covalente",
+        "Liaison métallique",
+        "Liaison peptidique",
+        "Liaison ionique"
+      ],
+      "answer": "Liaison ionique",
+      "difficulty": 2
+    },
+    {
+      "id": 19,
+      "type": "QCM",
+      "question": "En pharmacodynamie, par quoi se caractérise un agoniste partiel ?",
+      "options": [
+        "Efficacité maximale identique à l'agoniste complet",
+        "Affinité nulle pour le récepteur",
+        "Efficacité intrinsèque inférieure à 1",
+        "Absence totale d'effet pharmacologique"
+      ],
+      "answer": "Efficacité intrinsèque inférieure à 1",
+      "difficulty": 2
+    },
+    {
+      "id": 20,
+      "type": "OPEN",
+      "question": "Expliquez la différence entre la puissance et l'efficacité d'un médicament.",
+      "answer": "La puissance est la dose nécessaire pour produire un effet (EC50), tandis que l'efficacité est l'effet maximal qu'il peut atteindre (Emax).",
+      "difficulty": 2
+    },
+    {
+      "id": 21,
+      "type": "QCM",
+      "question": "Comment un antagoniste compétitif déplace-t-il la courbe dose-réponse d'un agoniste ?",
+      "options": [
+        "Déplacement vers la gauche sans changer l'Emax",
+        "Déplacement vers la droite sans changer l'Emax",
+        "Déplacement vers la droite en diminuant l'Emax",
+        "Déplacement vers la gauche en augmentant l'Emax"
+      ],
+      "answer": "Déplacement vers la droite sans changer l'Emax",
+      "difficulty": 2
+    },
+    {
+      "id": 22,
+      "type": "QCM",
+      "question": "Que teste principalement la Phase III des essais cliniques d'un médicament ?",
+      "options": [
+        "Efficacité sur volontaires sains",
+        "Tolérance chez l'animal",
+        "Efficacité sur un grand nombre de patients",
+        "Pharmacovigilance post-AMM"
+      ],
+      "answer": "Efficacité sur un grand nombre de patients",
+      "difficulty": 2
+    },
+    {
+      "id": 23,
+      "type": "QCM",
+      "question": "Sur quel paramètre la liaison du médicament aux protéines plasmatiques (albumine) influe-t-elle principalement ?",
+      "options": [
+        "L'absorption du médicament",
+        "La fraction libre active du médicament",
+        "Le métabolisme de phase II",
+        "L'excrétion biliaire"
+      ],
+      "answer": "La fraction libre active du médicament",
+      "difficulty": 2
+    },
+    {
+      "id": 24,
+      "type": "OPEN",
+      "question": "Quel rôle fonctionnel joue le thalamus vis-à-vis du cortex moteur ?",
+      "answer": "Il sert de relais et de filtre pour les informations excitatrices se dirigeant vers le cortex cérébral.",
+      "difficulty": 2
+    },
+    {
+      "id": 25,
+      "type": "OPEN",
+      "question": "Comment les noyaux gris centraux influencent-ils le thalamus dans le cadre de la motricité ?",
+      "answer": "Ils exercent une inhibition tonique sur le thalamus qui peut être levée (désinhibition) pour faciliter le mouvement.",
+      "difficulty": 2
+    },
+    {
+      "id": 26,
+      "type": "QCM",
+      "question": "Par quel mécanisme mécanique progresse le bol alimentaire dans l'œsophage vers l'estomac ?",
+      "options": [
+        "Gravité seule",
+        "Contractions musculaires volontaires",
+        "Le péristaltisme (ondes de contraction involontaires)",
+        "L'action des enzymes salivaires"
+      ],
+      "answer": "Le péristaltisme (ondes de contraction involontaires)",
+      "difficulty": 2
+    },
+    {
+      "id": 27,
+      "type": "QCM",
+      "question": "Quel est le principal nerf de la régulation nerveuse parasympathique stimulant la sécrétion acide de l'estomac ?",
+      "options": [
+        "Le nerf facial",
+        "Le nerf trijumeau",
+        "Le nerf vague (nerf X)",
+        "Le nerf olfactif"
+      ],
+      "answer": "Le nerf vague (nerf X)",
+      "difficulty": 2
+    },
+    {
+      "id": 28,
+      "type": "OPEN",
+      "question": "Quelle est la principale hormone gastro-intestinale impliquée dans la stimulation de la sécrétion acide gastrique ?",
+      "answer": "La gastrine, libérée par les cellules G de l'antre gastrique.",
+      "difficulty": 2
+    },
+    {
+      "id": 29,
+      "type": "QCM",
+      "question": "Au niveau histologique, à quoi correspondent principalement les thermorécepteurs périphériques de la peau ?",
+      "options": [
+        "Corpuscules de Pacini",
+        "Terminaisons nerveuses libres",
+        "Cellules de Merkel",
+        "Fuseaux neuromusculaires"
+      ],
+      "answer": "Terminaisons nerveuses libres",
+      "difficulty": 2
+    },
+    {
+      "id": 30,
+      "type": "OPEN",
+      "question": "Quel est le but des thermorécepteurs périphériques dans l'homéostasie ?",
+      "answer": "Ils détectent les variations de la température cutanée et transmettent l'information aux centres nerveux pour ajuster la thermorégulation.",
+      "difficulty": 2
+    },
+    {
+      "id": 31,
+      "type": "OPEN",
+      "question": "Que signifie l'expression 'médicament à marge thérapeutique étroite' ?",
+      "answer": "Il s'agit d'une très faible différence entre la dose efficace et la dose toxique, ce qui exige un suivi thérapeutique strict.",
+      "difficulty": 3
+    },
+    {
+      "id": 32,
+      "type": "QCM",
+      "question": "En pharmacologie, que désigne précisément le phénomène de tachyphylaxie ?",
+      "options": [
+        "Augmentation progressive de l'effet du médicament",
+        "Une diminution rapide de la réponse après administrations répétées",
+        "Réaction allergique au médicament",
+        "Effet toxique sur le foie"
+      ],
+      "answer": "Une diminution rapide de la réponse après administrations répétées",
+      "difficulty": 3
+    },
+    {
+      "id": 33,
+      "type": "QCM",
+      "question": "Quel isoenzyme du cytochrome P450 métabolise le plus grand nombre de médicaments dans l'organisme ?",
+      "options": [
+        "CYP1A2",
+        "CYP2D6",
+        "CYP3A4",
+        "CYP2C9"
+      ],
+      "answer": "CYP3A4",
+      "difficulty": 3
+    },
+    {
+      "id": 34,
+      "type": "OPEN",
+      "question": "Qu'est-ce qu'un promédicament (ou prodrogue) ? Donnez un exemple.",
+      "answer": "C'est une substance inactive qui est métabolisée en principe actif dans l'organisme, comme l'énalapril converti en énalaprilate.",
+      "difficulty": 3
+    },
+    {
+      "id": 35,
+      "type": "QCM",
+      "question": "De quels processus physiologiques rénaux dépend la clairance d'un médicament ?",
+      "options": [
+        "La filtration glomérulaire uniquement",
+        "La filtration glomérulaire, la sécrétion tubulaire et la réabsorption",
+        "Le débit sanguin hépatique",
+        "La liaison aux protéines uniquement"
+      ],
+      "answer": "La filtration glomérulaire, la sécrétion tubulaire et la réabsorption",
+      "difficulty": 3
+    },
+    {
+      "id": 36,
+      "type": "OPEN",
+      "question": "Quelles sont les conséquences cliniques de l'induction enzymatique (ex: CYP450) ?",
+      "answer": "Elle accélère le métabolisme hépatique, entraînant une diminution des concentrations et de l'efficacité des médicaments co-administrés.",
+      "difficulty": 3
+    },
+    {
+      "id": 37,
+      "type": "QCM",
+      "question": "Dans le trajet de la voie motrice principale (faisceau pyramidal), où s'effectue la décussation ?",
+      "options": [
+        "Moelle épinière",
+        "Cervelet",
+        "Pyramides bulbaires",
+        "Thalamus"
+      ],
+      "answer": "Pyramides bulbaires",
+      "difficulty": 3
+    },
+    {
+      "id": 38,
+      "type": "OPEN",
+      "question": "Comment se caractérise l'activité électroencéphalographique (EEG) lors du sommeil lent profond ?",
+      "answer": "Elle se caractérise par la présence d'ondes lentes de grande amplitude, appelées ondes delta.",
+      "difficulty": 3
+    },
+    {
+      "id": 39,
+      "type": "QCM",
+      "question": "Quel second messager est impliqué dans l'augmentation de la sécrétion acide gastrique stimulée par l'histamine ?",
+      "options": [
+        "Calcium (Ca2+)",
+        "IP3",
+        "GMP cyclique (GMPc)",
+        "AMP cyclique (AMPc)"
+      ],
+      "answer": "AMP cyclique (AMPc)",
+      "difficulty": 3
+    },
+    {
+      "id": 40,
+      "type": "QCM",
+      "question": "Lequel de ces signaux agit de façon paracrine ou endocrine pour inhiber la sécrétion d'acide gastrique ?",
+      "options": [
+        "Gastrine",
+        "Acétylcholine",
+        "Histamine",
+        "Somatostatine"
+      ],
+      "answer": "Somatostatine",
+      "difficulty": 3
+    }
+  ]
+}
