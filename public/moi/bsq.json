@@ -1,0 +1,429 @@
+{
+    "theme": "Algorithmique : Plus Grand Carré (BSQ) par Programmation Dynamique",
+    "cards": [
+      {
+        "id": 1,
+        "type": "QCM",
+        "question": "Quel est le but de l'algorithme BSQ ?",
+        "options": [
+          "Trouver le plus grand carré vide dans une grille.",
+          "Trouver le chemin le plus court dans un labyrinthe.",
+          "Trier une liste d'obstacles par taille.",
+          "Calculer l'aire totale de tous les obstacles."
+        ],
+        "answer": "Trouver le plus grand carré vide dans une grille.",
+        "difficulty": 1
+      },
+      {
+        "id": 2,
+        "type": "QCM",
+        "question": "Sur quel principe mathématique ou algorithmique repose la solution BSQ détaillée ?",
+        "options": [
+          "Programmation Dynamique (DP).",
+          "Algorithme glouton (Greedy).",
+          "Diviser pour régner (Divide and Conquer).",
+          "Retour sur trace (Backtracking)."
+        ],
+        "answer": "Programmation Dynamique (DP).",
+        "difficulty": 1
+      },
+      {
+        "id": 3,
+        "type": "QCM",
+        "question": "Quelle est la complexité temporelle visée par cet algorithme BSQ ?",
+        "options": [
+          "O(n x m).",
+          "O(n^2).",
+          "O(log n).",
+          "O(1)."
+        ],
+        "answer": "O(n x m).",
+        "difficulty": 1
+      },
+      {
+        "id": 4,
+        "type": "QCM",
+        "question": "Dans la matrice DP, que représente la case dp[i][j] ?",
+        "options": [
+          "Le côté du plus grand carré dont le coin inférieur droit est en (i, j).",
+          "Le côté du plus grand carré dont le coin supérieur gauche est en (i, j).",
+          "La somme des obstacles autour de (i, j).",
+          "La distance à l'obstacle le plus proche."
+        ],
+        "answer": "Le côté du plus grand carré dont le coin inférieur droit est en (i, j).",
+        "difficulty": 1
+      },
+      {
+        "id": 5,
+        "type": "QCM",
+        "question": "Que vaut dp[i][j] si la case d'origine correspond à un obstacle ?",
+        "options": [
+          "0.",
+          "1.",
+          "-1.",
+          "La valeur de la case précédente."
+        ],
+        "answer": "0.",
+        "difficulty": 1
+      },
+      {
+        "id": 6,
+        "type": "QCM",
+        "question": "Quel est l'ordre correct de libération de la mémoire pour la grille (map->map) ?",
+        "options": [
+          "Les lignes, puis le tableau de pointeurs.",
+          "Le tableau de pointeurs, puis les lignes.",
+          "La structure Map, puis le tableau de pointeurs.",
+          "Les lignes, puis la structure Map directement."
+        ],
+        "answer": "Les lignes, puis le tableau de pointeurs.",
+        "difficulty": 1
+      },
+      {
+        "id": 7,
+        "type": "QCM",
+        "question": "Quelle fonction de la bibliothèque standard est recommandée pour lire la première ligne (métadonnées) du fichier ?",
+        "options": [
+          "fscanf.",
+          "getline.",
+          "fread.",
+          "fgets."
+        ],
+        "answer": "fscanf.",
+        "difficulty": 1
+      },
+      {
+        "id": 8,
+        "type": "QCM",
+        "question": "Que permet la gestion du flux stdin dans ce programme ?",
+        "options": [
+          "Lire la carte via un pipe comme `cat map | ./bsq`.",
+          "Créer un fichier temporaire contenant les obstacles.",
+          "Éviter les fuites de mémoire internes.",
+          "Accélérer l'écriture du résultat final."
+        ],
+        "answer": "Lire la carte via un pipe comme `cat map | ./bsq`.",
+        "difficulty": 1
+      },
+      {
+        "id": 9,
+        "type": "QCM",
+        "question": "Parmi les variables de la structure Map, laquelle stocke le caractère de remplissage du carré final ?",
+        "options": [
+          "full.",
+          "empty.",
+          "obstacle.",
+          "map."
+        ],
+        "answer": "full.",
+        "difficulty": 1
+      },
+      {
+        "id": 10,
+        "type": "OPEN",
+        "question": "Combien de fois l'algorithme optimal de BSQ parcourt-il la grille pour remplir sa matrice de programmation dynamique ?",
+        "answer": "Il ne parcourt la grille qu'une seule fois.",
+        "difficulty": 1
+      },
+      {
+        "id": 11,
+        "type": "OPEN",
+        "question": "Que fait-on de la valeur dp[i][j] si la case est sur la toute première ligne ou première colonne et qu'elle est vide ?",
+        "answer": "On lui attribue la valeur 1, car on ne peut pas former de carré plus grand que 1x1 sur les bords extérieurs.",
+        "difficulty": 1
+      },
+      {
+        "id": 12,
+        "type": "OPEN",
+        "question": "Citez les trois caractères définis dans la légende (métadonnées) de la carte BSQ.",
+        "answer": "Le caractère vide, le caractère obstacle et le caractère plein.",
+        "difficulty": 1
+      },
+      {
+        "id": 13,
+        "type": "OPEN",
+        "question": "Dans la structure Map, que représentent les variables lines et width ?",
+        "answer": "Elles représentent respectivement le nombre de lignes et la largeur (le nombre de colonnes) de la grille.",
+        "difficulty": 1
+      },
+      {
+        "id": 14,
+        "type": "OPEN",
+        "question": "Pour dessiner le carré final, sur quelle variable boucle-t-on à partir de start_i et start_j ?",
+        "answer": "On boucle jusqu'à l'ajout de max_size (la taille du plus grand carré trouvé).",
+        "difficulty": 1
+      },
+      {
+        "id": 15,
+        "type": "OPEN",
+        "question": "Quelle fonction est utilisée pour afficher le résultat final de la grille sur la sortie standard ?",
+        "answer": "La fonction print_map (qui utilise des printf sur chaque ligne).",
+        "difficulty": 1
+      },
+      {
+        "id": 16,
+        "type": "QCM",
+        "question": "Quelle est la formule générale de programmation dynamique pour une case vide en (i, j) dans BSQ ?",
+        "options": [
+          "min(dp[i-1][j], dp[i][j-1], dp[i-1][j-1]) + 1",
+          "max(dp[i-1][j], dp[i][j-1], dp[i-1][j-1]) + 1",
+          "dp[i-1][j] + dp[i][j-1] + 1",
+          "dp[i-1][j-1] + 1"
+        ],
+        "answer": "min(dp[i-1][j], dp[i][j-1], dp[i-1][j-1]) + 1",
+        "difficulty": 2
+      },
+      {
+        "id": 17,
+        "type": "QCM",
+        "question": "Pourquoi la formule du cas général prend-elle le minimum des 3 cases adjacentes ?",
+        "options": [
+          "Car un carré de taille n nécessite des carrés de taille n-1 au-dessus, à gauche et en diagonale.",
+          "Car il faut vérifier qu'il n'y a pas d'obstacles sur les bords du carré.",
+          "Car le carré doit toujours être adjacent à au moins un obstacle.",
+          "Car c'est la seule façon de garantir une complexité spatiale minimale."
+        ],
+        "answer": "Car un carré de taille n nécessite des carrés de taille n-1 au-dessus, à gauche et en diagonale.",
+        "difficulty": 2
+      },
+      {
+        "id": 18,
+        "type": "QCM",
+        "question": "Que faut-il absolument vérifier concernant la largeur de la grille lors du parsing avec getline ?",
+        "options": [
+          "Que toutes les lignes ont exactement la même largeur.",
+          "Qu'il n'y a aucun obstacle sur la dernière ligne.",
+          "Que la ligne ne dépasse pas 256 caractères.",
+          "Que la dernière ligne se termine par un caractère vide."
+        ],
+        "answer": "Que toutes les lignes ont exactement la même largeur.",
+        "difficulty": 2
+      },
+      {
+        "id": 19,
+        "type": "QCM",
+        "question": "Selon les règles du fichier, quand est-ce qu'une carte est considérée comme invalide ?",
+        "options": [
+          "Si les caractères de légende (vide, obstacle, plein) sont identiques entre eux.",
+          "S'il n'y a aucun obstacle présent sur la grille.",
+          "Si la largeur de la grille est un nombre impair.",
+          "Si le fichier ne contient pas l'extension .bsq."
+        ],
+        "answer": "Si les caractères de légende (vide, obstacle, plein) sont identiques entre eux.",
+        "difficulty": 2
+      },
+      {
+        "id": 20,
+        "type": "QCM",
+        "question": "Quel est un danger associé à l'utilisation de la fonction getline en C ?",
+        "options": [
+          "Elle alloue de la mémoire dynamiquement en interne, ce qui peut causer des fuites.",
+          "Elle ne permet pas de lire plus de 1024 caractères par ligne.",
+          "Elle ignore systématiquement les retours à la ligne.",
+          "Elle écrase automatiquement le contenu de la matrice dp."
+        ],
+        "answer": "Elle alloue de la mémoire dynamiquement en interne, ce qui peut causer des fuites.",
+        "difficulty": 2
+      },
+      {
+        "id": 21,
+        "type": "QCM",
+        "question": "Comment l'algorithme détermine-t-il la position (start_i) du coin supérieur gauche du carré à dessiner ?",
+        "options": [
+          "start_i = best_i - max_size + 1",
+          "start_i = best_i - max_size",
+          "start_i = best_i + max_size - 1",
+          "start_i = best_i + max_size"
+        ],
+        "answer": "start_i = best_i - max_size + 1",
+        "difficulty": 2
+      },
+      {
+        "id": 22,
+        "type": "QCM",
+        "question": "Que doit retourner la fonction validate_map si la carte contient un caractère qui n'est ni vide ni un obstacle ?",
+        "options": [
+          "0 (indiquant une carte invalide).",
+          "1 (indiquant une carte valide).",
+          "-1 (pour erreur fatale).",
+          "La largeur de la ligne courante."
+        ],
+        "answer": "0 (indiquant une carte invalide).",
+        "difficulty": 2
+      },
+      {
+        "id": 23,
+        "type": "QCM",
+        "question": "Quelle précaution faut-il prendre avec le retour de malloc ou calloc en C ?",
+        "options": [
+          "Toujours vérifier que le retour n'est pas NULL.",
+          "Toujours caster le retour en (void*).",
+          "Toujours libérer la mémoire juste après l'allocation.",
+          "Toujours allouer une taille multiple de 8 octets."
+        ],
+        "answer": "Toujours vérifier que le retour n'est pas NULL.",
+        "difficulty": 2
+      },
+      {
+        "id": 24,
+        "type": "QCM",
+        "question": "Que fait la fonction min3 dans l'implémentation fournie ?",
+        "options": [
+          "Elle retourne la plus petite valeur parmi trois entiers.",
+          "Elle calcule la moyenne de trois entiers.",
+          "Elle convertit trois caractères en entiers.",
+          "Elle libère la mémoire de trois pointeurs."
+        ],
+        "answer": "Elle retourne la plus petite valeur parmi trois entiers.",
+        "difficulty": 2
+      },
+      {
+        "id": 25,
+        "type": "OPEN",
+        "question": "Pourquoi la libération de la mémoire de la structure Map doit-elle se faire dans l'ordre inverse de l'allocation ?",
+        "answer": "Pour ne pas perdre les adresses des lignes allouées et du tableau de pointeurs avant de les avoir libérés.",
+        "difficulty": 2
+      },
+      {
+        "id": 26,
+        "type": "OPEN",
+        "question": "Quelles sont les trois variables que l'on doit mettre à jour dès qu'un nouveau maximum est trouvé dans la matrice dp ?",
+        "answer": "Il s'agit des variables max_size, best_i et best_j.",
+        "difficulty": 2
+      },
+      {
+        "id": 27,
+        "type": "OPEN",
+        "question": "Si le fichier est lu via l'entrée standard (stdin), que passe-t-on comme argument à la fonction read_map ?",
+        "answer": "On passe l'argument NULL.",
+        "difficulty": 2
+      },
+      {
+        "id": 28,
+        "type": "OPEN",
+        "question": "Comment gère-t-on le caractère de retour à la ligne (\\n) à la fin des chaînes lues par getline ?",
+        "answer": "On le remplace par le caractère de fin de chaîne (\\0) s'il est présent à la fin de la ligne lue.",
+        "difficulty": 2
+      },
+      {
+        "id": 29,
+        "type": "OPEN",
+        "question": "Que fait l'algorithme si fscanf ne parvient pas à extraire exactement les 4 métadonnées de la première ligne ?",
+        "answer": "Il libère la mémoire allouée pour la structure Map, ferme le fichier si nécessaire, et retourne NULL.",
+        "difficulty": 2
+      },
+      {
+        "id": 30,
+        "type": "OPEN",
+        "question": "En quelle complexité spatiale et mémoire l'algorithme décrit fonctionne-t-il, sachant qu'il crée un tableau dp ?",
+        "answer": "Il opère en O(n x m) car la matrice de programmation dynamique dp possède la même taille que la grille initiale.",
+        "difficulty": 2
+      },
+      {
+        "id": 31,
+        "type": "QCM",
+        "question": "Quelle erreur classique d'implémentation est mise en évidence concernant la case dp[i][j] ?",
+        "options": [
+          "Penser que c'est le coin haut-gauche, ce qui empêcherait un parcours de haut en bas et de gauche à droite.",
+          "Oublier de l'initialiser à zéro, ce qui fausse les calculs.",
+          "Le confondre avec la matrice map contenant les caractères.",
+          "Dépasser les limites du tableau en omettant de vérifier i et j."
+        ],
+        "answer": "Penser que c'est le coin haut-gauche, ce qui empêcherait un parcours de haut en bas et de gauche à droite.",
+        "difficulty": 3
+      },
+      {
+        "id": 32,
+        "type": "QCM",
+        "question": "Lors de l'allocation du tableau de la matrice DP (dp), comment les lignes sont-elles initialisées ?",
+        "options": [
+          "En utilisant `calloc` pour les initialiser à zéro (sizeof(int)).",
+          "En utilisant une boucle `while` pour remplir chaque ligne de '0'.",
+          "En utilisant la fonction `memset` sur toute la structure Map.",
+          "En affectant explicitement la valeur 0 à chaque itération du parcours."
+        ],
+        "answer": "En utilisant `calloc` pour les initialiser à zéro (sizeof(int)).",
+        "difficulty": 3
+      },
+      {
+        "id": 33,
+        "type": "QCM",
+        "question": "Comment est défini le paramètre de boucle pour parcourir les colonnes lors de la résolution du BSQ ?",
+        "options": [
+          "for (int j = 0; j < map->width; j++)",
+          "for (int j = 1; j <= map->width; j++)",
+          "for (int j = map->width; j > 0; j--)",
+          "while (j < map->lines)"
+        ],
+        "answer": "for (int j = 0; j < map->width; j++)",
+        "difficulty": 3
+      },
+      {
+        "id": 34,
+        "type": "QCM",
+        "question": "Dans la fonction min3(int a, int b, int c), comment est évaluée la condition ternaire ?",
+        "options": [
+          "(a < b) ? ((a < c) ? a : c) : ((b < c) ? b : c)",
+          "(a < b && a < c) ? a : (b < c ? b : c)",
+          "min(a, min(b, c))",
+          "a < b ? a : b < c ? b : c"
+        ],
+        "answer": "(a < b) ? ((a < c) ? a : c) : ((b < c) ? b : c)",
+        "difficulty": 3
+      },
+      {
+        "id": 35,
+        "type": "QCM",
+        "question": "Lors de la lecture avec getline(&line, &len, file), que représentent line et len ?",
+        "options": [
+          "`line` est un pointeur de chaîne alloué ou NULL, `len` est la taille du buffer.",
+          "`line` est la ligne précédente, `len` est la longueur du fichier.",
+          "`line` est le flux standard, `len` est le nombre de lignes.",
+          "`line` est un caractère unique, `len` est sa position dans la grille."
+        ],
+        "answer": "`line` est un pointeur de chaîne alloué ou NULL, `len` est la taille du buffer.",
+        "difficulty": 3
+      },
+      {
+        "id": 36,
+        "type": "QCM",
+        "question": "Si argc == 1, que fait le programme principal (main) de la solution fournie ?",
+        "options": [
+          "Il appelle `process_file(NULL)` pour lire sur l'entrée standard.",
+          "Il affiche un message d'erreur d'usage et quitte le programme.",
+          "Il génère une carte aléatoire par défaut.",
+          "Il demande à l'utilisateur de taper le chemin du fichier."
+        ],
+        "answer": "Il appelle `process_file(NULL)` pour lire sur l'entrée standard.",
+        "difficulty": 3
+      },
+      {
+        "id": 37,
+        "type": "OPEN",
+        "question": "Pourquoi l'utilisation d'une approche récursive depuis le coin haut-gauche serait-elle inefficace pour BSQ ?",
+        "answer": "Sans mémorisation, elle recalculerait plusieurs fois les mêmes sous-carrés (complexité exponentielle) ou exigerait plusieurs parcours complexes de la grille.",
+        "difficulty": 3
+      },
+      {
+        "id": 38,
+        "type": "OPEN",
+        "question": "Dans la fonction read_map, que permet l'expression ternaire attribuant la valeur à la variable file ?",
+        "answer": "Elle permet d'ouvrir un fichier précis s'il est fourni (filename), ou sinon de lire directement depuis l'entrée standard (stdin).",
+        "difficulty": 3
+      },
+      {
+        "id": 39,
+        "type": "OPEN",
+        "question": "Quelle est l'utilité des lignes conditionnelles if (dp[i][j] > max_size) dans la boucle solve_bsq ?",
+        "answer": "Elles mettent à jour en temps réel la taille maximale (max_size) et les coordonnées de ce plus grand carré (best_i, best_j) sans reparcourir la matrice à la fin.",
+        "difficulty": 3
+      },
+      {
+        "id": 40,
+        "type": "OPEN",
+        "question": "Décrivez la condition d'échec dimensionnelle exacte dans validate_map qui rend la carte BSQ invalide.",
+        "answer": "La carte est invalide si le pointeur map est NULL, ou si le nombre de lignes (lines) ou la largeur (width) est inférieur ou égal à zéro.",
+        "difficulty": 3
+      }
+    ]
+  }

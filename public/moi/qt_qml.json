@@ -1,0 +1,681 @@
+{
+    "theme": "Développement d'applications avec Qt",
+    "cards": [
+      {
+        "id": 1,
+        "type": "QCM",
+        "question": "Quelle est la promesse fondamentale du framework Qt concernant la portabilité ?",
+        "options": [
+          "Code once, run everywhere",
+          "Write once, debug everywhere",
+          "Compile once, run anywhere",
+          "Design once, use native"
+        ],
+        "answer": "Code once, run everywhere",
+        "difficulty": 1
+      },
+      {
+        "id": 2,
+        "type": "QCM",
+        "question": "Quel module contient les classes fondamentales non graphiques (QString, QTimer) ?",
+        "options": [
+          "Qt Core",
+          "Qt Gui",
+          "Qt Network",
+          "Qt Widgets"
+        ],
+        "answer": "Qt Core",
+        "difficulty": 1
+      },
+      {
+        "id": 3,
+        "type": "QCM",
+        "question": "Quelle classe est l'ancêtre commun de la grande majorité des objets dans Qt ?",
+        "options": [
+          "QObject",
+          "QWidget",
+          "QApplication",
+          "QString"
+        ],
+        "answer": "QObject",
+        "difficulty": 1
+      },
+      {
+        "id": 4,
+        "type": "QCM",
+        "question": "Quel est le langage déclaratif utilisé par Qt Quick pour concevoir des interfaces graphiques ?",
+        "options": [
+          "QML",
+          "HTML",
+          "XML",
+          "CSS"
+        ],
+        "answer": "QML",
+        "difficulty": 1
+      },
+      {
+        "id": 5,
+        "type": "QCM",
+        "question": "Comment s'appelle l'environnement de développement intégré (EDI) officiel fourni par Qt ?",
+        "options": [
+          "Qt Creator",
+          "Qt Designer",
+          "Qt Studio",
+          "Visual Studio"
+        ],
+        "answer": "Qt Creator",
+        "difficulty": 1
+      },
+      {
+        "id": 6,
+        "type": "QCM",
+        "question": "Quel outil permet de concevoir visuellement des interfaces graphiques pour Qt Widgets ?",
+        "options": [
+          "Qt Designer",
+          "Qt Linguist",
+          "Qt Quick",
+          "qmake"
+        ],
+        "answer": "Qt Designer",
+        "difficulty": 1
+      },
+      {
+        "id": 7,
+        "type": "QCM",
+        "question": "Quel outil est spécifiquement utilisé pour gérer les traductions d'une application Qt ?",
+        "options": [
+          "Qt Linguist",
+          "Qt Translator",
+          "Qt Locale",
+          "Qt Designer"
+        ],
+        "answer": "Qt Linguist",
+        "difficulty": 1
+      },
+      {
+        "id": 8,
+        "type": "QCM",
+        "question": "Quelle est l'extension classique du fichier de configuration de projet utilisé par qmake ?",
+        "options": [
+          ".pro",
+          ".qrc",
+          ".ui",
+          ".qml"
+        ],
+        "answer": ".pro",
+        "difficulty": 1
+      },
+      {
+        "id": 9,
+        "type": "QCM",
+        "question": "Quelle est l'extension d'un fichier de ressources dans un projet Qt ?",
+        "options": [
+          ".qrc",
+          ".res",
+          ".pro",
+          ".xml"
+        ],
+        "answer": ".qrc",
+        "difficulty": 1
+      },
+      {
+        "id": 10,
+        "type": "QCM",
+        "question": "Quel module gère les communications réseau comme TCP, UDP ou HTTP ?",
+        "options": [
+          "Qt Network",
+          "Qt WebKit",
+          "Qt Sql",
+          "Qt Core"
+        ],
+        "answer": "Qt Network",
+        "difficulty": 1
+      },
+      {
+        "id": 11,
+        "type": "QCM",
+        "question": "Quel module utiliser pour se connecter à une base de données MySQL ou SQLite ?",
+        "options": [
+          "Qt Sql",
+          "Qt Data",
+          "Qt Database",
+          "Qt Core"
+        ],
+        "answer": "Qt Sql",
+        "difficulty": 1
+      },
+      {
+        "id": 12,
+        "type": "QCM",
+        "question": "Quelle macro est indispensable pour activer les signaux et slots dans une classe C++ Qt ?",
+        "options": [
+          "Q_OBJECT",
+          "Q_PROPERTY",
+          "Q_DECLARE_METATYPE",
+          "Q_ENUMS"
+        ],
+        "answer": "Q_OBJECT",
+        "difficulty": 1
+      },
+      {
+        "id": 13,
+        "type": "QCM",
+        "question": "Dans le modèle MVC, à quoi correspond la Scène QML ?",
+        "options": [
+          "À la Vue",
+          "Au Modèle",
+          "Au Contrôleur",
+          "Au Délégué"
+        ],
+        "answer": "À la Vue",
+        "difficulty": 1
+      },
+      {
+        "id": 14,
+        "type": "QCM",
+        "question": "Quel module Qt fournit les composants graphiques pour le mode fenêtré classique ?",
+        "options": [
+          "Qt Widgets",
+          "Qt Quick",
+          "Qt Gui",
+          "Qt Core"
+        ],
+        "answer": "Qt Widgets",
+        "difficulty": 1
+      },
+      {
+        "id": 15,
+        "type": "OPEN",
+        "question": "Qu'est-ce qu'un signal dans le paradigme de programmation événementielle de Qt ?",
+        "answer": "C'est un message émis par un objet pour indiquer qu'un événement particulier ou un changement d'état s'est produit.",
+        "difficulty": 1
+      },
+      {
+        "id": 16,
+        "type": "OPEN",
+        "question": "Qu'est-ce qu'un slot dans Qt ?",
+        "answer": "C'est une fonction conçue pour être connectée à un signal et s'exécuter lorsque ce signal est émis.",
+        "difficulty": 1
+      },
+      {
+        "id": 17,
+        "type": "OPEN",
+        "question": "À quoi sert le type QML 'Timer' ?",
+        "answer": "Il permet de déclencher l'exécution d'un code à intervalles réguliers ou après un certain délai.",
+        "difficulty": 1
+      },
+      {
+        "id": 18,
+        "type": "OPEN",
+        "question": "Dans le langage QML, quel langage est utilisé par défaut pour coder la logique en ligne et les fonctions ?",
+        "answer": "C'est le langage JavaScript.",
+        "difficulty": 1
+      },
+      {
+        "id": 19,
+        "type": "OPEN",
+        "question": "Quelle est la classe C++ de Qt dédiée à la manipulation des chaînes de caractères (supportant Unicode) ?",
+        "answer": "La classe QString.",
+        "difficulty": 1
+      },
+      {
+        "id": 20,
+        "type": "OPEN",
+        "question": "Quel est le rôle de l'utilitaire en ligne de commande 'qmake' ?",
+        "answer": "Il analyse le fichier de projet (.pro) pour générer les Makefiles nécessaires à la compilation de l'application.",
+        "difficulty": 1
+      },
+      {
+        "id": 21,
+        "type": "OPEN",
+        "question": "Que signifie le sigle MVC, souvent utilisé dans l'architecture des applications Qt ?",
+        "answer": "Modèle-Vue-Contrôleur.",
+        "difficulty": 1
+      },
+      {
+        "id": 22,
+        "type": "OPEN",
+        "question": "À quoi sert le module Qt Test ?",
+        "answer": "Il fournit un framework pour écrire et exécuter des tests unitaires en C++ ou en QML.",
+        "difficulty": 1
+      },
+      {
+        "id": 23,
+        "type": "OPEN",
+        "question": "Quel utilitaire de compilation transforme les fichiers XML d'interface (.ui) en code source C++ (.h) ?",
+        "answer": "L'utilitaire uic (User Interface Compiler).",
+        "difficulty": 1
+      },
+      {
+        "id": 24,
+        "type": "OPEN",
+        "question": "Qu'est-ce qu'une application SDI (Single Document Interface) ?",
+        "answer": "C'est une application où chaque fenêtre s'affiche au même niveau, sans qu'une fenêtre principale ne contienne les autres.",
+        "difficulty": 1
+      },
+      {
+        "id": 25,
+        "type": "QCM",
+        "question": "Quelle méthode permet de transférer un QObject d'un thread vers un autre ?",
+        "options": [
+          "moveToThread()",
+          "setAffinity()",
+          "changeThread()",
+          "startThread()"
+        ],
+        "answer": "moveToThread()",
+        "difficulty": 2
+      },
+      {
+        "id": 26,
+        "type": "QCM",
+        "question": "Quelle classe de Qt Core est utilisée pour manipuler une structure de données au format JSON ?",
+        "options": [
+          "QJsonDocument",
+          "QXmlStreamReader",
+          "QDataStream",
+          "QTextStream"
+        ],
+        "answer": "QJsonDocument",
+        "difficulty": 2
+      },
+      {
+        "id": 27,
+        "type": "QCM",
+        "question": "Quelle classe gère l'ensemble des requêtes et réponses HTTP dans une application Qt ?",
+        "options": [
+          "QNetworkAccessManager",
+          "QUdpSocket",
+          "QTcpSocket",
+          "QNetworkRequest"
+        ],
+        "answer": "QNetworkAccessManager",
+        "difficulty": 2
+      },
+      {
+        "id": 28,
+        "type": "QCM",
+        "question": "Comment Qt optimise-t-il la mémoire lors de la copie de conteneurs (ex: QList, QString) ?",
+        "options": [
+          "Grâce au partage implicite (copy-on-write)",
+          "Grâce au garbage collector",
+          "En utilisant uniquement des pointeurs bruts",
+          "En limitant la taille des conteneurs"
+        ],
+        "answer": "Grâce au partage implicite (copy-on-write)",
+        "difficulty": 2
+      },
+      {
+        "id": 29,
+        "type": "QCM",
+        "question": "En QML, quel mot-clé permet de déclarer une propriété comme constante et non modifiable ?",
+        "options": [
+          "readonly property",
+          "const property",
+          "final property",
+          "static property"
+        ],
+        "answer": "readonly property",
+        "difficulty": 2
+      },
+      {
+        "id": 30,
+        "type": "QCM",
+        "question": "Quel layout Qt Widgets dispose les éléments dans une grille de colonnes et de lignes ?",
+        "options": [
+          "QGridLayout",
+          "QVBoxLayout",
+          "QFormLayout",
+          "QStackedLayout"
+        ],
+        "answer": "QGridLayout",
+        "difficulty": 2
+      },
+      {
+        "id": 31,
+        "type": "QCM",
+        "question": "Quelle classe permet de sauvegarder et de restaurer les paramètres utilisateurs (registre, fichiers plist/ini) ?",
+        "options": [
+          "QSettings",
+          "QFile",
+          "QSaveState",
+          "QConfig"
+        ],
+        "answer": "QSettings",
+        "difficulty": 2
+      },
+      {
+        "id": 32,
+        "type": "QCM",
+        "question": "Lors d'une requête HTTP, quelle classe encapsule les données renvoyées par le serveur ?",
+        "options": [
+          "QNetworkReply",
+          "QNetworkRequest",
+          "QHttpResponse",
+          "QHttpHeader"
+        ],
+        "answer": "QNetworkReply",
+        "difficulty": 2
+      },
+      {
+        "id": 33,
+        "type": "QCM",
+        "question": "Quelle classe permet d'optimiser l'extraction d'une sous-chaîne de caractères sans allouer de nouvelle mémoire ?",
+        "options": [
+          "QStringRef",
+          "QByteArray",
+          "QChar",
+          "QStringView"
+        ],
+        "answer": "QStringRef",
+        "difficulty": 2
+      },
+      {
+        "id": 34,
+        "type": "QCM",
+        "question": "Quelle structure de données unidimensionnelle stocke les valeurs de manière hachée pour une recherche très rapide ?",
+        "options": [
+          "QSet",
+          "QList",
+          "QVector",
+          "QLinkedList"
+        ],
+        "answer": "QSet",
+        "difficulty": 2
+      },
+      {
+        "id": 35,
+        "type": "QCM",
+        "question": "Comment annuler proprement toutes les modifications d'une transaction SQL en cas d'erreur ?",
+        "options": [
+          "En appelant rollback() sur l'instance QSqlDatabase",
+          "En appelant commit()",
+          "En supprimant l'objet QSqlQuery",
+          "En fermant la connexion SQL"
+        ],
+        "answer": "En appelant rollback() sur l'instance QSqlDatabase",
+        "difficulty": 2
+      },
+      {
+        "id": 36,
+        "type": "QCM",
+        "question": "Quelle fonction permet d'exposer un type C++ pour qu'il puisse être instancié dynamiquement depuis QML ?",
+        "options": [
+          "qmlRegisterType()",
+          "setContextProperty()",
+          "Q_DECLARE_METATYPE",
+          "qmlRegisterSingletonInstance()"
+        ],
+        "answer": "qmlRegisterType()",
+        "difficulty": 2
+      },
+      {
+        "id": 37,
+        "type": "QCM",
+        "question": "Que permet la classe QVariant ?",
+        "options": [
+          "Contenir et convertir de très nombreux types de données différents",
+          "Gérer les variations de thèmes visuels",
+          "Stocker des variables globales C++",
+          "Créer des animations QML"
+        ],
+        "answer": "Contenir et convertir de très nombreux types de données différents",
+        "difficulty": 2
+      },
+      {
+        "id": 38,
+        "type": "QCM",
+        "question": "Quel type de layout (mise en page) permet de superposer des éléments et d'en afficher un seul à la fois ?",
+        "options": [
+          "QStackedLayout",
+          "QGridLayout",
+          "QFormLayout",
+          "QVBoxLayout"
+        ],
+        "answer": "QStackedLayout",
+        "difficulty": 2
+      },
+      {
+        "id": 39,
+        "type": "OPEN",
+        "question": "Quelle est la principale différence d'usage entre QImage et QPixmap ?",
+        "answer": "QPixmap est optimisée pour l'affichage rapide à l'écran, tandis que QImage est optimisée pour la manipulation et la lecture des pixels.",
+        "difficulty": 2
+      },
+      {
+        "id": 40,
+        "type": "OPEN",
+        "question": "Qu'est-ce qu'une propriété attachée (attached property) en QML ?",
+        "answer": "C'est une propriété fournie par un type parent (comme un Layout) à ses éléments enfants pour modifier leur positionnement ou comportement.",
+        "difficulty": 2
+      },
+      {
+        "id": 41,
+        "type": "OPEN",
+        "question": "Comment Qt gère-t-il l'absence d'exceptions C++ pour signaler des erreurs (ex: ouverture de fichier) ?",
+        "answer": "Il utilise des méthodes retournant un booléen (souvent stocké dans une variable *ok) ou une méthode error() / errorString().",
+        "difficulty": 2
+      },
+      {
+        "id": 42,
+        "type": "OPEN",
+        "question": "Que se passe-t-il lorsqu'un signal connecté à un slot est émis vers un objet situé dans un thread différent ?",
+        "answer": "L'appel devient asynchrone : le slot est placé dans la file d'attente (run-loop) du thread de destination.",
+        "difficulty": 2
+      },
+      {
+        "id": 43,
+        "type": "OPEN",
+        "question": "Dans Qt Quick, à quoi sert le gestionnaire de signal 'Component.onCompleted' ?",
+        "answer": "Il permet d'exécuter un bloc de code JavaScript automatiquement dès que l'objet QML a terminé son instanciation.",
+        "difficulty": 2
+      },
+      {
+        "id": 44,
+        "type": "OPEN",
+        "question": "Qu'est-ce que la compilation croisée (cross-compilation) ?",
+        "answer": "C'est le fait de compiler sur un ordinateur de développement des binaires destinés à s'exécuter sur une architecture matérielle différente (ex: Raspberry Pi, smartphones).",
+        "difficulty": 2
+      },
+      {
+        "id": 45,
+        "type": "OPEN",
+        "question": "À quoi sert l'outil 'macdeployqt' sous macOS ?",
+        "answer": "Il copie automatiquement les frameworks et plugins Qt nécessaires à l'intérieur du bundle de l'application pour la rendre autonome.",
+        "difficulty": 2
+      },
+      {
+        "id": 46,
+        "type": "OPEN",
+        "question": "Pourquoi utiliser la méthode prepare() de QSqlQuery avant exec() ?",
+        "answer": "Pour optimiser les performances de la base de données lorsqu'une même requête paramétrée est exécutée plusieurs fois.",
+        "difficulty": 2
+      },
+      {
+        "id": 47,
+        "type": "OPEN",
+        "question": "Quel est le rôle du Meta-Object Compiler (moc) lors de la compilation ?",
+        "answer": "Il analyse le code C++ et génère le code nécessaire pour faire fonctionner les signaux, les slots et les propriétés dynamiques.",
+        "difficulty": 2
+      },
+      {
+        "id": 48,
+        "type": "OPEN",
+        "question": "Quelle est l'utilité de la macro Q_DECLARE_METATYPE ?",
+        "answer": "Elle permet de rendre un type C++ personnalisé reconnaissable par la classe QVariant, afin de l'utiliser dans les signaux et slots.",
+        "difficulty": 2
+      },
+      {
+        "id": 49,
+        "type": "QCM",
+        "question": "Dans le framework Qt Test, quelle macro permet de récupérer itérativement des données d'un jeu de test ?",
+        "options": [
+          "QFETCH",
+          "QCOMPARE",
+          "QVERIFY",
+          "QBENCHMARK"
+        ],
+        "answer": "QFETCH",
+        "difficulty": 3
+      },
+      {
+        "id": 50,
+        "type": "QCM",
+        "question": "Quelle fonction globale de Qt permet de forcer la conversion d'un entier vers l'endianisme gros-boutiste (Big Endian) ?",
+        "options": [
+          "qToBigEndian()",
+          "qSwapEndian()",
+          "qConvertEndian()",
+          "qToHostEndian()"
+        ],
+        "answer": "qToBigEndian()",
+        "difficulty": 3
+      },
+      {
+        "id": 51,
+        "type": "QCM",
+        "question": "Dans le module des automates à états, comment ajouter une transition déclenchée par un signal ?",
+        "options": [
+          "En utilisant addTransition() avec le signal en paramètre",
+          "En utilisant connect() sur le QState",
+          "En surchargeant la méthode onSignal()",
+          "En créant un QEventTransition"
+        ],
+        "answer": "En utilisant addTransition() avec le signal en paramètre",
+        "difficulty": 3
+      },
+      {
+        "id": 52,
+        "type": "QCM",
+        "question": "Quel composant QML permet de dessiner des graphiques 2D impérativement en utilisant une API similaire au HTML5 ?",
+        "options": [
+          "Canvas",
+          "Rectangle",
+          "Shape",
+          "Painter2D"
+        ],
+        "answer": "Canvas",
+        "difficulty": 3
+      },
+      {
+        "id": 53,
+        "type": "QCM",
+        "question": "Dans Qt Charts, quel élément permet d'afficher un graphique boursier de type chandeliers japonais ?",
+        "options": [
+          "CandleStickSeries",
+          "LineSeries",
+          "BarSeries",
+          "SplineSeries"
+        ],
+        "answer": "CandleStickSeries",
+        "difficulty": 3
+      },
+      {
+        "id": 54,
+        "type": "QCM",
+        "question": "Comment exposer un objet C++ en tant que Singleton exploitable directement dans QML ?",
+        "options": [
+          "qmlRegisterSingletonInstance()",
+          "qmlRegisterType()",
+          "setContextProperty()",
+          "Q_GLOBAL_STATIC"
+        ],
+        "answer": "qmlRegisterSingletonInstance()",
+        "difficulty": 3
+      },
+      {
+        "id": 55,
+        "type": "QCM",
+        "question": "Quelle fonction de Qt Test permet de simuler un clic de souris sur un widget ?",
+        "options": [
+          "QTest::mouseClick()",
+          "QTest::click()",
+          "QTest::sendMouse()",
+          "QTest::simulateClick()"
+        ],
+        "answer": "QTest::mouseClick()",
+        "difficulty": 3
+      },
+      {
+        "id": 56,
+        "type": "QCM",
+        "question": "Comment rend-on une propriété QML obligatoire à l'instanciation de l'objet ?",
+        "options": [
+          "En ajoutant le mot-clé required avant property",
+          "En utilisant pragma Strict",
+          "En définissant la propriété dans C++",
+          "C'est impossible en QML"
+        ],
+        "answer": "En ajoutant le mot-clé required avant property",
+        "difficulty": 3
+      },
+      {
+        "id": 57,
+        "type": "QCM",
+        "question": "Quel type de connexion signaux/slots est utilisé par défaut lorsque l'émetteur et le récepteur sont dans le même thread ?",
+        "options": [
+          "DirectConnection",
+          "QueuedConnection",
+          "BlockingQueuedConnection",
+          "AutoConnection"
+        ],
+        "answer": "DirectConnection",
+        "difficulty": 3
+      },
+      {
+        "id": 58,
+        "type": "QCM",
+        "question": "Quelle méthode permet d'obtenir la liste des tables d'une base de données SQL connectée ?",
+        "options": [
+          "QSqlDatabase::tables()",
+          "QSqlRecord::tables()",
+          "QSqlQuery::showTables()",
+          "QSqlDriver::listTables()"
+        ],
+        "answer": "QSqlDatabase::tables()",
+        "difficulty": 3
+      },
+      {
+        "id": 59,
+        "type": "OPEN",
+        "question": "Que contient exactement la classe QNetworkRequest ?",
+        "answer": "Elle encapsule les informations relatives à une requête HTTP, telles que l'URL, le protocole, le port et les en-têtes.",
+        "difficulty": 3
+      },
+      {
+        "id": 60,
+        "type": "OPEN",
+        "question": "Comment exécuter une fonction de manière asynchrone sans définir explicitement de signal ?",
+        "answer": "On peut utiliser la méthode statique QMetaObject::invokeMethod() pour placer l'appel directement dans la run-loop de l'objet cible.",
+        "difficulty": 3
+      },
+      {
+        "id": 61,
+        "type": "OPEN",
+        "question": "Lors de l'utilisation de QSettings, comment se prémunir de l'absence d'une clé dans les réglages ?",
+        "answer": "Il faut fournir une valeur par défaut en tant que second argument à la méthode value().",
+        "difficulty": 3
+      },
+      {
+        "id": 62,
+        "type": "OPEN",
+        "question": "Qu'est-ce qu'une boîte de dialogue 'modale' ?",
+        "answer": "C'est une fenêtre qui bloque l'utilisation des autres fenêtres de l'application (via une run-loop locale) tant qu'elle n'est pas fermée.",
+        "difficulty": 3
+      },
+      {
+        "id": 63,
+        "type": "OPEN",
+        "question": "Comment la fonction tr() est-elle utilisée dans le code source C++ ?",
+        "answer": "Elle englobe les chaînes de caractères littérales afin que l'outil lupdate puisse les extraire pour être traduites via Qt Linguist.",
+        "difficulty": 3
+      },
+      {
+        "id": 64,
+        "type": "OPEN",
+        "question": "Quel est le rôle de la classe QSharedDataPointer ?",
+        "answer": "Elle simplifie l'implémentation du partage implicite (copy-on-write) et du comptage de références pour des classes C++ personnalisées.",
+        "difficulty": 3
+      }
+    ]
+  }
