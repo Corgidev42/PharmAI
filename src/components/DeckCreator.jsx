@@ -169,16 +169,16 @@ export default function DeckCreator({ onClose, playerId = 0 }) {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="fixed inset-0 z-[100] flex items-center justify-center bg-purple-950/80 backdrop-blur-md p-4 overflow-y-auto"
+      className="fixed inset-0 z-[100] flex items-center justify-center overflow-hidden bg-purple-950/80 backdrop-blur-md p-2 sm:p-3"
     >
       <motion.div
         initial={{ scale: 0.95, y: 20 }}
         animate={{ scale: 1, y: 0 }}
         exit={{ scale: 0.95, y: 20 }}
-        className="w-full max-w-2xl rounded-[1.75rem] border-2 border-pink-400/35 bg-gradient-to-b from-purple-950/98 to-fuchsia-950/40 shadow-neon-pink my-8"
+        className="flex h-[100dvh] max-h-[100dvh] w-full max-w-2xl flex-col overflow-hidden rounded-[1.75rem] border-2 border-pink-400/35 bg-gradient-to-b from-purple-950/98 to-fuchsia-950/40 shadow-neon-pink"
       >
         {/* Header */}
-        <div className="flex items-center justify-between px-6 py-4 border-b border-pink-400/20">
+        <div className="flex shrink-0 items-center justify-between border-b border-pink-400/20 px-4 py-3 sm:px-6 sm:py-4">
           <div>
             <h2 className="text-lg font-extrabold title-candy">Deck Gemini</h2>
             <p className="text-xs text-pink-200/70 mt-0.5">
@@ -196,7 +196,7 @@ export default function DeckCreator({ onClose, playerId = 0 }) {
         </div>
 
         {/* Step indicator */}
-        <div className="px-6 pt-4 flex gap-2">
+        <div className="flex shrink-0 gap-2 px-4 pt-3 sm:px-6 sm:pt-4">
           {STEPS.map((s, i) => (
             <div
               key={s}
@@ -207,11 +207,17 @@ export default function DeckCreator({ onClose, playerId = 0 }) {
           ))}
         </div>
 
-        <div className="p-6">
+        <div className="flex min-h-0 flex-1 flex-col overflow-hidden p-4 sm:p-6">
           <AnimatePresence mode="wait">
             {/* UPLOAD */}
             {step === 'upload' && (
-              <motion.div key="upload" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }}>
+              <motion.div
+                key="upload"
+                className="flex min-h-0 flex-1 flex-col overflow-hidden"
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -20 }}
+              >
                 <UploadStep
                   fileInputRef={fileInputRef}
                   dragging={dragging}
@@ -226,7 +232,13 @@ export default function DeckCreator({ onClose, playerId = 0 }) {
 
             {/* CONFIG */}
             {step === 'config' && (
-              <motion.div key="config" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }}>
+              <motion.div
+                key="config"
+                className="flex min-h-0 flex-1 flex-col overflow-hidden"
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -20 }}
+              >
                 <ConfigStep
                   extractInfo={extractInfo}
                   apiKey={apiKey}
@@ -250,14 +262,26 @@ export default function DeckCreator({ onClose, playerId = 0 }) {
 
             {/* GENERATING */}
             {step === 'generating' && (
-              <motion.div key="generating" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }}>
+              <motion.div
+                key="generating"
+                className="flex min-h-0 flex-1 flex-col overflow-hidden"
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -20 }}
+              >
                 <GeneratingStep progress={progress} />
               </motion.div>
             )}
 
             {/* PREVIEW */}
             {step === 'preview' && generatedDeck && (
-              <motion.div key="preview" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }}>
+              <motion.div
+                key="preview"
+                className="flex min-h-0 flex-1 flex-col overflow-hidden"
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -20 }}
+              >
                 <PreviewStep
                   deck={generatedDeck}
                   warnings={warnings}
@@ -281,8 +305,8 @@ export default function DeckCreator({ onClose, playerId = 0 }) {
 
 function UploadStep({ fileInputRef, dragging, setDragging, handleFiles, extracting, extractError, files }) {
   return (
-    <div className="space-y-4">
-      <p className="text-sm text-gray-400">
+    <div className="flex min-h-0 flex-1 flex-col gap-3 overflow-hidden">
+      <p className="shrink-0 text-xs text-gray-400 sm:text-sm">
         Importez un ou plusieurs fichiers PDF de cours. Le texte sera extrait puis envoyé à Google Gemini pour générer des questions.
       </p>
 
@@ -291,7 +315,7 @@ function UploadStep({ fileInputRef, dragging, setDragging, handleFiles, extracti
         onDragLeave={() => setDragging(false)}
         onDrop={(e) => { e.preventDefault(); setDragging(false); handleFiles(e.dataTransfer.files) }}
         onClick={() => fileInputRef.current?.click()}
-        className={`flex flex-col items-center justify-center gap-3 p-10 rounded-xl border-2 border-dashed
+        className={`flex min-h-0 flex-1 flex-col items-center justify-center gap-2 rounded-xl border-2 border-dashed p-6 sm:gap-3 sm:p-8
           cursor-pointer transition-all ${
             dragging
               ? 'border-indigo-400 bg-indigo-500/10'
@@ -366,7 +390,7 @@ function ConfigStep({
     effectiveModel.length > 0
 
   return (
-    <div className="space-y-5">
+    <div className="flex min-h-0 flex-1 flex-col gap-2.5 overflow-hidden sm:gap-3">
       {extractInfo && (
         <div className="flex items-center gap-2 px-3 py-2 rounded-lg bg-emerald-900/20 border border-emerald-700/30">
           <span className="text-emerald-400 text-sm">&#10003;</span>
@@ -419,11 +443,9 @@ function ConfigStep({
         <textarea
           value={guideInstructions}
           onChange={(e) => setGuideInstructions(e.target.value.slice(0, 6000))}
-          rows={5}
-          placeholder={`Exemples :\n• Insister sur le chapitre 3 et les définitions officielles.\n• Questions en français, niveau L2, pas de calculs.\n• 80 % QCM, éviter les questions sur l’historique.\n• Se baser sur les encadrés « à retenir » uniquement.`}
-          className="w-full px-4 py-3 rounded-lg bg-gray-800/60 border border-gray-700
-            text-gray-100 placeholder-gray-600 text-sm focus:outline-none focus:border-violet-500/50
-            transition-colors resize-y min-h-[100px] max-h-48 leading-relaxed"
+          rows={2}
+          placeholder={`Exemples :\n• Insister sur le chapitre 3…\n• Niveau L2, pas de calculs.`}
+          className="max-h-20 min-h-[3.25rem] w-full resize-none overflow-y-auto rounded-lg border border-gray-700 bg-gray-800/60 px-3 py-2 text-xs leading-relaxed text-gray-100 placeholder-gray-600 focus:border-violet-500/50 focus:outline-none"
         />
         <p className="text-xs text-gray-600">
           Ces règles s’appliquent uniquement à la génération liée aux PDF importés ci-dessus ; elles sont envoyées à Gemini en plus du texte extrait.
@@ -536,24 +558,24 @@ function PreviewStep({ deck, warnings, onLoadInGame, onDownload, onDeleteCard, o
   const diffCounts = [1, 2, 3].map((d) => deck.cards.filter((c) => c.difficulty === d).length)
 
   return (
-    <div className="space-y-4">
+    <div className="flex min-h-0 flex-1 flex-col gap-2 overflow-hidden">
       {/* Stats */}
-      <div className="grid grid-cols-3 gap-3">
-        <div className="px-3 py-2 rounded-lg bg-gray-800/50 text-center">
-          <p className="text-lg font-bold text-gray-100">{deck.cards.length}</p>
-          <p className="text-xs text-gray-500">cartes</p>
+      <div className="grid shrink-0 grid-cols-3 gap-2 sm:gap-3">
+        <div className="rounded-lg bg-gray-800/50 px-2 py-1.5 text-center sm:px-3 sm:py-2">
+          <p className="text-base font-bold text-gray-100 sm:text-lg">{deck.cards.length}</p>
+          <p className="text-[10px] text-gray-500 sm:text-xs">cartes</p>
         </div>
-        <div className="px-3 py-2 rounded-lg bg-gray-800/50 text-center">
-          <p className="text-lg font-bold text-indigo-400">{qcmCount}</p>
-          <p className="text-xs text-gray-500">QCM</p>
+        <div className="rounded-lg bg-gray-800/50 px-2 py-1.5 text-center sm:px-3 sm:py-2">
+          <p className="text-base font-bold text-indigo-400 sm:text-lg">{qcmCount}</p>
+          <p className="text-[10px] text-gray-500 sm:text-xs">QCM</p>
         </div>
-        <div className="px-3 py-2 rounded-lg bg-gray-800/50 text-center">
-          <p className="text-lg font-bold text-amber-400">{openCount}</p>
-          <p className="text-xs text-gray-500">Ouvertes</p>
+        <div className="rounded-lg bg-gray-800/50 px-2 py-1.5 text-center sm:px-3 sm:py-2">
+          <p className="text-base font-bold text-amber-400 sm:text-lg">{openCount}</p>
+          <p className="text-[10px] text-gray-500 sm:text-xs">Ouvertes</p>
         </div>
       </div>
 
-      <div className="flex gap-2 text-xs text-gray-500 justify-center">
+      <div className="flex shrink-0 flex-wrap justify-center gap-x-2 gap-y-0.5 text-[10px] text-gray-500 sm:text-xs">
         <span>Facile: {diffCounts[0]}</span>
         <span>·</span>
         <span>Moyen: {diffCounts[1]}</span>
@@ -562,26 +584,26 @@ function PreviewStep({ deck, warnings, onLoadInGame, onDownload, onDeleteCard, o
       </div>
 
       {warnings && (
-        <div className="px-3 py-2 rounded-lg bg-amber-900/20 border border-amber-700/30">
-          <p className="text-xs text-amber-300">Certaines cartes ont été auto-corrigées.</p>
+        <div className="shrink-0 rounded-lg border border-amber-700/30 bg-amber-900/20 px-2 py-1.5 sm:px-3 sm:py-2">
+          <p className="text-[10px] text-amber-300 sm:text-xs">Certaines cartes ont été auto-corrigées.</p>
         </div>
       )}
 
-      {/* Card list */}
-      <div className="max-h-64 overflow-y-auto space-y-2 pr-1 scrollbar-thin">
+      {/* Card list — sans défilement : aperçu tronqué */}
+      <div className="min-h-0 flex-1 space-y-1.5 overflow-hidden pr-0.5">
         {deck.cards.map((card) => (
           <div
             key={card.id}
-            className="px-3 py-2.5 rounded-lg bg-gray-800/40 border border-gray-700/30 hover:bg-gray-800/60 transition-colors"
+            className="rounded-lg border border-gray-700/30 bg-gray-800/40 px-2 py-1.5 transition-colors hover:bg-gray-800/60 sm:px-3 sm:py-2"
           >
-            <div className="flex items-start gap-2">
-              <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded shrink-0 mt-0.5 ${
+            <div className="flex items-start gap-1.5 sm:gap-2">
+              <span className={`mt-0.5 shrink-0 rounded px-1 py-0.5 text-[9px] font-bold sm:text-[10px] ${
                 card.type === 'QCM' ? 'bg-indigo-500/20 text-indigo-400' : 'bg-amber-500/20 text-amber-400'
               }`}>
                 {card.type}
               </span>
               <p
-                className="text-sm text-gray-200 flex-1 cursor-pointer"
+                className="line-clamp-2 flex-1 cursor-pointer text-[11px] text-gray-200 sm:text-sm"
                 onClick={() => setExpandedCard(expandedCard === card.id ? null : card.id)}
               >
                 {card.question}
@@ -629,7 +651,7 @@ function PreviewStep({ deck, warnings, onLoadInGame, onDownload, onDeleteCard, o
       </div>
 
       {/* Actions */}
-      <div className="flex gap-3 pt-2">
+      <div className="flex shrink-0 flex-wrap gap-2 pt-1 sm:gap-3 sm:pt-2">
         <button
           onClick={onRegenerate}
           className="px-4 py-2.5 rounded-lg border border-gray-700 text-gray-400

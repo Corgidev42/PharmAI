@@ -46,25 +46,26 @@ export default function OpenQuestionTwoPlayer({
         : 'border-pink-400/45'
 
   return (
-    <div className="space-y-4">
-      <AnimatePresence mode="wait">
+    <div className="flex min-h-0 flex-1 flex-col gap-3 overflow-hidden">
+      <div className="min-h-0 flex-1 overflow-hidden">
+        <AnimatePresence mode="wait">
         {step === 'prep' && (
           <motion.div
             key="prep"
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
-            className={`rounded-2xl border-2 ${borderAccent} bg-black/55 p-5 text-center space-y-3`}
+            className={`space-y-2 rounded-2xl border-2 ${borderAccent} bg-black/55 p-3 text-center sm:space-y-3 sm:p-5`}
           >
             <p className="text-xs font-semibold uppercase tracking-widest text-slate-300">
               Question ouverte — confidentialité
             </p>
-            <p className="text-base font-bold text-white leading-snug">
+            <p className="text-sm font-bold leading-snug text-white sm:text-base">
               <span className="text-pink-200">{activeName}</span>
               {' '}ne doit pas voir l&apos;écran : tourne-toi, ferme les yeux ou passe l&apos;appareil à{' '}
               <span className="text-cyan-200">{arbiterName}</span>.
             </p>
-            <div className="text-5xl font-black tabular-nums text-white tracking-tight">
+            <div className="text-4xl font-black tabular-nums tracking-tight text-white sm:text-5xl">
               {countdown > 0 ? countdown : '…'}
             </div>
             <p className="text-xs text-slate-400">
@@ -86,22 +87,22 @@ export default function OpenQuestionTwoPlayer({
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
-            className={`rounded-2xl border-2 ${borderAccent} bg-purple-950/80 p-5 space-y-4`}
+            className={`space-y-2 rounded-2xl border-2 ${borderAccent} bg-purple-950/80 p-3 sm:space-y-3 sm:p-4`}
           >
-            <p className="text-xs font-semibold text-amber-200/90">
+            <p className="text-[11px] font-semibold text-amber-200/90 sm:text-xs">
               Réservé à {arbiterName} — ne montre pas cet écran à {activeName}.
             </p>
-            <p className="text-lg font-bold text-white leading-relaxed">{card.question}</p>
-            <div className="p-4 rounded-xl bg-black/40 border border-white/10">
-              <p className="text-[11px] font-semibold text-slate-400 mb-1 uppercase tracking-wide">
+            <p className="line-clamp-4 text-sm font-bold leading-snug text-white sm:text-base">{card.question}</p>
+            <div className="rounded-xl border border-white/10 bg-black/40 p-2.5 sm:p-4">
+              <p className="mb-0.5 text-[10px] font-semibold uppercase tracking-wide text-slate-400 sm:text-[11px]">
                 Réponse attendue (référence)
               </p>
-              <p className="text-sm text-slate-100 leading-relaxed">{card.answer}</p>
+              <p className="line-clamp-6 text-xs leading-snug text-slate-100 sm:text-sm">{card.answer}</p>
             </div>
             <button
               type="button"
               onClick={() => setStep('active')}
-              className="w-full py-3 rounded-xl font-bold text-sm bg-white/10 border border-white/20 text-white hover:bg-white/15 transition-colors"
+              className="w-full rounded-xl border border-white/20 bg-white/10 py-2.5 text-sm font-bold text-white transition-colors hover:bg-white/15 sm:py-3"
             >
               C&apos;est noté — afficher la question à {activeName}
             </button>
@@ -114,15 +115,15 @@ export default function OpenQuestionTwoPlayer({
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
-            className="space-y-4"
+            className="space-y-3"
           >
-            <div className={`rounded-2xl border-2 ${borderAccent} bg-purple-950/60 p-5`}>
-              <p className="text-lg font-bold text-white leading-relaxed">{card.question}</p>
-              <p className="text-xs text-slate-400 mt-3">
+            <div className={`rounded-2xl border-2 ${borderAccent} bg-purple-950/60 p-3 sm:p-4`}>
+              <p className="line-clamp-4 text-sm font-bold leading-snug text-white sm:text-base">{card.question}</p>
+              <p className="mt-2 text-[11px] text-slate-400 sm:mt-3 sm:text-xs">
                 {activeName} : réponds à voix haute. {arbiterName} compare avec la référence.
               </p>
             </div>
-            <div className="rounded-xl border border-white/15 bg-black/35 p-4 space-y-2">
+            <div className="space-y-1.5 rounded-xl border border-white/15 bg-black/35 p-3 sm:p-4">
               <p className="text-[11px] font-semibold text-slate-400 uppercase tracking-wide">
                 Arbitre ({arbiterName})
               </p>
@@ -146,7 +147,8 @@ export default function OpenQuestionTwoPlayer({
             </div>
           </motion.div>
         )}
-      </AnimatePresence>
+        </AnimatePresence>
+      </div>
     </div>
   )
 }

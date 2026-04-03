@@ -12,7 +12,7 @@ export default function GameOverScreen() {
   const winnerPlayer = isDraw ? null : players[winner]
 
   return (
-    <div className="min-h-screen flex items-center justify-center p-4">
+    <div className="flex h-[100dvh] max-w-[100vw] items-center justify-center overflow-hidden p-3 sm:p-4">
       <motion.div
         initial={{ scale: 0.85, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}

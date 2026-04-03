@@ -1,6 +1,8 @@
 # PharmAI
 
-Jeu de plateau local en 2D (React, Tailwind) pour réviser des cours : circuit de **26 cases**, 2 joueurs, propriétés et duels basés sur des questions (QCM / ouvertes). **Chaque joueur importe son propre fichier `deck.json`** : aux tours et duels où une question est tirée, c’est le **paquet du joueur actif** qui est pioché (tu peux réviser deux matières différentes en même temps). Création de decks assistée par **Google Gemini** à partir de PDF, ou génération via **NotebookLM** (voir [Manuel NotebookLM](#manuel--créer-un-deck-avec-notebooklm)).
+Jeu de plateau local en 2D (React, Tailwind) pour réviser des cours : plateau **100 cases** (parcours serpentin), 2 joueurs, propriétés et duels basés sur des questions (QCM / ouvertes). **Chaque joueur importe son propre fichier `deck.json`** : aux tours et duels où une question est tirée, c’est le **paquet du joueur actif** qui est pioché (tu peux réviser deux matières différentes en même temps). Création de decks assistée par **Google Gemini** à partir de PDF, ou génération via **NotebookLM** (voir [Manuel NotebookLM](#manuel--créer-un-deck-avec-notebooklm)).
+
+Sur **téléphone**, l’interface est pensée pour le **portrait** (plateau en haut) et le **paysage** (panneau scores + dé à gauche, plateau à droite, comme sur un grand écran).
 
 **Dépôt :** [github.com/Corgidev42/PharmAI](https://github.com/Corgidev42/PharmAI)
 
@@ -45,6 +47,23 @@ npm run dev
 
 Ouvrez l’URL indiquée (souvent `http://localhost:5173`).
 
+### Accès depuis un autre appareil (même Wi‑Fi)
+
+Le fichier `vite.config.js` configure **`server.host: true`** : un simple `npm run dev` expose déjà l’app sur le réseau local. Ouvre **`http://<IP_DE_TON_PC>:5173`** (le port **5173** est celui de Vite, pas 8080).
+
+La variante explicite reste disponible :
+
+```bash
+npm run dev:host
+```
+
+**Docker** sert la même app sur le port défini par **`PHARMAI_PORT`** (souvent **8080**) : `http://<IP>:8080` après `make up`. Ce n’est **pas** le même port que le dev Vite — si tu testes 8080 alors que seul `npm run dev` tourne, rien ne répond (ou autre service).
+
+- **macOS / Linux :** `ip a` ou `ifconfig` pour voir l’IP (souvent `192.168.x.x` ou `10.x.x.x`).
+- **Windows :** `ipconfig` (carte Wi‑Fi ou Ethernet active).
+- **Pare-feu :** autorise le port **5173** (TCP) entrant pour Node/Vite si la page ne charge pas.
+- **Clé API Gemini** : si tu restreins la clé par origine HTTP, ajoute aussi `http://192.168.x.x:5173` dans Google AI Studio.
+
 ## Build production
 
 ```bash
@@ -52,12 +71,91 @@ npm run build
 npm run preview
 ```
 
+Prévisualisation accessible sur le réseau local :
+
+```bash
+npm run preview:host
+```
+
+## Docker (nginx + accès téléphone sur le port du PC)
+
+Image multi‑étapes : build **Vite** puis fichiers statiques servis par **nginx** sur le port **80** du conteneur, mappé sur un port de ta machine (par défaut **8080**).
+
+### Prérequis
+
+- [Docker](https://docs.docker.com/get-docker/) et Docker Compose v2
+
+### Construire et lancer
+
+```bash
+docker compose up --build
+```
+
+L’app est disponible sur **ce PC** : [http://localhost:8080](http://localhost:8080) (ou le port défini par `PHARMAI_PORT`).
+
+Depuis le **téléphone** (même Wi‑Fi) : `http://<IP_DE_TON_PC>:8080`.
+
+Variables utiles (fichier **`.env`** à la racine du projet, lu par Compose, **ne pas commiter**) :
+
+```env
+PHARMAI_PORT=8080
+VITE_GOOGLE_AI_API_KEY=ta_cle_optionnelle
+```
+
+- **`PHARMAI_PORT`** : port sur **ton ordinateur** (hôte). Dans `docker-compose.yml`, le mapping est `0.0.0.0:PHARMAI_PORT:80` : **80** = nginx **dans** le conteneur ; **PHARMAI_PORT** = ce que tu ouvres en local et sur le téléphone (souvent **8080**). Le préfixe **`0.0.0.0`** force l’écoute sur **toutes les interfaces** du PC (LAN), pas seulement localhost.
+
+La clé `VITE_GOOGLE_AI_API_KEY` est passée **au moment du build** de l’image ; sans elle, tu peux toujours saisir la clé dans l’interface. Pour reconstruire après changement de clé :
+
+```bash
+docker compose build --no-cache
+docker compose up
+```
+
+### Où « exposer » le port pour le téléphone ?
+
+1. **Choisir le port** : dans `.env`, `PHARMAI_PORT=8080` (ou autre, ex. `3000`). Redémarre : `docker compose up -d --build` si tu changes le mapping.
+2. **Même réseau** : le téléphone et le PC doivent être sur le **même Wi‑Fi** (pas le réseau invité isolé).
+3. **Adresse à saisir sur le téléphone** : `http://` + **IP locale du PC** + `:` + **port**  
+   Ex. `http://192.168.1.42:8080` — l’IP se trouve avec `ipconfig` (Windows), **Réglages système → Réseau → Wi‑Fi → Détails** (macOS), ou `ip a` / `hostname -I` (Linux).
+4. **Pare-feu sur le PC** : autoriser le trafic **TCP entrant** sur ce port (ex. **8080**).
+   - **Windows** : Panneau de configuration → Pare-feu → Règles de trafic entrant → Nouvelle règle → TCP → port 8080 → Autoriser.
+   - **macOS** : si le pare-feu bloque, autorise **Docker** ou **docker-proxy**, ou ajoute une règle pour le port utilisé.
+   - **Linux** : `sudo ufw allow 8080/tcp` puis `sudo ufw reload` (si UFW est actif).
+5. **Docker Desktop** : en général le `ports:` de Compose suffit ; si rien n’écoute de l’extérieur, vérifie surtout le pare-feu **OS** et que tu utilises l’**IP du PC sur le LAN**, pas `127.0.0.1` depuis le téléphone.
+
+### IP « publique » : pourquoi ça ne marche souvent pas comme le Wi‑Fi
+
+Sur le **même réseau local** (Wi‑Fi), `http://192.168.x.x:8080` fonctionne car tout est dans ton LAN.
+
+Pour ouvrir l’app depuis **Internet** avec ton **IP publique** (`http://x.x.x.x:8080`), il faut en plus :
+
+1. **Redirection de ports (NAT)** sur ta **box** : règle du type « port WAN 8080 → IP LAN du PC:8080 » (TCP). Sans ça, le routeur ne sait pas à quel appareil envoyer le trafic.
+2. **Pare-feu** du PC (et parfois de la box) ouvert sur ce port.
+3. **CGNAT** : beaucoup de FAI n’attribuent **pas** d’IPv4 publique joignable en entrée (adresse « partagée »). Dans ce cas, **aucun port forwarding ne suffit** pour l’IPv4 ; il faudrait une **IPv6** exposée, ou un **tunnel**.
+
+**Alternatives simples** sans gérer la box :
+
+- **[Cloudflare Tunnel](https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/)** (gratuit) ou **[ngrok](https://ngrok.com/)** : tu obtiens une URL HTTPS temporaire qui pointe vers ton `localhost:8080`.
+- **VPN** (Tailscale, ZeroTier, WireGuard) : tes appareils ont des IP virtuelles stables sur un réseau privé — pratique pour jouer sans exposer un service sur Internet.
+
+**Sécurité** : exposer nginx + l’app React sur Internet ouvre ta machine aux scans ; préfère un tunnel ou un VPN pour un usage perso.
+
+### Arrêter
+
+```bash
+docker compose down
+```
+
+### Makefile (raccourcis Docker)
+
+Le fichier `Makefile` pilote **uniquement** Docker Compose : `make up` (démarre en arrière-plan), `make down`, `make logs`, `make rebuild`, etc. — voir `make help`.
+
 ## Règles de jeu (résumé)
 
-- **Deux decks** : à l’écran d’accueil, chaque joueur charge **son** JSON. Les questions posées pendant **le tour de Lou** viennent du deck de Lou ; celles du tour de l’autre joueur viennent de l’autre deck. Un duel utilise le deck **du joueur qui attaque** (joueur actif).
-- **Decks vides** : la partie peut s’arrêter si une carte est nécessaire alors que le **deck du joueur concerné** est épuisé ; la fin « normale » est aussi quand **les deux** paquets sont épuisés ou après le nombre max de tours. Le gagnant est celui qui possède **le plus de cases** (égalité possible).
-- **Retomber sur la même case** : chaque arrêt tire la **prochaine carte** du paquet du joueur actif dans l’ordre.
-- **Cases spéciales** : **Départ** (+1 bonus), **Fée** (+1), **Potion** (+2), **Mégaphone** (+1), **Taxe** (−1 bonus, min. 0), **Chance** (carte la plus facile restante dans *ton* paquet ; +2 bonus si bonne réponse, pas de capture), **Nuage** (+1 bonus + rejoue), autres repos sans question, **Serpent** / **Échelle** (glissade ±2 cases). Les bonus ne décident pas la victoire « plus de cases ».
+- **Deux decks** : à l’écran d’accueil, chaque joueur charge **son** JSON. Les questions du tour viennent du **deck du joueur actif** ; un duel utilise le deck **de l’attaquant** (joueur actif).
+- **Plateau** : parcours **1 → 100** en serpentin (jeu de l’oie) ; **échelles** et **serpents** déplacent selon les liaisons du plateau.
+- **Decks vides / fin** : la partie peut s’arrêter si une carte est nécessaire alors que le deck concerné est épuisé ; fin aussi quand **les deux** paquets sont épuisés ou après le **nombre max de tours**. Le gagnant est celui qui possède **le plus de cases** (égalité possible).
+- **Cases spéciales** : **Départ** et **Arrivée** (100) avec bonus ; **Serpents** / **Échelles** avec animation le long du ruban. Les bonus ne décident pas seuls la victoire (priorité au nombre de cases possédées).
 
 ## Format `deck.json`
 
@@ -177,6 +275,7 @@ CONTRAINTES FINALES
 - `src/game/` — logique pure (moteur, chargement deck, PDF, génération Gemini)
 - `src/store/` — état Zustand
 - `src/components/` — UI (plateau, modales, import, créateur de deck)
+- `Dockerfile` / `docker-compose.yml` / `nginx.conf` — image statique + reverse minimal pour jeu sur le réseau local
 
 ## Licence
 

@@ -1,10 +1,12 @@
 import {
   TOTAL_TILES,
+  LAST_TILE_INDEX,
   DICE_MIN,
   DICE_MAX,
   DUEL_PENALTY,
   MAX_TURNS,
   TILE_SPECIAL_AT_INDEX,
+  SLIDE_TO_AT_INDEX,
   SPECIAL_TILE,
 } from './constants.js'
 
@@ -12,16 +14,28 @@ export function rollDice() {
   return Math.floor(Math.random() * (DICE_MAX - DICE_MIN + 1)) + DICE_MIN
 }
 
+/** Un pas en avant, sans dépasser la case 100 (index 99). */
+export function stepForward(position) {
+  if (position >= LAST_TILE_INDEX) return position
+  return Math.min(LAST_TILE_INDEX, position + 1)
+}
+
+/** Avance de `steps` pas (pour usage ponctuel) — plafonné à l’arrivée. */
 export function movePlayer(position, steps) {
-  return (position + steps) % TOTAL_TILES
+  return Math.min(LAST_TILE_INDEX, position + steps)
 }
 
 export function createInitialTiles() {
-  return Array.from({ length: TOTAL_TILES }, (_, i) => ({
-    id: i,
-    owner: null,
-    special: TILE_SPECIAL_AT_INDEX[i] ?? null,
-  }))
+  return Array.from({ length: TOTAL_TILES }, (_, i) => {
+    const special = TILE_SPECIAL_AT_INDEX[i] ?? null
+    const slideTo = SLIDE_TO_AT_INDEX[i]
+    return {
+      id: i,
+      owner: null,
+      special,
+      slideTo: slideTo != null ? slideTo : null,
+    }
+  })
 }
 
 export function createPlayer(id, name, color) {
@@ -46,7 +60,6 @@ export function drawCard(cards, currentIndex, minDifficulty = 0) {
   return { card: cards[currentIndex], nextIndex: currentIndex + 1 }
 }
 
-/** Case Chance : pioche la carte restante la plus facile (difficulté minimale). */
 export function drawChanceCard(cards, currentIndex) {
   if (currentIndex >= cards.length) return { card: null, nextIndex: currentIndex }
 
@@ -70,8 +83,20 @@ export function checkAnswer(card, answer) {
   return answer === true
 }
 
-/** Serpents / échelles : enchaîne les glissades jusqu’à une case « stable ». */
-export function applySerpentsEtEchelles(startIndex, tiles, maxChain = 10) {
+/** Indices visités entre deux cases du parcours (serpentin), d’un pas de 1. */
+export function indexPath(from, to) {
+  const a = Math.max(0, Math.min(LAST_TILE_INDEX, from))
+  const b = Math.max(0, Math.min(LAST_TILE_INDEX, to))
+  if (a === b) return []
+  const step = a < b ? 1 : -1
+  const out = []
+  for (let i = a + step; step > 0 ? i <= b : i >= b; i += step) {
+    out.push(i)
+  }
+  return out
+}
+
+export function resolveSlides(startIndex, tiles, maxChain = 24) {
   let pos = startIndex
   let serpents = 0
   let echelles = 0
@@ -81,17 +106,14 @@ export function applySerpentsEtEchelles(startIndex, tiles, maxChain = 10) {
     guard++
     const tile = tiles[pos]
     if (!tile?.special) break
-    if (tile.special === SPECIAL_TILE.SERPENT) {
-      pos = (pos - 2 + TOTAL_TILES) % TOTAL_TILES
-      serpents++
-      continue
-    }
-    if (tile.special === SPECIAL_TILE.ECHELLE) {
-      pos = (pos + 2) % TOTAL_TILES
-      echelles++
-      continue
-    }
-    break
+    const st = tile.special
+    if (st !== SPECIAL_TILE.SERPENT && st !== SPECIAL_TILE.ECHELLE) break
+    const target = tile.slideTo
+    if (target == null || target === pos) break
+    const clamped = Math.max(0, Math.min(LAST_TILE_INDEX, target))
+    if (st === SPECIAL_TILE.SERPENT) serpents++
+    if (st === SPECIAL_TILE.ECHELLE) echelles++
+    pos = clamped
   }
 
   let slideNote = null
@@ -99,29 +121,17 @@ export function applySerpentsEtEchelles(startIndex, tiles, maxChain = 10) {
     const bits = []
     if (serpents) bits.push(`${serpents} serpent${serpents > 1 ? 's' : ''}`)
     if (echelles) bits.push(`${echelles} échelle${echelles > 1 ? 's' : ''}`)
-    slideNote = `${bits.join(' · ')} — case ajustée (serpent / échelle).`
+    slideNote = `${bits.join(' · ')} — déplacement.`
   }
 
-  return { finalIndex: pos, slideNote }
+  return { finalIndex: pos, slideNote, serpents, echelles }
 }
 
 export function resolveLanding(tiles, tileIndex, playerId) {
   const tile = tiles[tileIndex]
   if (tile.special) {
     if (tile.special === SPECIAL_TILE.DEPART) return 'SPECIAL_DEPART'
-    if (tile.special === SPECIAL_TILE.CHANCE) return 'SPECIAL_CHANCE'
-    if (tile.special === SPECIAL_TILE.TAX) return 'SPECIAL_TAX'
-    if (tile.special === SPECIAL_TILE.FEE_BONBONS) return 'SPECIAL_FEE_BONBONS'
-    if (tile.special === SPECIAL_TILE.POTION_DOUX) return 'SPECIAL_POTION_DOUX'
-    if (tile.special === SPECIAL_TILE.MEGAPHONE) return 'SPECIAL_MEGAPHONE'
-    if (tile.special === SPECIAL_TILE.NUAGE) return 'SPECIAL_NUAGE'
-    if (
-      tile.special === SPECIAL_TILE.PARC ||
-      tile.special === SPECIAL_TILE.PRISON ||
-      tile.special === SPECIAL_TILE.BULLES_PAIX ||
-      tile.special === SPECIAL_TILE.TOILE_ARAIGNEE
-    )
-      return 'SPECIAL_REST'
+    if (tile.special === SPECIAL_TILE.FIN) return 'SPECIAL_FIN'
   }
   if (tile.owner === null) return 'FREE'
   if (tile.owner === playerId) return 'OWN'
@@ -152,9 +162,6 @@ export function countOwnedTiles(tiles, playerId) {
   return tiles.filter((t) => t.owner === playerId).length
 }
 
-/**
- * @param {Array<{ cards: unknown[], currentIndex: number }>} decks — un paquet par joueur (index 0 et 1)
- */
 export function checkVictory(tiles, decks, turnCount) {
   const bothDecksExhausted =
     Array.isArray(decks) &&
@@ -174,31 +181,4 @@ export function checkVictory(tiles, decks, turnCount) {
 
 export function nextPlayerIndex(current) {
   return current === 0 ? 1 : 0
-}
-
-/** Texte des cases repos (hors Nuage, traité à part). */
-export function getRestSpecialCopy(special) {
-  switch (special) {
-    case SPECIAL_TILE.BULLES_PAIX:
-      return {
-        title: 'Repos',
-        subtitle: 'Pas de question. Tour suivant.',
-      }
-    case SPECIAL_TILE.TOILE_ARAIGNEE:
-      return {
-        title: 'Repos',
-        subtitle: 'Pas de question. Tour suivant.',
-      }
-    case SPECIAL_TILE.PARC:
-      return {
-        title: 'Repos',
-        subtitle: 'Pas de question. Tour suivant.',
-      }
-    case SPECIAL_TILE.PRISON:
-    default:
-      return {
-        title: 'Repos',
-        subtitle: 'Pas de question. Tour suivant.',
-      }
-  }
 }

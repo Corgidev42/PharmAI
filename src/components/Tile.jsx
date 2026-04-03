@@ -38,7 +38,7 @@ export default function Tile({ tile, index, size = 64 }) {
         className="text-white/40 absolute top-0.5 left-1 font-mono"
         style={{ fontSize: Math.max(7, size * 0.14) }}
       >
-        {index}
+        {index + 1}
       </span>
 
       {specialLabel && (

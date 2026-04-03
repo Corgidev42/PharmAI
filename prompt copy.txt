@@ -2,9 +2,9 @@ Tu es un assistant pédagogique. Tu as accès à mes documents sources (cours, P
 
 Ce prompt est la version « volume adaptatif » : le nombre de questions dépend de la richesse et de l’étendue réelle des sources, pas d’un quota fixe.
 
---- INSTRUCTIONS SPÉCIFIQUES À CE PDF / CE NOTEBOOK (à compléter manuellement ci‑dessous) ---
+--- INSTRUCTIONS SPÉCIFIQUES À CE PDF / CE NOTEBOOK ---
 
-[COLLE ICI TES PRÉCISIONS : focus examen, chapitres à prioriser, niveau attendu, angle particulier, ce qu’il faut éviter ou insister, etc. Si tu n’as rien à ajouter, écris « Aucune instruction supplémentaire. »]
+Aucune instruction supplémentaire.
 
 --- FIN DU BLOC MANUEL ---
 

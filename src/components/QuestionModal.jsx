@@ -8,9 +8,9 @@ function QCMQuestion({ card, onAnswer }) {
   const [selected, setSelected] = useState(null)
 
   return (
-    <div className="space-y-4">
-      <p className="text-lg font-bold text-white leading-relaxed">{card.question}</p>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+    <div className="flex min-h-0 flex-1 flex-col gap-3 overflow-hidden">
+      <p className="line-clamp-4 text-sm font-bold leading-snug text-white sm:text-base">{card.question}</p>
+      <div className="grid min-h-0 flex-1 grid-cols-1 gap-2 overflow-hidden sm:grid-cols-2 sm:gap-2.5">
         {card.options.map((opt) => (
           <button
             key={opt}
@@ -19,7 +19,7 @@ function QCMQuestion({ card, onAnswer }) {
               setTimeout(() => onAnswer(opt), 200)
             }}
             disabled={selected !== null}
-            className={`px-4 py-3.5 rounded-2xl border-2 text-left transition-all text-sm font-bold
+            className={`min-h-0 rounded-2xl border-2 px-3 py-2.5 text-left text-xs font-bold transition-all sm:px-4 sm:py-3 sm:text-sm
               ${
                 selected === opt
                   ? 'border-pink-400 bg-pink-500/25 text-pink-100 shadow-neon-pink'
@@ -36,14 +36,8 @@ function QCMQuestion({ card, onAnswer }) {
   )
 }
 
-function ResultDisplay({ correct, onProceed, isChance }) {
-  const captureLine = isChance
-    ? correct
-      ? '+2 bonus (case Chance, pas de capture).'
-      : 'Pas de bonus. Carte suivante.'
-    : correct
-      ? 'Case capturée.'
-      : 'Case non capturée.'
+function ResultDisplay({ correct, onProceed }) {
+  const captureLine = correct ? 'Case capturée.' : 'Case non capturée.'
 
   return (
     <motion.div
@@ -78,8 +72,7 @@ export default function QuestionModal() {
   const slideNote = useGameStore((s) => s.slideNote)
 
   const visible =
-    phase === PHASES.QUESTION ||
-    (phase === PHASES.RESULT && (landingType === 'FREE' || landingType === 'CHANCE'))
+    phase === PHASES.QUESTION || (phase === PHASES.RESULT && landingType === 'FREE')
   const player = players[currentPlayer]
   const arbiter = players[currentPlayer === 0 ? 1 : 0]
 
@@ -90,31 +83,25 @@ export default function QuestionModal() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-md p-4"
+          className="fixed inset-0 z-50 flex items-center justify-center overflow-hidden bg-black/70 p-3 backdrop-blur-md sm:p-4"
         >
           <motion.div
             initial={{ opacity: 0, scale: 0.96, y: 12 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.96, y: 12 }}
             transition={{ type: 'spring', stiffness: 300, damping: 26 }}
-            className="w-full max-w-lg rounded-2xl border border-white/15 bg-gradient-to-br from-purple-950/98 to-slate-950/90 p-6 shadow-2xl"
+            className="flex min-h-0 max-h-[min(100dvh,100%)] w-full max-w-lg flex-col overflow-hidden rounded-2xl border border-white/15 bg-gradient-to-br from-purple-950/98 to-slate-950/90 p-4 shadow-2xl sm:p-5"
             style={{ boxShadow: `0 0 32px ${player.color}22` }}
           >
             {slideNote && phase === PHASES.QUESTION && (
-              <p className="text-xs font-medium text-slate-300 mb-4 px-3 py-2 rounded-xl bg-white/5 border border-white/10 whitespace-pre-line">
+              <p className="mb-2 line-clamp-3 shrink-0 whitespace-pre-line rounded-xl border border-white/10 bg-white/5 px-2 py-1.5 text-[11px] font-medium text-slate-300 sm:mb-3 sm:px-3 sm:py-2 sm:text-xs">
                 {slideNote}
               </p>
             )}
 
             {phase === PHASES.QUESTION && currentCard && (
-              <>
-                {landingType === 'CHANCE' && (
-                  <p className="text-xs font-medium text-violet-200/95 mb-3 px-3 py-2 rounded-xl bg-violet-500/15 border border-violet-400/30">
-                    Case Chance : carte la plus facile restante dans le paquet. Bonne réponse = +2 bonus
-                    (pas de capture de case).
-                  </p>
-                )}
-                <div className="flex items-center justify-between mb-4">
+              <div className="flex min-h-0 flex-1 flex-col overflow-hidden">
+                <div className="mb-3 flex shrink-0 items-center justify-between sm:mb-4">
                   <span
                     className="text-xs font-bold uppercase tracking-wider px-3 py-1.5 rounded-full border border-white/15"
                     style={{
@@ -137,10 +124,10 @@ export default function QuestionModal() {
                     arbiterName={arbiter.name}
                     card={currentCard}
                     onAnswer={submitAnswer}
-                    accent={landingType === 'CHANCE' ? 'violet' : 'pink'}
+                    accent="pink"
                   />
                 )}
-              </>
+              </div>
             )}
 
             {phase === PHASES.RESULT && (
@@ -150,11 +137,7 @@ export default function QuestionModal() {
                     {slideNote}
                   </p>
                 )}
-                <ResultDisplay
-                  correct={lastAnswerCorrect}
-                  onProceed={proceedAfterResult}
-                  isChance={landingType === 'CHANCE'}
-                />
+                <ResultDisplay correct={lastAnswerCorrect} onProceed={proceedAfterResult} />
               </>
             )}
           </motion.div>

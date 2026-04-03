@@ -4,19 +4,23 @@ import { motion, AnimatePresence } from 'framer-motion'
 const SECTIONS = [
   {
     title: 'But du jeu',
-    body: 'Poss\u00e9der le plus de cases possible sur le plateau. Le joueur avec le plus de propri\u00e9t\u00e9s \u00e0 la fin de la partie gagne\u2009!',
+    body: 'Posséder le plus de cases possible. Le joueur avec le plus de propriétés à la fin gagne. Le plateau est une course du bas vers le haut (case 1 → case 100).',
   },
   {
-    title: 'D\u00e9roulement d\u2019un tour',
-    body: '1. Lance le d\u00e9.\n2. Ton serpent avance du nombre de cases indiqu\u00e9.\n3. Selon la case\u2009:\n   \u2022 Case libre \u2192 r\u00e9ponds \u00e0 une question pour la capturer.\n   \u2022 Case adverse \u2192 duel\u2009! Bonne r\u00e9ponse = tu la prends.\n   \u2022 Ta propre case \u2192 repos, au joueur suivant.',
+    title: 'Parcours serpentin',
+    body: 'Comme un jeu de l’oie classique : la ligne du bas va de gauche à droite (1→10), la ligne au-dessus de droite à gauche (20→11), et ainsi de suite jusqu’à la case 100 en haut à gauche. On ne repart pas au début après 100 : le dé s’arrête à l’arrivée.',
   },
   {
-    title: 'Cases sp\u00e9ciales',
-    body: '\u2022 D\u00e9part \u2014 +1 bonus\n\u2022 Chance \u2014 pioche la question la plus facile restante ; +2 bonus si bonne r\u00e9ponse (pas de capture)\n\u2022 \u00c9chelle \u2014 avance de 2 cases\n\u2022 Serpent \u2014 recule de 2 cases\n\u2022 Nuage \u2014 +1 bonus et tu rejoues (relance le d\u00e9)\n\u2022 F\u00e9e \u2014 +1 bonus\n\u2022 Taxe \u2014 \u22121 bonus\n\u2022 Questions ouvertes \u2014 le joueur actif ne doit pas voir la r\u00e9ponse attendue : compte \u00e0 rebours puis lecture par l\u2019autre joueur.',
+    title: 'Déplacement',
+    body: 'Lance le dé : tu avances le long du parcours. Si le dé te ferait dépasser la case 100, tu t’arrêtes sur 100. Les échelles (↑) te font monter tout de suite ; les serpents (↓) te font descendre. Pas de question pour monter une échelle simple.',
+  },
+  {
+    title: 'Questions',
+    body: 'Sur une case libre → question pour capturer. Sur une case adverse → duel. Départ : +1 bonus. Case Arrivée (100) : +2 bonus.',
   },
   {
     title: 'Fin de partie',
-    body: 'La partie se termine quand le deck de questions est \u00e9puis\u00e9 ou apr\u00e8s 30 tours. Le joueur poss\u00e9dant le plus de cases gagne. En cas d\u2019\u00e9galit\u00e9\u2009: match nul\u2009!',
+    body: 'Quand les deux decks sont épuisés ou après 64 tours, le joueur avec le plus de cases gagne.',
   },
 ]
 
@@ -27,10 +31,11 @@ export default function RulesModal() {
     <>
       <button
         onClick={() => setOpen(true)}
-        className="fixed top-4 right-4 z-50 w-10 h-10 rounded-full glass-candy border-2 border-pink-400/40
+        className="fixed z-50 w-9 h-9 sm:w-10 sm:h-10 rounded-full glass-candy border-2 border-pink-400/40
+          top-[max(0.75rem,env(safe-area-inset-top))] right-[max(0.75rem,env(safe-area-inset-right))]
           flex items-center justify-center text-pink-200 hover:text-white hover:border-pink-400/70
           transition-all hover:shadow-neon-pink text-lg font-bold"
-        aria-label="R\u00e8gles du jeu"
+        aria-label="Règles du jeu"
       >
         ?
       </button>
@@ -38,7 +43,7 @@ export default function RulesModal() {
       <AnimatePresence>
         {open && (
           <motion.div
-            className="fixed inset-0 z-[100] flex items-center justify-center p-4"
+            className="fixed inset-0 z-[100] flex items-center justify-center overflow-hidden p-3 sm:p-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -49,21 +54,19 @@ export default function RulesModal() {
             />
 
             <motion.div
-              className="relative glass-candy border-2 border-pink-400/30 p-6 md:p-8 max-w-lg w-full max-h-[85vh] overflow-y-auto"
+              className="relative flex h-[min(100dvh,100%)] max-h-[100dvh] w-full max-w-2xl flex-col overflow-hidden rounded-2xl border-2 border-pink-400/30 glass-candy p-4 sm:p-5"
               initial={{ scale: 0.85, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.85, opacity: 0 }}
               transition={{ type: 'spring', stiffness: 300, damping: 25 }}
             >
-              <h2 className="text-2xl title-candy mb-5">
-                R\u00e8gles du jeu
-              </h2>
+              <h2 className="shrink-0 text-xl title-candy sm:text-2xl">Règles du jeu</h2>
 
-              <div className="space-y-4">
+              <div className="mt-3 grid min-h-0 flex-1 grid-cols-1 gap-x-4 gap-y-2 overflow-hidden sm:grid-cols-2 sm:gap-y-3">
                 {SECTIONS.map((s) => (
-                  <div key={s.title}>
-                    <h3 className="text-sm font-extrabold text-pink-300 mb-1">{s.title}</h3>
-                    <p className="text-sm text-gray-200/85 whitespace-pre-line leading-relaxed">
+                  <div key={s.title} className="min-h-0 overflow-hidden">
+                    <h3 className="text-[11px] font-extrabold text-pink-300 sm:text-xs">{s.title}</h3>
+                    <p className="mt-0.5 text-[10px] leading-snug text-gray-200/90 sm:text-[11px]">
                       {s.body}
                     </p>
                   </div>
@@ -71,11 +74,11 @@ export default function RulesModal() {
               </div>
 
               <button
+                type="button"
                 onClick={() => setOpen(false)}
-                className="mt-6 w-full py-2.5 rounded-xl bg-gradient-to-r from-pink-500 to-fuchsia-500
-                  text-white font-bold shadow-neon-pink hover:brightness-110 transition-all"
+                className="mt-3 w-full shrink-0 rounded-xl bg-gradient-to-r from-pink-500 to-fuchsia-500 py-2.5 text-sm font-bold text-white shadow-neon-pink transition-all hover:brightness-110"
               >
-                Compris\u2009!
+                Compris !
               </button>
             </motion.div>
           </motion.div>

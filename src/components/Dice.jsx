@@ -95,11 +95,13 @@ export default function Dice({ compact = false }) {
 
   return (
     <div
-      className={`flex flex-col w-full ${compact ? 'items-stretch gap-2' : 'items-center gap-3'}`}
+        className={`flex flex-col w-full ${compact ? 'items-stretch gap-1.5 sm:gap-2' : 'items-center gap-3'}`}
     >
       <p
         className={`font-semibold text-pink-200/85 w-full ${
-          compact ? 'text-center text-[11px] leading-snug px-1' : 'text-sm text-center max-w-[14rem]'
+          compact
+            ? 'text-center text-[10px] sm:text-[11px] leading-snug px-0.5 sm:px-1'
+            : 'text-sm text-center max-w-[14rem]'
         }`}
       >
         {isActive ? (
@@ -132,7 +134,7 @@ export default function Dice({ compact = false }) {
         <div
           className={
             compact
-              ? 'relative w-full max-w-[min(100%,9rem)] mx-auto [aspect-ratio:1/1] shrink-0'
+              ? 'relative w-full max-w-[min(100%,5.5rem)] max-lg:landscape:max-w-[min(100%,6.75rem)] sm:max-w-[min(100%,7.5rem)] md:max-w-[min(100%,9rem)] mx-auto [aspect-ratio:1/1] shrink-0'
               : 'relative h-20 w-20 shrink-0'
           }
         >
@@ -140,7 +142,7 @@ export default function Dice({ compact = false }) {
             type="button"
             onClick={handleRoll}
             disabled={!isActive || rolling}
-            className={`absolute inset-0 rounded-3xl border-2 flex items-center justify-center overflow-hidden transition-all ${
+            className={`absolute inset-0 rounded-2xl sm:rounded-3xl border-2 flex items-center justify-center overflow-hidden transition-all touch-manipulation ${
               isActive
                 ? 'border-pink-400/70 bg-purple-950/80 hover:border-cyan-400/60 cursor-pointer shadow-neon-pink hover:shadow-neon-cyan'
                 : 'border-white/15 bg-purple-950/50 cursor-default opacity-55'

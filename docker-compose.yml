@@ -1,0 +1,12 @@
+services:
+  pharmai:
+    build:
+      context: .
+      args:
+        VITE_GOOGLE_AI_API_KEY: ${VITE_GOOGLE_AI_API_KEY:-}
+    image: pharmai:local
+    container_name: pharmai-web
+    ports:
+      # 0.0.0.0 = toutes les interfaces du PC → http://<IP_LAN>:PORT depuis le téléphone
+      - "0.0.0.0:${PHARMAI_PORT:-8080}:80"
+    restart: unless-stopped

@@ -8,7 +8,7 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
     <>
       <NeonBackdrop />
-      <div className="relative z-10 min-h-screen">
+      <div className="relative z-10 h-[100dvh] w-full max-w-[100vw] overflow-hidden">
         <App />
       </div>
     </>
