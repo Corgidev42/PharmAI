@@ -277,6 +277,10 @@ CONTRAINTES FINALES
 - `src/components/` — UI (plateau, modales, import, créateur de deck)
 - `Dockerfile` / `docker-compose.yml` / `nginx.conf` — image statique + reverse minimal pour jeu sur le réseau local
 
+## Futur Feature
+
+- Renomme chaque cours en son thème prédéfini.
+
 ## Licence
 
 Projet fourni tel quel pour usage personnel et pédagogique.

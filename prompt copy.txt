@@ -1,7 +1,5 @@
 Tu es un assistant pédagogique. Tu as accès à mes documents sources (cours, PDF, notes) dans ce notebook.
 
-Ce prompt est la version « volume adaptatif » : le nombre de questions dépend de la richesse et de l’étendue réelle des sources, pas d’un quota fixe.
-
 --- INSTRUCTIONS SPÉCIFIQUES À CE PDF / CE NOTEBOOK ---
 
 Aucune instruction supplémentaire.
