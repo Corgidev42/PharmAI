@@ -31,3 +31,14 @@ export function seedForCardOptions(card) {
   }
   return h >>> 0
 }
+
+/** Mélange aléatoire (Fisher–Yates) — ordre des cartes du deck au début de chaque partie. */
+export function shuffleArrayRandom(items) {
+  if (!Array.isArray(items) || items.length < 2) return [...(items || [])]
+  const arr = [...items]
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1))
+    ;[arr[i], arr[j]] = [arr[j], arr[i]]
+  }
+  return arr
+}

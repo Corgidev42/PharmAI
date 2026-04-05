@@ -23,6 +23,7 @@ import {
   countOwnedTiles,
   applyPlayerBonus,
 } from '../game/engine.js'
+import { shuffleArrayRandom } from '../game/shuffleOptions.js'
 
 function buildInitialState() {
   return {
@@ -114,7 +115,15 @@ export const useGameStore = create((set, get) => ({
 
   setDeckErrors: (errors) => set({ deckErrors: errors }),
 
-  startGame: () => set({ phase: PHASES.ROLLING }),
+  startGame: () =>
+    set((s) => ({
+      phase: PHASES.ROLLING,
+      decks: s.decks.map((d) => ({
+        ...d,
+        cards: shuffleArrayRandom(d.cards),
+        currentIndex: 0,
+      })),
+    })),
 
   roll: () => {
     const value = rollDice()
