@@ -642,6 +642,11 @@ function PreviewStep({ deck, warnings, onLoadInGame, onDownload, onDeleteCard, o
                     {card.type === 'OPEN' && (
                       <p><span className="text-gray-500">Réponse :</span> {card.answer}</p>
                     )}
+                    {card.explanation && (
+                      <p className="text-gray-500">
+                        <span className="font-semibold text-gray-400">Explication :</span> {card.explanation}
+                      </p>
+                    )}
                   </div>
                 </motion.div>
               )}

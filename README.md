@@ -204,6 +204,7 @@ STRUCTURE DU JSON (obligatoire)
   - "question" : string
   - "options" : tableau de strings UNIQUEMENT si type === "QCM" (exactement 4 options pour chaque QCM)
   - "answer" : string (pour QCM : la bonne option, identique à l’une des 4 options ; pour OPEN : réponse attendue courte)
+  - "explanation" : string (recommandé — 1 à 3 phrases : pourquoi la bonne réponse est correcte ; affichée après une mauvaise réponse)
   - "difficulty" : entier 1, 2 ou 3
 
 VOLUME ET RÉPARTITION
@@ -232,6 +233,7 @@ EXEMPLE DE FORME (à imiter strictement pour la structure, pas le contenu) :
       "question": "...",
       "options": ["...", "...", "...", "..."],
       "answer": "...",
+      "explanation": "...",
       "difficulty": 1
     },
     {
@@ -239,6 +241,7 @@ EXEMPLE DE FORME (à imiter strictement pour la structure, pas le contenu) :
       "type": "OPEN",
       "question": "...",
       "answer": "...",
+      "explanation": "...",
       "difficulty": 2
     }
   ]
@@ -277,9 +280,13 @@ CONTRAINTES FINALES
 - `src/components/` — UI (plateau, modales, import, créateur de deck)
 - `Dockerfile` / `docker-compose.yml` / `nginx.conf` — image statique + reverse minimal pour jeu sur le réseau local
 
-## Futur Feature
+## Fonctionnalités récentes (révision)
 
-- Renomme chaque cours en son thème prédéfini.
+- Après une **mauvaise réponse**, la modale affiche la **réponse attendue** et, si le deck la contient, une **explication** (`explanation` dans le JSON).
+- Les **options QCM** sont **mélangées** à l’affichage (ordre déterministe par carte, pas toujours la même case « correcte »).
+- Génération **Gemini** / prompts **NotebookLM** : inclure systématiquement `"explanation"` sur chaque carte (voir `prompt.txt` et `prompt copy.txt`).
+- Script : `node scripts/fill-deck-explanations.mjs` — complète les cartes sans `explanation` avec un texte générique (à affiner à la main ou via une nouvelle génération).
+
 
 ## Licence
 

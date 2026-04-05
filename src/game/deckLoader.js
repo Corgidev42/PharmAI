@@ -10,6 +10,8 @@ function validateCard(card, index) {
   if (card.answer == null) errors.push(`${prefix}: "answer" manquante`)
   if (typeof card.difficulty !== 'number' || card.difficulty < 1 || card.difficulty > 3)
     errors.push(`${prefix}: "difficulty" doit être 1, 2 ou 3`)
+  if (card.explanation != null && typeof card.explanation !== 'string')
+    errors.push(`${prefix}: "explanation" doit être une chaîne si présente`)
 
   if (card.type === 'QCM') {
     if (!Array.isArray(card.options) || card.options.length < 2)

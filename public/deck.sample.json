@@ -12,7 +12,8 @@
         "Blocage des canaux calciques"
       ],
       "answer": "Blocage des récepteurs bêta-adrénergiques",
-      "difficulty": 1
+      "difficulty": 1,
+      "explanation": "La bonne réponse est « Blocage des récepteurs bêta-adrénergiques ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
     },
     {
       "id": 2,
@@ -25,14 +26,16 @@
         "Transdermique"
       ],
       "answer": "Intraveineuse",
-      "difficulty": 1
+      "difficulty": 1,
+      "explanation": "La bonne réponse est « Intraveineuse ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
     },
     {
       "id": 3,
       "type": "OPEN",
       "question": "Définissez la demi-vie d'élimination d'un médicament.",
       "answer": "Temps nécessaire pour que la concentration plasmatique du médicament diminue de moitié.",
-      "difficulty": 1
+      "difficulty": 1,
+      "explanation": "Réponse-type attendue : Temps nécessaire pour que la concentration plasmatique du médicament diminue de moitié.. Complète avec les exemples ou nuances vus dans ta fiche si l’énoncé le demande."
     },
     {
       "id": 4,
@@ -45,7 +48,8 @@
         "Poumon"
       ],
       "answer": "Foie",
-      "difficulty": 1
+      "difficulty": 1,
+      "explanation": "La bonne réponse est « Foie ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
     },
     {
       "id": 5,
@@ -58,14 +62,16 @@
         "Excrétion rénale"
       ],
       "answer": "Biotransformation hépatique",
-      "difficulty": 2
+      "difficulty": 2,
+      "explanation": "La bonne réponse est « Biotransformation hépatique ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
     },
     {
       "id": 6,
       "type": "OPEN",
       "question": "Qu'est-ce que l'effet de premier passage hépatique ?",
       "answer": "Métabolisme d'un médicament par le foie avant qu'il n'atteigne la circulation systémique, réduisant sa biodisponibilité.",
-      "difficulty": 2
+      "difficulty": 2,
+      "explanation": "Réponse-type attendue : Métabolisme d'un médicament par le foie avant qu'il n'atteigne la circulation systémique, réduisant sa biodisponibilité.. Complète avec les exemples ou nuances vus dans ta fiche si l’énoncé le demande."
     },
     {
       "id": 7,
@@ -78,7 +84,8 @@
         "Liaison peptidique"
       ],
       "answer": "Liaison ionique",
-      "difficulty": 2
+      "difficulty": 2,
+      "explanation": "La bonne réponse est « Liaison ionique ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
     },
     {
       "id": 8,
@@ -91,14 +98,16 @@
         "Une absence totale d'effet pharmacologique"
       ],
       "answer": "Une efficacité intrinsèque inférieure à 1",
-      "difficulty": 2
+      "difficulty": 2,
+      "explanation": "La bonne réponse est « Une efficacité intrinsèque inférieure à 1 ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
     },
     {
       "id": 9,
       "type": "OPEN",
       "question": "Expliquez la différence entre puissance et efficacité d'un médicament.",
       "answer": "La puissance correspond à la dose nécessaire pour produire un effet (EC50), tandis que l'efficacité est l'effet maximal atteignable (Emax).",
-      "difficulty": 2
+      "difficulty": 2,
+      "explanation": "Réponse-type attendue : La puissance correspond à la dose nécessaire pour produire un effet (EC50), tandis que l'efficacité est l'effet maximal atteignable (Emax).. Complète avec les exemples ou nuances vus dans ta fiche si l’énoncé le demande."
     },
     {
       "id": 10,
@@ -111,7 +120,8 @@
         "Clairance"
       ],
       "answer": "AUC (Aire sous la courbe)",
-      "difficulty": 1
+      "difficulty": 1,
+      "explanation": "La bonne réponse est « AUC (Aire sous la courbe) ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
     },
     {
       "id": 11,
@@ -124,14 +134,16 @@
         "La gauche en augmentant l'Emax"
       ],
       "answer": "La droite sans changer l'Emax",
-      "difficulty": 2
+      "difficulty": 2,
+      "explanation": "La bonne réponse est « La droite sans changer l'Emax ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
     },
     {
       "id": 12,
       "type": "OPEN",
       "question": "Qu'est-ce que la pharmacovigilance ?",
       "answer": "Surveillance et évaluation des effets indésirables des médicaments après leur mise sur le marché.",
-      "difficulty": 1
+      "difficulty": 1,
+      "explanation": "Réponse-type attendue : Surveillance et évaluation des effets indésirables des médicaments après leur mise sur le marché.. Complète avec les exemples ou nuances vus dans ta fiche si l’énoncé le demande."
     },
     {
       "id": 13,
@@ -144,7 +156,8 @@
         "Phase IV"
       ],
       "answer": "Phase III",
-      "difficulty": 2
+      "difficulty": 2,
+      "explanation": "La bonne réponse est « Phase III ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
     },
     {
       "id": 14,
@@ -157,14 +170,16 @@
         "L'excrétion biliaire"
       ],
       "answer": "La fraction libre active du médicament",
-      "difficulty": 2
+      "difficulty": 2,
+      "explanation": "La bonne réponse est « La fraction libre active du médicament ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
     },
     {
       "id": 15,
       "type": "OPEN",
       "question": "Décrivez le concept de marge thérapeutique étroite.",
       "answer": "Un médicament à marge thérapeutique étroite a une faible différence entre la dose efficace et la dose toxique, nécessitant un suivi thérapeutique strict.",
-      "difficulty": 3
+      "difficulty": 3,
+      "explanation": "Réponse-type attendue : Un médicament à marge thérapeutique étroite a une faible différence entre la dose efficace et la dose toxique, nécessitant un suivi thérapeutique strict.. Complète avec les exemples ou nuances vus dans ta fiche si l’énoncé le demande."
     },
     {
       "id": 16,
@@ -177,7 +192,8 @@
         "Un effet toxique sur le foie"
       ],
       "answer": "Une diminution rapide de la réponse après administrations répétées",
-      "difficulty": 3
+      "difficulty": 3,
+      "explanation": "La bonne réponse est « Une diminution rapide de la réponse après administrations répétées ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
     },
     {
       "id": 17,
@@ -190,14 +206,16 @@
         "CYP2C9"
       ],
       "answer": "CYP3A4",
-      "difficulty": 3
+      "difficulty": 3,
+      "explanation": "La bonne réponse est « CYP3A4 ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
     },
     {
       "id": 18,
       "type": "OPEN",
       "question": "Qu'est-ce qu'un promédicament (prodrogue) ? Donnez un exemple.",
       "answer": "Un promédicament est une substance pharmacologiquement inactive qui est convertie en métabolite actif dans l'organisme. Exemple : l'énalapril est converti en énalaprilate.",
-      "difficulty": 3
+      "difficulty": 3,
+      "explanation": "Réponse-type attendue : Un promédicament est une substance pharmacologiquement inactive qui est convertie en métabolite actif dans l'organisme. Exemple : l'énalapril est converti en énalaprilate.. Complète avec les exemples ou nuances vus dans ta fiche si l’énoncé le demande."
     },
     {
       "id": 19,
@@ -210,14 +228,16 @@
         "La liaison aux protéines uniquement"
       ],
       "answer": "La filtration glomérulaire, la sécrétion tubulaire et la réabsorption",
-      "difficulty": 3
+      "difficulty": 3,
+      "explanation": "La bonne réponse est « La filtration glomérulaire, la sécrétion tubulaire et la réabsorption ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
     },
     {
       "id": 20,
       "type": "OPEN",
       "question": "Expliquez le concept d'induction enzymatique et ses conséquences cliniques.",
       "answer": "L'induction enzymatique est l'augmentation de la synthèse des enzymes de métabolisation (CYP450) par certains médicaments, entraînant une accélération du métabolisme et une diminution de l'efficacité des médicaments co-administrés.",
-      "difficulty": 3
+      "difficulty": 3,
+      "explanation": "Réponse-type attendue : L'induction enzymatique est l'augmentation de la synthèse des enzymes de métabolisation (CYP450) par certains médicaments, entraînant une accélération du métabolisme et une diminution de l'efficacité des médicaments co-administrés.. Complète avec les exemples ou nuances vus dans ta fiche si l’énoncé le demande."
     }
   ]
 }

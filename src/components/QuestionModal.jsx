@@ -1,19 +1,26 @@
-import { useState } from 'react'
+import { useState, useMemo } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useGameStore } from '../store/useGameStore'
 import { PHASES } from '../game/constants'
+import { seedForCardOptions, shuffleWithSeed } from '../game/shuffleOptions'
 import OpenQuestionTwoPlayer from './OpenQuestionTwoPlayer'
 
 function QCMQuestion({ card, onAnswer }) {
   const [selected, setSelected] = useState(null)
 
+  const shuffledOptions = useMemo(() => {
+    const opts = Array.isArray(card.options) ? [...card.options] : []
+    return shuffleWithSeed(opts, seedForCardOptions(card))
+  }, [card])
+
   return (
     <div className="flex min-h-0 flex-1 flex-col gap-3 overflow-hidden">
       <p className="line-clamp-4 text-sm font-bold leading-snug text-white sm:text-base">{card.question}</p>
       <div className="grid min-h-0 flex-1 grid-cols-1 gap-2 overflow-hidden sm:grid-cols-2 sm:gap-2.5">
-        {card.options.map((opt) => (
+        {shuffledOptions.map((opt, idx) => (
           <button
-            key={opt}
+            key={`${card.id}-${idx}`}
+            type="button"
             onClick={() => {
               setSelected(opt)
               setTimeout(() => onAnswer(opt), 200)
@@ -36,23 +43,40 @@ function QCMQuestion({ card, onAnswer }) {
   )
 }
 
-function ResultDisplay({ correct, onProceed }) {
+function ResultDisplay({ correct, onProceed, card }) {
   const captureLine = correct ? 'Case capturée.' : 'Case non capturée.'
+  const expl =
+    typeof card?.explanation === 'string' && card.explanation.trim() ? card.explanation.trim() : null
 
   return (
     <motion.div
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ type: 'spring', stiffness: 320, damping: 28 }}
-      className="text-center space-y-4"
+      className="flex max-h-[min(70dvh,28rem)] flex-col space-y-3 overflow-y-auto text-center sm:space-y-4"
     >
       <p className={`text-xl font-bold ${correct ? 'text-emerald-300' : 'text-rose-300'}`}>
         {correct ? 'Bonne réponse' : 'Mauvaise réponse'}
       </p>
       <p className="text-sm text-slate-300">{captureLine}</p>
+
+      {!correct && card?.answer != null && (
+        <div className="rounded-xl border border-white/10 bg-white/5 px-3 py-2.5 text-left text-sm text-slate-200">
+          <p className="text-[11px] font-semibold uppercase tracking-wide text-amber-200/90">Réponse attendue</p>
+          <p className="mt-1 whitespace-pre-line text-slate-100">{String(card.answer)}</p>
+          {expl && (
+            <>
+              <p className="mt-3 text-[11px] font-semibold uppercase tracking-wide text-cyan-200/90">Explication</p>
+              <p className="mt-1 whitespace-pre-line text-sm leading-snug text-slate-300">{expl}</p>
+            </>
+          )}
+        </div>
+      )}
+
       <button
+        type="button"
         onClick={onProceed}
-        className="px-8 py-3 rounded-2xl font-bold bg-gradient-to-r from-pink-500 to-fuchsia-500 text-white shadow-neon-pink hover:brightness-110 transition-all"
+        className="shrink-0 rounded-2xl bg-gradient-to-r from-pink-500 to-fuchsia-500 px-8 py-3 font-bold text-white shadow-neon-pink transition-all hover:brightness-110"
       >
         Continuer
       </button>
@@ -137,7 +161,7 @@ export default function QuestionModal() {
                     {slideNote}
                   </p>
                 )}
-                <ResultDisplay correct={lastAnswerCorrect} onProceed={proceedAfterResult} />
+                <ResultDisplay correct={lastAnswerCorrect} onProceed={proceedAfterResult} card={currentCard} />
               </>
             )}
           </motion.div>

@@ -1,0 +1,469 @@
+{
+  "theme": "Botanique Générale et Systématique",
+  "cards": [
+    {
+      "id": 1,
+      "type": "QCM",
+      "question": "Quel est l'ancêtre commun universel à la base de toute vie sur terre selon la classification botanique ?",
+      "options": [
+        "LUCA (Last Universal Common Ancestor)",
+        "Les Archées",
+        "Les Cyanobactéries",
+        "Les Phycophytes"
+      ],
+      "answer": "LUCA (Last Universal Common Ancestor)",
+      "difficulty": 1,
+      "explanation": "La bonne réponse est « LUCA (Last Universal Common Ancestor) ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 2,
+      "type": "QCM",
+      "question": "Quelle est la composition principale de la paroi de la cellule végétale ?",
+      "options": [
+        "Pectocellulosique (99% de cellulose)",
+        "Peptidoglycane",
+        "Chitine",
+        "Kératine"
+      ],
+      "answer": "Pectocellulosique (99% de cellulose)",
+      "difficulty": 1,
+      "explanation": "La bonne réponse est « Pectocellulosique (99% de cellulose) ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 3,
+      "type": "QCM",
+      "question": "Qui a révolutionné la classification botanique en instaurant la nomenclature binominale ?",
+      "options": [
+        "Carl von Linné",
+        "Théophraste",
+        "John Ray",
+        "Joseph Pitton de Tournefort"
+      ],
+      "answer": "Carl von Linné",
+      "difficulty": 1,
+      "explanation": "La bonne réponse est « Carl von Linné ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 4,
+      "type": "QCM",
+      "question": "Que nécessite obligatoirement la phase claire de la photosynthèse dans le chloroplaste ?",
+      "options": [
+        "L'énergie lumineuse (soleil)",
+        "L'obscurité totale",
+        "Une température de 37°C",
+        "L'absence de dioxygène"
+      ],
+      "answer": "L'énergie lumineuse (soleil)",
+      "difficulty": 1,
+      "explanation": "La bonne réponse est « L'énergie lumineuse (soleil) ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 5,
+      "type": "QCM",
+      "question": "Quel est le fruit caractéristique produit par la famille des Fabacées ?",
+      "options": [
+        "La gousse",
+        "La silique",
+        "La capsule tricoque",
+        "La baie"
+      ],
+      "answer": "La gousse",
+      "difficulty": 1,
+      "explanation": "La bonne réponse est « La gousse ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 6,
+      "type": "QCM",
+      "question": "Quelle est l'inflorescence typique et caractéristique de la famille des Asteraceae ?",
+      "options": [
+        "Le capitule",
+        "L'ombelle d'ombellules",
+        "Le chaton",
+        "La cyme unipare scorpioïde"
+      ],
+      "answer": "Le capitule",
+      "difficulty": 1,
+      "explanation": "La bonne réponse est « Le capitule ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 7,
+      "type": "QCM",
+      "question": "Quel fruit est spécifique à la famille des Poacées (graminées) ?",
+      "options": [
+        "Le caryopse",
+        "L'akène à pappus",
+        "Le follicule",
+        "La drupe"
+      ],
+      "answer": "Le caryopse",
+      "difficulty": 1,
+      "explanation": "La bonne réponse est « Le caryopse ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 8,
+      "type": "QCM",
+      "question": "Chez les Bryophytes, comment se nomme l'organe reproducteur femelle produisant l'oosphère ?",
+      "options": [
+        "L'archégone",
+        "L'anthéridie",
+        "Le sporange",
+        "Le prothalle"
+      ],
+      "answer": "L'archégone",
+      "difficulty": 1,
+      "explanation": "La bonne réponse est « L'archégone ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 9,
+      "type": "QCM",
+      "question": "Quel type d'inflorescence caractérise majoritairement la famille des Apiacées ?",
+      "options": [
+        "L'ombelle d'ombellules",
+        "L'épi d'épillets",
+        "La grappe de cymes",
+        "Le corymbe"
+      ],
+      "answer": "L'ombelle d'ombellules",
+      "difficulty": 1,
+      "explanation": "La bonne réponse est « L'ombelle d'ombellules ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 10,
+      "type": "OPEN",
+      "question": "Qu'est-ce que l'autotrophie chez les végétaux ?",
+      "answer": "C'est la capacité de se nourrir soi-même en produisant de la matière organique à partir de CO2 grâce à l'énergie solaire et aux chloroplastes.",
+      "difficulty": 1,
+      "explanation": "Réponse-type attendue : C'est la capacité de se nourrir soi-même en produisant de la matière organique à partir de CO2 grâce à l'énergie solaire et aux chloroplastes.. Complète avec les exemples ou nuances vus dans ta fiche si l’énoncé le demande."
+    },
+    {
+      "id": 11,
+      "type": "OPEN",
+      "question": "Quel est le rôle principal des chloroplastes dans la cellule végétale ?",
+      "answer": "Ils captent l'énergie solaire via des pigments chlorophylliens pour réaliser la photosynthèse et assimiler le CO2.",
+      "difficulty": 1,
+      "explanation": "Réponse-type attendue : Ils captent l'énergie solaire via des pigments chlorophylliens pour réaliser la photosynthèse et assimiler le CO2.. Complète avec les exemples ou nuances vus dans ta fiche si l’énoncé le demande."
+    },
+    {
+      "id": 12,
+      "type": "OPEN",
+      "question": "Quelles propriétés thérapeutiques possèdent les dérivés salicylés issus de Salix alba (Saule blanc) ?",
+      "answer": "Ils possèdent des propriétés antipyrétiques et anti-rhumatismales, agissant comme une aspirine naturelle.",
+      "difficulty": 1,
+      "explanation": "Réponse-type attendue : Ils possèdent des propriétés antipyrétiques et anti-rhumatismales, agissant comme une aspirine naturelle.. Complète avec les exemples ou nuances vus dans ta fiche si l’énoncé le demande."
+    },
+    {
+      "id": 13,
+      "type": "OPEN",
+      "question": "Quelle particularité morphologique permet de reconnaître facilement la tige des Lamiaceae (Lamiacées) ?",
+      "answer": "La tige des Lamiaceae a la particularité d'être de section carrée.",
+      "difficulty": 1,
+      "explanation": "Réponse-type attendue : La tige des Lamiaceae a la particularité d'être de section carrée.. Complète avec les exemples ou nuances vus dans ta fiche si l’énoncé le demande."
+    },
+    {
+      "id": 14,
+      "type": "OPEN",
+      "question": "Qu'est-ce qu'un cyathe, caractéristique des Euphorbes ?",
+      "answer": "C'est une unité structurale (inflorescence) en forme de coupe contenant des glandes nectarifères, une fleur femelle et des fleurs mâles.",
+      "difficulty": 1,
+      "explanation": "Réponse-type attendue : C'est une unité structurale (inflorescence) en forme de coupe contenant des glandes nectarifères, une fleur femelle et des fleurs mâles.. Complète avec les exemples ou nuances vus dans ta fiche si l’énoncé le demande."
+    },
+    {
+      "id": 15,
+      "type": "OPEN",
+      "question": "Quels sont les fruits caractéristiques de la famille des Brassicacées (Crucifères) ?",
+      "answer": "Ce sont les siliques et les silicules, formées de 2 carpelles soudés ouverts avec une fausse cloison.",
+      "difficulty": 1,
+      "explanation": "Réponse-type attendue : Ce sont les siliques et les silicules, formées de 2 carpelles soudés ouverts avec une fausse cloison.. Complète avec les exemples ou nuances vus dans ta fiche si l’énoncé le demande."
+    },
+    {
+      "id": 16,
+      "type": "QCM",
+      "question": "Qu'est-ce qui caractérise la double fécondation chez les Angiospermes ?",
+      "options": [
+        "La formation d'un zygote principal (2n) et d'un albumen nourricier triploïde (3n)",
+        "La fécondation de deux oosphères par un seul grain de pollen",
+        "La formation de deux embryons distincts dans la même graine",
+        "L'intervention successive de deux grains de pollen différents"
+      ],
+      "answer": "La formation d'un zygote principal (2n) et d'un albumen nourricier triploïde (3n)",
+      "difficulty": 2,
+      "explanation": "La bonne réponse est « La formation d'un zygote principal (2n) et d'un albumen nourricier triploïde (3n) ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 17,
+      "type": "QCM",
+      "question": "Dans quelle famille végétale trouve-t-on l'Aconit napellus, plante très toxique contenant de l'aconitine ?",
+      "options": [
+        "Les Ranunculaceae",
+        "Les Papaveraceae",
+        "Les Solanaceae",
+        "Les Euphorbiaceae"
+      ],
+      "answer": "Les Ranunculaceae",
+      "difficulty": 2,
+      "explanation": "La bonne réponse est « Les Ranunculaceae ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 18,
+      "type": "QCM",
+      "question": "Quelle est la particularité morphologique des feuilles âgées officinales du Gommier bleu (Eucalyptus globulus) ?",
+      "options": [
+        "Elles sont alternes et falciformes (en forme de faux)",
+        "Elles sont opposées et décussées",
+        "Elles sont en forme de rosette basale",
+        "Elles sont transformées en épines"
+      ],
+      "answer": "Elles sont alternes et falciformes (en forme de faux)",
+      "difficulty": 2,
+      "explanation": "La bonne réponse est « Elles sont alternes et falciformes (en forme de faux) ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 19,
+      "type": "QCM",
+      "question": "Qu'est-ce que la reviviscence, une capacité observée chez les lichens ?",
+      "options": [
+        "La capacité de subir une déshydratation prolongée puis de se réhydrater et survivre",
+        "La reproduction végétative à partir d'un fragment de feuille",
+        "Le fait de changer de couleur selon l'humidité",
+        "La germination immédiate de la spore sans dormance"
+      ],
+      "answer": "La capacité de subir une déshydratation prolongée puis de se réhydrater et survivre",
+      "difficulty": 2,
+      "explanation": "La bonne réponse est « La capacité de subir une déshydratation prolongée puis de se réhydrater et survivre ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 20,
+      "type": "QCM",
+      "question": "Chez les Filicophytes (fougères), comment nomme-t-on le gamétophyte haploïde éphémère en forme de cœur ?",
+      "options": [
+        "Le prothalle",
+        "Le strobile",
+        "Le sporophyte",
+        "L'élatère"
+      ],
+      "answer": "Le prothalle",
+      "difficulty": 2,
+      "explanation": "La bonne réponse est « Le prothalle ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 21,
+      "type": "QCM",
+      "question": "Quel type de métabolites secondaires toxiques retrouve-t-on majoritairement dans la Belladone (Atropa belladonna) ?",
+      "options": [
+        "Des alcaloïdes tropaniques (comme l'hyoscyamine)",
+        "Des alcaloïdes isoquinoléiques (comme la protopine)",
+        "Des hétérosides cyanogénétiques",
+        "Des lactones sesquiterpéniques"
+      ],
+      "answer": "Des alcaloïdes tropaniques (comme l'hyoscyamine)",
+      "difficulty": 2,
+      "explanation": "La bonne réponse est « Des alcaloïdes tropaniques (comme l'hyoscyamine) ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 22,
+      "type": "QCM",
+      "question": "Comment qualifie-t-on l'androcée des Brassicacées, composé de 4 grandes étamines et 2 plus petites ?",
+      "options": [
+        "Tétradyname",
+        "Didyname",
+        "Méristémone",
+        "Polyadelphe"
+      ],
+      "answer": "Tétradyname",
+      "difficulty": 2,
+      "explanation": "La bonne réponse est « Tétradyname ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 23,
+      "type": "QCM",
+      "question": "Quelle famille botanique est caractérisée par un androcée polyadelphe et des feuilles à pétiole ailé ?",
+      "options": [
+        "Les Rutaceae",
+        "Les Rosaceae",
+        "Les Malvaceae",
+        "Les Myrtaceae"
+      ],
+      "answer": "Les Rutaceae",
+      "difficulty": 2,
+      "explanation": "La bonne réponse est « Les Rutaceae ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 24,
+      "type": "QCM",
+      "question": "Quel est le type de fruit caractéristique produit par les Rutacées comme l'Oranger (Citrus sinensis) ?",
+      "options": [
+        "L'hespéride (agrume)",
+        "La drupe à 2 noyaux",
+        "Le follicule",
+        "La pyxide"
+      ],
+      "answer": "L'hespéride (agrume)",
+      "difficulty": 2,
+      "explanation": "La bonne réponse est « L'hespéride (agrume) ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 25,
+      "type": "OPEN",
+      "question": "Expliquez le phénomène de gymnospermie compensée chez les conifères.",
+      "answer": "La graine est nue car l'écaille ne se referme pas entièrement, mais les écailles se ferment autour de la graine après la fécondation pour la protéger.",
+      "difficulty": 2,
+      "explanation": "Réponse-type attendue : La graine est nue car l'écaille ne se referme pas entièrement, mais les écailles se ferment autour de la graine après la fécondation pour la protéger.. Complète avec les exemples ou nuances vus dans ta fiche si l’énoncé le demande."
+    },
+    {
+      "id": 26,
+      "type": "OPEN",
+      "question": "Qu'est-ce que le cambium chez les végétaux ?",
+      "answer": "C'est un méristème secondaire qui permet la croissance en épaisseur de la plante en produisant le tissu de transport de la sève (bois et phloème).",
+      "difficulty": 2,
+      "explanation": "Réponse-type attendue : C'est un méristème secondaire qui permet la croissance en épaisseur de la plante en produisant le tissu de transport de la sève (bois et phloème).. Complète avec les exemples ou nuances vus dans ta fiche si l’énoncé le demande."
+    },
+    {
+      "id": 27,
+      "type": "OPEN",
+      "question": "Quelle molécule sert de réserve glucidique spécifique dans la famille des Asteraceae, à la place de l'amidon ?",
+      "answer": "C'est l'inuline, un polymère du fructose.",
+      "difficulty": 2,
+      "explanation": "Réponse-type attendue : C'est l'inuline, un polymère du fructose.. Complète avec les exemples ou nuances vus dans ta fiche si l’énoncé le demande."
+    },
+    {
+      "id": 28,
+      "type": "OPEN",
+      "question": "De quoi est constitué un lichen ?",
+      "answer": "Il résulte d'une symbiose (association physique durable et mutualiste) entre un champignon (souvent ascomycète) et une algue verte unicellulaire ou cyanobactérie.",
+      "difficulty": 2,
+      "explanation": "Réponse-type attendue : Il résulte d'une symbiose (association physique durable et mutualiste) entre un champignon (souvent ascomycète) et une algue verte unicellulaire ou cyanobactérie.. Complète avec les exemples ou nuances vus dans ta fiche si l’énoncé le demande."
+    },
+    {
+      "id": 29,
+      "type": "OPEN",
+      "question": "Quels sont les symptômes de la toxicité de la Grande ciguë (Conium maculatum) ?",
+      "answer": "Ses alcaloïdes, comme la coniine, provoquent des fourmillements, une analgésie, puis une paralysie et la mort par asphyxie.",
+      "difficulty": 2,
+      "explanation": "Réponse-type attendue : Ses alcaloïdes, comme la coniine, provoquent des fourmillements, une analgésie, puis une paralysie et la mort par asphyxie.. Complète avec les exemples ou nuances vus dans ta fiche si l’énoncé le demande."
+    },
+    {
+      "id": 30,
+      "type": "OPEN",
+      "question": "Quelle molécule toxique extrait-on du Colchique d'automne et pour quel usage thérapeutique principal ?",
+      "answer": "On en extrait la colchicine, utilisée comme anti-inflammatoire pour traiter les crises de goutte.",
+      "difficulty": 2,
+      "explanation": "Réponse-type attendue : On en extrait la colchicine, utilisée comme anti-inflammatoire pour traiter les crises de goutte.. Complète avec les exemples ou nuances vus dans ta fiche si l’énoncé le demande."
+    },
+    {
+      "id": 31,
+      "type": "QCM",
+      "question": "Chez le Cycas revoluta, quelle particularité présente le développement de l'embryon ?",
+      "options": [
+        "L'embryon se développe immédiatement dès que l'ovule tombe à terre, sans période de dormance.",
+        "L'embryon reste en dormance plusieurs années à l'intérieur de la graine ailée.",
+        "Le développement nécessite un passage obligatoire dans le tube digestif d'un animal.",
+        "Il est parasite du prothalle pendant toute la vie de la plante."
+      ],
+      "answer": "L'embryon se développe immédiatement dès que l'ovule tombe à terre, sans période de dormance.",
+      "difficulty": 3,
+      "explanation": "La bonne réponse est « L'embryon se développe immédiatement dès que l'ovule tombe à terre, sans période de dormance. ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 32,
+      "type": "QCM",
+      "question": "Quelle est l'utilisation thérapeutique de la pilocarpine, extraite du Jaborandi (Rutaceae) ?",
+      "options": [
+        "Alcaloïde parasympathomimétique utilisé en collyre pour traiter le glaucome.",
+        "Alcaloïde parasympatholytique utilisé en pré-anesthésie.",
+        "Composé phénolique utilisé comme cicatrisant gastrique.",
+        "Terpène utilisé comme antiseptique des voies respiratoires."
+      ],
+      "answer": "Alcaloïde parasympathomimétique utilisé en collyre pour traiter le glaucome.",
+      "difficulty": 3,
+      "explanation": "La bonne réponse est « Alcaloïde parasympathomimétique utilisé en collyre pour traiter le glaucome. ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 33,
+      "type": "QCM",
+      "question": "Parmi les plantes de la sous-famille des Carduoideae, laquelle contient de la silymarine hépatoprotectrice ?",
+      "options": [
+        "Le Chardon-Marie (Silybum marianum)",
+        "La Chicorée sauvage (Cichorium intybus)",
+        "Le Souci sauvage (Calendula arvensis)",
+        "La Grande Gentiane (Gentiana lutea)"
+      ],
+      "answer": "Le Chardon-Marie (Silybum marianum)",
+      "difficulty": 3,
+      "explanation": "La bonne réponse est « Le Chardon-Marie (Silybum marianum) ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 34,
+      "type": "QCM",
+      "question": "Quel alcaloïde majeur, extrait des racines d'Ipéca (Rubiaceae), était autrefois utilisé comme émétique (pour faire vomir) ?",
+      "options": [
+        "L'émétine",
+        "L'ergotamine",
+        "La yohimbine",
+        "La quinine"
+      ],
+      "answer": "L'émétine",
+      "difficulty": 3,
+      "explanation": "La bonne réponse est « L'émétine ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 35,
+      "type": "QCM",
+      "question": "L'écorce du Marronnier d'Inde (Sapindaceae) contient de l'esculoside. À quelle classe de molécules appartient-il ?",
+      "options": [
+        "Coumarines",
+        "Alcaloïdes stéroïdiques",
+        "Saponosides triterpéniques",
+        "Huiles essentielles"
+      ],
+      "answer": "Coumarines",
+      "difficulty": 3,
+      "explanation": "La bonne réponse est « Coumarines ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 36,
+      "type": "QCM",
+      "question": "Quelle famille de plantes est caractérisée par une fleur dicline souvent unisexuée, un fruit de type capsule tricoque et produit souvent un latex caustique ?",
+      "options": [
+        "Les Euphorbiaceae",
+        "Les Malvaceae",
+        "Les Papaveraceae",
+        "Les Apocynaceae"
+      ],
+      "answer": "Les Euphorbiaceae",
+      "difficulty": 3,
+      "explanation": "La bonne réponse est « Les Euphorbiaceae ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 37,
+      "type": "OPEN",
+      "question": "En morphologie florale, qu'est-ce qu'une fleur zygomorphe ?",
+      "answer": "C'est une fleur irrégulière qui ne possède qu'un seul plan de symétrie (symétrie bilatérale).",
+      "difficulty": 3,
+      "explanation": "Réponse-type attendue : C'est une fleur irrégulière qui ne possède qu'un seul plan de symétrie (symétrie bilatérale).. Complète avec les exemples ou nuances vus dans ta fiche si l’énoncé le demande."
+    },
+    {
+      "id": 38,
+      "type": "OPEN",
+      "question": "En quoi consiste la multiplication végétative par 'tallage' chez les Poaceae ?",
+      "answer": "C'est la production de tiges secondaires (talles) à la base de la tige principale (le chaume), permettant à la plante de reformer de nouveaux pieds si elle est couchée ou piétinée.",
+      "difficulty": 3,
+      "explanation": "Réponse-type attendue : C'est la production de tiges secondaires (talles) à la base de la tige principale (le chaume), permettant à la plante de reformer de nouveaux pieds si elle est couchée ou piétinée.. Complète avec les exemples ou nuances vus dans ta fiche si l’énoncé le demande."
+    },
+    {
+      "id": 39,
+      "type": "OPEN",
+      "question": "Quel est le mécanisme d'action toxique des poils urticants pluricellulaires de la Grande ortie (Urtica dioica) ?",
+      "answer": "La pointe effilée en silice du poil se brise au moindre frôlement, libérant de l'acide formique et d'autres composés brûlants et allergisants.",
+      "difficulty": 3,
+      "explanation": "Réponse-type attendue : La pointe effilée en silice du poil se brise au moindre frôlement, libérant de l'acide formique et d'autres composés brûlants et allergisants.. Complète avec les exemples ou nuances vus dans ta fiche si l’énoncé le demande."
+    },
+    {
+      "id": 40,
+      "type": "OPEN",
+      "question": "Comment se caractérise l'inflorescence hétérogame (capitule) du Souci sauvage (Calendula arvensis) ?",
+      "answer": "Elle est composée de fleurs tubulées centrales (mâles et actinomorphes) et de fleurs ligulées rayonnantes à la périphérie (femelles et zygomorphes).",
+      "difficulty": 3,
+      "explanation": "Réponse-type attendue : Elle est composée de fleurs tubulées centrales (mâles et actinomorphes) et de fleurs ligulées rayonnantes à la périphérie (femelles et zygomorphes).. Complète avec les exemples ou nuances vus dans ta fiche si l’énoncé le demande."
+    }
+  ]
+}

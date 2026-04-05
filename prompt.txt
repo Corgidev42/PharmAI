@@ -11,6 +11,7 @@ STRUCTURE DU JSON (obligatoire)
   - "question" : string
   - "options" : tableau de strings UNIQUEMENT si type === "QCM" (exactement 4 options pour chaque QCM)
   - "answer" : string (pour QCM : la bonne option, identique à l’une des 4 options ; pour OPEN : réponse attendue courte)
+  - "explanation" : string (1 à 3 phrases en français : pourquoi la bonne réponse est correcte, piège fréquent, ou rappel du cours ; pour aider après une erreur)
   - "difficulty" : entier 1, 2 ou 3
 
 VOLUME ET RÉPARTITION
@@ -28,6 +29,7 @@ CONTENU PÉDAGOGIQUE
 - Tout le contenu des questions/réponses doit être dérivé des thèmes et faits présents dans mes sources ; ne pas inventer de hors-sujet.
 - QCM : les 3 mauvaises réponses (distracteurs) doivent être plausibles et proches du sujet (erreurs classiques, confusions de cours), pas absurdes.
 - OPEN : "answer" au plus 2 phrases, style réponse attendue en oral ou à l’examen court.
+- Chaque "explanation" doit être utile sans recopier mot pour mot la question : expliquer le raisonnement ou l’erreur à éviter.
 
 EXEMPLE DE FORME (à imiter strictement pour la structure, pas le contenu) :
 {
@@ -39,6 +41,7 @@ EXEMPLE DE FORME (à imiter strictement pour la structure, pas le contenu) :
       "question": "...",
       "options": ["...", "...", "...", "..."],
       "answer": "...",
+      "explanation": "...",
       "difficulty": 1
     },
     {
@@ -46,6 +49,7 @@ EXEMPLE DE FORME (à imiter strictement pour la structure, pas le contenu) :
       "type": "OPEN",
       "question": "...",
       "answer": "...",
+      "explanation": "...",
       "difficulty": 2
     }
   ]
@@ -54,4 +58,4 @@ EXEMPLE DE FORME (à imiter strictement pour la structure, pas le contenu) :
 CONTRAINTES FINALES
 - Un seul bloc de sortie : le JSON complet, valide, syntaxiquement correct.
 - Pas de commentaires JSON, pas de virgule en trop.
-- Vérifie avant envoi : exactement 40 cartes (QCM/OPEN) avec la répartition des difficultés indiquée ; ids 1 à 40 sans doublon.
+- Vérifie avant envoi : exactement 40 cartes (QCM/OPEN) avec la répartition des difficultés indiquée ; ids 1 à 40 sans doublon ; chaque carte a bien "explanation".

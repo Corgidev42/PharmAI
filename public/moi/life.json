@@ -1,429 +1,469 @@
 {
-    "theme": "Jeu de la Vie de Conway - Éditeur et Simulateur",
-    "cards": [
-      {
-        "id": 1,
-        "type": "QCM",
-        "question": "Quels sont les trois paramètres d'argument attendus par l'architecture de ce programme ?",
-        "options": [
-          "Largeur, Hauteur et Nombre d'itérations",
-          "Coordonnée X, Coordonnée Y et Temps",
-          "Fichier source, Vitesse et Taille",
-          "Stylo, Boucle et Double Buffering"
-        ],
-        "answer": "Largeur, Hauteur et Nombre d'itérations",
-        "difficulty": 1
-      },
-      {
-        "id": 2,
-        "type": "QCM",
-        "question": "Quelle est l'utilité principale du Double Buffering (tableaux board et next) dans cet automate cellulaire ?",
-        "options": [
-          "Empêcher que les naissances et morts n'influencent les cellules voisines durant le même cycle",
-          "Dessiner deux fois plus vite sur le terminal",
-          "Sauvegarder l'état final dans un fichier texte",
-          "Permettre l'utilisation de deux stylos en même temps"
-        ],
-        "answer": "Empêcher que les naissances et morts n'influencent les cellules voisines durant le même cycle",
-        "difficulty": 1
-      },
-      {
-        "id": 3,
-        "type": "QCM",
-        "question": "Lors du dessin interactif, quelle touche permet d'inverser l'état du stylo (allumé/éteint) ?",
-        "options": [
-          "La touche 'x'",
-          "La touche 'p'",
-          "La touche 'space'",
-          "La touche 'z'"
-        ],
-        "answer": "La touche 'x'",
-        "difficulty": 1
-      },
-      {
-        "id": 4,
-        "type": "QCM",
-        "question": "Quel caractère est affiché lors de l'output pour représenter une cellule vivante ?",
-        "options": [
-          "'0'",
-          "'1'",
-          "'x'",
-          "'#'"
-        ],
-        "answer": "'0'",
-        "difficulty": 1
-      },
-      {
-        "id": 5,
-        "type": "QCM",
-        "question": "Quel caractère est affiché lors de l'output pour représenter une cellule morte ?",
-        "options": [
-          "Un espace (' ')",
-          "Un tiret ('-')",
-          "Un point ('.')",
-          "Un zéro ('0')"
-        ],
-        "answer": "Un espace (' ')",
-        "difficulty": 1
-      },
-      {
-        "id": 6,
-        "type": "QCM",
-        "question": "Selon les règles de Conway présentées, combien de voisins une cellule morte doit-elle avoir pour devenir vivante ?",
-        "options": [
-          "Exactement 3 voisins",
-          "Exactement 2 voisins",
-          "2 ou 3 voisins",
-          "4 voisins"
-        ],
-        "answer": "Exactement 3 voisins",
-        "difficulty": 1
-      },
-      {
-        "id": 7,
-        "type": "QCM",
-        "question": "Lors du comptage pour une cellule centrale, quel est le nombre maximum de cases voisines vérifiées ?",
-        "options": [
-          "8 cases",
-          "4 cases",
-          "9 cases",
-          "6 cases"
-        ],
-        "answer": "8 cases",
-        "difficulty": 1
-      },
-      {
-        "id": 8,
-        "type": "QCM",
-        "question": "Quelle fonction système est utilisée dans la boucle de dessin pour lire l'entrée caractère par caractère ?",
-        "options": [
-          "read",
-          "scanf",
-          "getchar",
-          "fgets"
-        ],
-        "answer": "read",
-        "difficulty": 1
-      },
-      {
-        "id": 9,
-        "type": "QCM",
-        "question": "Quel axe de déplacement est contrôlé par les touches 'w' et 's' (ou 'z' et 's') ?",
-        "options": [
-          "Axe Y (Haut/Bas)",
-          "Axe X (Gauche/Droite)",
-          "Axe Z (Profondeur)",
-          "L'axe du temps (Itérations)"
-        ],
-        "answer": "Axe Y (Haut/Bas)",
-        "difficulty": 1
-      },
-      {
-        "id": 10,
-        "type": "OPEN",
-        "question": "Que signifient les variables w, h et iter passées en arguments du programme ?",
-        "answer": "Elles représentent respectivement la largeur de la grille, sa hauteur, et le nombre d'itérations à simuler.",
-        "difficulty": 1
-      },
-      {
-        "id": 11,
-        "type": "OPEN",
-        "question": "Que se passe-t-il sur la grille si le stylo (variable pen) est égal à 1 à la position (x, y) ?",
-        "answer": "La case survolée devient vivante, c'est-à-dire que board[y][x] prend la valeur 1.",
-        "difficulty": 1
-      },
-      {
-        "id": 12,
-        "type": "OPEN",
-        "question": "Quelle fonction de la bibliothèque standard C est utilisée pour convertir les arguments argv en entiers ?",
-        "answer": "C'est la fonction atoi.",
-        "difficulty": 1
-      },
-      {
-        "id": 13,
-        "type": "OPEN",
-        "question": "Comment le programme vérifie-t-il que la cellule centrale n'est pas comptée parmi ses propres voisins ?",
-        "answer": "Il utilise la condition (di || dj) pour exclure le cas où les deux décalages sont nuls.",
-        "difficulty": 1
-      },
-      {
-        "id": 14,
-        "type": "OPEN",
-        "question": "Quel tableau stocke l'état actuel de la grille lors de la simulation ?",
-        "answer": "C'est le tableau nommé 'board'.",
-        "difficulty": 1
-      },
-      {
-        "id": 15,
-        "type": "OPEN",
-        "question": "Quel tableau est utilisé pour préparer et stocker le futur état de la grille ?",
-        "answer": "C'est le tableau nommé 'next'.",
-        "difficulty": 1
-      },
-      {
-        "id": 16,
-        "type": "QCM",
-        "question": "Quelle est la condition pour qu'une cellule déjà vivante survive à l'itération suivante ?",
-        "options": [
-          "Elle doit avoir 2 ou 3 voisins",
-          "Elle doit avoir exactement 3 voisins",
-          "Elle doit avoir plus de 3 voisins",
-          "Elle doit avoir moins de 2 voisins"
-        ],
-        "answer": "Elle doit avoir 2 ou 3 voisins",
-        "difficulty": 2
-      },
-      {
-        "id": 17,
-        "type": "QCM",
-        "question": "Comment le programme prévient-il les accès mémoire hors limites lors de la vérification du voisinage ?",
-        "options": [
-          "Par des vérifications des bords comme 'i + di >= 0' et 'i + di < h'",
-          "En allouant une grille deux fois plus grande",
-          "En utilisant un bloc try/catch",
-          "En déclarant la grille comme une variable globale statique"
-        ],
-        "answer": "Par des vérifications des bords comme 'i + di >= 0' et 'i + di < h'",
-        "difficulty": 2
-      },
-      {
-        "id": 18,
-        "type": "QCM",
-        "question": "Dans l'éditeur interactif, quelles variables gardent la trace de la position du curseur ?",
-        "options": [
-          "x et y",
-          "i et j",
-          "di et dj",
-          "w et h"
-        ],
-        "answer": "x et y",
-        "difficulty": 2
-      },
-      {
-        "id": 19,
-        "type": "QCM",
-        "question": "À quoi correspond l'opération logicielle 'board[i][j] && (n == 2 || n == 3)' dans le calcul du tableau next ?",
-        "options": [
-          "À la règle de survie d'une cellule vivante",
-          "À la règle de naissance d'une cellule morte",
-          "À la condition d'isolement (mort de la cellule)",
-          "À la détection des bords de la matrice"
-        ],
-        "answer": "À la règle de survie d'une cellule vivante",
-        "difficulty": 2
-      },
-      {
-        "id": 20,
-        "type": "QCM",
-        "question": "À quoi correspond l'opération logicielle '!board[i][j] && n == 3' dans la simulation ?",
-        "options": [
-          "À la règle de reproduction (naissance d'une cellule)",
-          "À la mort par surpopulation",
-          "À l'effacement de la grille",
-          "Au déplacement du curseur vers le bas"
-        ],
-        "answer": "À la règle de reproduction (naissance d'une cellule)",
-        "difficulty": 2
-      },
-      {
-        "id": 21,
-        "type": "QCM",
-        "question": "Quelle est l'étape immédiatement après le calcul complet du tableau 'next' pour toute la grille ?",
-        "options": [
-          "Le Swap : recopier le tableau next dans board",
-          "Le Print : afficher immédiatement le tableau next",
-          "L'Input : demander de nouvelles coordonnées à l'utilisateur",
-          "Le Flush : vider la mémoire de la variable n"
-        ],
-        "answer": "Le Swap : recopier le tableau next dans board",
-        "difficulty": 2
-      },
-      {
-        "id": 22,
-        "type": "QCM",
-        "question": "Lors du déplacement du curseur, à quoi sert la condition 'x < w - 1' (pour la touche d) ?",
-        "options": [
-          "À empêcher de sortir de la grille par la droite",
-          "À forcer le curseur à revenir au début de la ligne",
-          "À vérifier que le fichier d'entrée n'est pas vide",
-          "À activer l'inversion du stylo (pen)"
-        ],
-        "answer": "À empêcher de sortir de la grille par la droite",
-        "difficulty": 2
-      },
-      {
-        "id": 23,
-        "type": "QCM",
-        "question": "Quel est l'état initial de la variable 'pen' définie au début du programme ?",
-        "options": [
-          "0 (stylo éteint)",
-          "1 (stylo allumé)",
-          "-1 (mode effacement)",
-          "La valeur de argv"
-        ],
-        "answer": "0 (stylo éteint)",
-        "difficulty": 2
-      },
-      {
-        "id": 24,
-        "type": "QCM",
-        "question": "Combien de boucles imbriquées sont nécessaires au total pour compter les voisins adjacents d'une cellule (i, j) ?",
-        "options": [
-          "Deux boucles (di et dj)",
-          "Une seule boucle parcourant de 0 à 8",
-          "Trois boucles (x, y, et z)",
-          "Quatre boucles pour les 4 points cardinaux"
-        ],
-        "answer": "Deux boucles (di et dj)",
-        "difficulty": 2
-      },
-      {
-        "id": 25,
-        "type": "OPEN",
-        "question": "Pourquoi les boucles parcourant les voisins di et dj vont-elles de -1 à 1 ?",
-        "answer": "Parce qu'elles permettent de cibler les coordonnées relatives des 8 cellules immédiatement adjacentes à la cellule centrale (0, 0).",
-        "difficulty": 2
-      },
-      {
-        "id": 26,
-        "type": "OPEN",
-        "question": "Quelle action le code effectue-t-il lorsque la condition de surpopulation (plus de 3 voisins) est rencontrée sur une cellule vivante ?",
-        "answer": "La cellule ne remplit plus la condition de survie et la valeur 0 (morte) est assignée dans le tableau next.",
-        "difficulty": 2
-      },
-      {
-        "id": 27,
-        "type": "OPEN",
-        "question": "Comment le nombre total de voisins vivants est-il accumulé dans le programme en C ?",
-        "answer": "En effectuant la somme cumulée : n += board[i + di][j + dj].",
-        "difficulty": 2
-      },
-      {
-        "id": 28,
-        "type": "OPEN",
-        "question": "Quel est le risque évité par la condition y > 0 lors de l'appui sur la touche 'w' (ou 'z') ?",
-        "answer": "Cela évite de déplacer le curseur en dehors de la limite supérieure de la grille (out of bounds).",
-        "difficulty": 2
-      },
-      {
-        "id": 29,
-        "type": "OPEN",
-        "question": "Quelles touches clavier sont spécifiquement évoquées pour gérer les déplacements de l'axe X (Gauche/Droite) ?",
-        "answer": "Les touches 'a' et 'd' (ou 'q' et 'd').",
-        "difficulty": 2
-      },
-      {
-        "id": 30,
-        "type": "OPEN",
-        "question": "Décrivez la phase de transfert (Le Swap) de l'automate cellulaire.",
-        "answer": "Elle consiste à utiliser deux boucles imbriquées pour copier chaque élément de next[i][j] vers board[i][j] avant l'itération suivante.",
-        "difficulty": 2
-      },
-      {
-        "id": 31,
-        "type": "QCM",
-        "question": "Comment est écrite la ligne de code booléenne unique condensant les règles de Conway pour l'affectation de next[i][j] ?",
-        "options": [
-          "next[i][j] = (board[i][j] && (n == 2 || n == 3)) || (!board[i][j] && n == 3)",
-          "next[i][j] = (board[i][j] && n == 3) || (!board[i][j] && (n == 2 || n == 3))",
-          "next[i][j] = board[i+di][j+dj] && (n == 2)",
-          "next[i][j] = board[i][j] ? 0 : 1"
-        ],
-        "answer": "next[i][j] = (board[i][j] && (n == 2 || n == 3)) || (!board[i][j] && n == 3)",
-        "difficulty": 3
-      },
-      {
-        "id": 32,
-        "type": "QCM",
-        "question": "Dans le code C, quelle instruction est utilisée pour exécuter la boucle de dessin interactif en lisant l'entrée ?",
-        "options": [
-          "while (read(0, &c, 1) == 1)",
-          "for (int i = 0; i < argc; i++)",
-          "while (scanf(\"%c\", &c) != EOF)",
-          "do { c = getchar(); } while(c != 'x')"
-        ],
-        "answer": "while (read(0, &c, 1) == 1)",
-        "difficulty": 3
-      },
-      {
-        "id": 33,
-        "type": "QCM",
-        "question": "Lors de l'affichage final (Output), comment le programme crée-t-il une nouvelle ligne de grille sur la console ?",
-        "options": [
-          "En exécutant putchar('\\n') à la fin de chaque ligne i",
-          "En ajoutant un retour chariot automatique avec printf",
-          "En utilisant l'instruction puts(board[i])",
-          "La console crée automatiquement le saut de ligne à la largeur w"
-        ],
-        "answer": "En exécutant putchar('\\n') à la fin de chaque ligne i",
-        "difficulty": 3
-      },
-      {
-        "id": 34,
-        "type": "QCM",
-        "question": "Quelle est l'expression ternaire employée par le programme pour afficher les caractères vivants ou morts ?",
-        "options": [
-          "putchar(board[i][j] ? '0' : ' ')",
-          "board[i][j] == 1 ? putchar('0') : putchar('-')",
-          "printf(\"%c\", next[i][j] ? ' ' : '0')",
-          "putchar(pen ? '0' : 'x')"
-        ],
-        "answer": "putchar(board[i][j] ? '0' : ' ')",
-        "difficulty": 3
-      },
-      {
-        "id": 35,
-        "type": "QCM",
-        "question": "Dans l'imbrication des boucles de la simulation, quel est l'ordre exact des trois boucles principales entourant le comptage ?",
-        "options": [
-          "Boucle t (itérations), puis boucle i (hauteur), puis boucle j (largeur)",
-          "Boucle i (hauteur), puis boucle j (largeur), puis boucle t (itérations)",
-          "Boucle di, puis boucle dj, puis boucle t",
-          "Boucle t (itérations), puis boucle x, puis boucle y"
-        ],
-        "answer": "Boucle t (itérations), puis boucle i (hauteur), puis boucle j (largeur)",
-        "difficulty": 3
-      },
-      {
-        "id": 36,
-        "type": "QCM",
-        "question": "Comment le programme bascule-t-il l'état de la variable 'pen' lors de la pression sur la touche 'x' ?",
-        "options": [
-          "pen = !pen;",
-          "pen = 1;",
-          "pen == 0 ? 1 : 0;",
-          "pen = pen ^ 0;"
-        ],
-        "answer": "pen = !pen;",
-        "difficulty": 3
-      },
-      {
-        "id": 37,
-        "type": "OPEN",
-        "question": "Dans la vérification des bords, écrire la condition complète liée à l'axe des colonnes (largeur w) pour éviter les accès mémoire hors limites.",
-        "answer": "La condition est : j + dj >= 0 && j + dj < w.",
-        "difficulty": 3
-      },
-      {
-        "id": 38,
-        "type": "OPEN",
-        "question": "Que signifie la variable 'n' réinitialisée à 0 dans la boucle de simulation ?",
-        "answer": "Elle est utilisée comme un compteur pour additionner et stocker le nombre de voisins vivants d'une cellule donnée.",
-        "difficulty": 3
-      },
-      {
-        "id": 39,
-        "type": "OPEN",
-        "question": "Quelle est l'implication de l'utilisation de `(void)argc;` dans le code source fourni ?",
-        "answer": "Cela indique au compilateur d'ignorer la variable argc afin d'éviter un avertissement de variable non utilisée.",
-        "difficulty": 3
-      },
-      {
-        "id": 40,
-        "type": "OPEN",
-        "question": "Pourquoi est-il crucial d'initialiser tous les éléments du tableau board à 0 avec une double boucle avant la phase interactive ?",
-        "answer": "Car en C, les variables locales allouées sur la pile (VLA) contiennent des valeurs poubelles (garbage) qui corrompraient la simulation de la grille.",
-        "difficulty": 3
-      }
-    ]
-  }
+  "theme": "Jeu de la Vie de Conway - Éditeur et Simulateur",
+  "cards": [
+    {
+      "id": 1,
+      "type": "QCM",
+      "question": "Quels sont les trois paramètres d'argument attendus par l'architecture de ce programme ?",
+      "options": [
+        "Largeur, Hauteur et Nombre d'itérations",
+        "Coordonnée X, Coordonnée Y et Temps",
+        "Fichier source, Vitesse et Taille",
+        "Stylo, Boucle et Double Buffering"
+      ],
+      "answer": "Largeur, Hauteur et Nombre d'itérations",
+      "difficulty": 1,
+      "explanation": "La bonne réponse est « Largeur, Hauteur et Nombre d'itérations ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 2,
+      "type": "QCM",
+      "question": "Quelle est l'utilité principale du Double Buffering (tableaux board et next) dans cet automate cellulaire ?",
+      "options": [
+        "Empêcher que les naissances et morts n'influencent les cellules voisines durant le même cycle",
+        "Dessiner deux fois plus vite sur le terminal",
+        "Sauvegarder l'état final dans un fichier texte",
+        "Permettre l'utilisation de deux stylos en même temps"
+      ],
+      "answer": "Empêcher que les naissances et morts n'influencent les cellules voisines durant le même cycle",
+      "difficulty": 1,
+      "explanation": "La bonne réponse est « Empêcher que les naissances et morts n'influencent les cellules voisines durant le même cycle ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 3,
+      "type": "QCM",
+      "question": "Lors du dessin interactif, quelle touche permet d'inverser l'état du stylo (allumé/éteint) ?",
+      "options": [
+        "La touche 'x'",
+        "La touche 'p'",
+        "La touche 'space'",
+        "La touche 'z'"
+      ],
+      "answer": "La touche 'x'",
+      "difficulty": 1,
+      "explanation": "La bonne réponse est « La touche 'x' ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 4,
+      "type": "QCM",
+      "question": "Quel caractère est affiché lors de l'output pour représenter une cellule vivante ?",
+      "options": [
+        "'0'",
+        "'1'",
+        "'x'",
+        "'#'"
+      ],
+      "answer": "'0'",
+      "difficulty": 1,
+      "explanation": "La bonne réponse est « '0' ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 5,
+      "type": "QCM",
+      "question": "Quel caractère est affiché lors de l'output pour représenter une cellule morte ?",
+      "options": [
+        "Un espace (' ')",
+        "Un tiret ('-')",
+        "Un point ('.')",
+        "Un zéro ('0')"
+      ],
+      "answer": "Un espace (' ')",
+      "difficulty": 1,
+      "explanation": "La bonne réponse est « Un espace (' ') ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 6,
+      "type": "QCM",
+      "question": "Selon les règles de Conway présentées, combien de voisins une cellule morte doit-elle avoir pour devenir vivante ?",
+      "options": [
+        "Exactement 3 voisins",
+        "Exactement 2 voisins",
+        "2 ou 3 voisins",
+        "4 voisins"
+      ],
+      "answer": "Exactement 3 voisins",
+      "difficulty": 1,
+      "explanation": "La bonne réponse est « Exactement 3 voisins ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 7,
+      "type": "QCM",
+      "question": "Lors du comptage pour une cellule centrale, quel est le nombre maximum de cases voisines vérifiées ?",
+      "options": [
+        "8 cases",
+        "4 cases",
+        "9 cases",
+        "6 cases"
+      ],
+      "answer": "8 cases",
+      "difficulty": 1,
+      "explanation": "La bonne réponse est « 8 cases ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 8,
+      "type": "QCM",
+      "question": "Quelle fonction système est utilisée dans la boucle de dessin pour lire l'entrée caractère par caractère ?",
+      "options": [
+        "read",
+        "scanf",
+        "getchar",
+        "fgets"
+      ],
+      "answer": "read",
+      "difficulty": 1,
+      "explanation": "La bonne réponse est « read ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 9,
+      "type": "QCM",
+      "question": "Quel axe de déplacement est contrôlé par les touches 'w' et 's' (ou 'z' et 's') ?",
+      "options": [
+        "Axe Y (Haut/Bas)",
+        "Axe X (Gauche/Droite)",
+        "Axe Z (Profondeur)",
+        "L'axe du temps (Itérations)"
+      ],
+      "answer": "Axe Y (Haut/Bas)",
+      "difficulty": 1,
+      "explanation": "La bonne réponse est « Axe Y (Haut/Bas) ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 10,
+      "type": "OPEN",
+      "question": "Que signifient les variables w, h et iter passées en arguments du programme ?",
+      "answer": "Elles représentent respectivement la largeur de la grille, sa hauteur, et le nombre d'itérations à simuler.",
+      "difficulty": 1,
+      "explanation": "Réponse-type attendue : Elles représentent respectivement la largeur de la grille, sa hauteur, et le nombre d'itérations à simuler.. Complète avec les exemples ou nuances vus dans ta fiche si l’énoncé le demande."
+    },
+    {
+      "id": 11,
+      "type": "OPEN",
+      "question": "Que se passe-t-il sur la grille si le stylo (variable pen) est égal à 1 à la position (x, y) ?",
+      "answer": "La case survolée devient vivante, c'est-à-dire que board[y][x] prend la valeur 1.",
+      "difficulty": 1,
+      "explanation": "Réponse-type attendue : La case survolée devient vivante, c'est-à-dire que board[y][x] prend la valeur 1.. Complète avec les exemples ou nuances vus dans ta fiche si l’énoncé le demande."
+    },
+    {
+      "id": 12,
+      "type": "OPEN",
+      "question": "Quelle fonction de la bibliothèque standard C est utilisée pour convertir les arguments argv en entiers ?",
+      "answer": "C'est la fonction atoi.",
+      "difficulty": 1,
+      "explanation": "Réponse-type attendue : C'est la fonction atoi.. Complète avec les exemples ou nuances vus dans ta fiche si l’énoncé le demande."
+    },
+    {
+      "id": 13,
+      "type": "OPEN",
+      "question": "Comment le programme vérifie-t-il que la cellule centrale n'est pas comptée parmi ses propres voisins ?",
+      "answer": "Il utilise la condition (di || dj) pour exclure le cas où les deux décalages sont nuls.",
+      "difficulty": 1,
+      "explanation": "Réponse-type attendue : Il utilise la condition (di || dj) pour exclure le cas où les deux décalages sont nuls.. Complète avec les exemples ou nuances vus dans ta fiche si l’énoncé le demande."
+    },
+    {
+      "id": 14,
+      "type": "OPEN",
+      "question": "Quel tableau stocke l'état actuel de la grille lors de la simulation ?",
+      "answer": "C'est le tableau nommé 'board'.",
+      "difficulty": 1,
+      "explanation": "Réponse-type attendue : C'est le tableau nommé 'board'.. Complète avec les exemples ou nuances vus dans ta fiche si l’énoncé le demande."
+    },
+    {
+      "id": 15,
+      "type": "OPEN",
+      "question": "Quel tableau est utilisé pour préparer et stocker le futur état de la grille ?",
+      "answer": "C'est le tableau nommé 'next'.",
+      "difficulty": 1,
+      "explanation": "Réponse-type attendue : C'est le tableau nommé 'next'.. Complète avec les exemples ou nuances vus dans ta fiche si l’énoncé le demande."
+    },
+    {
+      "id": 16,
+      "type": "QCM",
+      "question": "Quelle est la condition pour qu'une cellule déjà vivante survive à l'itération suivante ?",
+      "options": [
+        "Elle doit avoir 2 ou 3 voisins",
+        "Elle doit avoir exactement 3 voisins",
+        "Elle doit avoir plus de 3 voisins",
+        "Elle doit avoir moins de 2 voisins"
+      ],
+      "answer": "Elle doit avoir 2 ou 3 voisins",
+      "difficulty": 2,
+      "explanation": "La bonne réponse est « Elle doit avoir 2 ou 3 voisins ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 17,
+      "type": "QCM",
+      "question": "Comment le programme prévient-il les accès mémoire hors limites lors de la vérification du voisinage ?",
+      "options": [
+        "Par des vérifications des bords comme 'i + di >= 0' et 'i + di < h'",
+        "En allouant une grille deux fois plus grande",
+        "En utilisant un bloc try/catch",
+        "En déclarant la grille comme une variable globale statique"
+      ],
+      "answer": "Par des vérifications des bords comme 'i + di >= 0' et 'i + di < h'",
+      "difficulty": 2,
+      "explanation": "La bonne réponse est « Par des vérifications des bords comme 'i + di >= 0' et 'i + di < h' ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 18,
+      "type": "QCM",
+      "question": "Dans l'éditeur interactif, quelles variables gardent la trace de la position du curseur ?",
+      "options": [
+        "x et y",
+        "i et j",
+        "di et dj",
+        "w et h"
+      ],
+      "answer": "x et y",
+      "difficulty": 2,
+      "explanation": "La bonne réponse est « x et y ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 19,
+      "type": "QCM",
+      "question": "À quoi correspond l'opération logicielle 'board[i][j] && (n == 2 || n == 3)' dans le calcul du tableau next ?",
+      "options": [
+        "À la règle de survie d'une cellule vivante",
+        "À la règle de naissance d'une cellule morte",
+        "À la condition d'isolement (mort de la cellule)",
+        "À la détection des bords de la matrice"
+      ],
+      "answer": "À la règle de survie d'une cellule vivante",
+      "difficulty": 2,
+      "explanation": "La bonne réponse est « À la règle de survie d'une cellule vivante ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 20,
+      "type": "QCM",
+      "question": "À quoi correspond l'opération logicielle '!board[i][j] && n == 3' dans la simulation ?",
+      "options": [
+        "À la règle de reproduction (naissance d'une cellule)",
+        "À la mort par surpopulation",
+        "À l'effacement de la grille",
+        "Au déplacement du curseur vers le bas"
+      ],
+      "answer": "À la règle de reproduction (naissance d'une cellule)",
+      "difficulty": 2,
+      "explanation": "La bonne réponse est « À la règle de reproduction (naissance d'une cellule) ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 21,
+      "type": "QCM",
+      "question": "Quelle est l'étape immédiatement après le calcul complet du tableau 'next' pour toute la grille ?",
+      "options": [
+        "Le Swap : recopier le tableau next dans board",
+        "Le Print : afficher immédiatement le tableau next",
+        "L'Input : demander de nouvelles coordonnées à l'utilisateur",
+        "Le Flush : vider la mémoire de la variable n"
+      ],
+      "answer": "Le Swap : recopier le tableau next dans board",
+      "difficulty": 2,
+      "explanation": "La bonne réponse est « Le Swap : recopier le tableau next dans board ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 22,
+      "type": "QCM",
+      "question": "Lors du déplacement du curseur, à quoi sert la condition 'x < w - 1' (pour la touche d) ?",
+      "options": [
+        "À empêcher de sortir de la grille par la droite",
+        "À forcer le curseur à revenir au début de la ligne",
+        "À vérifier que le fichier d'entrée n'est pas vide",
+        "À activer l'inversion du stylo (pen)"
+      ],
+      "answer": "À empêcher de sortir de la grille par la droite",
+      "difficulty": 2,
+      "explanation": "La bonne réponse est « À empêcher de sortir de la grille par la droite ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 23,
+      "type": "QCM",
+      "question": "Quel est l'état initial de la variable 'pen' définie au début du programme ?",
+      "options": [
+        "0 (stylo éteint)",
+        "1 (stylo allumé)",
+        "-1 (mode effacement)",
+        "La valeur de argv"
+      ],
+      "answer": "0 (stylo éteint)",
+      "difficulty": 2,
+      "explanation": "La bonne réponse est « 0 (stylo éteint) ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 24,
+      "type": "QCM",
+      "question": "Combien de boucles imbriquées sont nécessaires au total pour compter les voisins adjacents d'une cellule (i, j) ?",
+      "options": [
+        "Deux boucles (di et dj)",
+        "Une seule boucle parcourant de 0 à 8",
+        "Trois boucles (x, y, et z)",
+        "Quatre boucles pour les 4 points cardinaux"
+      ],
+      "answer": "Deux boucles (di et dj)",
+      "difficulty": 2,
+      "explanation": "La bonne réponse est « Deux boucles (di et dj) ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 25,
+      "type": "OPEN",
+      "question": "Pourquoi les boucles parcourant les voisins di et dj vont-elles de -1 à 1 ?",
+      "answer": "Parce qu'elles permettent de cibler les coordonnées relatives des 8 cellules immédiatement adjacentes à la cellule centrale (0, 0).",
+      "difficulty": 2,
+      "explanation": "Réponse-type attendue : Parce qu'elles permettent de cibler les coordonnées relatives des 8 cellules immédiatement adjacentes à la cellule centrale (0, 0).. Complète avec les exemples ou nuances vus dans ta fiche si l’énoncé le demande."
+    },
+    {
+      "id": 26,
+      "type": "OPEN",
+      "question": "Quelle action le code effectue-t-il lorsque la condition de surpopulation (plus de 3 voisins) est rencontrée sur une cellule vivante ?",
+      "answer": "La cellule ne remplit plus la condition de survie et la valeur 0 (morte) est assignée dans le tableau next.",
+      "difficulty": 2,
+      "explanation": "Réponse-type attendue : La cellule ne remplit plus la condition de survie et la valeur 0 (morte) est assignée dans le tableau next.. Complète avec les exemples ou nuances vus dans ta fiche si l’énoncé le demande."
+    },
+    {
+      "id": 27,
+      "type": "OPEN",
+      "question": "Comment le nombre total de voisins vivants est-il accumulé dans le programme en C ?",
+      "answer": "En effectuant la somme cumulée : n += board[i + di][j + dj].",
+      "difficulty": 2,
+      "explanation": "Réponse-type attendue : En effectuant la somme cumulée : n += board[i + di][j + dj].. Complète avec les exemples ou nuances vus dans ta fiche si l’énoncé le demande."
+    },
+    {
+      "id": 28,
+      "type": "OPEN",
+      "question": "Quel est le risque évité par la condition y > 0 lors de l'appui sur la touche 'w' (ou 'z') ?",
+      "answer": "Cela évite de déplacer le curseur en dehors de la limite supérieure de la grille (out of bounds).",
+      "difficulty": 2,
+      "explanation": "Réponse-type attendue : Cela évite de déplacer le curseur en dehors de la limite supérieure de la grille (out of bounds).. Complète avec les exemples ou nuances vus dans ta fiche si l’énoncé le demande."
+    },
+    {
+      "id": 29,
+      "type": "OPEN",
+      "question": "Quelles touches clavier sont spécifiquement évoquées pour gérer les déplacements de l'axe X (Gauche/Droite) ?",
+      "answer": "Les touches 'a' et 'd' (ou 'q' et 'd').",
+      "difficulty": 2,
+      "explanation": "Réponse-type attendue : Les touches 'a' et 'd' (ou 'q' et 'd').. Complète avec les exemples ou nuances vus dans ta fiche si l’énoncé le demande."
+    },
+    {
+      "id": 30,
+      "type": "OPEN",
+      "question": "Décrivez la phase de transfert (Le Swap) de l'automate cellulaire.",
+      "answer": "Elle consiste à utiliser deux boucles imbriquées pour copier chaque élément de next[i][j] vers board[i][j] avant l'itération suivante.",
+      "difficulty": 2,
+      "explanation": "Réponse-type attendue : Elle consiste à utiliser deux boucles imbriquées pour copier chaque élément de next[i][j] vers board[i][j] avant l'itération suivante.. Complète avec les exemples ou nuances vus dans ta fiche si l’énoncé le demande."
+    },
+    {
+      "id": 31,
+      "type": "QCM",
+      "question": "Comment est écrite la ligne de code booléenne unique condensant les règles de Conway pour l'affectation de next[i][j] ?",
+      "options": [
+        "next[i][j] = (board[i][j] && (n == 2 || n == 3)) || (!board[i][j] && n == 3)",
+        "next[i][j] = (board[i][j] && n == 3) || (!board[i][j] && (n == 2 || n == 3))",
+        "next[i][j] = board[i+di][j+dj] && (n == 2)",
+        "next[i][j] = board[i][j] ? 0 : 1"
+      ],
+      "answer": "next[i][j] = (board[i][j] && (n == 2 || n == 3)) || (!board[i][j] && n == 3)",
+      "difficulty": 3,
+      "explanation": "La bonne réponse est « next[i][j] = (board[i][j] && (n == 2 || n == 3)) || (!board[i][j] && n == 3) ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 32,
+      "type": "QCM",
+      "question": "Dans le code C, quelle instruction est utilisée pour exécuter la boucle de dessin interactif en lisant l'entrée ?",
+      "options": [
+        "while (read(0, &c, 1) == 1)",
+        "for (int i = 0; i < argc; i++)",
+        "while (scanf(\"%c\", &c) != EOF)",
+        "do { c = getchar(); } while(c != 'x')"
+      ],
+      "answer": "while (read(0, &c, 1) == 1)",
+      "difficulty": 3,
+      "explanation": "La bonne réponse est « while (read(0, &c, 1) == 1) ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 33,
+      "type": "QCM",
+      "question": "Lors de l'affichage final (Output), comment le programme crée-t-il une nouvelle ligne de grille sur la console ?",
+      "options": [
+        "En exécutant putchar('\\n') à la fin de chaque ligne i",
+        "En ajoutant un retour chariot automatique avec printf",
+        "En utilisant l'instruction puts(board[i])",
+        "La console crée automatiquement le saut de ligne à la largeur w"
+      ],
+      "answer": "En exécutant putchar('\\n') à la fin de chaque ligne i",
+      "difficulty": 3,
+      "explanation": "La bonne réponse est « En exécutant putchar('\\n') à la fin de chaque ligne i ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 34,
+      "type": "QCM",
+      "question": "Quelle est l'expression ternaire employée par le programme pour afficher les caractères vivants ou morts ?",
+      "options": [
+        "putchar(board[i][j] ? '0' : ' ')",
+        "board[i][j] == 1 ? putchar('0') : putchar('-')",
+        "printf(\"%c\", next[i][j] ? ' ' : '0')",
+        "putchar(pen ? '0' : 'x')"
+      ],
+      "answer": "putchar(board[i][j] ? '0' : ' ')",
+      "difficulty": 3,
+      "explanation": "La bonne réponse est « putchar(board[i][j] ? '0' : ' ') ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 35,
+      "type": "QCM",
+      "question": "Dans l'imbrication des boucles de la simulation, quel est l'ordre exact des trois boucles principales entourant le comptage ?",
+      "options": [
+        "Boucle t (itérations), puis boucle i (hauteur), puis boucle j (largeur)",
+        "Boucle i (hauteur), puis boucle j (largeur), puis boucle t (itérations)",
+        "Boucle di, puis boucle dj, puis boucle t",
+        "Boucle t (itérations), puis boucle x, puis boucle y"
+      ],
+      "answer": "Boucle t (itérations), puis boucle i (hauteur), puis boucle j (largeur)",
+      "difficulty": 3,
+      "explanation": "La bonne réponse est « Boucle t (itérations), puis boucle i (hauteur), puis boucle j (largeur) ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 36,
+      "type": "QCM",
+      "question": "Comment le programme bascule-t-il l'état de la variable 'pen' lors de la pression sur la touche 'x' ?",
+      "options": [
+        "pen = !pen;",
+        "pen = 1;",
+        "pen == 0 ? 1 : 0;",
+        "pen = pen ^ 0;"
+      ],
+      "answer": "pen = !pen;",
+      "difficulty": 3,
+      "explanation": "La bonne réponse est « pen = !pen; ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 37,
+      "type": "OPEN",
+      "question": "Dans la vérification des bords, écrire la condition complète liée à l'axe des colonnes (largeur w) pour éviter les accès mémoire hors limites.",
+      "answer": "La condition est : j + dj >= 0 && j + dj < w.",
+      "difficulty": 3,
+      "explanation": "Réponse-type attendue : La condition est : j + dj >= 0 && j + dj < w.. Complète avec les exemples ou nuances vus dans ta fiche si l’énoncé le demande."
+    },
+    {
+      "id": 38,
+      "type": "OPEN",
+      "question": "Que signifie la variable 'n' réinitialisée à 0 dans la boucle de simulation ?",
+      "answer": "Elle est utilisée comme un compteur pour additionner et stocker le nombre de voisins vivants d'une cellule donnée.",
+      "difficulty": 3,
+      "explanation": "Réponse-type attendue : Elle est utilisée comme un compteur pour additionner et stocker le nombre de voisins vivants d'une cellule donnée.. Complète avec les exemples ou nuances vus dans ta fiche si l’énoncé le demande."
+    },
+    {
+      "id": 39,
+      "type": "OPEN",
+      "question": "Quelle est l'implication de l'utilisation de `(void)argc;` dans le code source fourni ?",
+      "answer": "Cela indique au compilateur d'ignorer la variable argc afin d'éviter un avertissement de variable non utilisée.",
+      "difficulty": 3,
+      "explanation": "Réponse-type attendue : Cela indique au compilateur d'ignorer la variable argc afin d'éviter un avertissement de variable non utilisée.. Complète avec les exemples ou nuances vus dans ta fiche si l’énoncé le demande."
+    },
+    {
+      "id": 40,
+      "type": "OPEN",
+      "question": "Pourquoi est-il crucial d'initialiser tous les éléments du tableau board à 0 avec une double boucle avant la phase interactive ?",
+      "answer": "Car en C, les variables locales allouées sur la pile (VLA) contiennent des valeurs poubelles (garbage) qui corrompraient la simulation de la grille.",
+      "difficulty": 3,
+      "explanation": "Réponse-type attendue : Car en C, les variables locales allouées sur la pile (VLA) contiennent des valeurs poubelles (garbage) qui corrompraient la simulation de la grille.. Complète avec les exemples ou nuances vus dans ta fiche si l’énoncé le demande."
+    }
+  ]
+}

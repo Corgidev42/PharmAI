@@ -1,0 +1,1155 @@
+{
+  "theme": "Physiologie",
+  "cards": [
+    {
+      "id": 1,
+      "type": "QCM",
+      "theme": "Pharmacologie",
+      "question": "Quel est le principal mécanisme d'action des bêta-bloquants ?",
+      "options": [
+        "Blocage des canaux calciques",
+        "Stimulation des récepteurs alpha",
+        "Inhibition de l'enzyme de conversion",
+        "Blocage des récepteurs bêta-adrénergiques"
+      ],
+      "answer": "Blocage des récepteurs bêta-adrénergiques",
+      "difficulty": 1,
+      "explanation": "La bonne réponse est « Blocage des récepteurs bêta-adrénergiques ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 2,
+      "type": "QCM",
+      "theme": "Pharmacologie",
+      "question": "Quelle voie d'administration offre la biodisponibilité la plus élevée ?",
+      "options": [
+        "Orale",
+        "Intraveineuse",
+        "Sublinguale",
+        "Transdermique"
+      ],
+      "answer": "Intraveineuse",
+      "difficulty": 1,
+      "explanation": "La bonne réponse est « Intraveineuse ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 3,
+      "type": "QCM",
+      "theme": "Pharmacologie",
+      "question": "Quel organe est principalement responsable du métabolisme des médicaments ?",
+      "options": [
+        "Rein",
+        "Foie",
+        "Intestin",
+        "Poumon"
+      ],
+      "answer": "Foie",
+      "difficulty": 1,
+      "explanation": "La bonne réponse est « Foie ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 4,
+      "type": "QCM",
+      "theme": "Pharmacologie",
+      "question": "Comment définit-on la demi-vie d'élimination d'un médicament ?",
+      "options": [
+        "Temps nécessaire pour que la concentration plasmatique diminue de moitié",
+        "Temps pour éliminer totalement le médicament",
+        "Temps nécessaire pour l'absorption complète",
+        "Temps pour atteindre l'efficacité maximale"
+      ],
+      "answer": "Temps nécessaire pour que la concentration plasmatique diminue de moitié",
+      "difficulty": 1,
+      "explanation": "La bonne réponse est « Temps nécessaire pour que la concentration plasmatique diminue de moitié ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 5,
+      "type": "QCM",
+      "theme": "Pharmacologie",
+      "question": "Quel paramètre pharmacocinétique mesure l'exposition totale au médicament ?",
+      "options": [
+        "Cmax",
+        "Tmax",
+        "AUC (Aire sous la courbe)",
+        "Clairance"
+      ],
+      "answer": "AUC (Aire sous la courbe)",
+      "difficulty": 1,
+      "explanation": "La bonne réponse est « AUC (Aire sous la courbe) ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 6,
+      "type": "QCM",
+      "theme": "Pharmacologie",
+      "question": "Quel est le rôle de la pharmacovigilance ?",
+      "options": [
+        "La phase I des essais cliniques",
+        "La surveillance et l'évaluation des effets indésirables après commercialisation",
+        "La création de nouvelles molécules",
+        "Le test d'efficacité sur l'animal"
+      ],
+      "answer": "La surveillance et l'évaluation des effets indésirables après commercialisation",
+      "difficulty": 1,
+      "explanation": "La bonne réponse est « La surveillance et l'évaluation des effets indésirables après commercialisation ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 7,
+      "type": "QCM",
+      "theme": "Pharmacologie",
+      "question": "Les enzymes du cytochrome P450 sont principalement impliquées dans quel processus ?",
+      "options": [
+        "Absorption intestinale",
+        "Distribution tissulaire",
+        "Biotransformation hépatique",
+        "Excrétion rénale"
+      ],
+      "answer": "Biotransformation hépatique",
+      "difficulty": 2,
+      "explanation": "La bonne réponse est « Biotransformation hépatique ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 8,
+      "type": "OPEN",
+      "theme": "Pharmacologie",
+      "question": "Qu'est-ce que l'effet de premier passage hépatique ?",
+      "options": null,
+      "answer": "C'est le métabolisme d'un médicament par le foie avant qu'il n'atteigne la circulation systémique, réduisant sa biodisponibilité.",
+      "difficulty": 2,
+      "explanation": "Réponse-type attendue : C'est le métabolisme d'un médicament par le foie avant qu'il n'atteigne la circulation systémique, réduisant sa biodisponibilité.. Complète avec les exemples ou nuances vus dans ta fiche si l’énoncé le demande."
+    },
+    {
+      "id": 9,
+      "type": "QCM",
+      "theme": "Pharmacologie",
+      "question": "Quel type de liaison médicament-récepteur est généralement réversible ?",
+      "options": [
+        "Liaison covalente",
+        "Liaison ionique",
+        "Liaison métallique",
+        "Liaison peptidique"
+      ],
+      "answer": "Liaison ionique",
+      "difficulty": 2,
+      "explanation": "La bonne réponse est « Liaison ionique ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 10,
+      "type": "QCM",
+      "theme": "Pharmacologie",
+      "question": "Un agoniste partiel se caractérise par :",
+      "options": [
+        "Une efficacité maximale identique à l'agoniste complet",
+        "Une affinité nulle pour le récepteur",
+        "Une efficacité intrinsèque inférieure à 1",
+        "Une absence totale d'effet pharmacologique"
+      ],
+      "answer": "Une efficacité intrinsèque inférieure à 1",
+      "difficulty": 2,
+      "explanation": "La bonne réponse est « Une efficacité intrinsèque inférieure à 1 ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 11,
+      "type": "QCM",
+      "theme": "Pharmacologie",
+      "question": "Un antagoniste compétitif déplace la courbe dose-réponse de l'agoniste vers :",
+      "options": [
+        "La gauche sans changer l'Emax",
+        "La droite sans changer l'Emax",
+        "La droite en diminuant l'Emax",
+        "La gauche en augmentant l'Emax"
+      ],
+      "answer": "La droite sans changer l'Emax",
+      "difficulty": 2,
+      "explanation": "La bonne réponse est « La droite sans changer l'Emax ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 12,
+      "type": "OPEN",
+      "theme": "Pharmacologie",
+      "question": "Expliquez la différence entre puissance et efficacité d'un médicament.",
+      "options": null,
+      "answer": "La puissance correspond à la dose nécessaire pour produire un effet (EC50), tandis que l'efficacité est l'effet maximal atteignable (Emax).",
+      "difficulty": 2,
+      "explanation": "Réponse-type attendue : La puissance correspond à la dose nécessaire pour produire un effet (EC50), tandis que l'efficacité est l'effet maximal atteignable (Emax).. Complète avec les exemples ou nuances vus dans ta fiche si l’énoncé le demande."
+    },
+    {
+      "id": 13,
+      "type": "QCM",
+      "theme": "Pharmacologie",
+      "question": "Quelle phase des essais cliniques teste l'efficacité du médicament sur un grand nombre de patients ?",
+      "options": [
+        "Phase I",
+        "Phase II",
+        "Phase III",
+        "Phase IV"
+      ],
+      "answer": "Phase III",
+      "difficulty": 2,
+      "explanation": "La bonne réponse est « Phase III ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 14,
+      "type": "QCM",
+      "theme": "Pharmacologie",
+      "question": "La liaison aux protéines plasmatiques (albumine) affecte principalement :",
+      "options": [
+        "L'absorption du médicament",
+        "La fraction libre active du médicament",
+        "Le métabolisme de phase II",
+        "L'excrétion biliaire"
+      ],
+      "answer": "La fraction libre active du médicament",
+      "difficulty": 2,
+      "explanation": "La bonne réponse est « La fraction libre active du médicament ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 15,
+      "type": "QCM",
+      "theme": "Pharmacologie",
+      "question": "Le phénomène de tachyphylaxie désigne :",
+      "options": [
+        "Une augmentation progressive de l'effet du médicament",
+        "Une diminution rapide de la réponse après administrations répétées",
+        "Une réaction allergique au médicament",
+        "Un effet toxique hépatique irréversible"
+      ],
+      "answer": "Une diminution rapide de la réponse après administrations répétées",
+      "difficulty": 3,
+      "explanation": "La bonne réponse est « Une diminution rapide de la réponse après administrations répétées ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 16,
+      "type": "QCM",
+      "theme": "Pharmacologie",
+      "question": "Quel isoenzyme du CYP450 métabolise le plus grand nombre de médicaments ?",
+      "options": [
+        "CYP1A2",
+        "CYP2D6",
+        "CYP3A4",
+        "CYP2C9"
+      ],
+      "answer": "CYP3A4",
+      "difficulty": 3,
+      "explanation": "La bonne réponse est « CYP3A4 ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 17,
+      "type": "QCM",
+      "theme": "Pharmacologie",
+      "question": "La clairance rénale d'un médicament dépend de :",
+      "options": [
+        "La filtration glomérulaire uniquement",
+        "La filtration glomérulaire, la sécrétion tubulaire et la réabsorption",
+        "Le débit sanguin hépatique",
+        "La liaison aux protéines uniquement"
+      ],
+      "answer": "La filtration glomérulaire, la sécrétion tubulaire et la réabsorption",
+      "difficulty": 3,
+      "explanation": "La bonne réponse est « La filtration glomérulaire, la sécrétion tubulaire et la réabsorption ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 18,
+      "type": "OPEN",
+      "theme": "Pharmacologie",
+      "question": "Décrivez ce qu'implique un médicament ayant une « marge thérapeutique étroite ».",
+      "options": null,
+      "answer": "Il y a une faible différence entre sa dose efficace et sa dose toxique, nécessitant un suivi thérapeutique strict.",
+      "difficulty": 3,
+      "explanation": "Réponse-type attendue : Il y a une faible différence entre sa dose efficace et sa dose toxique, nécessitant un suivi thérapeutique strict.. Complète avec les exemples ou nuances vus dans ta fiche si l’énoncé le demande."
+    },
+    {
+      "id": 19,
+      "type": "OPEN",
+      "theme": "Pharmacologie",
+      "question": "Qu'est-ce qu'un promédicament (prodrogue) ? Donnez un exemple.",
+      "options": null,
+      "answer": "C'est une substance inactive convertie en métabolite actif dans l'organisme, comme l'énalapril qui est converti en énalaprilate.",
+      "difficulty": 3,
+      "explanation": "Réponse-type attendue : C'est une substance inactive convertie en métabolite actif dans l'organisme, comme l'énalapril qui est converti en énalaprilate.. Complète avec les exemples ou nuances vus dans ta fiche si l’énoncé le demande."
+    },
+    {
+      "id": 20,
+      "type": "OPEN",
+      "theme": "Pharmacologie",
+      "question": "Expliquez le concept d'induction enzymatique et ses conséquences cliniques.",
+      "options": null,
+      "answer": "C'est l'augmentation de la synthèse des enzymes de métabolisation (CYP450), entraînant une accélération du métabolisme et une diminution de l'efficacité des médicaments co-administrés.",
+      "difficulty": 3,
+      "explanation": "Réponse-type attendue : C'est l'augmentation de la synthèse des enzymes de métabolisation (CYP450), entraînant une accélération du métabolisme et une diminution de l'efficacité des médicaments co-administrés.. Complète avec les exemples ou nuances vus dans ta fiche si l’énoncé le demande."
+    },
+    {
+      "id": 21,
+      "type": "QCM",
+      "theme": "Système Nerveux Autonome",
+      "question": "Quelles structures forment la composante centrale du système nerveux ?",
+      "options": [
+        "Hémisphères cérébraux, diencéphale, tronc cérébral, cervelet, moelle épinière",
+        "Nerfs spinaux et ganglions sensitifs",
+        "Organes effecteurs et système entérique",
+        "Récepteurs cutanés et voies afférentes"
+      ],
+      "answer": "Hémisphères cérébraux, diencéphale, tronc cérébral, cervelet, moelle épinière",
+      "difficulty": 1,
+      "explanation": "La bonne réponse est « Hémisphères cérébraux, diencéphale, tronc cérébral, cervelet, moelle épinière ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 22,
+      "type": "QCM",
+      "theme": "Système Nerveux Autonome",
+      "question": "Quel neurotransmetteur est libéré par les neurones post-ganglionnaires du système parasympathique au niveau du viscère ?",
+      "options": [
+        "Acétylcholine",
+        "Noradrénaline",
+        "Adrénaline",
+        "Dopamine"
+      ],
+      "answer": "Acétylcholine",
+      "difficulty": 1,
+      "explanation": "La bonne réponse est « Acétylcholine ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 23,
+      "type": "QCM",
+      "theme": "Système Nerveux Autonome",
+      "question": "Quel est l'effet de la stimulation sympathique sur les fibres radiales de l'iris ?",
+      "options": [
+        "Mydriase (contraction)",
+        "Myosis (contraction)",
+        "Relâchement du muscle ciliaire",
+        "Aucun effet direct"
+      ],
+      "answer": "Mydriase (contraction)",
+      "difficulty": 1,
+      "explanation": "La bonne réponse est « Mydriase (contraction) ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 24,
+      "type": "QCM",
+      "theme": "Système Nerveux Autonome",
+      "question": "Lors du baroréflexe, que provoque une hausse importante de la tension artérielle ?",
+      "options": [
+        "Une activation parasympathique et une inhibition sympathique",
+        "Une activation sympathique et une inhibition parasympathique",
+        "Une tachycardie compensatrice et une vasoconstriction",
+        "Une libération massive d'adrénaline par la surrénale"
+      ],
+      "answer": "Une activation parasympathique et une inhibition sympathique",
+      "difficulty": 2,
+      "explanation": "La bonne réponse est « Une activation parasympathique et une inhibition sympathique ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 25,
+      "type": "QCM",
+      "theme": "Système Nerveux Autonome",
+      "question": "Au niveau vasculaire, quel récepteur est stimulé par l'acétylcholine pour provoquer une vasodilatation via la production de NO endothélial ?",
+      "options": [
+        "Le récepteur muscarinique M3",
+        "Le récepteur alpha-1 adrénergique",
+        "Le récepteur bêta-2 adrénergique",
+        "Le récepteur nicotinique musculaire"
+      ],
+      "answer": "Le récepteur muscarinique M3",
+      "difficulty": 2,
+      "explanation": "La bonne réponse est « Le récepteur muscarinique M3 ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 26,
+      "type": "QCM",
+      "theme": "Système Nerveux Autonome",
+      "question": "Quel est l'effet du système sympathique via les récepteurs bêta-2 sur les muscles lisses bronchiques ?",
+      "options": [
+        "Relaxation (bronchodilatation)",
+        "Contraction (bronchoconstriction)",
+        "Augmentation drastique des sécrétions muqueuses",
+        "Des spasmes bronchiques rythmés"
+      ],
+      "answer": "Relaxation (bronchodilatation)",
+      "difficulty": 2,
+      "explanation": "La bonne réponse est « Relaxation (bronchodilatation) ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 27,
+      "type": "OPEN",
+      "theme": "Système Nerveux Autonome",
+      "question": "Décrivez la voie parasympathique impliquée dans le réflexe de la miction.",
+      "options": null,
+      "answer": "Les fibres parasympathiques (issues de S2-S4) entraînent la contraction du détrusor via les récepteurs muscariniques pour expulser l'urine.",
+      "difficulty": 2,
+      "explanation": "Réponse-type attendue : Les fibres parasympathiques (issues de S2-S4) entraînent la contraction du détrusor via les récepteurs muscariniques pour expulser l'urine.. Complète avec les exemples ou nuances vus dans ta fiche si l’énoncé le demande."
+    },
+    {
+      "id": 28,
+      "type": "QCM",
+      "theme": "Neurotransmetteurs",
+      "question": "À partir de quel acide aminé sont synthétisées les catécholamines ?",
+      "options": [
+        "Tryptophane",
+        "Tyrosine",
+        "Glutamate",
+        "Choline"
+      ],
+      "answer": "Tyrosine",
+      "difficulty": 1,
+      "explanation": "La bonne réponse est « Tyrosine ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 29,
+      "type": "QCM",
+      "theme": "Neurotransmetteurs",
+      "question": "Quel neurotransmetteur est dégradé par l'AChE (Acétylcholinestérase) ?",
+      "options": [
+        "Noradrénaline",
+        "Dopamine",
+        "Acétylcholine",
+        "Adrénaline"
+      ],
+      "answer": "Acétylcholine",
+      "difficulty": 1,
+      "explanation": "La bonne réponse est « Acétylcholine ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 30,
+      "type": "QCM",
+      "theme": "Neurotransmetteurs",
+      "question": "Quelle enzyme catalyse la transformation de la L-DOPA en Dopamine ?",
+      "options": [
+        "Tyrosine hydroxylase",
+        "DOPA décarboxylase",
+        "Dopamine bêta hydroxylase",
+        "Mono-Amino-Oxydase (MAO)"
+      ],
+      "answer": "DOPA décarboxylase",
+      "difficulty": 2,
+      "explanation": "La bonne réponse est « DOPA décarboxylase ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 31,
+      "type": "QCM",
+      "theme": "Neurotransmetteurs",
+      "question": "Les récepteurs bêta (1, 2, 3) sont couplés à :",
+      "options": [
+        "Une inhibition de l'AC (AC-)",
+        "Une activation de la PLC (PLC+)",
+        "Une activation de l'AC (AC+)",
+        "Un canal potassique (K+)"
+      ],
+      "answer": "Une activation de l'AC (AC+)",
+      "difficulty": 2,
+      "explanation": "La bonne réponse est « Une activation de l'AC (AC+) ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 32,
+      "type": "OPEN",
+      "theme": "Neurotransmetteurs",
+      "question": "Quelles sont les deux enzymes impliquées dans la dégradation de la noradrénaline ?",
+      "options": null,
+      "answer": "La Mono-Amino-Oxydase (MAO) et la COMT.",
+      "difficulty": 2,
+      "explanation": "Réponse-type attendue : La Mono-Amino-Oxydase (MAO) et la COMT.. Complète avec les exemples ou nuances vus dans ta fiche si l’énoncé le demande."
+    },
+    {
+      "id": 33,
+      "type": "QCM",
+      "theme": "Motricité et Posture",
+      "question": "Dans quelle fonction motrice interviennent principalement les noyaux gris centraux ?",
+      "options": [
+        "Déclenchement et fin de séquence",
+        "Relais sensitif de la douleur",
+        "Contrôle exclusif de l'équilibre",
+        "Audition et vision"
+      ],
+      "answer": "Déclenchement et fin de séquence",
+      "difficulty": 1,
+      "explanation": "La bonne réponse est « Déclenchement et fin de séquence ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 34,
+      "type": "QCM",
+      "theme": "Motricité et Posture",
+      "question": "Quelles structures forment le striatum ?",
+      "options": [
+        "Globus pallidus et Thalamus",
+        "Noyau caudé et Putamen",
+        "Substance noire et Amygdale",
+        "Noyau sous-thalamique et Cortex"
+      ],
+      "answer": "Noyau caudé et Putamen",
+      "difficulty": 1,
+      "explanation": "La bonne réponse est « Noyau caudé et Putamen ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 35,
+      "type": "QCM",
+      "theme": "Motricité et Posture",
+      "question": "Quelle est la cause anatomique de la maladie de Parkinson ?",
+      "options": [
+        "Dégénérescence de la voie cortico-spinale",
+        "Lésion directe du cervelet",
+        "Dégénérescence de la voie nigro-striée (dopaminergique)",
+        "Dégénérescence de la voie striato-nigrale (GABAergique)"
+      ],
+      "answer": "Dégénérescence de la voie nigro-striée (dopaminergique)",
+      "difficulty": 1,
+      "explanation": "La bonne réponse est « Dégénérescence de la voie nigro-striée (dopaminergique) ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 36,
+      "type": "QCM",
+      "theme": "Motricité et Posture",
+      "question": "Quelle dégénérescence neurologique spécifique cause la chorée de Huntington ?",
+      "options": [
+        "La dégénérescence de la voie nigro-striée (dopaminergique)",
+        "La dégénérescence de la voie cortico-spinale",
+        "La dégénérescence de la voie striato-nigrale (GABAergique)",
+        "La dégénérescence de la voie thalamo-corticale"
+      ],
+      "answer": "La dégénérescence de la voie striato-nigrale (GABAergique)",
+      "difficulty": 3,
+      "explanation": "La bonne réponse est « La dégénérescence de la voie striato-nigrale (GABAergique) ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 37,
+      "type": "OPEN",
+      "theme": "Motricité et Posture",
+      "question": "Vers quelle structure le Globus Pallidus interne (GPi) projette-t-il pour l'inhiber toniquement ?",
+      "options": null,
+      "answer": "Le thalamus.",
+      "difficulty": 1,
+      "explanation": "Réponse-type attendue : Le thalamus.. Complète avec les exemples ou nuances vus dans ta fiche si l’énoncé le demande."
+    },
+    {
+      "id": 38,
+      "type": "OPEN",
+      "theme": "Motricité et Posture",
+      "question": "Quel rôle joue le cervelet dans la séquence d'activation des aires motrices ?",
+      "options": null,
+      "answer": "Il intervient dans l'initiation et la coordination.",
+      "difficulty": 1,
+      "explanation": "Réponse-type attendue : Il intervient dans l'initiation et la coordination.. Complète avec les exemples ou nuances vus dans ta fiche si l’énoncé le demande."
+    },
+    {
+      "id": 39,
+      "type": "QCM",
+      "theme": "Motricité et Posture",
+      "question": "Quelle est la conséquence directe d'une intention de mouvement sur le fonctionnement thalamique ?",
+      "options": [
+        "Une inhibition tonique renforcée",
+        "La destruction des neurones thalamiques",
+        "Une dé-inhibition du thalamus",
+        "Une diminution de l'activation corticale"
+      ],
+      "answer": "Une dé-inhibition du thalamus",
+      "difficulty": 2,
+      "explanation": "La bonne réponse est « Une dé-inhibition du thalamus ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 40,
+      "type": "QCM",
+      "theme": "Motricité et Posture",
+      "question": "Quel est le rôle fonctionnel fondamental de la moelle épinière pour la motricité ?",
+      "options": [
+        "Centre de l'équilibre",
+        "Relais sensitif cortical",
+        "Centre réflexe",
+        "Programmation du mouvement"
+      ],
+      "answer": "Centre réflexe",
+      "difficulty": 1,
+      "explanation": "La bonne réponse est « Centre réflexe ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 41,
+      "type": "QCM",
+      "theme": "Motricité et Posture",
+      "question": "Quel ion est massivement libéré par le réticulum sarcoplasmique lors de l'excitation-contraction musculaire ?",
+      "options": [
+        "Sodium (Na+)",
+        "Potassium (K+)",
+        "Calcium (Ca++)",
+        "Magnésium (Mg++)"
+      ],
+      "answer": "Calcium (Ca++)",
+      "difficulty": 1,
+      "explanation": "La bonne réponse est « Calcium (Ca++) ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 42,
+      "type": "QCM",
+      "theme": "Motricité et Posture",
+      "question": "Quel neurotransmetteur est libéré au niveau de la plaque motrice ?",
+      "options": [
+        "Dopamine",
+        "Sérotonine",
+        "Acétylcholine (ACh)",
+        "Adrénaline"
+      ],
+      "answer": "Acétylcholine (ACh)",
+      "difficulty": 1,
+      "explanation": "La bonne réponse est « Acétylcholine (ACh) ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 43,
+      "type": "QCM",
+      "theme": "Motricité et Posture",
+      "question": "Quel récepteur est responsable du déclenchement du réflexe myotatique inverse ?",
+      "options": [
+        "Le fuseau neuro-musculaire",
+        "L'organe tendineux de Golgi",
+        "Le nocicepteur cutané",
+        "La plaque motrice"
+      ],
+      "answer": "L'organe tendineux de Golgi",
+      "difficulty": 2,
+      "explanation": "La bonne réponse est « L'organe tendineux de Golgi ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 44,
+      "type": "QCM",
+      "theme": "Motricité et Posture",
+      "question": "Quelle fibre sensitive est stimulée par l'étirement du fuseau neuro-musculaire ?",
+      "options": [
+        "Fibre sensitive Ia",
+        "Fibre sensitive Ib",
+        "Fibre Ad",
+        "Fibre C"
+      ],
+      "answer": "Fibre sensitive Ia",
+      "difficulty": 2,
+      "explanation": "La bonne réponse est « Fibre sensitive Ia ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 45,
+      "type": "QCM",
+      "theme": "Motricité et Posture",
+      "question": "Lors d'un réflexe myotatique, le relâchement du muscle antagoniste est rendu possible grâce à :",
+      "options": [
+        "Un interneurone inhibiteur",
+        "L'activation directe d'un motoneurone gamma",
+        "La stimulation de l'organe tendineux de Golgi",
+        "L'inhibition des voies descendantes pyramidales"
+      ],
+      "answer": "Un interneurone inhibiteur",
+      "difficulty": 2,
+      "explanation": "La bonne réponse est « Un interneurone inhibiteur ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 46,
+      "type": "OPEN",
+      "theme": "Motricité et Posture",
+      "question": "Comment nomme-t-on l'organisation topographique de l'aire motrice primaire sur le cortex ?",
+      "options": null,
+      "answer": "On nomme cette cartographie fonctionnelle l'homonculus moteur.",
+      "difficulty": 2,
+      "explanation": "Réponse-type attendue : On nomme cette cartographie fonctionnelle l'homonculus moteur.. Complète avec les exemples ou nuances vus dans ta fiche si l’énoncé le demande."
+    },
+    {
+      "id": 47,
+      "type": "QCM",
+      "theme": "Motricité et Posture",
+      "question": "Quelle est la fonction précise des motoneurones gamma dans le contrôle moteur ?",
+      "options": [
+        "Activer directement la contraction des fibres musculaires extrafusales",
+        "Ajuster le niveau de tension des fibres intrafusales pour contrôler l'activité fusoriale",
+        "Inhiber la transmission synaptique des réflexes nociceptifs",
+        "Relayer les informations volontaires du cortex vers la moelle"
+      ],
+      "answer": "Ajuster le niveau de tension des fibres intrafusales pour contrôler l'activité fusoriale",
+      "difficulty": 3,
+      "explanation": "La bonne réponse est « Ajuster le niveau de tension des fibres intrafusales pour contrôler l'activité fusoriale ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 48,
+      "type": "QCM",
+      "theme": "Motricité et Posture",
+      "question": "Quelle voie descendante issue des centres supérieurs permet de moduler l'activité des motoneurones gamma ?",
+      "options": [
+        "Le faisceau cortico-spinal direct",
+        "Le faisceau réticulo-spinal",
+        "Le faisceau spino-thalamique",
+        "La voie visuo-spatiale"
+      ],
+      "answer": "Le faisceau réticulo-spinal",
+      "difficulty": 3,
+      "explanation": "La bonne réponse est « Le faisceau réticulo-spinal ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 49,
+      "type": "QCM",
+      "theme": "Posturologie et Marche",
+      "question": "Quel est l'organe de l'équilibre situé dans l'oreille interne ?",
+      "options": [
+        "Le vestibule",
+        "La cochlée",
+        "Le tympan",
+        "La trompe d'Eustache"
+      ],
+      "answer": "Le vestibule",
+      "difficulty": 1,
+      "explanation": "La bonne réponse est « Le vestibule ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 50,
+      "type": "QCM",
+      "theme": "Posturologie et Marche",
+      "question": "Que détecte l'inclinaison de la tête au niveau de l'utricule et du saccule ?",
+      "options": [
+        "L'accélération angulaire",
+        "La rotation des yeux",
+        "L'audition",
+        "L'accélération linéaire"
+      ],
+      "answer": "L'accélération linéaire",
+      "difficulty": 1,
+      "explanation": "La bonne réponse est « L'accélération linéaire ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 51,
+      "type": "QCM",
+      "theme": "Posturologie et Marche",
+      "question": "Que détectent les crêtes ampullaires des canaux semi-circulaires ?",
+      "options": [
+        "L'accélération linéaire",
+        "L'accélération angulaire",
+        "Les ondes sonores",
+        "La pression artérielle"
+      ],
+      "answer": "L'accélération angulaire",
+      "difficulty": 3,
+      "explanation": "La bonne réponse est « L'accélération angulaire ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 52,
+      "type": "QCM",
+      "theme": "Posturologie et Marche",
+      "question": "Quel lobe cérébelleux (archéo-cervelet) est principalement impliqué dans l'équilibre ?",
+      "options": [
+        "Lobe frontal",
+        "Lobe flocculo-nodulaire",
+        "Lobe temporal",
+        "Vermis"
+      ],
+      "answer": "Lobe flocculo-nodulaire",
+      "difficulty": 1,
+      "explanation": "La bonne réponse est « Lobe flocculo-nodulaire ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 53,
+      "type": "QCM",
+      "theme": "Posturologie et Marche",
+      "question": "Pendant la marche, quelle est l'amplitude de la trajectoire verticale du centre de gravité (qui décrit une courbe sinusoïdale) ?",
+      "options": [
+        "Environ 5 cm",
+        "Environ 10 cm",
+        "Moins de 1 cm",
+        "Environ 15 cm"
+      ],
+      "answer": "Environ 5 cm",
+      "difficulty": 2,
+      "explanation": "La bonne réponse est « Environ 5 cm ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 54,
+      "type": "QCM",
+      "theme": "Posturologie et Marche",
+      "question": "Dans le cycle de la marche, quelle phase dure le plus longtemps et représente environ 40 % du cycle ?",
+      "options": [
+        "L'appui unilatéral (pied à plat)",
+        "L'appui postérieur d'élan (DAP D)",
+        "L'attaque du talon au sol",
+        "Le double appui antérieur de réception"
+      ],
+      "answer": "L'appui unilatéral (pied à plat)",
+      "difficulty": 2,
+      "explanation": "La bonne réponse est « L'appui unilatéral (pied à plat) ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 55,
+      "type": "QCM",
+      "theme": "Posturologie et Marche",
+      "question": "Durant l'appui unilatéral de la marche, quel groupe musculaire maintient l'équilibre du bassin qui a tendance à s'incliner du côté oscillant ?",
+      "options": [
+        "Les muscles fessiers",
+        "Les muscles ischio-jambiers",
+        "Le muscle psoas",
+        "Le triceps sural"
+      ],
+      "answer": "Les muscles fessiers",
+      "difficulty": 3,
+      "explanation": "La bonne réponse est « Les muscles fessiers ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 56,
+      "type": "QCM",
+      "theme": "Thermorégulation",
+      "question": "Chez l'homme homéotherme, à combien s'élève approximativement la température centrale du noyau thermique ?",
+      "options": [
+        "36°C",
+        "37°C",
+        "38°C",
+        "39°C"
+      ],
+      "answer": "37°C",
+      "difficulty": 1,
+      "explanation": "La bonne réponse est « 37°C ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 57,
+      "type": "QCM",
+      "theme": "Thermorégulation",
+      "question": "Quelle structure cérébrale est considérée comme le principal centre thermorégulateur ?",
+      "options": [
+        "Le cervelet",
+        "L'aire pré-optique de l'hypothalamus antérieur",
+        "Le bulbe rachidien",
+        "Le thalamus"
+      ],
+      "answer": "L'aire pré-optique de l'hypothalamus antérieur",
+      "difficulty": 1,
+      "explanation": "La bonne réponse est « L'aire pré-optique de l'hypothalamus antérieur ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 58,
+      "type": "QCM",
+      "theme": "Thermorégulation",
+      "question": "Quel mécanisme de thermolyse est déclenché par l'organisme dans un environnement chaud ?",
+      "options": [
+        "Vasoconstriction cutanée",
+        "Frisson des muscles squelettiques",
+        "Vasodilatation cutanée",
+        "Augmentation de l'activité de la graisse brune"
+      ],
+      "answer": "Vasodilatation cutanée",
+      "difficulty": 1,
+      "explanation": "La bonne réponse est « Vasodilatation cutanée ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 59,
+      "type": "QCM",
+      "theme": "Thermorégulation",
+      "question": "Au niveau hypothalamique, quel est le mode d'action des substances pyrogènes (comme les PGE2) lors d'une fièvre ?",
+      "options": [
+        "Elles stimulent la sudation",
+        "Elles modifient la température de référence via inhibition de l'aire pré-optique",
+        "Elles provoquent une vasodilatation massive",
+        "Elles détruisent le noyau supra-chiasmatique"
+      ],
+      "answer": "Elles modifient la température de référence via inhibition de l'aire pré-optique",
+      "difficulty": 3,
+      "explanation": "La bonne réponse est « Elles modifient la température de référence via inhibition de l'aire pré-optique ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 60,
+      "type": "QCM",
+      "theme": "Thermorégulation",
+      "question": "Quel neurotransmetteur est libéré par les neurones du noyau du raphé pour stimuler le frisson via la moelle épinière ?",
+      "options": [
+        "Le GABA",
+        "L'acétylcholine",
+        "La dopamine",
+        "Le glutamate (Glu)"
+      ],
+      "answer": "Le glutamate (Glu)",
+      "difficulty": 3,
+      "explanation": "La bonne réponse est « Le glutamate (Glu) ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 61,
+      "type": "QCM",
+      "theme": "Sommeil et Rythmes Biologiques",
+      "question": "Quelle structure représente le générateur endogène de l'horloge biologique humaine ?",
+      "options": [
+        "L'épiphyse",
+        "Le noyau supra-chiasmatique de l'hypothalamus",
+        "Le thalamus",
+        "Le cervelet"
+      ],
+      "answer": "Le noyau supra-chiasmatique de l'hypothalamus",
+      "difficulty": 1,
+      "explanation": "La bonne réponse est « Le noyau supra-chiasmatique de l'hypothalamus ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 62,
+      "type": "QCM",
+      "theme": "Sommeil et Rythmes Biologiques",
+      "question": "Quelle hormone est considérée comme le synchronisateur endogène principal du rythme veille-sommeil ?",
+      "options": [
+        "Sérotonine",
+        "Dopamine",
+        "Cortisol",
+        "Mélatonine"
+      ],
+      "answer": "Mélatonine",
+      "difficulty": 1,
+      "explanation": "La bonne réponse est « Mélatonine ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 63,
+      "type": "QCM",
+      "theme": "Sommeil et Rythmes Biologiques",
+      "question": "Sur un électroencéphalogramme (EEG), à quel stade correspondent les ondes lentes de grande amplitude dites ondes delta ?",
+      "options": [
+        "Veille active",
+        "Sommeil lent léger (N1)",
+        "Sommeil lent profond (N3)",
+        "Sommeil paradoxal (SP)"
+      ],
+      "answer": "Sommeil lent profond (N3)",
+      "difficulty": 1,
+      "explanation": "La bonne réponse est « Sommeil lent profond (N3) ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 64,
+      "type": "QCM",
+      "theme": "Sommeil et Rythmes Biologiques",
+      "question": "Quelles ondes EEG sont caractéristiques d'un état de veille calme avec les yeux fermés ?",
+      "options": [
+        "Ondes alpha",
+        "Ondes bêta",
+        "Ondes theta",
+        "Ondes delta"
+      ],
+      "answer": "Ondes alpha",
+      "difficulty": 1,
+      "explanation": "La bonne réponse est « Ondes alpha ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 65,
+      "type": "OPEN",
+      "theme": "Sommeil et Rythmes Biologiques",
+      "question": "Quelle caractéristique musculaire distingue le sommeil paradoxal (SP) des autres phases de sommeil ?",
+      "options": null,
+      "answer": "L'atonie posturale, c'est-à-dire une abolition complète du tonus musculaire.",
+      "difficulty": 2,
+      "explanation": "Réponse-type attendue : L'atonie posturale, c'est-à-dire une abolition complète du tonus musculaire.. Complète avec les exemples ou nuances vus dans ta fiche si l’énoncé le demande."
+    },
+    {
+      "id": 66,
+      "type": "OPEN",
+      "theme": "Sommeil et Rythmes Biologiques",
+      "question": "Citez deux structures ou noyaux appartenant au réseau exécutif de l'éveil du tronc cérébral.",
+      "options": null,
+      "answer": "Le locus coeruleus, le noyau du raphé dorsal, ou le noyau de Meynert.",
+      "difficulty": 2,
+      "explanation": "Réponse-type attendue : Le locus coeruleus, le noyau du raphé dorsal, ou le noyau de Meynert.. Complète avec les exemples ou nuances vus dans ta fiche si l’énoncé le demande."
+    },
+    {
+      "id": 67,
+      "type": "QCM",
+      "theme": "Physiologie Digestive",
+      "question": "Quel type de sécrétion est principalement régulé au niveau de l'estomac lors de la digestion ?",
+      "options": [
+        "Sécrétion basique",
+        "Sécrétion biliaire",
+        "Sécrétion acide",
+        "Sécrétion salivaire"
+      ],
+      "answer": "Sécrétion acide",
+      "difficulty": 1,
+      "explanation": "La bonne réponse est « Sécrétion acide ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 68,
+      "type": "OPEN",
+      "theme": "Physiologie Digestive",
+      "question": "Quelle est la principale hormone gastro-intestinale impliquée dans la stimulation de la sécrétion acide gastrique ?",
+      "options": null,
+      "answer": "La gastrine, libérée par les cellules G de l'antre gastrique.",
+      "difficulty": 2,
+      "explanation": "Réponse-type attendue : La gastrine, libérée par les cellules G de l'antre gastrique.. Complète avec les exemples ou nuances vus dans ta fiche si l’énoncé le demande."
+    },
+    {
+      "id": 69,
+      "type": "QCM",
+      "theme": "Physiologie Digestive",
+      "question": "Lequel de ces signaux agit de façon paracrine ou endocrine pour inhiber la sécrétion d'acide gastrique ?",
+      "options": [
+        "Gastrine",
+        "Acétylcholine",
+        "Histamine",
+        "Somatostatine"
+      ],
+      "answer": "Somatostatine",
+      "difficulty": 3,
+      "explanation": "La bonne réponse est « Somatostatine ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 70,
+      "type": "QCM",
+      "theme": "Mémoire",
+      "question": "Combien d'éléments la mémoire de travail peut-elle retenir en moyenne ?",
+      "options": [
+        "3 ± 1",
+        "7 ± 2",
+        "12 ± 3",
+        "Un nombre illimité"
+      ],
+      "answer": "7 ± 2",
+      "difficulty": 1,
+      "explanation": "La bonne réponse est « 7 ± 2 ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 71,
+      "type": "QCM",
+      "theme": "Mémoire",
+      "question": "Quelle mémoire est sollicitée pour se souvenir de la capitale du Japon ?",
+      "options": [
+        "Mémoire épisodique",
+        "Mémoire procédurale",
+        "Mémoire sémantique",
+        "Mémoire de travail"
+      ],
+      "answer": "Mémoire sémantique",
+      "difficulty": 1,
+      "explanation": "La bonne réponse est « Mémoire sémantique ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 72,
+      "type": "QCM",
+      "theme": "Mémoire",
+      "question": "Quel célèbre patient a subi l'ablation bilatérale des hippocampes en 1953 pour soigner son épilepsie ?",
+      "options": [
+        "Phineas Gage",
+        "Henry Molaison (H.M.)",
+        "Alois Alzheimer",
+        "Ivan Pavlov"
+      ],
+      "answer": "Henry Molaison (H.M.)",
+      "difficulty": 1,
+      "explanation": "La bonne réponse est « Henry Molaison (H.M.) ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 73,
+      "type": "QCM",
+      "theme": "Mémoire",
+      "question": "Quelle structure cérébrale a été démontrée comme indispensable à la mémorisation spatiale ?",
+      "options": [
+        "L'hippocampe",
+        "L'amygdale",
+        "Le cervelet",
+        "Le bulbe olfactif"
+      ],
+      "answer": "L'hippocampe",
+      "difficulty": 1,
+      "explanation": "La bonne réponse est « L'hippocampe ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 74,
+      "type": "QCM",
+      "theme": "Mémoire",
+      "question": "Qu'est-ce que l'amorçage dans le cadre de la mémoire non déclarative ?",
+      "options": [
+        "Associer une cloche à la salivation",
+        "Énoncer un mot à partir de son préfixe en fonction du contexte",
+        "Conduire une voiture automatiquement",
+        "Mémoriser un événement traumatisant"
+      ],
+      "answer": "Énoncer un mot à partir de son préfixe en fonction du contexte",
+      "difficulty": 1,
+      "explanation": "La bonne réponse est « Énoncer un mot à partir de son préfixe en fonction du contexte ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 75,
+      "type": "QCM",
+      "theme": "Mémoire",
+      "question": "Quel type d'apprentissage associatif correspond au fait de s'arrêter au feu rouge ?",
+      "options": [
+        "Conditionnement répondant",
+        "Conditionnement opérant",
+        "Amorçage",
+        "Habituation"
+      ],
+      "answer": "Conditionnement opérant",
+      "difficulty": 1,
+      "explanation": "La bonne réponse est « Conditionnement opérant ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 76,
+      "type": "QCM",
+      "theme": "Mémoire",
+      "question": "Quel circuit correspond à la boucle tri-synaptique de l'hippocampe ?",
+      "options": [
+        "Cortex entorhinal -> Gyrus dentelé -> CA3 -> CA1",
+        "Subiculum -> CA1 -> CA3 -> Gyrus dentelé",
+        "Thalamus -> Amygdale -> CA1 -> Fornix",
+        "Gyrus cingulaire -> CA3 -> Cortex entorhinal -> Subiculum"
+      ],
+      "answer": "Cortex entorhinal -> Gyrus dentelé -> CA3 -> CA1",
+      "difficulty": 2,
+      "explanation": "La bonne réponse est « Cortex entorhinal -> Gyrus dentelé -> CA3 -> CA1 ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 77,
+      "type": "QCM",
+      "theme": "Mémoire",
+      "question": "Selon l'étude de Mueller et Oppenheimer (2014), quel est l'effet de l'écriture manuscrite sur la mémorisation ?",
+      "options": [
+        "Elle distrait l'attention et réduit la mémoire factuelle",
+        "Elle fixe les concepts plus efficacement en stimulant les boucles phonologiques et visuo-spatiales",
+        "Elle est moins efficace que le clavier car plus lente",
+        "Elle inhibe les associations proprioceptives"
+      ],
+      "answer": "Elle fixe les concepts plus efficacement en stimulant les boucles phonologiques et visuo-spatiales",
+      "difficulty": 2,
+      "explanation": "La bonne réponse est « Elle fixe les concepts plus efficacement en stimulant les boucles phonologiques et visuo-spatiales ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 78,
+      "type": "QCM",
+      "theme": "Émotions et Récompense",
+      "question": "Quelle structure cérébrale s'active spécifiquement lors de la présentation d'une image à connotation négative ?",
+      "options": [
+        "L'amygdale",
+        "Le thalamus",
+        "L'aire de Wernicke",
+        "Le gyrus de Heschl"
+      ],
+      "answer": "L'amygdale",
+      "difficulty": 2,
+      "explanation": "La bonne réponse est « L'amygdale ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 79,
+      "type": "QCM",
+      "theme": "Émotions et Récompense",
+      "question": "Quel est le neurotransmetteur principal du système de récompense ?",
+      "options": [
+        "Sérotonine",
+        "Acétylcholine",
+        "Dopamine",
+        "Glutamate"
+      ],
+      "answer": "Dopamine",
+      "difficulty": 1,
+      "explanation": "La bonne réponse est « Dopamine ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 80,
+      "type": "QCM",
+      "theme": "Émotions et Récompense",
+      "question": "Quel est le mode d'action pharmacologique de la cocaïne sur le système de récompense ?",
+      "options": [
+        "Elle inhibe la recapture de la dopamine",
+        "Elle stimule directement la libération de dopamine",
+        "Elle active les récepteurs nicotiniques de l'ATV",
+        "Elle stimule la libération d'endorphines"
+      ],
+      "answer": "Elle inhibe la recapture de la dopamine",
+      "difficulty": 2,
+      "explanation": "La bonne réponse est « Elle inhibe la recapture de la dopamine ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    },
+    {
+      "id": 81,
+      "type": "QCM",
+      "theme": "Émotions et Récompense",
+      "question": "Quelles structures forment principalement le circuit de Papez (circuit HMTC) lié aux émotions ?",
+      "options": [
+        "Hippocampe, Corps mamillaires, Thalamus, Gyrus cingulaire",
+        "Amygdale, Noyau caudé, Putamen, Cervelet",
+        "Aire tegmentale ventrale, Noyau accumbens, Cortex préfrontal",
+        "Bulbe olfactif, Cortex entorhinal, Hypophyse"
+      ],
+      "answer": "Hippocampe, Corps mamillaires, Thalamus, Gyrus cingulaire",
+      "difficulty": 2,
+      "explanation": "La bonne réponse est « Hippocampe, Corps mamillaires, Thalamus, Gyrus cingulaire ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+    }
+  ]
+}

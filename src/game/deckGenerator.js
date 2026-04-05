@@ -23,6 +23,7 @@ Règles :
 - Les questions doivent couvrir les concepts clés du cours de manière variée.
 - Pour les QCM, les distracteurs doivent être plausibles mais clairement faux.
 - Pour les OPEN, la réponse doit être concise (1-2 phrases).
+- Chaque carte doit inclure "explanation" : 1 à 3 phrases en français qui expliquent POURQUOI la bonne réponse est correcte (rappel du mécanisme, piège fréquent, ou lien avec le cours). Indispensable pour l’apprentissage après une erreur.
 - Chaque question doit avoir un id unique (entier séquentiel).
 - Si l'utilisateur fournit des consignes spécifiques pour ce document, applique-les en priorité (thèmes à privilégier, style, niveau, langue, interdits, proportion QCM/OPEN, etc.) tout en respectant le format JSON attendu.
 
@@ -46,7 +47,7 @@ ${text}
 
 Génère exactement ${count} questions de révision sur le thème "${theme}".
 
-Format JSON attendu :
+Format JSON attendu (chaque carte a une clé "explanation" obligatoire) :
 {
   "theme": "${theme}",
   "cards": [
@@ -56,6 +57,7 @@ Format JSON attendu :
       "question": "...",
       "options": ["A", "B", "C", "D"],
       "answer": "B",
+      "explanation": "Pourquoi B est correct et comment écarter les autres options.",
       "difficulty": 1
     },
     {
@@ -63,6 +65,7 @@ Format JSON attendu :
       "type": "OPEN",
       "question": "...",
       "answer": "...",
+      "explanation": "Points clés à mentionner et erreurs fréquentes.",
       "difficulty": 2
     }
   ]
@@ -277,6 +280,7 @@ function autoFixDeck(deck) {
     }
 
     if (c.answer == null) continue
+    if (c.explanation != null && typeof c.explanation !== 'string') delete c.explanation
 
     fixed.cards.push(c)
   }
