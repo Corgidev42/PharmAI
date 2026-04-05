@@ -71,12 +71,12 @@ function QCMResultReveal({ card, userPick }) {
             >
               {isCorrect && (
                 <span className="mb-1 block text-[10px] font-extrabold uppercase tracking-wide text-emerald-200/95">
-                  Non — c’était celle-ci
+                  Bonne réponse
                 </span>
               )}
               {isWrongPick && (
                 <span className="mb-1 block text-[10px] font-extrabold uppercase tracking-wide text-rose-200/90">
-                  Ton choix
+                  Mauvaise réponse
                 </span>
               )}
               <span className="block leading-snug">{opt}</span>
