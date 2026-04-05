@@ -1,5 +1,5 @@
 {
-  "theme": "Physiologie",
+  "theme": "Compilation Globale : Pharmacologie, Physiologie, Système Nerveux et Motricité",
   "cards": [
     {
       "id": 1,
@@ -14,7 +14,7 @@
       ],
       "answer": "Blocage des récepteurs bêta-adrénergiques",
       "difficulty": 1,
-      "explanation": "La bonne réponse est « Blocage des récepteurs bêta-adrénergiques ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "Les bêta-bloquants agissent en bloquant les récepteurs bêta-adrénergiques, empêchant ainsi l'action des catécholamines (comme la noradrénaline) sur le cœur et les vaisseaux."
     },
     {
       "id": 2,
@@ -29,7 +29,7 @@
       ],
       "answer": "Intraveineuse",
       "difficulty": 1,
-      "explanation": "La bonne réponse est « Intraveineuse ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "La voie intraveineuse offre une biodisponibilité de 100 % car le principe actif est injecté directement dans la circulation systémique, évitant ainsi l'effet de premier passage hépatique."
     },
     {
       "id": 3,
@@ -44,7 +44,7 @@
       ],
       "answer": "Foie",
       "difficulty": 1,
-      "explanation": "La bonne réponse est « Foie ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "Le foie est l'organe central du métabolisme des médicaments, principalement grâce à son abondance en enzymes de biotransformation, notamment celles de la famille du cytochrome P450."
     },
     {
       "id": 4,
@@ -59,7 +59,7 @@
       ],
       "answer": "Temps nécessaire pour que la concentration plasmatique diminue de moitié",
       "difficulty": 1,
-      "explanation": "La bonne réponse est « Temps nécessaire pour que la concentration plasmatique diminue de moitié ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "La demi-vie d'élimination (T1/2) est le paramètre pharmacocinétique défini comme le temps requis pour que la concentration plasmatique du médicament soit réduite de 50 %."
     },
     {
       "id": 5,
@@ -74,7 +74,7 @@
       ],
       "answer": "AUC (Aire sous la courbe)",
       "difficulty": 1,
-      "explanation": "La bonne réponse est « AUC (Aire sous la courbe) ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "L'AUC (Area Under the Curve) intègre la concentration plasmatique en fonction du temps, reflétant ainsi l'exposition globale de l'organisme au principe actif."
     },
     {
       "id": 6,
@@ -89,7 +89,7 @@
       ],
       "answer": "La surveillance et l'évaluation des effets indésirables après commercialisation",
       "difficulty": 1,
-      "explanation": "La bonne réponse est « La surveillance et l'évaluation des effets indésirables après commercialisation ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "La pharmacovigilance (phase IV) est le système de surveillance post-AMM permettant de recenser et d'évaluer les effets indésirables d'un médicament en conditions réelles d'utilisation."
     },
     {
       "id": 7,
@@ -104,7 +104,7 @@
       ],
       "answer": "Biotransformation hépatique",
       "difficulty": 2,
-      "explanation": "La bonne réponse est « Biotransformation hépatique ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "Les cytochromes P450 (ex: CYP3A4) sont la principale famille d'enzymes responsables de la biotransformation (métabolisme de phase I) des médicaments au niveau du foie."
     },
     {
       "id": 8,
@@ -114,7 +114,7 @@
       "options": null,
       "answer": "C'est le métabolisme d'un médicament par le foie avant qu'il n'atteigne la circulation systémique, réduisant sa biodisponibilité.",
       "difficulty": 2,
-      "explanation": "Réponse-type attendue : C'est le métabolisme d'un médicament par le foie avant qu'il n'atteigne la circulation systémique, réduisant sa biodisponibilité.. Complète avec les exemples ou nuances vus dans ta fiche si l’énoncé le demande."
+      "explanation": "Lors d'une prise orale, le médicament passe par la veine porte et subit une dégradation partielle par les enzymes hépatiques avant de rejoindre la circulation générale, ce qui diminue sa fraction active."
     },
     {
       "id": 9,
@@ -129,7 +129,7 @@
       ],
       "answer": "Liaison ionique",
       "difficulty": 2,
-      "explanation": "La bonne réponse est « Liaison ionique ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "Contrairement aux liaisons covalentes (très fortes et irréversibles), les liaisons ioniques, hydrogène ou de Van der Waals sont des interactions de faible énergie permettant une liaison réversible."
     },
     {
       "id": 10,
@@ -144,7 +144,7 @@
       ],
       "answer": "Une efficacité intrinsèque inférieure à 1",
       "difficulty": 2,
-      "explanation": "La bonne réponse est « Une efficacité intrinsèque inférieure à 1 ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "Un agoniste partiel se lie au récepteur mais ne parvient pas à induire la réponse physiologique maximale (son Emax est inférieur à celui d'un agoniste complet, efficacité intrinsèque < 1)."
     },
     {
       "id": 11,
@@ -159,7 +159,7 @@
       ],
       "answer": "La droite sans changer l'Emax",
       "difficulty": 2,
-      "explanation": "La bonne réponse est « La droite sans changer l'Emax ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "En occupant le même site de liaison, l'antagoniste compétitif oblige à augmenter la dose d'agoniste pour atteindre le même effet (déplacement vers la droite, baisse de puissance), sans altérer l'effet maximal (Emax)."
     },
     {
       "id": 12,
@@ -169,7 +169,7 @@
       "options": null,
       "answer": "La puissance correspond à la dose nécessaire pour produire un effet (EC50), tandis que l'efficacité est l'effet maximal atteignable (Emax).",
       "difficulty": 2,
-      "explanation": "Réponse-type attendue : La puissance correspond à la dose nécessaire pour produire un effet (EC50), tandis que l'efficacité est l'effet maximal atteignable (Emax).. Complète avec les exemples ou nuances vus dans ta fiche si l’énoncé le demande."
+      "explanation": "L'efficacité reflète la réponse biologique maximale qu'une molécule peut induire (hauteur de la courbe), tandis que la puissance indique la dose requise pour atteindre 50% de cette réponse (position sur l'axe des abscisses)."
     },
     {
       "id": 13,
@@ -184,7 +184,7 @@
       ],
       "answer": "Phase III",
       "difficulty": 2,
-      "explanation": "La bonne réponse est « Phase III ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "La Phase III est l'étude pivot multicentrique sur des centaines/milliers de patients, servant à confirmer l'efficacité et la sécurité pour obtenir l'Autorisation de Mise sur le Marché (AMM)."
     },
     {
       "id": 14,
@@ -199,7 +199,7 @@
       ],
       "answer": "La fraction libre active du médicament",
       "difficulty": 2,
-      "explanation": "La bonne réponse est « La fraction libre active du médicament ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "Seule la fraction libre (non liée aux protéines) peut diffuser vers les tissus cibles, agir sur les récepteurs et subir une clairance métabolique ou rénale."
     },
     {
       "id": 15,
@@ -214,7 +214,7 @@
       ],
       "answer": "Une diminution rapide de la réponse après administrations répétées",
       "difficulty": 3,
-      "explanation": "La bonne réponse est « Une diminution rapide de la réponse après administrations répétées ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "La tachyphylaxie est une forme de tolérance aiguë où l'effet du médicament s'épuise très rapidement lors de prises rapprochées (désensibilisation des récepteurs)."
     },
     {
       "id": 16,
@@ -229,7 +229,7 @@
       ],
       "answer": "CYP3A4",
       "difficulty": 3,
-      "explanation": "La bonne réponse est « CYP3A4 ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "Le CYP3A4 est l'isoenzyme le plus abondant dans le foie et l'intestin, métabolisant environ la moitié des médicaments prescrits en clinique."
     },
     {
       "id": 17,
@@ -244,7 +244,7 @@
       ],
       "answer": "La filtration glomérulaire, la sécrétion tubulaire et la réabsorption",
       "difficulty": 3,
-      "explanation": "La bonne réponse est « La filtration glomérulaire, la sécrétion tubulaire et la réabsorption ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "L'excrétion rénale est la somme des processus de filtration passive au glomérule et de sécrétion active tubulaire, soustraite de la réabsorption tubulaire éventuelle."
     },
     {
       "id": 18,
@@ -254,7 +254,7 @@
       "options": null,
       "answer": "Il y a une faible différence entre sa dose efficace et sa dose toxique, nécessitant un suivi thérapeutique strict.",
       "difficulty": 3,
-      "explanation": "Réponse-type attendue : Il y a une faible différence entre sa dose efficace et sa dose toxique, nécessitant un suivi thérapeutique strict.. Complète avec les exemples ou nuances vus dans ta fiche si l’énoncé le demande."
+      "explanation": "Pour ces médicaments, une légère erreur de dosage ou interaction médicamenteuse peut basculer l'effet vers la toxicité, d'où l'importance du Suivi Thérapeutique Pharmacologique (STP)."
     },
     {
       "id": 19,
@@ -264,7 +264,7 @@
       "options": null,
       "answer": "C'est une substance inactive convertie en métabolite actif dans l'organisme, comme l'énalapril qui est converti en énalaprilate.",
       "difficulty": 3,
-      "explanation": "Réponse-type attendue : C'est une substance inactive convertie en métabolite actif dans l'organisme, comme l'énalapril qui est converti en énalaprilate.. Complète avec les exemples ou nuances vus dans ta fiche si l’énoncé le demande."
+      "explanation": "La molécule administrée est inactive pour améliorer son absorption ou sa distribution, puis clivée/modifiée (souvent par le foie) pour révéler le principe actif."
     },
     {
       "id": 20,
@@ -274,7 +274,7 @@
       "options": null,
       "answer": "C'est l'augmentation de la synthèse des enzymes de métabolisation (CYP450), entraînant une accélération du métabolisme et une diminution de l'efficacité des médicaments co-administrés.",
       "difficulty": 3,
-      "explanation": "Réponse-type attendue : C'est l'augmentation de la synthèse des enzymes de métabolisation (CYP450), entraînant une accélération du métabolisme et une diminution de l'efficacité des médicaments co-administrés.. Complète avec les exemples ou nuances vus dans ta fiche si l’énoncé le demande."
+      "explanation": "Un inducteur enzymatique stimule l'expression des gènes du CYP450. Les autres médicaments métabolisés par cette enzyme seront dégradés plus vite, réduisant leurs concentrations plasmatiques en-deçà du seuil thérapeutique."
     },
     {
       "id": 21,
@@ -289,7 +289,7 @@
       ],
       "answer": "Hémisphères cérébraux, diencéphale, tronc cérébral, cervelet, moelle épinière",
       "difficulty": 1,
-      "explanation": "La bonne réponse est « Hémisphères cérébraux, diencéphale, tronc cérébral, cervelet, moelle épinière ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "Le SNC est composé de l'encéphale (hémisphères, diencéphale, tronc cérébral, cervelet) protégé par la boîte crânienne, et de la moelle épinière protégée par la colonne vertébrale."
     },
     {
       "id": 22,
@@ -304,7 +304,7 @@
       ],
       "answer": "Acétylcholine",
       "difficulty": 1,
-      "explanation": "La bonne réponse est « Acétylcholine ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "Dans le système nerveux parasympathique, le neurone pré-ganglionnaire et le neurone post-ganglionnaire libèrent tous les deux de l'acétylcholine (sur des récepteurs muscariniques au niveau de l'organe effecteur)."
     },
     {
       "id": 23,
@@ -319,7 +319,7 @@
       ],
       "answer": "Mydriase (contraction)",
       "difficulty": 1,
-      "explanation": "La bonne réponse est « Mydriase (contraction) ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "Le système sympathique innerve le muscle dilatateur (fibres radiales) de l'iris. Sa contraction provoque la dilatation de la pupille (mydriase) pour laisser entrer plus de lumière en situation d'alerte."
     },
     {
       "id": 24,
@@ -334,7 +334,7 @@
       ],
       "answer": "Une activation parasympathique et une inhibition sympathique",
       "difficulty": 2,
-      "explanation": "La bonne réponse est « Une activation parasympathique et une inhibition sympathique ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "L'étirement des barorécepteurs signale une hypertension au tronc cérébral, qui répond en stimulant le nerf vague (baisse de fréquence cardiaque) et en levant le tonus sympathique (vasodilatation)."
     },
     {
       "id": 25,
@@ -349,7 +349,7 @@
       ],
       "answer": "Le récepteur muscarinique M3",
       "difficulty": 2,
-      "explanation": "La bonne réponse est « Le récepteur muscarinique M3 ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "L'acétylcholine se lie aux récepteurs muscariniques (M3) de l'endothélium, activant la production de monoxyde d'azote (NO) qui induit la relaxation du muscle lisse sous-jacent."
     },
     {
       "id": 26,
@@ -364,7 +364,7 @@
       ],
       "answer": "Relaxation (bronchodilatation)",
       "difficulty": 2,
-      "explanation": "La bonne réponse est « Relaxation (bronchodilatation) ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "Les récepteurs bêta-2 sont couplés à une protéine Gs (augmentation de l'AMPc) induisant la relaxation des cellules musculaires lisses, ce qui provoque une bronchodilatation facilitant la ventilation."
     },
     {
       "id": 27,
@@ -374,7 +374,7 @@
       "options": null,
       "answer": "Les fibres parasympathiques (issues de S2-S4) entraînent la contraction du détrusor via les récepteurs muscariniques pour expulser l'urine.",
       "difficulty": 2,
-      "explanation": "Réponse-type attendue : Les fibres parasympathiques (issues de S2-S4) entraînent la contraction du détrusor via les récepteurs muscariniques pour expulser l'urine.. Complète avec les exemples ou nuances vus dans ta fiche si l’énoncé le demande."
+      "explanation": "Le centre sacré de la miction s'active pour stimuler le muscle de la paroi vésicale (détrusor) et relâcher le sphincter interne, en coordination avec le relâchement volontaire du sphincter externe."
     },
     {
       "id": 28,
@@ -389,7 +389,7 @@
       ],
       "answer": "Tyrosine",
       "difficulty": 1,
-      "explanation": "La bonne réponse est « Tyrosine ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "La biosynthèse commune des catécholamines (dopamine, noradrénaline, adrénaline) débute par la transformation de la L-tyrosine par la tyrosine hydroxylase."
     },
     {
       "id": 29,
@@ -404,7 +404,7 @@
       ],
       "answer": "Acétylcholine",
       "difficulty": 1,
-      "explanation": "La bonne réponse est « Acétylcholine ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "L'Acétylcholinestérase, présente dans la fente synaptique, hydrolyse rapidement l'acétylcholine en choline (recapturée) et acétate."
     },
     {
       "id": 30,
@@ -419,7 +419,7 @@
       ],
       "answer": "DOPA décarboxylase",
       "difficulty": 2,
-      "explanation": "La bonne réponse est « DOPA décarboxylase ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "La L-DOPA est décarboxylée par l'enzyme DOPA décarboxylase cytoplasmique pour former la dopamine, qui sera ensuite internalisée dans des vésicules."
     },
     {
       "id": 31,
@@ -434,7 +434,7 @@
       ],
       "answer": "Une activation de l'AC (AC+)",
       "difficulty": 2,
-      "explanation": "La bonne réponse est « Une activation de l'AC (AC+) ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "Tous les récepteurs bêta-adrénergiques (bêta-1 cardiaque, bêta-2 pulmonaire/vasculaire) sont couplés à une protéine Gs qui stimule l'adénylate cyclase (AC+)."
     },
     {
       "id": 32,
@@ -444,7 +444,7 @@
       "options": null,
       "answer": "La Mono-Amino-Oxydase (MAO) et la COMT.",
       "difficulty": 2,
-      "explanation": "Réponse-type attendue : La Mono-Amino-Oxydase (MAO) et la COMT.. Complète avec les exemples ou nuances vus dans ta fiche si l’énoncé le demande."
+      "explanation": "Ces deux enzymes métabolisent la noradrénaline en métabolites inactifs désaminés (pour la MAO) et méthylés (pour la COMT, Catéchol-O-MéthylTransférase)."
     },
     {
       "id": 33,
@@ -459,7 +459,7 @@
       ],
       "answer": "Déclenchement et fin de séquence",
       "difficulty": 1,
-      "explanation": "La bonne réponse est « Déclenchement et fin de séquence ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "Les noyaux de la base modulent les intentions motrices corticales, permettant la sélection, le déclenchement des mouvements volontaires et la suppression des mouvements non souhaités."
     },
     {
       "id": 34,
@@ -474,7 +474,7 @@
       ],
       "answer": "Noyau caudé et Putamen",
       "difficulty": 1,
-      "explanation": "La bonne réponse est « Noyau caudé et Putamen ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "Le striatum constitue la principale porte d'entrée des informations afférentes corticales vers les noyaux gris centraux."
     },
     {
       "id": 35,
@@ -489,7 +489,7 @@
       ],
       "answer": "Dégénérescence de la voie nigro-striée (dopaminergique)",
       "difficulty": 1,
-      "explanation": "La bonne réponse est « Dégénérescence de la voie nigro-striée (dopaminergique) ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "La perte des neurones dopaminergiques de la substance noire pars compacta prive le striatum de dopamine, entraînant un déséquilibre des voies d'activation motrice."
     },
     {
       "id": 36,
@@ -504,7 +504,7 @@
       ],
       "answer": "La dégénérescence de la voie striato-nigrale (GABAergique)",
       "difficulty": 3,
-      "explanation": "La bonne réponse est « La dégénérescence de la voie striato-nigrale (GABAergique) ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "La destruction des neurones épineux moyens GABAergiques du striatum levant l'inhibition sur le thalamus cause une hyperkinésie caractéristique de la chorée."
     },
     {
       "id": 37,
@@ -514,7 +514,7 @@
       "options": null,
       "answer": "Le thalamus.",
       "difficulty": 1,
-      "explanation": "Réponse-type attendue : Le thalamus.. Complète avec les exemples ou nuances vus dans ta fiche si l’énoncé le demande."
+      "explanation": "Le GPi (et la substance noire réticulée) maintient une forte inhibition GABAergique sur les noyaux VA/VL du thalamus, l'empêchant d'exciter le cortex moteur au repos."
     },
     {
       "id": 38,
@@ -524,7 +524,7 @@
       "options": null,
       "answer": "Il intervient dans l'initiation et la coordination.",
       "difficulty": 1,
-      "explanation": "Réponse-type attendue : Il intervient dans l'initiation et la coordination.. Complète avec les exemples ou nuances vus dans ta fiche si l’énoncé le demande."
+      "explanation": "Le cervelet ajuste et affine les mouvements volontaires en comparant l'intention motrice (via les afférences corticales) avec la réalisation sensorielle, grâce à des schémas mémorisés."
     },
     {
       "id": 39,
@@ -539,7 +539,7 @@
       ],
       "answer": "Une dé-inhibition du thalamus",
       "difficulty": 2,
-      "explanation": "La bonne réponse est « Une dé-inhibition du thalamus ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "L'activation du striatum par le cortex inhibe le GPi, ce qui lève son inhibition tonique sur le thalamus (dé-inhibition). Le thalamus est alors libre d'activer le cortex moteur."
     },
     {
       "id": 40,
@@ -554,7 +554,7 @@
       ],
       "answer": "Centre réflexe",
       "difficulty": 1,
-      "explanation": "La bonne réponse est « Centre réflexe ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "La moelle épinière est le premier niveau de contrôle de l'activité musculaire (motoneurones alpha/gamma) et intègre les réflexes de la posture et de protection."
     },
     {
       "id": 41,
@@ -569,7 +569,7 @@
       ],
       "answer": "Calcium (Ca++)",
       "difficulty": 1,
-      "explanation": "La bonne réponse est « Calcium (Ca++) ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "Le potentiel d'action musculaire entraîne le relargage de Ca++ par les citernes terminales, ion qui se liera à la troponine pour initier le glissement des filaments d'actine et myosine."
     },
     {
       "id": 42,
@@ -584,7 +584,7 @@
       ],
       "answer": "Acétylcholine (ACh)",
       "difficulty": 1,
-      "explanation": "La bonne réponse est « Acétylcholine (ACh) ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "La terminaison du motoneurone alpha libère l'ACh, qui se fixe sur les récepteurs nicotiniques du muscle squelettique, déclenchant le potentiel de plaque motrice."
     },
     {
       "id": 43,
@@ -599,7 +599,7 @@
       ],
       "answer": "L'organe tendineux de Golgi",
       "difficulty": 2,
-      "explanation": "La bonne réponse est « L'organe tendineux de Golgi ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "Sensible à la tension excessive, l'organe de Golgi émet un signal via la fibre Ib pour déclencher l'inhibition autogénique (réflexe myotatique inverse), protégeant le muscle d'une déchirure."
     },
     {
       "id": 44,
@@ -614,7 +614,7 @@
       ],
       "answer": "Fibre sensitive Ia",
       "difficulty": 2,
-      "explanation": "La bonne réponse est « Fibre sensitive Ia ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "Les fibres sensitives de groupe Ia transmettent très rapidement au système central les variations de longueur musculaire détectées par les fuseaux neuromusculaires."
     },
     {
       "id": 45,
@@ -629,7 +629,7 @@
       ],
       "answer": "Un interneurone inhibiteur",
       "difficulty": 2,
-      "explanation": "La bonne réponse est « Un interneurone inhibiteur ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "La fibre Ia active simultanément le motoneurone du muscle agoniste et un interneurone inhibiteur (Ia) épinière qui hyperpolarise le motoneurone du muscle antagoniste."
     },
     {
       "id": 46,
@@ -639,7 +639,7 @@
       "options": null,
       "answer": "On nomme cette cartographie fonctionnelle l'homonculus moteur.",
       "difficulty": 2,
-      "explanation": "Réponse-type attendue : On nomme cette cartographie fonctionnelle l'homonculus moteur.. Complète avec les exemples ou nuances vus dans ta fiche si l’énoncé le demande."
+      "explanation": "Chaque zone du corps y est représentée de façon proportionnelle à la finesse de sa commande motrice (ex: très grande surface allouée à la main et au visage)."
     },
     {
       "id": 47,
@@ -654,7 +654,7 @@
       ],
       "answer": "Ajuster le niveau de tension des fibres intrafusales pour contrôler l'activité fusoriale",
       "difficulty": 3,
-      "explanation": "La bonne réponse est « Ajuster le niveau de tension des fibres intrafusales pour contrôler l'activité fusoriale ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "En contractant les pôles des fibres intrafusales, les motoneurones gamma gardent le fuseau tendu lors du raccourcissement du muscle, conservant ainsi sa sensibilité à l'étirement."
     },
     {
       "id": 48,
@@ -669,7 +669,7 @@
       ],
       "answer": "Le faisceau réticulo-spinal",
       "difficulty": 3,
-      "explanation": "La bonne réponse est « Le faisceau réticulo-spinal ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "La formation réticulée (pontique et bulbaire) envoie ses instructions par le faisceau réticulo-spinal pour ajuster la posture, le tonus antigravitaire et moduler les motoneurones gamma spinaux."
     },
     {
       "id": 49,
@@ -684,7 +684,7 @@
       ],
       "answer": "Le vestibule",
       "difficulty": 1,
-      "explanation": "La bonne réponse est « Le vestibule ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "Le vestibule, comprenant les organes otolithiques et les canaux semi-circulaires, forme l'appareil sensoriel primaire de l'équilibre."
     },
     {
       "id": 50,
@@ -699,7 +699,7 @@
       ],
       "answer": "L'accélération linéaire",
       "difficulty": 1,
-      "explanation": "La bonne réponse est « L'accélération linéaire ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "La gravité (ou l'accélération linéaire) déplace les otolithes lourds situés dans la membrane gélatineuse, inclinant ainsi les cils des cellules sensorielles de la macula."
     },
     {
       "id": 51,
@@ -714,7 +714,7 @@
       ],
       "answer": "L'accélération angulaire",
       "difficulty": 3,
-      "explanation": "La bonne réponse est « L'accélération angulaire ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "L'inertie de l'endolymphe dans les canaux repousse la cupule gélatineuse lors d'un mouvement de rotation de la tête, stimulant ainsi les récepteurs à l'accélération angulaire."
     },
     {
       "id": 52,
@@ -729,7 +729,7 @@
       ],
       "answer": "Lobe flocculo-nodulaire",
       "difficulty": 1,
-      "explanation": "La bonne réponse est « Lobe flocculo-nodulaire ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "L'archéo-cervelet, correspondant phylogénétiquement au lobe flocculo-nodulaire, traite directement les afférences vestibulaires pour réguler l'équilibre."
     },
     {
       "id": 53,
@@ -744,7 +744,7 @@
       ],
       "answer": "Environ 5 cm",
       "difficulty": 2,
-      "explanation": "La bonne réponse est « Environ 5 cm ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "Les mécanismes physiologiques d'optimisation de la marche limitent l'excursion verticale du centre de gravité à ~5 cm, minimisant la dépense énergétique."
     },
     {
       "id": 54,
@@ -759,7 +759,7 @@
       ],
       "answer": "L'appui unilatéral (pied à plat)",
       "difficulty": 2,
-      "explanation": "La bonne réponse est « L'appui unilatéral (pied à plat) ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "La phase où tout le poids du corps repose sur un seul pied à plat occupe environ 40 % de la durée d'un cycle de marche standard."
     },
     {
       "id": 55,
@@ -774,7 +774,7 @@
       ],
       "answer": "Les muscles fessiers",
       "difficulty": 3,
-      "explanation": "La bonne réponse est « Les muscles fessiers ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "Le moyen fessier (abducteur de la hanche) se contracte puissamment du côté de la jambe d'appui pour empêcher le bassin de chuter du côté de la jambe soulevée."
     },
     {
       "id": 56,
@@ -789,7 +789,7 @@
       ],
       "answer": "37°C",
       "difficulty": 1,
-      "explanation": "La bonne réponse est « 37°C ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "L'homéothermie maintient le noyau central corporel (organes vitaux et cerveau) autour d'une consigne thermique très stable à environ 37°C."
     },
     {
       "id": 57,
@@ -804,7 +804,7 @@
       ],
       "answer": "L'aire pré-optique de l'hypothalamus antérieur",
       "difficulty": 1,
-      "explanation": "La bonne réponse est « L'aire pré-optique de l'hypothalamus antérieur ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "Cette zone hypothalamique intègre les afférences thermiques périphériques/centrales et fixe la température de consigne (le 'thermostat' de l'organisme)."
     },
     {
       "id": 58,
@@ -819,7 +819,7 @@
       ],
       "answer": "Vasodilatation cutanée",
       "difficulty": 1,
-      "explanation": "La bonne réponse est « Vasodilatation cutanée ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "La vasodilatation augmente l'afflux de sang chaud à la surface de la peau, facilitant le transfert et la dissipation de la chaleur vers l'environnement (avec la sudation)."
     },
     {
       "id": 59,
@@ -834,7 +834,7 @@
       ],
       "answer": "Elles modifient la température de référence via inhibition de l'aire pré-optique",
       "difficulty": 3,
-      "explanation": "La bonne réponse est « Elles modifient la température de référence via inhibition de l'aire pré-optique ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "Les prostaglandines (PGE2) produites lors d'une infection inhibent l'aire pré-optique, signalant un 'faux froid'. L'hypothalamus remonte alors son point de consigne (ex: à 39°C), déclenchant le frisson (thermogénèse)."
     },
     {
       "id": 60,
@@ -849,7 +849,7 @@
       ],
       "answer": "Le glutamate (Glu)",
       "difficulty": 3,
-      "explanation": "La bonne réponse est « Le glutamate (Glu) ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "La désinhibition du noyau du raphé au froid ou lors de la fièvre permet la libération activatrice de glutamate (Glu) vers les motoneurones de la moelle pour engendrer le frisson."
     },
     {
       "id": 61,
@@ -864,7 +864,7 @@
       ],
       "answer": "Le noyau supra-chiasmatique de l'hypothalamus",
       "difficulty": 1,
-      "explanation": "La bonne réponse est « Le noyau supra-chiasmatique de l'hypothalamus ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "Implanté juste au-dessus du chiasma optique, il reçoit l'information lumineuse et génère le rythme circadien régissant l'éveil et de nombreuses fonctions métaboliques."
     },
     {
       "id": 62,
@@ -879,7 +879,7 @@
       ],
       "answer": "Mélatonine",
       "difficulty": 1,
-      "explanation": "La bonne réponse est « Mélatonine ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "La mélatonine, sécrétée par la glande pinéale (épiphyse) à la tombée de la nuit, signale au cerveau la préparation au sommeil."
     },
     {
       "id": 63,
@@ -894,7 +894,7 @@
       ],
       "answer": "Sommeil lent profond (N3)",
       "difficulty": 1,
-      "explanation": "La bonne réponse est « Sommeil lent profond (N3) ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "Les ondes delta (faible fréquence, forte amplitude) traduisent une synchronisation corticale massive, caractéristique du sommeil à ondes lentes profond (stade N3)."
     },
     {
       "id": 64,
@@ -909,7 +909,7 @@
       ],
       "answer": "Ondes alpha",
       "difficulty": 1,
-      "explanation": "La bonne réponse est « Ondes alpha ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "L'ouverture des yeux se manifeste par des ondes bêta désynchronisées. A la fermeture des yeux en veille relaxée, l'EEG montre une dominance du rythme alpha (8-12 Hz)."
     },
     {
       "id": 65,
@@ -919,7 +919,7 @@
       "options": null,
       "answer": "L'atonie posturale, c'est-à-dire une abolition complète du tonus musculaire.",
       "difficulty": 2,
-      "explanation": "Réponse-type attendue : L'atonie posturale, c'est-à-dire une abolition complète du tonus musculaire.. Complète avec les exemples ou nuances vus dans ta fiche si l’énoncé le demande."
+      "explanation": "Pendant le SP, les centres moteurs spinaux sont activement inhibés (via des voies descendantes glycinergiques/GABAergiques) pour empêcher la mise en acte des rêves."
     },
     {
       "id": 66,
@@ -929,7 +929,7 @@
       "options": null,
       "answer": "Le locus coeruleus, le noyau du raphé dorsal, ou le noyau de Meynert.",
       "difficulty": 2,
-      "explanation": "Réponse-type attendue : Le locus coeruleus, le noyau du raphé dorsal, ou le noyau de Meynert.. Complète avec les exemples ou nuances vus dans ta fiche si l’énoncé le demande."
+      "explanation": "Ces noyaux (noradrénergique, sérotoninergique, cholinergique) projettent de façon ascendante pour activer le cortex et maintenir la désynchronisation propre à l'éveil."
     },
     {
       "id": 67,
@@ -944,7 +944,7 @@
       ],
       "answer": "Sécrétion acide",
       "difficulty": 1,
-      "explanation": "La bonne réponse est « Sécrétion acide ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "L'estomac orchestre une abondante sécrétion d'acide chlorhydrique (HCl) par les cellules pariétales, indispensable à l'activation de la pepsine et à la stérilisation du bol alimentaire."
     },
     {
       "id": 68,
@@ -954,7 +954,7 @@
       "options": null,
       "answer": "La gastrine, libérée par les cellules G de l'antre gastrique.",
       "difficulty": 2,
-      "explanation": "Réponse-type attendue : La gastrine, libérée par les cellules G de l'antre gastrique.. Complète avec les exemples ou nuances vus dans ta fiche si l’énoncé le demande."
+      "explanation": "La présence d'acides aminés/peptides étirant l'antre gastrique déclenche la libération endocrine de gastrine qui amplifie puissamment l'activité des cellules pariétales."
     },
     {
       "id": 69,
@@ -969,7 +969,7 @@
       ],
       "answer": "Somatostatine",
       "difficulty": 3,
-      "explanation": "La bonne réponse est « Somatostatine ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "La somatostatine est sécrétée par les cellules D lorsque le pH stomacal devient trop bas, provoquant un rétrocontrôle négatif pour stopper la libération de HCl."
     },
     {
       "id": 70,
@@ -984,7 +984,7 @@
       ],
       "answer": "7 ± 2",
       "difficulty": 1,
-      "explanation": "La bonne réponse est « 7 ± 2 ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "Le postulat psychologique historique ('le chiffre magique sept, plus ou moins deux') décrit la capacité très limitée d'éléments stockables en mémoire de travail à l'instant t."
     },
     {
       "id": 71,
@@ -999,7 +999,7 @@
       ],
       "answer": "Mémoire sémantique",
       "difficulty": 1,
-      "explanation": "La bonne réponse est « Mémoire sémantique ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "La mémoire sémantique englobe les connaissances conceptuelles et culturelles (les 'faits') sans avoir besoin de se rappeler le moment ou le lieu de l'apprentissage initial."
     },
     {
       "id": 72,
@@ -1014,7 +1014,7 @@
       ],
       "answer": "Henry Molaison (H.M.)",
       "difficulty": 1,
-      "explanation": "La bonne réponse est « Henry Molaison (H.M.) ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "Le patient H.M. a perdu sa capacité à former de nouveaux souvenirs explicites suite à la résection de ses lobes temporaux médians (comprenant les deux hippocampes)."
     },
     {
       "id": 73,
@@ -1029,7 +1029,7 @@
       ],
       "answer": "L'hippocampe",
       "difficulty": 1,
-      "explanation": "La bonne réponse est « L'hippocampe ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "Outre la consolidation mnésique déclarative, les études chez le rat (Piscine de Morris) démontrent que l'hippocampe possède des 'cellules de lieu' primordiales pour les cartes mentales."
     },
     {
       "id": 74,
@@ -1044,7 +1044,7 @@
       ],
       "answer": "Énoncer un mot à partir de son préfixe en fonction du contexte",
       "difficulty": 1,
-      "explanation": "La bonne réponse est « Énoncer un mot à partir de son préfixe en fonction du contexte ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "L'amorçage (priming) facilite ou modifie la récupération inconsciente d'une information après l'exposition préalable à un stimulus lié."
     },
     {
       "id": 75,
@@ -1059,7 +1059,7 @@
       ],
       "answer": "Conditionnement opérant",
       "difficulty": 1,
-      "explanation": "La bonne réponse est « Conditionnement opérant ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "Contrairement au réflexe de Pavlov (répondant), le conditionnement opérant (skinnérien) consiste à l'adoption volontaire d'un comportement basé sur ses conséquences passées (la loi)."
     },
     {
       "id": 76,
@@ -1074,7 +1074,7 @@
       ],
       "answer": "Cortex entorhinal -> Gyrus dentelé -> CA3 -> CA1",
       "difficulty": 2,
-      "explanation": "La bonne réponse est « Cortex entorhinal -> Gyrus dentelé -> CA3 -> CA1 ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "L'information sensorielle rentre par le cortex entorhinal (voies perforantes) vers le gyrus dentelé, puis suit les fibres moussues vers CA3, puis les collatérales de Schaffer vers CA1."
     },
     {
       "id": 77,
@@ -1089,7 +1089,7 @@
       ],
       "answer": "Elle fixe les concepts plus efficacement en stimulant les boucles phonologiques et visuo-spatiales",
       "difficulty": 2,
-      "explanation": "La bonne réponse est « Elle fixe les concepts plus efficacement en stimulant les boucles phonologiques et visuo-spatiales ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "Prendre des notes manuscrites implique des associations multi-sensorielles (motrice, spatiale) qui renforcent drastiquement l'encodage conceptuel comparativement à la frappe aveugle sur clavier."
     },
     {
       "id": 78,
@@ -1104,7 +1104,7 @@
       ],
       "answer": "L'amygdale",
       "difficulty": 2,
-      "explanation": "La bonne réponse est « L'amygdale ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "L'amygdale bilatérale (associée au gyrus fusiforme) est impliquée de façon prépondérante dans la réaction de peur, de stress ou devant des stimuli dangereux (IRMF)."
     },
     {
       "id": 79,
@@ -1119,7 +1119,7 @@
       ],
       "answer": "Dopamine",
       "difficulty": 1,
-      "explanation": "La bonne réponse est « Dopamine ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "La dopamine synthétisée dans l'aire tegmentale ventrale (ATV) est libérée massivement dans le noyau accumbens en réponse à des stimuli hédoniques (la voie mésolimbique)."
     },
     {
       "id": 80,
@@ -1134,7 +1134,7 @@
       ],
       "answer": "Elle inhibe la recapture de la dopamine",
       "difficulty": 2,
-      "explanation": "La bonne réponse est « Elle inhibe la recapture de la dopamine ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "En bloquant le transporteur de la dopamine (DAT) au niveau synaptique, la cocaïne prolonge artificiellement la présence de dopamine, créant la sensation intense de plaisir et menant à l'addiction."
     },
     {
       "id": 81,
@@ -1149,7 +1149,7 @@
       ],
       "answer": "Hippocampe, Corps mamillaires, Thalamus, Gyrus cingulaire",
       "difficulty": 2,
-      "explanation": "La bonne réponse est « Hippocampe, Corps mamillaires, Thalamus, Gyrus cingulaire ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "Ce circuit interconnecte l'Hippocampe, les corps Mamillaires, les noyaux antérieurs du Thalamus et le Gyrus Cingulaire en une boucle vitale pour l'affect et la consolidation."
     }
   ]
 }

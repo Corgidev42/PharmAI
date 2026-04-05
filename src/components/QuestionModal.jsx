@@ -43,33 +43,84 @@ function QCMQuestion({ card, onAnswer }) {
   )
 }
 
-function ResultDisplay({ correct, onProceed, card }) {
+/** Après erreur QCM : même ordre que pendant la question, bonne option en vert. */
+function QCMResultReveal({ card, userPick }) {
+  const shuffledOptions = useMemo(() => {
+    const opts = Array.isArray(card.options) ? [...card.options] : []
+    return shuffleWithSeed(opts, seedForCardOptions(card))
+  }, [card])
+
+  const correctText = String(card.answer ?? '')
+
+  return (
+    <div className="w-full space-y-2 text-left">
+      <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 sm:gap-2.5">
+        {shuffledOptions.map((opt, idx) => {
+          const isCorrect = opt === correctText
+          const isWrongPick = !isCorrect && userPick === opt
+          return (
+            <div
+              key={`result-${card.id}-${idx}`}
+              className={`relative min-h-0 rounded-2xl border-2 px-3 py-2.5 text-xs font-bold sm:px-4 sm:py-3 sm:text-sm ${
+                isCorrect
+                  ? 'border-emerald-400 bg-emerald-500/20 text-emerald-50 shadow-[0_0_20px_rgba(52,211,153,0.35)]'
+                  : isWrongPick
+                    ? 'border-rose-400/70 bg-rose-500/15 text-rose-100 opacity-90'
+                    : 'border-white/10 bg-purple-950/40 text-slate-400 opacity-55'
+              }`}
+            >
+              {isCorrect && (
+                <span className="mb-1 block text-[10px] font-extrabold uppercase tracking-wide text-emerald-200/95">
+                  Non — c’était celle-ci
+                </span>
+              )}
+              {isWrongPick && (
+                <span className="mb-1 block text-[10px] font-extrabold uppercase tracking-wide text-rose-200/90">
+                  Ton choix
+                </span>
+              )}
+              <span className="block leading-snug">{opt}</span>
+            </div>
+          )
+        })}
+      </div>
+    </div>
+  )
+}
+
+function ResultDisplay({ correct, onProceed, card, userPick }) {
   const captureLine = correct ? 'Case capturée.' : 'Case non capturée.'
   const expl =
     typeof card?.explanation === 'string' && card.explanation.trim() ? card.explanation.trim() : null
+  const showQcmReveal = !correct && card?.type === 'QCM' && Array.isArray(card?.options)
 
   return (
     <motion.div
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ type: 'spring', stiffness: 320, damping: 28 }}
-      className="flex max-h-[min(70dvh,28rem)] flex-col space-y-3 overflow-y-auto text-center sm:space-y-4"
+      className="flex max-h-[min(78dvh,32rem)] flex-col space-y-3 overflow-y-auto text-center sm:space-y-4"
     >
       <p className={`text-xl font-bold ${correct ? 'text-emerald-300' : 'text-rose-300'}`}>
         {correct ? 'Bonne réponse' : 'Mauvaise réponse'}
       </p>
       <p className="text-sm text-slate-300">{captureLine}</p>
 
-      {!correct && card?.answer != null && (
+      {showQcmReveal && (
+        <QCMResultReveal card={card} userPick={typeof userPick === 'string' ? userPick : null} />
+      )}
+
+      {!correct && card?.answer != null && !showQcmReveal && (
         <div className="rounded-xl border border-white/10 bg-white/5 px-3 py-2.5 text-left text-sm text-slate-200">
           <p className="text-[11px] font-semibold uppercase tracking-wide text-amber-200/90">Réponse attendue</p>
           <p className="mt-1 whitespace-pre-line text-slate-100">{String(card.answer)}</p>
-          {expl && (
-            <>
-              <p className="mt-3 text-[11px] font-semibold uppercase tracking-wide text-cyan-200/90">Explication</p>
-              <p className="mt-1 whitespace-pre-line text-sm leading-snug text-slate-300">{expl}</p>
-            </>
-          )}
+        </div>
+      )}
+
+      {!correct && expl && (
+        <div className="rounded-xl border border-cyan-500/20 bg-cyan-950/20 px-3 py-2.5 text-left text-sm text-slate-200">
+          <p className="text-[11px] font-semibold uppercase tracking-wide text-cyan-200/90">Explication</p>
+          <p className="mt-1 whitespace-pre-line text-sm leading-snug text-slate-300">{expl}</p>
         </div>
       )}
 
@@ -94,6 +145,7 @@ export default function QuestionModal() {
   const proceedAfterResult = useGameStore((s) => s.proceedAfterResult)
   const landingType = useGameStore((s) => s.landingType)
   const slideNote = useGameStore((s) => s.slideNote)
+  const lastSubmittedAnswer = useGameStore((s) => s.lastSubmittedAnswer)
 
   const visible =
     phase === PHASES.QUESTION || (phase === PHASES.RESULT && landingType === 'FREE')
@@ -161,7 +213,12 @@ export default function QuestionModal() {
                     {slideNote}
                   </p>
                 )}
-                <ResultDisplay correct={lastAnswerCorrect} onProceed={proceedAfterResult} card={currentCard} />
+                <ResultDisplay
+                  correct={lastAnswerCorrect}
+                  onProceed={proceedAfterResult}
+                  card={currentCard}
+                  userPick={lastSubmittedAnswer}
+                />
               </>
             )}
           </motion.div>

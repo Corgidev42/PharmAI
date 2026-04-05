@@ -41,6 +41,8 @@ function buildInitialState() {
     currentCard: null,
     landingType: null,
     lastAnswerCorrect: null,
+    /** Dernière réponse soumise (texte d’option QCM ou booléen OPEN) — feedback visuel en phase RESULT. */
+    lastSubmittedAnswer: null,
     turnCount: 0,
     maxTurns: MAX_TURNS,
     winner: null,
@@ -367,6 +369,7 @@ export const useGameStore = create((set, get) => ({
       tiles: newTiles,
       players: newPlayers,
       lastAnswerCorrect: correct,
+      lastSubmittedAnswer: answer,
       phase: PHASES.RESULT,
       landingFx: null,
     })
@@ -380,6 +383,7 @@ export const useGameStore = create((set, get) => ({
         phase: PHASES.GAME_OVER,
         winner: victory,
         turnCount: s.turnCount + 1,
+        lastSubmittedAnswer: null,
         specialFeedback: null,
         slideNote: null,
         landingFx: null,
@@ -394,6 +398,7 @@ export const useGameStore = create((set, get) => ({
       currentCard: null,
       landingType: null,
       lastAnswerCorrect: null,
+      lastSubmittedAnswer: null,
       specialFeedback: null,
       slideNote: null,
       landingFx: null,

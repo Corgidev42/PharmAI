@@ -13,7 +13,7 @@
       ],
       "answer": "LUCA (Last Universal Common Ancestor)",
       "difficulty": 1,
-      "explanation": "La bonne réponse est « LUCA (Last Universal Common Ancestor) ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "LUCA (Last Universal Common Ancestor) est l'ancêtre commun à la base de toute vie sur terre, qu'elle soit végétale ou animale, procaryote ou eucaryote."
     },
     {
       "id": 2,
@@ -27,7 +27,7 @@
       ],
       "answer": "Pectocellulosique (99% de cellulose)",
       "difficulty": 1,
-      "explanation": "La bonne réponse est « Pectocellulosique (99% de cellulose) ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "La paroi de la cellule végétale est pectocellulosique, composée à 99% de cellulose, formant un exosquelette rigide qui s'épaissit lorsque la plante vieillit."
     },
     {
       "id": 3,
@@ -41,7 +41,7 @@
       ],
       "answer": "Carl von Linné",
       "difficulty": 1,
-      "explanation": "La bonne réponse est « Carl von Linné ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "Carl von Linné a introduit la classification binominale, identifiant de manière univoque chaque plante par un nom de genre suivi d'une épithète spécifique."
     },
     {
       "id": 4,
@@ -55,7 +55,7 @@
       ],
       "answer": "L'énergie lumineuse (soleil)",
       "difficulty": 1,
-      "explanation": "La bonne réponse est « L'énergie lumineuse (soleil) ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "La phase claire nécessite la présence de soleil (énergie lumineuse) pour réaliser la photolyse de l'eau et produire de l'énergie chimique (ATP) dans les thylakoïdes."
     },
     {
       "id": 5,
@@ -69,7 +69,7 @@
       ],
       "answer": "La gousse",
       "difficulty": 1,
-      "explanation": "La bonne réponse est « La gousse ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "Le fruit caractéristique des Fabacées (ou légumineuses) est la gousse, formée d'un carpelle unique pluriovulé s'ouvrant par deux fentes de déhiscence."
     },
     {
       "id": 6,
@@ -83,7 +83,7 @@
       ],
       "answer": "Le capitule",
       "difficulty": 1,
-      "explanation": "La bonne réponse est « Le capitule ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "Les Asteraceae (ou composées) se caractérisent par une inflorescence en capitule, où de petites fleurs sessiles sont densément regroupées sur un réceptacle floral en plateau."
     },
     {
       "id": 7,
@@ -97,7 +97,7 @@
       ],
       "answer": "Le caryopse",
       "difficulty": 1,
-      "explanation": "La bonne réponse est « Le caryopse ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "Les Poacées (anciennes graminées) produisent un fruit sec indéhiscent à graine unique, dont le tégument est intimement soudé au péricarpe, appelé caryopse."
     },
     {
       "id": 8,
@@ -111,7 +111,7 @@
       ],
       "answer": "L'archégone",
       "difficulty": 1,
-      "explanation": "La bonne réponse est « L'archégone ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "L'archégone est l'organe reproducteur femelle en forme de bouteille contenant l'oosphère, tandis que l'anthéridie est l'organe mâle libérant les anthérozoïdes."
     },
     {
       "id": 9,
@@ -125,7 +125,7 @@
       ],
       "answer": "L'ombelle d'ombellules",
       "difficulty": 1,
-      "explanation": "La bonne réponse est « L'ombelle d'ombellules ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "Les Apiacées (ou ombellifères) portent une inflorescence composée très caractéristique : des rayons de même taille insérés en un même point, formant une ombelle d'ombellules."
     },
     {
       "id": 10,
@@ -133,7 +133,7 @@
       "question": "Qu'est-ce que l'autotrophie chez les végétaux ?",
       "answer": "C'est la capacité de se nourrir soi-même en produisant de la matière organique à partir de CO2 grâce à l'énergie solaire et aux chloroplastes.",
       "difficulty": 1,
-      "explanation": "Réponse-type attendue : C'est la capacité de se nourrir soi-même en produisant de la matière organique à partir de CO2 grâce à l'énergie solaire et aux chloroplastes.. Complète avec les exemples ou nuances vus dans ta fiche si l’énoncé le demande."
+      "explanation": "L'autotrophie est la capacité des cellules végétales à produire leur propre matière organique carbonée à partir du CO2 atmosphérique, en utilisant l'énergie solaire captée lors de la photosynthèse."
     },
     {
       "id": 11,
@@ -141,7 +141,7 @@
       "question": "Quel est le rôle principal des chloroplastes dans la cellule végétale ?",
       "answer": "Ils captent l'énergie solaire via des pigments chlorophylliens pour réaliser la photosynthèse et assimiler le CO2.",
       "difficulty": 1,
-      "explanation": "Réponse-type attendue : Ils captent l'énergie solaire via des pigments chlorophylliens pour réaliser la photosynthèse et assimiler le CO2.. Complète avec les exemples ou nuances vus dans ta fiche si l’énoncé le demande."
+      "explanation": "Spécifiques aux végétaux, les chloroplastes contiennent des pigments (chlorophylles) qui captent l'énergie lumineuse indispensable pour réaliser la photosynthèse et le cycle de Calvin."
     },
     {
       "id": 12,
@@ -149,7 +149,7 @@
       "question": "Quelles propriétés thérapeutiques possèdent les dérivés salicylés issus de Salix alba (Saule blanc) ?",
       "answer": "Ils possèdent des propriétés antipyrétiques et anti-rhumatismales, agissant comme une aspirine naturelle.",
       "difficulty": 1,
-      "explanation": "Réponse-type attendue : Ils possèdent des propriétés antipyrétiques et anti-rhumatismales, agissant comme une aspirine naturelle.. Complète avec les exemples ou nuances vus dans ta fiche si l’énoncé le demande."
+      "explanation": "L'écorce de saule blanc contient des hétérosides (salicoside) générant des dérivés salicylés, agissant historiquement comme une 'aspirine naturelle' pour combattre la fièvre et les rhumatismes."
     },
     {
       "id": 13,
@@ -157,7 +157,7 @@
       "question": "Quelle particularité morphologique permet de reconnaître facilement la tige des Lamiaceae (Lamiacées) ?",
       "answer": "La tige des Lamiaceae a la particularité d'être de section carrée.",
       "difficulty": 1,
-      "explanation": "Réponse-type attendue : La tige des Lamiaceae a la particularité d'être de section carrée.. Complète avec les exemples ou nuances vus dans ta fiche si l’énoncé le demande."
+      "explanation": "La majorité des Lamiacées herbacées se distinguent visuellement par une tige de section nettement carrée, souvent associée à des feuilles opposées décussées."
     },
     {
       "id": 14,
@@ -165,7 +165,7 @@
       "question": "Qu'est-ce qu'un cyathe, caractéristique des Euphorbes ?",
       "answer": "C'est une unité structurale (inflorescence) en forme de coupe contenant des glandes nectarifères, une fleur femelle et des fleurs mâles.",
       "difficulty": 1,
-      "explanation": "Réponse-type attendue : C'est une unité structurale (inflorescence) en forme de coupe contenant des glandes nectarifères, une fleur femelle et des fleurs mâles.. Complète avec les exemples ou nuances vus dans ta fiche si l’énoncé le demande."
+      "explanation": "Le cyathe est une inflorescence complexe simulant une fleur unique. Il est composé d'une coupe ornée de glandes nectarifères en croissant, abritant des fleurs mâles réduites à une étamine et une fleur femelle centrale."
     },
     {
       "id": 15,
@@ -173,7 +173,7 @@
       "question": "Quels sont les fruits caractéristiques de la famille des Brassicacées (Crucifères) ?",
       "answer": "Ce sont les siliques et les silicules, formées de 2 carpelles soudés ouverts avec une fausse cloison.",
       "difficulty": 1,
-      "explanation": "Réponse-type attendue : Ce sont les siliques et les silicules, formées de 2 carpelles soudés ouverts avec une fausse cloison.. Complète avec les exemples ou nuances vus dans ta fiche si l’énoncé le demande."
+      "explanation": "Ces plantes produisent des siliques (allongées) et des silicules (courtes), des fruits secs déhiscents formés de deux carpelles séparés au centre par une fausse cloison appelée replum."
     },
     {
       "id": 16,
@@ -187,7 +187,7 @@
       ],
       "answer": "La formation d'un zygote principal (2n) et d'un albumen nourricier triploïde (3n)",
       "difficulty": 2,
-      "explanation": "La bonne réponse est « La formation d'un zygote principal (2n) et d'un albumen nourricier triploïde (3n) ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "Lors de la double siphonogamie, un gamète mâle féconde l'oosphère pour donner le zygote diploïde (2n), et le second gamète fusionne avec les deux noyaux polaires pour former l'albumen triploïde (3n)."
     },
     {
       "id": 17,
@@ -201,7 +201,7 @@
       ],
       "answer": "Les Ranunculaceae",
       "difficulty": 2,
-      "explanation": "La bonne réponse est « Les Ranunculaceae ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "L'Aconit napel appartient à la famille des Ranunculaceae. C'est l'une des plantes les plus toxiques de la flore européenne, contenant de l'aconitine, un alcaloïde violemment cardiotoxique."
     },
     {
       "id": 18,
@@ -215,7 +215,7 @@
       ],
       "answer": "Elles sont alternes et falciformes (en forme de faux)",
       "difficulty": 2,
-      "explanation": "La bonne réponse est « Elles sont alternes et falciformes (en forme de faux) ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "L'Eucalyptus globulus présente un net dimorphisme foliaire : ses feuilles âgées, qui concentrent l'huile essentielle officinale, prennent une forme alterne et falciforme (en forme de lame de faux)."
     },
     {
       "id": 19,
@@ -229,7 +229,7 @@
       ],
       "answer": "La capacité de subir une déshydratation prolongée puis de se réhydrater et survivre",
       "difficulty": 2,
-      "explanation": "La bonne réponse est « La capacité de subir une déshydratation prolongée puis de se réhydrater et survivre ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "La reviviscence permet aux lichens de survivre à des périodes de dessèchement extrême (manque d'eau sur plusieurs mois) et de relancer immédiatement leur métabolisme dès qu'ils sont réhydratés."
     },
     {
       "id": 20,
@@ -243,7 +243,7 @@
       ],
       "answer": "Le prothalle",
       "difficulty": 2,
-      "explanation": "La bonne réponse est « Le prothalle ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "Chez les fougères, la spore germe pour former un prothalle, un petit organisme haploïde indépendant et éphémère (souvent en forme de cœur) qui porte les organes sexuels (archégones et anthéridies)."
     },
     {
       "id": 21,
@@ -257,7 +257,7 @@
       ],
       "answer": "Des alcaloïdes tropaniques (comme l'hyoscyamine)",
       "difficulty": 2,
-      "explanation": "La bonne réponse est « Des alcaloïdes tropaniques (comme l'hyoscyamine) ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "La Belladone, comme d'autres Solanaceae toxiques (Datura, Jusquiame), synthétise d'importantes quantités d'alcaloïdes tropaniques (hyoscyamine, atropine) agissant fortement sur le système nerveux autonome."
     },
     {
       "id": 22,
@@ -271,7 +271,7 @@
       ],
       "answer": "Tétradyname",
       "difficulty": 2,
-      "explanation": "La bonne réponse est « Tétradyname ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "L'androcée des Brassicacées (Crucifères) est dit tétradyname, car il est spécifiquement composé de 6 étamines réparties en 4 internes grandes et 2 externes plus courtes."
     },
     {
       "id": 23,
@@ -285,7 +285,7 @@
       ],
       "answer": "Les Rutaceae",
       "difficulty": 2,
-      "explanation": "La bonne réponse est « Les Rutaceae ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "Les Rutacées (comme l'Oranger) se distinguent morphologiquement par leurs feuilles alternes à pétiole ailé (formant comme une deuxième petite feuille devant) et un androcée polyadelphe."
     },
     {
       "id": 24,
@@ -299,7 +299,7 @@
       ],
       "answer": "L'hespéride (agrume)",
       "difficulty": 2,
-      "explanation": "La bonne réponse est « L'hespéride (agrume) ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "L'hespéride est une baie modifiée cloisonnée caractéristique des agrumes. Son épicarpe coloré (zeste) abrite des poches sécrétrices d'essences, et son endocarpe est rempli de poils succulents gorgés de jus."
     },
     {
       "id": 25,
@@ -307,7 +307,7 @@
       "question": "Expliquez le phénomène de gymnospermie compensée chez les conifères.",
       "answer": "La graine est nue car l'écaille ne se referme pas entièrement, mais les écailles se ferment autour de la graine après la fécondation pour la protéger.",
       "difficulty": 2,
-      "explanation": "Réponse-type attendue : La graine est nue car l'écaille ne se referme pas entièrement, mais les écailles se ferment autour de la graine après la fécondation pour la protéger.. Complète avec les exemples ou nuances vus dans ta fiche si l’énoncé le demande."
+      "explanation": "Bien que les ovules soient nus à l'origine (Gymnospermes signifiant littéralement 'graine nue'), les écailles ligneuses du cône se referment après la pollinisation, offrant une protection mécanique à la graine jusqu'à maturité."
     },
     {
       "id": 26,
@@ -315,7 +315,7 @@
       "question": "Qu'est-ce que le cambium chez les végétaux ?",
       "answer": "C'est un méristème secondaire qui permet la croissance en épaisseur de la plante en produisant le tissu de transport de la sève (bois et phloème).",
       "difficulty": 2,
-      "explanation": "Réponse-type attendue : C'est un méristème secondaire qui permet la croissance en épaisseur de la plante en produisant le tissu de transport de la sève (bois et phloème).. Complète avec les exemples ou nuances vus dans ta fiche si l’énoncé le demande."
+      "explanation": "Le cambium est un méristème secondaire circulaire indispensable à la croissance en épaisseur des tiges et des racines, générant le xylème secondaire (bois) vers l'intérieur et le phloème vers l'extérieur."
     },
     {
       "id": 27,
@@ -323,7 +323,7 @@
       "question": "Quelle molécule sert de réserve glucidique spécifique dans la famille des Asteraceae, à la place de l'amidon ?",
       "answer": "C'est l'inuline, un polymère du fructose.",
       "difficulty": 2,
-      "explanation": "Réponse-type attendue : C'est l'inuline, un polymère du fructose.. Complète avec les exemples ou nuances vus dans ta fiche si l’énoncé le demande."
+      "explanation": "Les Asteraceae se distinguent sur le plan métabolique en stockant leur énergie sous forme d'inuline (un polymère du fructose) dans leurs organes souterrains, plutôt que sous la forme classique d'amidon."
     },
     {
       "id": 28,
@@ -331,7 +331,7 @@
       "question": "De quoi est constitué un lichen ?",
       "answer": "Il résulte d'une symbiose (association physique durable et mutualiste) entre un champignon (souvent ascomycète) et une algue verte unicellulaire ou cyanobactérie.",
       "difficulty": 2,
-      "explanation": "Réponse-type attendue : Il résulte d'une symbiose (association physique durable et mutualiste) entre un champignon (souvent ascomycète) et une algue verte unicellulaire ou cyanobactérie.. Complète avec les exemples ou nuances vus dans ta fiche si l’énoncé le demande."
+      "explanation": "Un lichen est un organisme chimérique unissant intimement un champignon (qui forme la structure du thalle et retient l'humidité) et une algue (qui apporte les nutriments via la photosynthèse)."
     },
     {
       "id": 29,
@@ -339,7 +339,7 @@
       "question": "Quels sont les symptômes de la toxicité de la Grande ciguë (Conium maculatum) ?",
       "answer": "Ses alcaloïdes, comme la coniine, provoquent des fourmillements, une analgésie, puis une paralysie et la mort par asphyxie.",
       "difficulty": 2,
-      "explanation": "Réponse-type attendue : Ses alcaloïdes, comme la coniine, provoquent des fourmillements, une analgésie, puis une paralysie et la mort par asphyxie.. Complète avec les exemples ou nuances vus dans ta fiche si l’énoncé le demande."
+      "explanation": "La Grande ciguë renferme de la coniine, un alcaloïde redoutable qui entraîne des fourmillements, une paralysie ascendante, puis la mort par arrêt respiratoire (asphyxie du diaphragme, comme lors de l'exécution de Socrate)."
     },
     {
       "id": 30,
@@ -347,7 +347,7 @@
       "question": "Quelle molécule toxique extrait-on du Colchique d'automne et pour quel usage thérapeutique principal ?",
       "answer": "On en extrait la colchicine, utilisée comme anti-inflammatoire pour traiter les crises de goutte.",
       "difficulty": 2,
-      "explanation": "Réponse-type attendue : On en extrait la colchicine, utilisée comme anti-inflammatoire pour traiter les crises de goutte.. Complète avec les exemples ou nuances vus dans ta fiche si l’énoncé le demande."
+      "explanation": "Le colchique synthétise la colchicine, un alcaloïde antimitotique bloquant la division cellulaire. En thérapeutique, elle est administrée à doses très contrôlées comme puissant anti-inflammatoire lors des crises de goutte."
     },
     {
       "id": 31,
@@ -361,7 +361,7 @@
       ],
       "answer": "L'embryon se développe immédiatement dès que l'ovule tombe à terre, sans période de dormance.",
       "difficulty": 3,
-      "explanation": "La bonne réponse est « L'embryon se développe immédiatement dès que l'ovule tombe à terre, sans période de dormance. ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "Contrairement aux graines évoluées des Spermatophytes, l'ovule fécondé du Cycas (bien qu'on l'appelle souvent graine) ne possède pas de phase de vie ralentie (dormance) et germe très rapidement."
     },
     {
       "id": 32,
@@ -375,7 +375,7 @@
       ],
       "answer": "Alcaloïde parasympathomimétique utilisé en collyre pour traiter le glaucome.",
       "difficulty": 3,
-      "explanation": "La bonne réponse est « Alcaloïde parasympathomimétique utilisé en collyre pour traiter le glaucome. ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "La pilocarpine est un alcaloïde parasympathomimétique extrait des feuilles de Jaborandi, couramment utilisé en ophtalmologie (collyre) pour favoriser le drainage de l'humeur aqueuse et soigner le glaucome."
     },
     {
       "id": 33,
@@ -389,7 +389,7 @@
       ],
       "answer": "Le Chardon-Marie (Silybum marianum)",
       "difficulty": 3,
-      "explanation": "La bonne réponse est « Le Chardon-Marie (Silybum marianum) ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "Le Chardon-Marie accumule de la silymarine dans ses akènes. Ce complexe actif est un puissant hépatoprotecteur, utilisé médicalement pour traiter de graves intoxications du foie (ex: Amanite phalloïde)."
     },
     {
       "id": 34,
@@ -403,7 +403,7 @@
       ],
       "answer": "L'émétine",
       "difficulty": 3,
-      "explanation": "La bonne réponse est « L'émétine ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "L'émétine est un alcaloïde isoquinoléique toxique extrait de la racine d'Ipéca. Agissant comme un puissant irritant gastrique, elle était jadis employée en sirop pour provoquer des vomissements salvateurs en cas d'empoisonnement."
     },
     {
       "id": 35,
@@ -417,7 +417,7 @@
       ],
       "answer": "Coumarines",
       "difficulty": 3,
-      "explanation": "La bonne réponse est « Coumarines ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "L'esculoside, extrait spécifiquement de l'écorce du Marronnier d'Inde, est une molécule de la famille des coumarines reconnue pour ses remarquables effets veinotoniques et vasculoprotecteurs."
     },
     {
       "id": 36,
@@ -431,7 +431,7 @@
       ],
       "answer": "Les Euphorbiaceae",
       "difficulty": 3,
-      "explanation": "La bonne réponse est « Les Euphorbiaceae ». Les autres options sont des distracteurs plausibles : compare-les au cours pour mémoriser les distinctions (mécanisme, définition, ordre de grandeur)."
+      "explanation": "Les Euphorbiacées forment une famille très vaste et diversifiée, se distinguant classiquement par des inflorescences unisexuées, des fruits de type capsule tricoque et la présence de laticifères sécrétant un latex blanc et caustique."
     },
     {
       "id": 37,
@@ -439,7 +439,7 @@
       "question": "En morphologie florale, qu'est-ce qu'une fleur zygomorphe ?",
       "answer": "C'est une fleur irrégulière qui ne possède qu'un seul plan de symétrie (symétrie bilatérale).",
       "difficulty": 3,
-      "explanation": "Réponse-type attendue : C'est une fleur irrégulière qui ne possède qu'un seul plan de symétrie (symétrie bilatérale).. Complète avec les exemples ou nuances vus dans ta fiche si l’énoncé le demande."
+      "explanation": "Contrairement aux fleurs actinomorphes qui ont une symétrie radiale (en étoile), une fleur zygomorphe présente une symétrie bilatérale avec un unique axe de symétrie, comme c'est le cas chez le Genêt d'Espagne (Fabacées)."
     },
     {
       "id": 38,
@@ -447,7 +447,7 @@
       "question": "En quoi consiste la multiplication végétative par 'tallage' chez les Poaceae ?",
       "answer": "C'est la production de tiges secondaires (talles) à la base de la tige principale (le chaume), permettant à la plante de reformer de nouveaux pieds si elle est couchée ou piétinée.",
       "difficulty": 3,
-      "explanation": "Réponse-type attendue : C'est la production de tiges secondaires (talles) à la base de la tige principale (le chaume), permettant à la plante de reformer de nouveaux pieds si elle est couchée ou piétinée.. Complète avec les exemples ou nuances vus dans ta fiche si l’énoncé le demande."
+      "explanation": "Le tallage est un mécanisme de ramification basale très actif chez les graminées (Poacées). Lorsqu'on rabat la tige principale (ex: pâturage ou roulage du gazon), la plante compense en générant de multiples nouvelles tiges (talles)."
     },
     {
       "id": 39,
@@ -455,7 +455,7 @@
       "question": "Quel est le mécanisme d'action toxique des poils urticants pluricellulaires de la Grande ortie (Urtica dioica) ?",
       "answer": "La pointe effilée en silice du poil se brise au moindre frôlement, libérant de l'acide formique et d'autres composés brûlants et allergisants.",
       "difficulty": 3,
-      "explanation": "Réponse-type attendue : La pointe effilée en silice du poil se brise au moindre frôlement, libérant de l'acide formique et d'autres composés brûlants et allergisants.. Complète avec les exemples ou nuances vus dans ta fiche si l’énoncé le demande."
+      "explanation": "Le poil urticant de l'ortie fonctionne comme une micro-seringue en silice. Sa tête fragile se brise net lors d'un frottement, perforant la peau pour y injecter un suc riche en acide formique provoquant démangeaisons et brûlures."
     },
     {
       "id": 40,
@@ -463,7 +463,7 @@
       "question": "Comment se caractérise l'inflorescence hétérogame (capitule) du Souci sauvage (Calendula arvensis) ?",
       "answer": "Elle est composée de fleurs tubulées centrales (mâles et actinomorphes) et de fleurs ligulées rayonnantes à la périphérie (femelles et zygomorphes).",
       "difficulty": 3,
-      "explanation": "Réponse-type attendue : Elle est composée de fleurs tubulées centrales (mâles et actinomorphes) et de fleurs ligulées rayonnantes à la périphérie (femelles et zygomorphes).. Complète avec les exemples ou nuances vus dans ta fiche si l’énoncé le demande."
+      "explanation": "Chez le Souci et de nombreuses Asteracées radiées, le capitule est dit 'hétérogame' car il rassemble deux types morphologiques de fleurs sur le même réceptacle : des fleurons tubulés au centre et de grandes languettes (ligules) sur les bords."
     }
   ]
 }

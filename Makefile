@@ -28,7 +28,7 @@ else
   R := \033[0m
 endif
 
-.PHONY: help up start down stop logs ps build rebuild restart clean setup env doctor
+.PHONY: help all up start down stop logs ps build rebuild restart clean setup env doctor
 
 ## help — Affiche les cibles disponibles (défaut)
 help:
@@ -51,6 +51,10 @@ help:
 	@printf '\n'
 	@printf '%b\n' "  $(C)NO_COLOR=1 make help$(R)  pour désactiver les couleurs"
 	@printf '\n'
+
+
+## all — Construit l'image et lance le conteneur (recommandé pour le premier lancement)
+all: build up
 
 ## up / start — Lance le stack en arrière-plan
 up start:
