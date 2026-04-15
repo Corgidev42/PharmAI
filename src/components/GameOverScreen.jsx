@@ -4,6 +4,7 @@ import { countOwnedTiles } from '../game/engine'
 
 export default function GameOverScreen() {
   const players = useGameStore((s) => s.players)
+  const soloMode = useGameStore((s) => s.soloMode)
   const tiles = useGameStore((s) => s.tiles)
   const winner = useGameStore((s) => s.winner)
   const resetGame = useGameStore((s) => s.resetGame)
@@ -24,10 +25,14 @@ export default function GameOverScreen() {
             animate={{ rotate: [0, -6, 6, -6, 0], scale: [1, 1.06, 1] }}
             transition={{ delay: 0.2, duration: 0.8 }}
           >
-            {isDraw ? '🤝' : '🎀'}
+            {soloMode ? '📚' : isDraw ? '🤝' : '🎀'}
           </motion.div>
           <h1 className="text-3xl font-extrabold title-candy">
-            {isDraw ? 'Égalité kawaii' : 'Gros bravo !'}
+            {soloMode
+              ? 'Session solo terminée'
+              : isDraw
+                ? 'Égalité kawaii'
+                : 'Gros bravo !'}
           </h1>
           {winnerPlayer && (
             <p className="text-xl font-extrabold drop-shadow-[0_0_12px_currentColor]" style={{ color: winnerPlayer.color }}>
@@ -35,11 +40,13 @@ export default function GameOverScreen() {
             </p>
           )}
           <p className="text-xs text-pink-200/75 leading-relaxed">
-            Gagnant = plus de cases possédées (les bonus néon ne comptent pas pour le titre).
+            {soloMode
+              ? 'Fin quand ton deck est épuisé ou au bout des tours — compte tes cases pour suivre ta progression.'
+              : 'Gagnant = plus de cases possédées (les bonus néon ne comptent pas pour le titre).'}
           </p>
 
           <div className="space-y-2 pt-2">
-            {players.map((player) => {
+            {(soloMode ? [players[0]] : players).map((player) => {
               const owned = countOwnedTiles(tiles, player.id)
               const bonus = player.bonus ?? 0
               const isWinner = player.id === winner

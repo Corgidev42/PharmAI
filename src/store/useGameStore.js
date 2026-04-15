@@ -28,6 +28,8 @@ import { shuffleArrayRandom } from '../game/shuffleOptions.js'
 function buildInitialState() {
   return {
     phase: PHASES.START,
+    /** Entraînement seul : un deck, pas d’alternance de tour. */
+    soloMode: false,
     currentPlayer: 0,
     players: [
       createPlayer(0, PLAYER_NAMES[0], PLAYER_COLORS[0]),
@@ -115,9 +117,12 @@ export const useGameStore = create((set, get) => ({
 
   setDeckErrors: (errors) => set({ deckErrors: errors }),
 
+  setSoloMode: (soloMode) => set({ soloMode: Boolean(soloMode) }),
+
   startGame: () =>
     set((s) => ({
       phase: PHASES.ROLLING,
+      currentPlayer: s.soloMode ? 0 : s.currentPlayer,
       decks: s.decks.map((d) => ({
         ...d,
         cards: shuffleArrayRandom(d.cards),
@@ -254,7 +259,7 @@ export const useGameStore = create((set, get) => ({
     }
 
     if (landing === 'OWN') {
-      const victory = checkVictory(s.tiles, s.decks, s.turnCount + 1)
+      const victory = checkVictory(s.tiles, s.decks, s.turnCount + 1, s.soloMode)
       if (victory !== null) {
         set({
           players: updatedPlayers,
@@ -289,7 +294,7 @@ export const useGameStore = create((set, get) => ({
       set({
         players: updatedPlayers,
         phase: PHASES.ROLLING,
-        currentPlayer: nextPlayerIndex(s.currentPlayer),
+        currentPlayer: nextPlayerIndex(s.currentPlayer, s.soloMode),
         turnCount: s.turnCount + 1,
         diceValue: null,
         landingType: null,
@@ -305,7 +310,7 @@ export const useGameStore = create((set, get) => ({
         set({
           players: updatedPlayers,
           phase: PHASES.GAME_OVER,
-          winner: checkVictory(s.tiles, s.decks, s.turnCount + 1) ?? -1,
+          winner: checkVictory(s.tiles, s.decks, s.turnCount + 1, s.soloMode) ?? -1,
           isAnimatingMovement: false,
         })
         return
@@ -333,7 +338,7 @@ export const useGameStore = create((set, get) => ({
       set({
         players: updatedPlayers,
         phase: PHASES.GAME_OVER,
-        winner: checkVictory(s.tiles, s.decks, s.turnCount + 1) ?? -1,
+        winner: checkVictory(s.tiles, s.decks, s.turnCount + 1, s.soloMode) ?? -1,
         isAnimatingMovement: false,
       })
       return
@@ -386,7 +391,7 @@ export const useGameStore = create((set, get) => ({
 
   proceedAfterResult: () => {
     const s = get()
-    const victory = checkVictory(s.tiles, s.decks, s.turnCount + 1)
+    const victory = checkVictory(s.tiles, s.decks, s.turnCount + 1, s.soloMode)
     if (victory !== null) {
       set({
         phase: PHASES.GAME_OVER,
@@ -401,7 +406,7 @@ export const useGameStore = create((set, get) => ({
     }
     set({
       phase: PHASES.ROLLING,
-      currentPlayer: nextPlayerIndex(s.currentPlayer),
+      currentPlayer: nextPlayerIndex(s.currentPlayer, s.soloMode),
       turnCount: s.turnCount + 1,
       diceValue: null,
       currentCard: null,

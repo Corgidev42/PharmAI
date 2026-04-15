@@ -146,6 +146,7 @@ export default function QuestionModal() {
   const landingType = useGameStore((s) => s.landingType)
   const slideNote = useGameStore((s) => s.slideNote)
   const lastSubmittedAnswer = useGameStore((s) => s.lastSubmittedAnswer)
+  const soloMode = useGameStore((s) => s.soloMode)
 
   const visible =
     phase === PHASES.QUESTION || (phase === PHASES.RESULT && landingType === 'FREE')
@@ -201,6 +202,7 @@ export default function QuestionModal() {
                     card={currentCard}
                     onAnswer={submitAnswer}
                     accent="pink"
+                    soloMode={soloMode}
                   />
                 )}
               </div>

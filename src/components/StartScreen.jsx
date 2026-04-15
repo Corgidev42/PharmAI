@@ -14,22 +14,28 @@ export default function StartScreen() {
   const loadDeckForPlayer = useGameStore((s) => s.loadDeckForPlayer)
   const setDeckErrors = useGameStore((s) => s.setDeckErrors)
   const deckErrors = useGameStore((s) => s.deckErrors)
+  const soloMode = useGameStore((s) => s.soloMode)
+  const setSoloMode = useGameStore((s) => s.setSoloMode)
 
   const [showCreator, setShowCreator] = useState(false)
   const [geminiPlayerId, setGeminiPlayerId] = useState(0)
 
-  const canStart = decks[0].cards.length > 0 && decks[1].cards.length > 0
+  const canStart = soloMode
+    ? decks[0].cards.length > 0
+    : decks[0].cards.length > 0 && decks[1].cards.length > 0
 
   const loadSample = useCallback(async () => {
     const result = await loadDeckFromUrl('/deck.sample.json')
     if (result.success) {
       const data = result.data
       loadDeckForPlayer(0, { theme: data.theme, cards: [...data.cards] })
-      loadDeckForPlayer(1, { theme: data.theme, cards: [...data.cards] })
+      if (!soloMode) {
+        loadDeckForPlayer(1, { theme: data.theme, cards: [...data.cards] })
+      }
     } else {
       setDeckErrors(result.errors)
     }
-  }, [loadDeckForPlayer, setDeckErrors])
+  }, [loadDeckForPlayer, setDeckErrors, soloMode])
 
   const openGemini = (playerId) => {
     setGeminiPlayerId(playerId)
@@ -48,33 +54,49 @@ export default function StartScreen() {
                 PharmAI
               </h1>
               <p className="text-[11px] font-semibold leading-snug text-pink-200/85 sm:text-xs">
-                Chaque joueur importe son deck : aux questions de ton tour, c’est ton paquet qui est pioché.
+                {soloMode
+                  ? 'Mode solo : un seul deck, tu enchaînes les tours pour t’entraîner sans adversaire.'
+                  : 'Chaque joueur importe son deck : aux questions de ton tour, c’est ton paquet qui est pioché.'}
               </p>
             </div>
 
+            <label className="flex shrink-0 cursor-pointer items-center gap-2 rounded-xl border border-cyan-400/25 bg-purple-950/50 px-3 py-2 sm:gap-3 sm:rounded-2xl sm:px-4 sm:py-2.5">
+              <input
+                type="checkbox"
+                checked={soloMode}
+                onChange={(e) => setSoloMode(e.target.checked)}
+                className="h-4 w-4 shrink-0 rounded border-cyan-400/50 text-pink-500 focus:ring-cyan-400/40"
+              />
+              <span className="text-xs font-bold text-cyan-100 sm:text-sm">Mode solo (entraînement)</span>
+            </label>
+
             <div className="shrink-0 space-y-1.5 sm:space-y-2">
-              {players.map((player) => (
-                <div key={player.id} className="flex items-center gap-2 sm:gap-3">
-                  <div
-                    className="h-4 w-4 shrink-0 rounded-full shadow-neon-pink ring-2 ring-white/30 sm:h-5 sm:w-5"
-                    style={{ backgroundColor: player.color }}
-                  />
-                  <input
-                    type="text"
-                    value={player.name}
-                    onChange={(e) => setPlayerName(player.id, e.target.value)}
-                    placeholder={`Joueur ${player.id + 1}`}
-                    className="min-w-0 flex-1 rounded-xl border-2 border-cyan-400/25 bg-purple-950/60 px-3 py-2 text-sm text-white placeholder-pink-300/40 transition-all focus:border-pink-400/50 focus:outline-none focus:shadow-neon-cyan sm:rounded-2xl sm:px-4 sm:py-2.5"
-                  />
-                </div>
-              ))}
+              {players
+                .filter((p) => !soloMode || p.id === 0)
+                .map((player) => (
+                  <div key={player.id} className="flex items-center gap-2 sm:gap-3">
+                    <div
+                      className="h-4 w-4 shrink-0 rounded-full shadow-neon-pink ring-2 ring-white/30 sm:h-5 sm:w-5"
+                      style={{ backgroundColor: player.color }}
+                    />
+                    <input
+                      type="text"
+                      value={player.name}
+                      onChange={(e) => setPlayerName(player.id, e.target.value)}
+                      placeholder={soloMode ? 'Ton pseudo' : `Joueur ${player.id + 1}`}
+                      className="min-w-0 flex-1 rounded-xl border-2 border-cyan-400/25 bg-purple-950/60 px-3 py-2 text-sm text-white placeholder-pink-300/40 transition-all focus:border-pink-400/50 focus:outline-none focus:shadow-neon-cyan sm:rounded-2xl sm:px-4 sm:py-2.5"
+                    />
+                  </div>
+                ))}
             </div>
 
             <div className="flex min-h-0 w-full flex-col gap-2 overflow-hidden sm:gap-3">
               <h2 className="shrink-0 text-[11px] font-bold text-cyan-200/90 sm:text-xs">Decks de révision</h2>
-              <div className="grid shrink-0 grid-cols-1 gap-2 sm:grid-cols-2 sm:gap-3">
+              <div
+                className={`grid shrink-0 grid-cols-1 gap-2 sm:gap-3 ${soloMode ? '' : 'sm:grid-cols-2'}`}
+              >
                 <DeckImporter playerId={0} />
-                <DeckImporter playerId={1} />
+                {!soloMode && <DeckImporter playerId={1} />}
               </div>
 
               {deckErrors && (
@@ -93,7 +115,7 @@ export default function StartScreen() {
                   onClick={loadSample}
                   className="min-w-[120px] flex-1 rounded-xl border-2 border-cyan-400/35 py-2 text-[11px] font-bold text-cyan-200 transition-all hover:bg-cyan-500/10 hover:shadow-neon-cyan sm:min-w-[140px] sm:rounded-2xl sm:py-2.5 sm:text-xs"
                 >
-                  Exemple (les deux decks)
+                  {soloMode ? 'Exemple (ton deck)' : 'Exemple (les deux decks)'}
                 </button>
                 <button
                   type="button"
@@ -102,13 +124,15 @@ export default function StartScreen() {
                 >
                   Gemini — {players[0].name}
                 </button>
-                <button
-                  type="button"
-                  onClick={() => openGemini(1)}
-                  className="min-w-[120px] flex-1 rounded-xl border-2 border-cyan-400/40 bg-gradient-to-r from-cyan-600/35 to-teal-600/35 py-2 text-[11px] font-bold text-cyan-100 transition-all hover:from-cyan-500/45 hover:to-teal-500/45 sm:min-w-[140px] sm:rounded-2xl sm:py-2.5 sm:text-xs"
-                >
-                  Gemini — {players[1].name}
-                </button>
+                {!soloMode && (
+                  <button
+                    type="button"
+                    onClick={() => openGemini(1)}
+                    className="min-w-[120px] flex-1 rounded-xl border-2 border-cyan-400/40 bg-gradient-to-r from-cyan-600/35 to-teal-600/35 py-2 text-[11px] font-bold text-cyan-100 transition-all hover:from-cyan-500/45 hover:to-teal-500/45 sm:min-w-[140px] sm:rounded-2xl sm:py-2.5 sm:text-xs"
+                  >
+                    Gemini — {players[1].name}
+                  </button>
+                )}
               </div>
             </div>
 
@@ -122,7 +146,11 @@ export default function StartScreen() {
                   : 'cursor-not-allowed border border-pink-500/20 bg-purple-950/80 text-pink-300/40'
               }`}
             >
-              {canStart ? 'C’est parti !' : 'Importe un deck pour chaque joueur'}
+              {canStart
+                ? 'C’est parti !'
+                : soloMode
+                  ? 'Importe au moins un deck'
+                  : 'Importe un deck pour chaque joueur'}
             </button>
           </div>
         </div>

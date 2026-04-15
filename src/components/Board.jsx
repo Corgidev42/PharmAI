@@ -144,6 +144,7 @@ function SnakeLadderRibbons({ cellSize, gap, tilePositions }) {
 export default function Board() {
   const tiles = useGameStore((s) => s.tiles)
   const players = useGameStore((s) => s.players)
+  const soloMode = useGameStore((s) => s.soloMode)
   const landingFx = useGameStore((s) => s.landingFx)
   const slidePath = useGameStore((s) => s.slidePath)
   const measureRef = useRef(null)
@@ -187,7 +188,8 @@ export default function Board() {
     return map
   }, [tilePositions])
 
-  const overlap = players[0].position === players[1].position
+  const boardPlayers = soloMode ? [players[0]] : players
+  const overlap = !soloMode && players[0].position === players[1].position
 
   const gridW = BOARD_COLS * cellSize + (BOARD_COLS - 1) * gap
   const gridH = BOARD_ROWS * cellSize + (BOARD_ROWS - 1) * gap
@@ -232,7 +234,7 @@ export default function Board() {
             })}
           </div>
 
-          {players.map((player) => {
+          {boardPlayers.map((player) => {
             const pos = tilePositions[player.position]
             const special = tiles[player.position]?.special
             const tileSpecial =

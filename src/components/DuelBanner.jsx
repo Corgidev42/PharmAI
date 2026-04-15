@@ -14,6 +14,7 @@ export default function DuelBanner() {
   const proceedAfterResult = useGameStore((s) => s.proceedAfterResult)
   const landingType = useGameStore((s) => s.landingType)
   const slideNote = useGameStore((s) => s.slideNote)
+  const soloMode = useGameStore((s) => s.soloMode)
 
   const [selected, setSelected] = useState(null)
 
@@ -43,11 +44,15 @@ export default function DuelBanner() {
                 <span className="font-extrabold text-white text-sm">{attacker.name}</span>
               </div>
               <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-amber-200">
-                Duel
+                {soloMode ? 'Défi' : 'Duel'}
               </span>
               <div className="flex items-center gap-2">
-                <span className="font-extrabold text-white text-sm">{defender.name}</span>
-                <div className="w-5 h-5 rounded-full shadow-neon-cyan" style={{ backgroundColor: defender.color }} />
+                <span className="font-extrabold text-white text-sm">
+                  {soloMode ? 'Plateau' : defender.name}
+                </span>
+                {!soloMode && (
+                  <div className="w-5 h-5 rounded-full shadow-neon-cyan" style={{ backgroundColor: defender.color }} />
+                )}
               </div>
             </div>
 
@@ -103,6 +108,7 @@ export default function DuelBanner() {
                       card={currentCard}
                       onAnswer={submitAnswer}
                       accent="rose"
+                      soloMode={soloMode}
                     />
                   )}
                 </>
@@ -118,7 +124,11 @@ export default function DuelBanner() {
                     <p className="text-[11px] text-cyan-200/90 font-bold whitespace-pre-line">{slideNote}</p>
                   )}
                   <p className={`text-xl font-bold ${lastAnswerCorrect ? 'text-emerald-300' : 'text-rose-300'}`}>
-                    {lastAnswerCorrect ? 'Case capturée.' : 'Échec du duel (−1 point).'}
+                    {lastAnswerCorrect
+                      ? 'Case capturée.'
+                      : soloMode
+                        ? 'Pas capturé (−1 point).'
+                        : 'Échec du duel (−1 point).'}
                   </p>
                   <button
                     onClick={proceedAfterResult}

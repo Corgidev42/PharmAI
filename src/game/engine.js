@@ -162,12 +162,14 @@ export function countOwnedTiles(tiles, playerId) {
   return tiles.filter((t) => t.owner === playerId).length
 }
 
-export function checkVictory(tiles, decks, turnCount) {
-  const bothDecksExhausted =
-    Array.isArray(decks) &&
-    decks.length >= 2 &&
-    decks[0].currentIndex >= decks[0].cards.length &&
-    decks[1].currentIndex >= decks[1].cards.length
+export function checkVictory(tiles, decks, turnCount, soloMode = false) {
+  const deck0Done =
+    Array.isArray(decks) && decks[0] && decks[0].currentIndex >= decks[0].cards.length
+  const deck1Done =
+    Array.isArray(decks) && decks[1] && decks[1].currentIndex >= decks[1].cards.length
+  const bothDecksExhausted = soloMode
+    ? deck0Done
+    : Array.isArray(decks) && decks.length >= 2 && deck0Done && deck1Done
   const turnsOver = turnCount >= MAX_TURNS
 
   if (!bothDecksExhausted && !turnsOver) return null
@@ -179,6 +181,7 @@ export function checkVictory(tiles, decks, turnCount) {
   return -1
 }
 
-export function nextPlayerIndex(current) {
+export function nextPlayerIndex(current, soloMode = false) {
+  if (soloMode) return 0
   return current === 0 ? 1 : 0
 }

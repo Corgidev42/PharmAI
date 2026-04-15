@@ -4,6 +4,7 @@ import Dice from './Dice'
 
 export default function ScoreBoard() {
   const players = useGameStore((s) => s.players)
+  const soloMode = useGameStore((s) => s.soloMode)
   const tiles = useGameStore((s) => s.tiles)
   const decks = useGameStore((s) => s.decks)
   const currentPlayer = useGameStore((s) => s.currentPlayer)
@@ -12,9 +13,13 @@ export default function ScoreBoard() {
 
   return (
     <div className="glass-candy flex h-full min-h-0 w-full min-w-0 flex-col overflow-hidden rounded-2xl border-2 border-cyan-400/25 p-2 shadow-neon-cyan sm:rounded-3xl sm:p-3 max-lg:landscape:rounded-xl max-lg:landscape:p-1.5 max-lg:landscape:h-auto lg:h-auto lg:min-h-0">
-      <div className="order-1 max-lg:landscape:order-4 grid shrink-0 grid-cols-2 gap-1.5 text-[9px] text-fuchsia-200/85 md:grid-cols-1 max-lg:landscape:grid-cols-1 sm:gap-2 sm:text-[10px]">
-        {players.map((p, i) => {
-          const d = decks[i]
+      <div
+        className={`order-1 max-lg:landscape:order-4 grid shrink-0 gap-1.5 text-[9px] text-fuchsia-200/85 md:grid-cols-1 max-lg:landscape:grid-cols-1 sm:gap-2 sm:text-[10px] ${
+          soloMode ? 'grid-cols-1' : 'grid-cols-2'
+        }`}
+      >
+        {(soloMode ? [players[0]] : players).map((p) => {
+          const d = decks[p.id]
           const left = d.cards.length - d.currentIndex
           return (
             <div
@@ -42,14 +47,14 @@ export default function ScoreBoard() {
         </span>
         <span
           className="min-w-0 text-pink-200/80 max-lg:landscape:w-full max-lg:landscape:break-words max-lg:landscape:text-left text-right"
-          title={`Pioche : ${players[currentPlayer]?.name ?? '…'}`}
+          title={soloMode ? 'Mode solo' : `Pioche : ${players[currentPlayer]?.name ?? '…'}`}
         >
-          Pioche : {players[currentPlayer]?.name ?? '…'}
+          {soloMode ? 'Mode solo' : `Pioche : ${players[currentPlayer]?.name ?? '…'}`}
         </span>
       </div>
 
       <div className="order-3 max-lg:landscape:order-3 flex shrink-0 flex-col gap-1.5 overflow-hidden sm:gap-2 max-lg:landscape:gap-1 lg:gap-2">
-        {players.map((player) => {
+        {(soloMode ? [players[0]] : players).map((player) => {
           const owned = countOwnedTiles(tiles, player.id)
           const bonus = player.bonus ?? 0
           const isActive = player.id === currentPlayer
