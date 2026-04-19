@@ -1,0 +1,281 @@
+{
+    "theme": "Architecture et multiplexage système (mini_serv)",
+    "cards": [
+      {
+        "id": 1,
+        "type": "QCM",
+        "question": "Quelle fonction système est au cœur de l'architecture pour gérer de multiples clients sans bloquer le serveur ?",
+        "options": [
+          "select",
+          "accept",
+          "recv",
+          "fork"
+        ],
+        "answer": "select",
+        "explanation": "La fonction select permet de surveiller plusieurs descripteurs de fichiers simultanément. Elle indique au programme lesquels sont prêts pour une lecture ou une écriture, évitant ainsi les appels réseau bloquants.",
+        "difficulty": 1
+      },
+      {
+        "id": 2,
+        "type": "QCM",
+        "question": "Comment la valeur du premier argument de select() (le paramètre nfds) doit-elle être calculée ?",
+        "options": [
+          "Le plus grand descripteur de fichier actif plus 1",
+          "Le nombre total de clients actuellement connectés",
+          "Le descripteur du socket d'écoute uniquement",
+          "La limite maximale de sockets définie par l'OS"
+        ],
+        "answer": "Le plus grand descripteur de fichier actif plus 1",
+        "explanation": "La fonction select() itère sur les descripteurs de 0 jusqu'à nfds - 1. Il faut donc obligatoirement lui fournir la valeur du plus grand descripteur utilisé (max_fd) augmentée de 1.",
+        "difficulty": 1
+      },
+      {
+        "id": 3,
+        "type": "OPEN",
+        "question": "Pourquoi est-il indispensable de copier l'ensemble de descripteurs (fd_set) actif dans un ensemble temporaire avant chaque appel à select() ?",
+        "answer": "Parce que select() est destructrice : elle écrase l'ensemble fourni pour y laisser uniquement les descripteurs qui sont prêts.",
+        "explanation": "Si l'on passe directement l'ensemble global de surveillance, tous les descripteurs inactifs à cet instant précis seront définitivement effacés de notre base. Une copie de travail s'impose à chaque tour de boucle.",
+        "difficulty": 1
+      },
+      {
+        "id": 4,
+        "type": "QCM",
+        "question": "Que signifie un événement de lecture (signalé par select) spécifiquement sur le descripteur du socket d'écoute du serveur ?",
+        "options": [
+          "Un nouveau client tente de se connecter",
+          "Un client existant a envoyé un message de texte",
+          "Un client vient de fermer brusquement sa connexion",
+          "Le serveur a subi une erreur critique interne"
+        ],
+        "answer": "Un nouveau client tente de se connecter",
+        "explanation": "Le socket d'écoute principal ne reçoit jamais de données textuelles. Son activation signale qu'une requête de connexion TCP est en attente, ce qui nécessite de déclencher l'appel à accept().",
+        "difficulty": 1
+      },
+      {
+        "id": 5,
+        "type": "OPEN",
+        "question": "Que retourne l'appel système recv() lorsqu'un client ferme proprement sa connexion TCP ?",
+        "answer": "L'appel recv() renvoie la valeur 0.",
+        "explanation": "C'est le signal réseau standard (End Of File) indiquant que le client a fermé la connexion de son côté. Le serveur doit alors intercepter ce 0 pour déclencher le nettoyage complet de ce client.",
+        "difficulty": 1
+      },
+      {
+        "id": 6,
+        "type": "QCM",
+        "question": "Lors de l'acceptation d'un nouveau client, à quels destinataires le message de bienvenue (arrived) doit-il être diffusé ?",
+        "options": [
+          "À tous les clients déjà connectés, sauf le nouveau",
+          "À tous les clients connectés, y compris le nouveau venu",
+          "Seulement au nouveau client pour confirmer sa connexion",
+          "À personne, c'est un log exclusivement interne"
+        ],
+        "answer": "À tous les clients déjà connectés, sauf le nouveau",
+        "explanation": "La logique de broadcast du sujet veut qu'on avertisse les utilisateurs présents dans le salon de l'arrivée d'un nouveau participant. Envoyer ce message au nouveau lui-même est une erreur de logique.",
+        "difficulty": 1
+      },
+      {
+        "id": 7,
+        "type": "OPEN",
+        "question": "Lorsqu'un client se déconnecte, quels destinataires doivent recevoir la notification de son départ (left) ?",
+        "answer": "La notification doit être envoyée à tous les autres clients restant connectés sur le serveur.",
+        "explanation": "Le serveur agit comme un relais. Si un membre quitte la session, tous les autres descripteurs encore actifs doivent en être informés afin de maintenir la cohérence du chat.",
+        "difficulty": 1
+      },
+      {
+        "id": 8,
+        "type": "QCM",
+        "question": "Quel code de retour doit obligatoirement être utilisé avec la fonction exit() pour signaler une erreur système critique à l'OS ?",
+        "options": [
+          "exit(1)",
+          "exit(0)",
+          "exit(-1)",
+          "exit(255)"
+        ],
+        "answer": "exit(1)",
+        "explanation": "Le standard UNIX stipule qu'une exécution réussie retourne 0. Toute erreur fatale exige un code d'erreur (ici 1) pour informer les scripts externes ou correcteurs que le programme a échoué.",
+        "difficulty": 1
+      },
+      {
+        "id": 9,
+        "type": "OPEN",
+        "question": "Pourquoi chaque client connecté doit-il posséder son propre buffer de réception persistant en mémoire ?",
+        "answer": "Parce que le protocole TCP peut fragmenter les paquets, empêchant de garantir qu'une phrase entière est reçue en un seul appel à recv().",
+        "explanation": "Les octets arrivent sous forme de flux continu sans délimitation. Il faut accumuler ces morceaux dans un tampon spécifique à chaque client jusqu'à la réception du caractère de saut de ligne.",
+        "difficulty": 1
+      },
+      {
+        "id": 10,
+        "type": "QCM",
+        "question": "Que doit faire le serveur si l'appel à recv() retourne un seul paquet réseau contenant plusieurs lignes de chat collées (plusieurs \\n) ?",
+        "options": [
+          "Extraire et relayer chaque ligne indépendamment dans une boucle",
+          "Envoyer tout le bloc réseau en une seule fois avec un seul préfixe",
+          "Ignorer toutes les données suivant le premier saut de ligne",
+          "Déconnecter le client pour tentative de saturation du réseau"
+        ],
+        "answer": "Extraire et relayer chaque ligne indépendamment dans une boucle",
+        "explanation": "L'unité logique du chat est la ligne. Le serveur doit donc analyser le buffer et boucler tant qu'un retour à la ligne est présent, afin de préfixer et diffuser chaque phrase distinctement.",
+        "difficulty": 2
+      },
+      {
+        "id": 11,
+        "type": "QCM",
+        "question": "Pour respecter les standards, quel flux doit être utilisé pour écrire les messages d'erreur du serveur via l'appel système write() ?",
+        "options": [
+          "La sortie d'erreur standard (descripteur 2)",
+          "La sortie standard (descripteur 1)",
+          "L'entrée standard (descripteur 0)",
+          "Un descripteur généré par la socket d'écoute"
+        ],
+        "answer": "La sortie d'erreur standard (descripteur 2)",
+        "explanation": "Les normes UNIX (et les testeurs automatiques) exigent que les erreurs graves s'affichent sur stderr (fd = 2). Utiliser stdout (fd = 1) conduirait à un échec aux tests.",
+        "difficulty": 2
+      },
+      {
+        "id": 12,
+        "type": "OPEN",
+        "question": "Citez les trois opérations de nettoyage indispensables que le serveur doit effectuer lorsqu'un client se déconnecte.",
+        "answer": "Il faut retirer son descripteur de l'ensemble de surveillance (FD_CLR), fermer sa socket (close) et libérer son buffer réseau (free).",
+        "explanation": "Oublier l'une de ces étapes est catastrophique : une boucle infinie de select() si on omet FD_CLR, un épuisement des ressources système pour le close, et une fuite de mémoire pour le free.",
+        "difficulty": 2
+      },
+      {
+        "id": 13,
+        "type": "QCM",
+        "question": "Lorsqu'un nouveau client est accepté par le serveur, comment doit-il être intégré au système de surveillance de select() ?",
+        "options": [
+          "En allumant son bit via la macro FD_SET sur l'ensemble global des descripteurs actifs",
+          "En relançant la fonction listen() avec un identifiant incrémenté",
+          "En allouant un nouveau thread indépendant de la boucle principale",
+          "En exécutant FD_ISSET pour activer directement sa socket"
+        ],
+        "answer": "En allumant son bit via la macro FD_SET sur l'ensemble global des descripteurs actifs",
+        "explanation": "FD_SET marque le descripteur dans la base persistante des fds à surveiller. Lors du prochain passage dans la boucle, select() inclura cette socket dans sa vérification de lecture.",
+        "difficulty": 2
+      },
+      {
+        "id": 14,
+        "type": "QCM",
+        "question": "Quelle est l'approche attendue en réseau C si la fonction select() retourne une valeur strictement inférieure à 0 ?",
+        "options": [
+          "Passer à l'itération suivante avec une instruction 'continue'",
+          "Arrêter immédiatement le programme avec une erreur fatale",
+          "Couper de force toutes les connexions clientes existantes",
+          "Fermer la socket principale et relancer l'appel bind()"
+        ],
+        "answer": "Passer à l'itération suivante avec une instruction 'continue'",
+        "explanation": "Un retour négatif de select() peut résulter d'un signal asynchrone non critique (comme EINTR). L'ignorer prudemment avec un `continue` protège le serveur contre les crashs inopportuns.",
+        "difficulty": 2
+      },
+      {
+        "id": 15,
+        "type": "OPEN",
+        "question": "Lors de la diffusion d'un message textuel (chat), quels sont les clients qui reçoivent la chaîne formatée ?",
+        "answer": "Tous les autres clients actuellement connectés, à la stricte exclusion du client expéditeur.",
+        "explanation": "L'expéditeur sachant déjà ce qu'il a écrit, le serveur a pour seul rôle de distribuer l'information au reste des utilisateurs pour simuler la conversation de groupe.",
+        "difficulty": 2
+      },
+      {
+        "id": 16,
+        "type": "QCM",
+        "question": "Juste après un appel réussi à recv(), que doit faire le serveur pour traiter le tampon réseau comme une chaîne de caractères (string) valide en C ?",
+        "options": [
+          "Ajouter manuellement un octet nul (\\0) à l'index correspondant au nombre d'octets retournés",
+          "Convertir l'intégralité du buffer en format big-endian via ntohl()",
+          "Insérer un caractère de saut de ligne (\\n) pour forcer le flush",
+          "Réinitialiser complètement la zone mémoire avec bzero()"
+        ],
+        "answer": "Ajouter manuellement un octet nul (\\0) à l'index correspondant au nombre d'octets retournés",
+        "explanation": "La fonction recv() récupère des octets bruts sans jamais terminer la chaîne par un '\\0'. Cet ajout est critique pour éviter que les fonctions de gestion de chaînes ne lisent la mémoire indéfiniment.",
+        "difficulty": 2
+      },
+      {
+        "id": 17,
+        "type": "OPEN",
+        "question": "Que doit impérativement faire le programme si une fonction système ou une fonction gérant la mémoire échoue critique ?",
+        "answer": "Il doit afficher son message d'erreur fatal sur stderr et mettre un terme au processus avec un code de sortie de 1.",
+        "explanation": "En architecture réseau, on ne laisse pas un programme s'exécuter dans un état corrompu (socket non lié, allocation RAM échouée). Il faut intercepter le retour de l'OS et planter proprement.",
+        "difficulty": 2
+      },
+      {
+        "id": 18,
+        "type": "QCM",
+        "question": "Comment le serveur configure-t-il sa socket pour écouter exclusivement les connexions entrantes issues de l'environnement local (localhost) ?",
+        "options": [
+          "En assignant la constante htonl(2130706433) au champ sin_addr de la structure IP",
+          "En testant l'adresse de chaque client connecté via un bloc if après l'accept()",
+          "En utilisant l'argument INADDR_ANY couplé au port 127.0.0.1",
+          "En rejetant tout descripteur de fichier supérieur à 1024"
+        ],
+        "answer": "En assignant la constante htonl(2130706433) au champ sin_addr de la structure IP",
+        "explanation": "Le nombre entier 2130706433 est la conversion en 32 bits non signé de l'adresse IP 127.0.0.1. Renseigner cette valeur garantit au niveau du noyau que la socket rejettera le trafic externe.",
+        "difficulty": 2
+      },
+      {
+        "id": 19,
+        "type": "OPEN",
+        "question": "Comment s'assurer qu'un appel à send() vers un client saturé ne bloquera pas l'intégralité de la boucle du serveur ?",
+        "answer": "Il faut vérifier via le set d'écriture (souvent nommé wfds) de select() que la socket destinataire est réellement prête à recevoir.",
+        "explanation": "TCP dispose de buffers d'envoi de taille finie. Si ces tampons sont pleins, `send()` va se bloquer. Interroger select() sur les descripteurs en écriture permet d'esquiver ce piège mortel.",
+        "difficulty": 3
+      },
+      {
+        "id": 20,
+        "type": "QCM",
+        "question": "D'après les contraintes architecturales simplifiées du sujet, quelle action faut-il entreprendre face à une erreur EAGAIN sur les opérations réseau ?",
+        "options": [
+          "Il ne faut pas s'en soucier, ce cas n'a pas à être géré",
+          "Il faut relancer l'appel bloquant dans une boucle infinie jusqu'au succès",
+          "Il faut fermer la connexion du client immédiatement car le socket est défaillant",
+          "Il faut endormir le thread courant avec sleep() et réessayer plus tard"
+        ],
+        "answer": "Il ne faut pas s'en soucier, ce cas n'a pas à être géré",
+        "explanation": "Le modèle purement synchrone basé sur select() garantit que read() et write() ne sont appelés que si la socket est déjà marquée comme prête. L'erreur de blocage (EAGAIN) est donc évitée par design.",
+        "difficulty": 3
+      },
+      {
+        "id": 21,
+        "type": "OPEN",
+        "question": "Comment le serveur identifie-t-il les clients ayant une activité réseau une fois que select() a rendu la main ?",
+        "answer": "Il doit boucler sur tous les entiers de 0 jusqu'à max_fd et vérifier leur état individuel grâce à la macro FD_ISSET().",
+        "explanation": "Select() ne fournit pas directement une liste des sockets actives. Il se contente de mettre à jour le bitmask. C'est donc au développeur de balayer linéairement tous les descripteurs sous surveillance.",
+        "difficulty": 3
+      },
+      {
+        "id": 22,
+        "type": "QCM",
+        "question": "Dans le cadre du sujet, comment l'identifiant logique (ID) d'un nouveau client doit-il être défini ?",
+        "options": [
+          "Via un compteur global stocké par le programme qui s'incrémente après chaque acceptation",
+          "En lui assignant directement la valeur numérique de son descripteur de fichier (fd)",
+          "En générant une empreinte cryptographique unique lors de sa connexion",
+          "En recyclant systématiquement l'identifiant le plus bas qui vient d'être libéré"
+        ],
+        "answer": "Via un compteur global stocké par le programme qui s'incrémente après chaque acceptation",
+        "explanation": "Les descripteurs réseaux (fd) recyclés par l'OS ne respectent pas un incrément mathématique pur. Pour assurer un identifiant incrémenté sans trou (0, 1, 2...), un compteur logiciel distinct est obligatoire.",
+        "difficulty": 3
+      },
+      {
+        "id": 23,
+        "type": "QCM",
+        "question": "Pour valider les outils de contrôle de mémoire, quelle précaution doit-on prendre avant d'exécuter un arrêt suite à une erreur fatale ?",
+        "options": [
+          "Fermer tous les fd ouverts et libérer toutes les zones de mémoire allouées",
+          "Informer l'intégralité des clients du crash du serveur via un broadcast",
+          "Lancer un appel récursif à select() pour purger les buffers réseau",
+          "Dumper l'état de la file d'attente dans un fichier de journalisation"
+        ],
+        "answer": "Fermer tous les fd ouverts et libérer toutes les zones de mémoire allouées",
+        "explanation": "Une bonne architecture système nettoie ses structures (leaks) même en cas de crash contrôlé. Si l'allocation d'un nouveau client échoue, il est de bon ton de fermer tous les sockets et free le dictionnaire avant l'exit(1).",
+        "difficulty": 3
+      },
+      {
+        "id": 24,
+        "type": "OPEN",
+        "question": "Pourquoi le simple fait de conserver la fonction exit(0) pour gérer une erreur dans l'architecture provoquerait-il un échec à l'examen ?",
+        "answer": "Parce qu'un retour de 0 signale faussement au système d'exploitation et aux testeurs que le programme s'est exécuté avec succès.",
+        "explanation": "La correction automatique analyse l'exit code du binaire. Si le serveur masque une erreur fatale (liée à malloc ou socket) en quittant avec un code de succès (0), la validation métier échouera systématiquement.",
+        "difficulty": 3
+      }
+    ]
+  }

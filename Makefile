@@ -1,11 +1,11 @@
 # ═══════════════════════════════════════════════════════════════════════════
 #  PharmAI — Makefile (Docker Compose uniquement)
-#  Usage : make help   |   make up   |   make down
+#  Usage : make (= build + start)   |   make help   |   make down
 # ═══════════════════════════════════════════════════════════════════════════
 
 SHELL        := /bin/bash
 .SHELLFLAGS  := -eu -o pipefail -c
-.DEFAULT_GOAL := help
+.DEFAULT_GOAL := all
 
 DOCKER_COMPOSE ?= docker compose
 SERVICE        ?= pharmai
@@ -30,11 +30,12 @@ endif
 
 .PHONY: help all up start down stop logs ps build rebuild restart clean setup env doctor
 
-## help — Affiche les cibles disponibles (défaut)
+## help — Affiche les cibles disponibles
 help:
 	@printf '\n'
 	@printf '%b\n' "$(B)$(M)  PharmAI$(R) $(C)~$(R) Docker Compose (nginx + build Vite)"
 	@printf '\n'
+	@printf '%b\n' "  $(G)make$(R) / $(Y)all$(R)           $(C)#$(R) $(Y)build$(R) puis $(Y)start$(R) (défaut)"
 	@printf '%b\n' "  $(G)make$(R) $(Y)up$(R) / $(Y)start$(R)   $(C)#$(R) démarre le service en arrière-plan"
 	@printf '%b\n' "  $(G)make$(R) $(Y)down$(R) / $(Y)stop$(R)  $(C)#$(R) arrête et supprime les conteneurs"
 	@printf '%b\n' "  $(G)make$(R) $(Y)logs$(R)           $(C)#$(R) suit les logs ($(SERVICE))"
@@ -53,8 +54,8 @@ help:
 	@printf '\n'
 
 
-## all — Construit l'image et lance le conteneur (recommandé pour le premier lancement)
-all: build up
+## all — build puis start (cible par défaut de make)
+all: build start
 
 ## up / start — Lance le stack en arrière-plan
 up start:
