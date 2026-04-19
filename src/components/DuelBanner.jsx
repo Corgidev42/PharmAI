@@ -1,8 +1,8 @@
-import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useGameStore } from '../store/useGameStore'
 import { PHASES } from '../game/constants'
 import OpenQuestionTwoPlayer from './OpenQuestionTwoPlayer'
+import { QCMQuestion, ResultDisplay } from './QuestionModal'
 
 export default function DuelBanner() {
   const phase = useGameStore((s) => s.phase)
@@ -15,8 +15,7 @@ export default function DuelBanner() {
   const landingType = useGameStore((s) => s.landingType)
   const slideNote = useGameStore((s) => s.slideNote)
   const soloMode = useGameStore((s) => s.soloMode)
-
-  const [selected, setSelected] = useState(null)
+  const lastSubmittedAnswer = useGameStore((s) => s.lastSubmittedAnswer)
 
   const visible = phase === PHASES.DUEL || (phase === PHASES.RESULT && landingType === 'OPPONENT')
 
@@ -71,36 +70,11 @@ export default function DuelBanner() {
                   </p>
 
                   {currentCard.type === 'QCM' ? (
-                    <>
-                      <p className="text-lg font-bold text-white leading-relaxed mt-2 mb-5">
-                        {currentCard.question}
-                      </p>
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                        {currentCard.options.map((opt) => (
-                          <button
-                            key={opt}
-                            onClick={() => {
-                              setSelected(opt)
-                              setTimeout(() => {
-                                submitAnswer(opt)
-                                setSelected(null)
-                              }, 200)
-                            }}
-                            disabled={selected !== null}
-                            className={`px-4 py-3.5 rounded-2xl border-2 text-left text-sm font-bold transition-all
-                              ${
-                                selected === opt
-                                  ? 'border-rose-400 bg-rose-500/25 text-rose-50 shadow-neon-rose'
-                                  : 'border-rose-400/30 bg-purple-950/50 text-pink-50 hover:border-rose-400/60'
-                              }
-                              ${selected !== null && selected !== opt ? 'opacity-35' : ''}
-                            `}
-                          >
-                            {opt}
-                          </button>
-                        ))}
-                      </div>
-                    </>
+                    <QCMQuestion
+                      card={currentCard}
+                      onAnswer={submitAnswer}
+                      questionClassName="line-clamp-4 text-lg font-bold leading-relaxed text-white"
+                    />
                   ) : (
                     <OpenQuestionTwoPlayer
                       activeName={attacker.name}
@@ -114,29 +88,23 @@ export default function DuelBanner() {
                 </>
               )}
 
-              {phase === PHASES.RESULT && (
-                <motion.div
-                  initial={{ scale: 0.85, opacity: 0 }}
-                  animate={{ scale: 1, opacity: 1 }}
-                  className="text-center space-y-4 py-2"
-                >
+              {phase === PHASES.RESULT && currentCard && (
+                <>
                   {slideNote && (
-                    <p className="text-[11px] text-cyan-200/90 font-bold whitespace-pre-line">{slideNote}</p>
+                    <p className="text-[11px] font-medium text-slate-400 mb-4 px-3 py-2 rounded-lg bg-white/5 border border-white/10 whitespace-pre-line">
+                      {slideNote}
+                    </p>
                   )}
-                  <p className={`text-xl font-bold ${lastAnswerCorrect ? 'text-emerald-300' : 'text-rose-300'}`}>
-                    {lastAnswerCorrect
-                      ? 'Case capturée.'
-                      : soloMode
-                        ? 'Pas capturé (−1 point).'
-                        : 'Échec du duel (−1 point).'}
-                  </p>
-                  <button
-                    onClick={proceedAfterResult}
-                    className="px-8 py-3 rounded-2xl font-bold bg-gradient-to-r from-rose-500 to-pink-500 text-white shadow-neon-rose"
-                  >
-                    Continuer
-                  </button>
-                </motion.div>
+                  <ResultDisplay
+                    correct={lastAnswerCorrect}
+                    onProceed={proceedAfterResult}
+                    card={currentCard}
+                    userPick={lastSubmittedAnswer}
+                    failureSubtitle={
+                      soloMode ? 'Pas capturé (−1 point).' : 'Échec du duel (−1 point).'
+                    }
+                  />
+                </>
               )}
             </div>
           </motion.div>

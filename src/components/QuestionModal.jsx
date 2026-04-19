@@ -5,7 +5,7 @@ import { PHASES } from '../game/constants'
 import { seedForCardOptions, shuffleWithSeed } from '../game/shuffleOptions'
 import OpenQuestionTwoPlayer from './OpenQuestionTwoPlayer'
 
-function QCMQuestion({ card, onAnswer }) {
+export function QCMQuestion({ card, onAnswer, questionClassName }) {
   const [selected, setSelected] = useState(null)
 
   const shuffledOptions = useMemo(() => {
@@ -13,9 +13,13 @@ function QCMQuestion({ card, onAnswer }) {
     return shuffleWithSeed(opts, seedForCardOptions(card))
   }, [card])
 
+  const qClass =
+    questionClassName ??
+    'line-clamp-4 text-sm font-bold leading-snug text-white sm:text-base'
+
   return (
     <div className="flex min-h-0 flex-1 flex-col gap-3 overflow-hidden">
-      <p className="line-clamp-4 text-sm font-bold leading-snug text-white sm:text-base">{card.question}</p>
+      <p className={qClass}>{card.question}</p>
       <div className="grid min-h-0 flex-1 grid-cols-1 gap-2 overflow-hidden sm:grid-cols-2 sm:gap-2.5">
         {shuffledOptions.map((opt, idx) => (
           <button
@@ -88,8 +92,8 @@ function QCMResultReveal({ card, userPick }) {
   )
 }
 
-function ResultDisplay({ correct, onProceed, card, userPick }) {
-  const captureLine = correct ? 'Case capturée.' : 'Case non capturée.'
+export function ResultDisplay({ correct, onProceed, card, userPick, failureSubtitle }) {
+  const captureLine = correct ? 'Case capturée.' : failureSubtitle ?? 'Case non capturée.'
   const expl =
     typeof card?.explanation === 'string' && card.explanation.trim() ? card.explanation.trim() : null
   const showQcmReveal = !correct && card?.type === 'QCM' && Array.isArray(card?.options)
